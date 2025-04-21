@@ -109,7 +109,7 @@
             }
         }
     </style>
-  
+
     <style>
         * {
             margin: 0;
@@ -123,27 +123,36 @@
             text-transform: capitalize;
         }
     </style>
-    <link href="{{asset('')}}js1744307594169/app.46ba12d9.1744307594169.js" rel="preload" as="script">
-    <link href="{{asset('')}}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js" rel="preload" as="script">
-    <link href="{{asset('')}}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js" rel="preload" as="script">
-    <link href="{{asset('')}}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js" rel="preload" as="script">
-    <link href="{{asset('')}}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js" rel="preload" as="script">
-    <link href="{{asset('')}}static/css/app.c3049ff2.css" rel="preload" as="style">
-    <link href="{{asset('')}}static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
-    <link href="{{asset('')}}static/css/chunk-vendors.794edbf9.css" rel="preload" as="style">
-    <link href="{{asset('')}}static/css/chunk-vant.d14f5539.css" rel="stylesheet">
-    <link href="{{asset('')}}static/css/chunk-vendors.794edbf9.css" rel="stylesheet">
-    <link href="{{asset('')}}static/css/app.c3049ff2.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-7a1721c4.c20230a9.css">
-    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-7a1721c4.da18abce.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-5576a184.9f52f39a.css">
-    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-5576a184.c49d8c14.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-7cbde8e8.788c4ae8.css">
-    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-7cbde8e8.43936207.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-4f89519c.2a0f3cea.css">
-    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-4f89519c.5238fa59.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-693d0a34.f05eb557.css">
-    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-693d0a34.843d936b.1744307594169.chunk.js"></script>
+    <link href="{{ asset('') }}js1744307594169/app.46ba12d9.1744307594169.js" rel="preload" as="script">
+    <link href="{{ asset('') }}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js" rel="preload"
+        as="script">
+    <link href="{{ asset('') }}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js" rel="preload"
+        as="script">
+    <link href="{{ asset('') }}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js" rel="preload"
+        as="script">
+    <link href="{{ asset('') }}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js" rel="preload"
+        as="script">
+    <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="preload" as="style">
+    <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
+    <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="preload" as="style">
+    <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="stylesheet">
+    <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="stylesheet">
+    <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-7a1721c4.c20230a9.css">
+    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-7a1721c4.da18abce.1744307594169.chunk.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-5576a184.9f52f39a.css">
+    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-5576a184.c49d8c14.1744307594169.chunk.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-7cbde8e8.788c4ae8.css">
+    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-7cbde8e8.43936207.1744307594169.chunk.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-4f89519c.2a0f3cea.css">
+    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-4f89519c.5238fa59.1744307594169.chunk.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-693d0a34.f05eb557.css">
+    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-693d0a34.843d936b.1744307594169.chunk.js">
+    </script>
 </head>
 
 <body class="mein_cn" data-new-gr-c-s-check-loaded="14.1232.0" data-gr-ext-installed="">
@@ -165,7 +174,7 @@
                                 <div data-v-29c52665="" class="container flex"><!---->
                                     <div data-v-29c52665="" class="myName">
                                         <div data-v-29c52665=""><img data-v-29c52665=""
-                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20231025/0feefd89860da746f3a51ec0d8063854.png"
+                                                src="{{asset('')}}static/img/0feefd89860da746f3a51ec0d8063854.png"
                                                 alt=""></div>
                                     </div>
                                     <div data-v-29c52665="" class="name tac"></div>
@@ -182,7 +191,8 @@
                                 </div>
                             </div>
                             <div data-v-2a245038="" data-v-decd48ac="" class="logo"><img data-v-2a245038=""
-                                    data-v-decd48ac="" src="{{asset('')}}static/img/logo11.7b555b58.png" alt=""></div>
+                                    data-v-decd48ac="" src="{{ asset('') }}static/img/logo11.7b555b58.png"
+                                    alt=""></div>
                         </div>
                         <div data-v-decd48ac="" id="scroll" class="content-container"
                             style="padding-top: 44px; padding-bottom: 60px;">
@@ -211,35 +221,35 @@
                                                 style="height: 181px; transform: translate3d(-1700px, 0px, 0px); transition-duration: 0ms;">
                                                 <div data-v-2a245038="" class="swiper-slide" style="width: 425px;">
                                                     <div data-v-2a245038="" class="item"><img data-v-2a245038=""
-                                                            src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20250304/7c2c04bc60609a6ea4eea2babd770e1b.png"
+                                                            src="{{asset('')}}static/img/7c2c04bc60609a6ea4eea2babd770e1b.png"
                                                             alt=""></div>
                                                 </div>
                                                 <div data-v-2a245038="" class="swiper-slide" style="width: 425px;">
                                                     <div data-v-2a245038="" class="item"><img data-v-2a245038=""
-                                                            src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241204/93b58a4ca388801b3b10a2c7ccfab3eb.jpg"
+                                                            src="{{asset('')}}static/img/93b58a4ca388801b3b10a2c7ccfab3eb.jpg"
                                                             alt=""></div>
                                                 </div>
                                                 <div data-v-2a245038="" class="swiper-slide" style="width: 425px;">
                                                     <div data-v-2a245038="" class="item"><img data-v-2a245038=""
-                                                            src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241211/ed92eba5fd824766543c9cc095b0d421.png"
+                                                            src="{{asset('')}}static/img/ed92eba5fd824766543c9cc095b0d421.png"
                                                             alt=""></div>
                                                 </div>
                                                 <div data-v-2a245038="" class="swiper-slide swiper-slide-prev"
                                                     style="width: 425px;">
                                                     <div data-v-2a245038="" class="item"><img data-v-2a245038=""
-                                                            src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241205/8a927b72565569f07637be7da13e05f0.png"
+                                                            src="{{asset('')}}static/img/8a927b72565569f07637be7da13e05f0.png"
                                                             alt=""></div>
                                                 </div>
                                                 <div data-v-2a245038="" class="swiper-slide swiper-slide-active"
                                                     style="width: 425px;">
                                                     <div data-v-2a245038="" class="item"><img data-v-2a245038=""
-                                                            src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241213/1a6490de7f3f5674795bb13a2294e500.png"
+                                                            src="{{asset('')}}static/img/1a6490de7f3f5674795bb13a2294e500.png"
                                                             alt=""></div>
                                                 </div>
                                                 <div data-v-2a245038="" class="swiper-slide swiper-slide-next"
                                                     style="width: 425px;">
                                                     <div data-v-2a245038="" class="item"><img data-v-2a245038=""
-                                                            src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241222/5ab063a75c73bb2c043ec57f0c440549.png"
+                                                            src="{{asset('')}}static/img/5ab063a75c73bb2c043ec57f0c440549.png"
                                                             alt=""></div>
                                                 </div>
                                             </div> <span class="swiper-notification" aria-live="assertive"
@@ -688,7 +698,7 @@
                                                 <li data-v-2a245038="" data-v-decd48ac="">
                                                     <div data-v-2a245038="" data-v-decd48ac=""><img
                                                             data-v-2a245038="" data-v-decd48ac=""
-                                                            src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20231028/5a26fdd455bb38f3ee8b1e05fba5d77a.png"
+                                                            src="{{asset('')}}static/img/5a26fdd455bb38f3ee8b1e05fba5d77a.png"
                                                             alt="">
                                                         <p data-v-2a245038="" data-v-decd48ac="">Recharge</p>
                                                     </div>
@@ -696,7 +706,7 @@
                                                 <li data-v-2a245038="" data-v-decd48ac="">
                                                     <div data-v-2a245038="" data-v-decd48ac=""><img
                                                             data-v-2a245038="" data-v-decd48ac=""
-                                                            src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20231028/1b7a5f04b0c1deee8df771cd5ecf235c.png"
+                                                            src="{{asset('')}}static/img/1b7a5f04b0c1deee8df771cd5ecf235c.png"
                                                             alt="">
                                                         <p data-v-2a245038="" data-v-decd48ac="">Share</p>
                                                     </div>
@@ -704,7 +714,7 @@
                                                 <li data-v-2a245038="" data-v-decd48ac="">
                                                     <div data-v-2a245038="" data-v-decd48ac=""><img
                                                             data-v-2a245038="" data-v-decd48ac=""
-                                                            src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20231125/52f7785fd93b8df124b99de899c86d2c.png"
+                                                            src="{{asset('')}}static/img/52f7785fd93b8df124b99de899c86d2c.png"
                                                             alt="">
                                                         <p data-v-2a245038="" data-v-decd48ac="">Rewards</p>
                                                     </div>
@@ -712,7 +722,7 @@
                                                 <li data-v-2a245038="" data-v-decd48ac="">
                                                     <div data-v-2a245038="" data-v-decd48ac=""><img
                                                             data-v-2a245038="" data-v-decd48ac=""
-                                                            src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20231104/d90754a40f81f3da840167c9230e4eb4.png"
+                                                            src="{{asset('')}}static/img/d90754a40f81f3da840167c9230e4eb4.png"
                                                             alt="">
                                                         <p data-v-2a245038="" data-v-decd48ac="">my team</p>
                                                     </div>
@@ -726,7 +736,8 @@
                                                 <li data-v-2a245038="" data-v-decd48ac="" class="bps tips">
                                                     <div data-v-2a245038="" data-v-decd48ac="" class="ico"><img
                                                             data-v-2a245038="" data-v-decd48ac=""
-                                                            src="{{asset('')}}static/img/vip0_ico1.41c05f1a.png" alt="">
+                                                            src="{{ asset('') }}static/img/vip0_ico1.41c05f1a.png"
+                                                            alt="">
                                                     </div>
                                                     <div data-v-2a245038="" data-v-decd48ac="" class="name"> White
                                                         Paper </div>
@@ -734,7 +745,8 @@
                                                 <li data-v-2a245038="" data-v-decd48ac="" class="jd tips">
                                                     <div data-v-2a245038="" data-v-decd48ac="" class="icos"><img
                                                             data-v-2a245038="" data-v-decd48ac=""
-                                                            src="{{asset('')}}static/img/vip0_ico2.d606c74f.png" alt="">
+                                                            src="{{ asset('') }}static/img/vip0_ico2.d606c74f.png"
+                                                            alt="">
                                                     </div>
                                                     <div data-v-2a245038="" data-v-decd48ac="" class="abs">
                                                         <div data-v-2a245038="" data-v-decd48ac="" class="name">
@@ -747,7 +759,8 @@
                                                 <li data-v-2a245038="" data-v-decd48ac="" class="flex">
                                                     <div data-v-2a245038="" data-v-decd48ac="" class="ico"><img
                                                             data-v-2a245038="" data-v-decd48ac=""
-                                                            src="{{asset('')}}static/img/vip0_ico8.98a59dfc.png" alt="">
+                                                            src="{{ asset('') }}static/img/vip0_ico8.98a59dfc.png"
+                                                            alt="">
                                                     </div>
                                                     <div data-v-2a245038="" data-v-decd48ac="" class="flex1">
                                                         <div data-v-2a245038="" data-v-decd48ac="" class="n">
@@ -759,7 +772,8 @@
                                                 <li data-v-2a245038="" data-v-decd48ac="" class="flex">
                                                     <div data-v-2a245038="" data-v-decd48ac="" class="ico"><img
                                                             data-v-2a245038="" data-v-decd48ac=""
-                                                            src="{{asset('')}}static/img/vip0_ico4.9ff2a10d.png" alt="">
+                                                            src="{{ asset('') }}static/img/vip0_ico4.9ff2a10d.png"
+                                                            alt="">
                                                     </div>
                                                     <div data-v-2a245038="" data-v-decd48ac="" class="flex1">
                                                         <div data-v-2a245038="" data-v-decd48ac="" class="n">
@@ -783,12 +797,12 @@
                                                             <div data-v-55574732="" data-v-6d57ba0e=""
                                                                 class="video_box"><video data-v-55574732=""
                                                                     controls="controls"
-                                                                    src="https://finpact-gridquant.s3.ap-northeast-1.amazonaws.com/mp4/a12dda072fbc5e38deb1a2d8b3a80888_raw.mp4"></video><img
+                                                                    src="{{asset('')}}static/img/a12dda072fbc5e38deb1a2d8b3a80888_raw.mp4"></video><img
                                                                     data-v-55574732=""
-                                                                    src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241214/e287daebc5fd5ae1e7b6d95b52e6f2f7.jpg"
+                                                                    src="{{asset('')}}static/img/e287daebc5fd5ae1e7b6d95b52e6f2f7.jpg"
                                                                     alt="" class="maskLayer"><img
                                                                     data-v-55574732=""
-                                                                    src="{{asset('')}}static/img/play_icon.6d066898.png"
+                                                                    src="{{ asset('') }}static/img/play_icon.6d066898.png"
                                                                     alt="" class="play_icon"></div>
                                                         </div>
                                                     </div>
@@ -854,23 +868,23 @@
                                             <ul data-v-2a245038="" data-v-decd48ac="" class="bbsList">
                                                 <li data-v-2a245038="" data-v-decd48ac=""><img data-v-2a245038=""
                                                         data-v-decd48ac=""
-                                                        src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20240507/ab681326c1d447ff4ccf258c2543b594.png"
+                                                        src="{{asset('')}}static/img/ab681326c1d447ff4ccf258c2543b594.png"
                                                         alt=""></li>
                                                 <li data-v-2a245038="" data-v-decd48ac=""><img data-v-2a245038=""
                                                         data-v-decd48ac=""
-                                                        src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20240507/35c26f03cd70d2b27151eae5a2eb83d7.png"
+                                                        src="{{asset('')}}static/img/35c26f03cd70d2b27151eae5a2eb83d7.png"
                                                         alt=""></li>
                                                 <li data-v-2a245038="" data-v-decd48ac=""><img data-v-2a245038=""
                                                         data-v-decd48ac=""
-                                                        src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241218/333a876f752578575e698732094bddf9.jpg"
+                                                        src="{{asset('')}}static/img/333a876f752578575e698732094bddf9.jpg"
                                                         alt=""></li>
                                                 <li data-v-2a245038="" data-v-decd48ac=""><img data-v-2a245038=""
                                                         data-v-decd48ac=""
-                                                        src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20240507/6732ae6241cb8133a511ca14de951204.png"
+                                                        src="{{asset('')}}static/img/6732ae6241cb8133a511ca14de951204.png"
                                                         alt=""></li>
                                                 <li data-v-2a245038="" data-v-decd48ac=""><img data-v-2a245038=""
                                                         data-v-decd48ac=""
-                                                        src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20240507/cd1f2c3affb0e3473e8f82a690a0f184.png"
+                                                        src="{{asset('')}}static/img/cd1f2c3affb0e3473e8f82a690a0f184.png"
                                                         alt=""></li>
                                             </ul>
                                         </div>
@@ -880,52 +894,15 @@
                                         style="transform: translate(-582px, 0px);">
                                         <div data-v-38e7bdcd="" class="img_box">
                                             <div data-v-38e7bdcd="" class="maskLayer"></div><img data-v-38e7bdcd=""
-                                                src="{{asset('')}}static/img/icon-welfare.0156163e.png" alt="">
+                                                src="{{ asset('') }}static/img/icon-welfare.0156163e.png"
+                                                alt="">
                                         </div>
                                         <div data-v-38e7bdcd="" style="width: 1rem; height: 0px;"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div data-v-decd48ac="" class="footer">
-                            <div data-v-46204c6a="" data-v-2a245038="" class="footers" data-v-decd48ac="">
-                                <div data-v-46204c6a="" class="item">
-                                    <div data-v-46204c6a="" class="themeColor0">
-                                        <div data-v-46204c6a=""><img data-v-46204c6a=""
-                                                src="{{asset('')}}static/img/b_home_on.5de83a8b.png" alt=""></div><span
-                                            data-v-46204c6a=""> Homepage </span>
-                                    </div>
-                                </div>
-                                <div data-v-46204c6a="" class="item">
-                                    <div data-v-46204c6a="" class="">
-                                        <div data-v-46204c6a=""><img data-v-46204c6a=""
-                                                src="data:image/png;base64,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"
-                                                alt=""></div><span data-v-46204c6a=""> Contract </span>
-                                    </div>
-                                </div>
-                                <div data-v-46204c6a="" class="item">
-                                    <div data-v-46204c6a="" class="">
-                                        <div data-v-46204c6a=""><img data-v-46204c6a=""
-                                                src="{{asset('')}}static/img/b_sy.85a4fc63.png" alt=""></div><span
-                                            data-v-46204c6a=""> Income </span>
-                                    </div>
-                                </div>
-                                <div data-v-46204c6a="" class="item">
-                                    <div data-v-46204c6a="" class="">
-                                        <div data-v-46204c6a=""><img data-v-46204c6a=""
-                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABYCAYAAABxlTA0AAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPBSURBVHgB7Z1BTttAFIafk0oxu/QG7glKd901EgcoPUHhBCQbVCIkk02irBxO0HCC0gOgwq476Ak6PUFhF1jgvlcsgWyPE4OfnEn+TxoRxmMLvozHM2P7DREAAIC68MoUDsOw7ft+lz9+4BQkadm45nTKaXBwcGCoZhYSPBqNAv7xlVOH3MHMZrN3g8HgmmqkMa/AeDyWGntJbskVgo2Njc9UM6+KNnLNPbq/vw/JUeI43qSasdbgpOY6K1fwPO+KaiZXsLS5LtfcBMM1+DvVjK2JELltchfTbDY/7e/vG6qZTC8i6TH8nrOf4dNvwrW89lMwDf9N5vDw8A8tCZkazOI+8qlVtM+Uuz+9urs/rpBpg1nudkF5A7nlyLvIWbs20ixAbjnyBFsvbsvY5i47c0dy4GVAsDIQrAwEK5M30IgJpJGe0xX3ok5l+F1mnhmCn8eUFpzQRxPxPHa4Jl8Oh8PuvIIQ/Ey4uWhzimTOvKgcBL+csKgmQ3A1hMksZAYIrgBpLujhpnB2WzqjqBfBB+qu43xEo9HY5IuaNANBUTmeaXydngwrvOmZRuT2+/0LWj8uoig6YYET/my9U91qtfb4x+BpHpqIBen1etfJQzfGVobP8E46D4JLIJJlTrygSJDOgOCScFv8q2BzkM6AYGUgWBkIVgaClYFgZSBYGQhWBoKVgWBlIFgZCFYGgpWBYGUgWBkIVgaClYFgZSBYGQhWBoKVgWBlIFgZCFYGgpUp9WzasjAcDrc9z5PnwDpUAXEcywONk36/f0IV41wNHo1GOyz3G1UY4oaPt8lpKl8cVYyLTcQeKZGcFZXiomDNODwdqhgXBRvSw1DFOCeYL0jHpAQfe0oV45xgvtJPWMQRVYs899vlYw+oYpzspomIMAyPW63WW3oh/GXd3N3dGa1AI04KFhIhS/++CEZyykCwMhCsDAQrA8HKQLAyEKwMBCuTJ9hYCzcatUeUrhseUltHjzwqzIwGSwmWV/plJQJaU+R/T8Ia5JIXcTsv+uo52Ql834/WUXKyxIW8CB7YykjYr0xeOiOKovZsNvtLxfwP0DznxeiVQZqFRQJyMG/Sob5y19Hg+14/SGF2f8WZstzddKatFyEFESd4ccRV7lxyrmCp5nxKVD75vKpwE3JkiwLYtO10dnb2c2trKzdMCnhE7q6w3LFte7NoZ5Z8wZJvWPJ7/tUn8BS5zfSlSK5QZrEoWVtjh4Bwzml3keCgpZY7E9HJMhDyBIyM6talP2zoYWWZ89vb22MsFAAAAG7wD45kNnyGOhVoAAAAAElFTkSuQmCC"
-                                                alt=""></div><span data-v-46204c6a=""> Assets </span>
-                                    </div>
-                                </div>
-                                <div data-v-46204c6a="" class="item">
-                                    <div data-v-46204c6a="" class="">
-                                        <div data-v-46204c6a=""><img data-v-46204c6a=""
-                                                src="data:image/png;base64,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"
-                                                alt=""></div><span data-v-46204c6a=""> my </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @include('layouts.upnl.footer')
                     </div>
                 </div>
             </div>
@@ -943,11 +920,10 @@
             <p data-v-b68a32e2="">Loading...</p>
         </div><!---->
     </div>
-    <script src="{{asset('')}}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
-    <script src="{{asset('')}}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
-    <script src="{{asset('')}}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
-    <script src="{{asset('')}}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script>
-    <script src="{{asset('')}}js1744307594169/app.46ba12d9.1744307594169.js"></script><!----><!----><!---->
+    <script src="{{ asset('') }}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
+    <script src="{{ asset('') }}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
+    <script src="{{ asset('') }}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
+    <script src="{{ asset('') }}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script>
 </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
 
 </html>
