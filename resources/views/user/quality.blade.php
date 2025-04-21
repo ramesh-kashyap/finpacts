@@ -109,7 +109,7 @@
             }
         }
     </style>
- 
+
     <style>
         * {
             margin: 0;
@@ -123,28 +123,38 @@
             text-transform: capitalize;
         }
     </style>
-    <link href="{{asset('')}}js1744307594169/app.46ba12d9.1744307594169.js" rel="preload" as="script">
-    <link href="{{asset('')}}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js" rel="preload" as="script">
-    <link href="{{asset('')}}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js" rel="preload" as="script">
-    <link href="{{asset('')}}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js" rel="preload" as="script">
-    <link href="{{asset('')}}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js" rel="preload" as="script">
-    <link href="{{asset('')}}static/css/app.c3049ff2.css" rel="preload" as="style">
-    <link href="{{asset('')}}static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
-    <link href="{{asset('')}}static/css/chunk-vendors.794edbf9.css" rel="preload" as="style">
-    <link href="{{asset('')}}static/css/chunk-vant.d14f5539.css" rel="stylesheet">
-    <link href="{{asset('')}}static/css/chunk-vendors.794edbf9.css" rel="stylesheet">
-    <link href="{{asset('')}}static/css/app.c3049ff2.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-7c54221e.86e4aaa2.css">
-    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-7c54221e.a353e3ff.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-5576a184.9f52f39a.css">
-    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-5576a184.c49d8c14.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-7cbde8e8.788c4ae8.css">
-    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-7cbde8e8.43936207.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-4f89519c.2a0f3cea.css">
-    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-4f89519c.5238fa59.1744307594169.chunk.js"></script>
-    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-4006da76.e92bfa42.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-693d0a34.f05eb557.css">
-    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-693d0a34.843d936b.1744307594169.chunk.js"></script>
+    <link href="{{ asset('') }}js1744307594169/app.46ba12d9.1744307594169.js" rel="preload" as="script">
+    <link href="{{ asset('') }}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js" rel="preload"
+        as="script">
+    <link href="{{ asset('') }}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js" rel="preload"
+        as="script">
+    <link href="{{ asset('') }}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js" rel="preload"
+        as="script">
+    <link href="{{ asset('') }}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js" rel="preload"
+        as="script">
+    <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="preload" as="style">
+    <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
+    <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="preload" as="style">
+    <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="stylesheet">
+    <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="stylesheet">
+    <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-7c54221e.86e4aaa2.css">
+    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-7c54221e.a353e3ff.1744307594169.chunk.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-5576a184.9f52f39a.css">
+    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-5576a184.c49d8c14.1744307594169.chunk.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-7cbde8e8.788c4ae8.css">
+    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-7cbde8e8.43936207.1744307594169.chunk.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-4f89519c.2a0f3cea.css">
+    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-4f89519c.5238fa59.1744307594169.chunk.js">
+    </script>
+    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-4006da76.e92bfa42.1744307594169.chunk.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-693d0a34.f05eb557.css">
+    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-693d0a34.843d936b.1744307594169.chunk.js">
+    </script>
 </head>
 
 <body class="mein_cn">
@@ -364,7 +374,8 @@
                                                 <div data-v-5f0c154b="" class="flexs">
                                                     <div data-v-5f0c154b="" class="custom-image van-empty">
                                                         <div class="van-empty__image"><img
-                                                                src="{{asset('')}}static/img/none0.f307acfc.png"></div>
+                                                                src="{{ asset('') }}static/img/none0.f307acfc.png">
+                                                        </div>
                                                         <p class="van-empty__description">No data yet</p>
                                                     </div>
                                                 </div>
@@ -418,7 +429,8 @@
                                                 </ul>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
                                                         data-v-5959a183="" data-v-decd48ac=""
-                                                        src="{{asset('')}}static/img/jh_on0.9a3e055f.png" alt=""></div>
+                                                        src="{{ asset('') }}static/img/jh_on0.9a3e055f.png"
+                                                        alt=""></div>
                                             </div>
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
@@ -480,7 +492,8 @@
                                                 </ul>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
                                                         data-v-5959a183="" data-v-decd48ac=""
-                                                        src="{{asset('')}}static/img/jh_on0.9a3e055f.png" alt=""></div>
+                                                        src="{{ asset('') }}static/img/jh_on0.9a3e055f.png"
+                                                        alt=""></div>
                                             </div>
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
@@ -542,7 +555,8 @@
                                                 </ul>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
                                                         data-v-5959a183="" data-v-decd48ac=""
-                                                        src="{{asset('')}}static/img/jh_on0.9a3e055f.png" alt=""></div>
+                                                        src="{{ asset('') }}static/img/jh_on0.9a3e055f.png"
+                                                        alt=""></div>
                                             </div>
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
@@ -604,7 +618,8 @@
                                                 </ul>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
                                                         data-v-5959a183="" data-v-decd48ac=""
-                                                        src="{{asset('')}}static/img/jh_on0.9a3e055f.png" alt=""></div>
+                                                        src="{{ asset('') }}static/img/jh_on0.9a3e055f.png"
+                                                        alt=""></div>
                                             </div>
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
@@ -625,7 +640,8 @@
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
                                                         data-v-5959a183="" data-v-decd48ac="" alt=""
                                                         data-src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
-                                                        src="{{asset('')}}static/img/error.2872d899.png" lazy="loading"></div>
+                                                        src="{{ asset('') }}static/img/error.2872d899.png"
+                                                        lazy="loading"></div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">60-day
                                                         Growth Contract</div><span data-v-5959a183=""
@@ -665,7 +681,8 @@
                                                 </ul>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
                                                         data-v-5959a183="" data-v-decd48ac=""
-                                                        src="{{asset('')}}static/img/jh_on0.9a3e055f.png" alt=""></div>
+                                                        src="{{ asset('') }}static/img/jh_on0.9a3e055f.png"
+                                                        alt=""></div>
                                             </div>
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
@@ -685,45 +702,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div data-v-decd48ac="" class="footer">
-                            <div data-v-46204c6a="" data-v-5959a183="" class="footers" data-v-decd48ac="">
-                                <div data-v-46204c6a="" class="item">
-                                    <div data-v-46204c6a="" class="">
-                                        <div data-v-46204c6a=""><img data-v-46204c6a=""
-                                                src="data:image/png;base64,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"
-                                                alt=""></div><span data-v-46204c6a=""> Homepage </span>
-                                    </div>
-                                </div>
-                                <div data-v-46204c6a="" class="item">
-                                    <div data-v-46204c6a="" class="themeColor0">
-                                        <div data-v-46204c6a=""><img data-v-46204c6a=""
-                                                src="{{asset('')}}static/img/b_jc_on.f2d87739.png" alt=""></div><span
-                                            data-v-46204c6a=""> Contract </span>
-                                    </div>
-                                </div>
-                                <div data-v-46204c6a="" class="item">
-                                    <div data-v-46204c6a="" class="">
-                                        <div data-v-46204c6a=""><img data-v-46204c6a=""
-                                                src="{{asset('')}}static/img/b_sy.85a4fc63.png" alt=""></div><span
-                                            data-v-46204c6a=""> Income </span>
-                                    </div>
-                                </div>
-                                <div data-v-46204c6a="" class="item">
-                                    <div data-v-46204c6a="" class="">
-                                        <div data-v-46204c6a=""><img data-v-46204c6a=""
-                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABYCAYAAABxlTA0AAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPBSURBVHgB7Z1BTttAFIafk0oxu/QG7glKd901EgcoPUHhBCQbVCIkk02irBxO0HCC0gOgwq476Ak6PUFhF1jgvlcsgWyPE4OfnEn+TxoRxmMLvozHM2P7DREAAIC68MoUDsOw7ft+lz9+4BQkadm45nTKaXBwcGCoZhYSPBqNAv7xlVOH3MHMZrN3g8HgmmqkMa/AeDyWGntJbskVgo2Njc9UM6+KNnLNPbq/vw/JUeI43qSasdbgpOY6K1fwPO+KaiZXsLS5LtfcBMM1+DvVjK2JELltchfTbDY/7e/vG6qZTC8i6TH8nrOf4dNvwrW89lMwDf9N5vDw8A8tCZkazOI+8qlVtM+Uuz+9urs/rpBpg1nudkF5A7nlyLvIWbs20ixAbjnyBFsvbsvY5i47c0dy4GVAsDIQrAwEK5M30IgJpJGe0xX3ok5l+F1mnhmCn8eUFpzQRxPxPHa4Jl8Oh8PuvIIQ/Ey4uWhzimTOvKgcBL+csKgmQ3A1hMksZAYIrgBpLujhpnB2WzqjqBfBB+qu43xEo9HY5IuaNANBUTmeaXydngwrvOmZRuT2+/0LWj8uoig6YYET/my9U91qtfb4x+BpHpqIBen1etfJQzfGVobP8E46D4JLIJJlTrygSJDOgOCScFv8q2BzkM6AYGUgWBkIVgaClYFgZSBYGQhWBoKVgWBlIFgZCFYGgpWBYGUgWBkIVgaClYFgZSBYGQhWBoKVgWBlIFgZCFYGgpUp9WzasjAcDrc9z5PnwDpUAXEcywONk36/f0IV41wNHo1GOyz3G1UY4oaPt8lpKl8cVYyLTcQeKZGcFZXiomDNODwdqhgXBRvSw1DFOCeYL0jHpAQfe0oV45xgvtJPWMQRVYs899vlYw+oYpzspomIMAyPW63WW3oh/GXd3N3dGa1AI04KFhIhS/++CEZyykCwMhCsDAQrA8HKQLAyEKwMBCuTJ9hYCzcatUeUrhseUltHjzwqzIwGSwmWV/plJQJaU+R/T8Ia5JIXcTsv+uo52Ql834/WUXKyxIW8CB7YykjYr0xeOiOKovZsNvtLxfwP0DznxeiVQZqFRQJyMG/Sob5y19Hg+14/SGF2f8WZstzddKatFyEFESd4ccRV7lxyrmCp5nxKVD75vKpwE3JkiwLYtO10dnb2c2trKzdMCnhE7q6w3LFte7NoZ5Z8wZJvWPJ7/tUn8BS5zfSlSK5QZrEoWVtjh4Bwzml3keCgpZY7E9HJMhDyBIyM6talP2zoYWWZ89vb22MsFAAAAG7wD45kNnyGOhVoAAAAAElFTkSuQmCC"
-                                                alt=""></div><span data-v-46204c6a=""> Assets </span>
-                                    </div>
-                                </div>
-                                <div data-v-46204c6a="" class="item">
-                                    <div data-v-46204c6a="" class="">
-                                        <div data-v-46204c6a=""><img data-v-46204c6a=""
-                                                src="data:image/png;base64,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"
-                                                alt=""></div><span data-v-46204c6a=""> my </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @include('layouts.upnl.footer')
                     </div>
                 </div>
             </div>
@@ -741,11 +720,11 @@
             <p data-v-b68a32e2="">Loading...</p>
         </div><!---->
     </div>
-    <script src="{{asset('')}}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
-    <script src="{{asset('')}}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
-    <script src="{{asset('')}}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
-    <script src="{{asset('')}}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script>
-    <script src="{{asset('')}}js1744307594169/app.46ba12d9.1744307594169.js"></script>
+    <script src="{{ asset('') }}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
+    <script src="{{ asset('') }}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
+    <script src="{{ asset('') }}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
+    <script src="{{ asset('') }}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script>
+    {{-- <script src="{{asset('')}}js1744307594169/app.46ba12d9.1744307594169.js"></script> --}}
 </body>
 
 </html>
