@@ -129,9 +129,10 @@
                 <div data-v-b73557e2="" data-v-39479e50="" class="head" data-v-6e2d35de="">
                     <div data-v-b73557e2="" class="safe"></div>
                     <div data-v-b73557e2="" class="container flex">
-                        <div data-v-b73557e2="" class="back"><a href="{{ route('user.profile') }}"><img
-                                    data-v-b73557e2="" src="{{ asset('') }}static/img/eroo.png" alt="">
-                            </a></div>
+                    <a href="{{route('user.profile')}}">
+                                    <div data-v-29c52665="" class="back"><img data-v-29c52665=""
+                                            src="{{ asset('') }}static/img/icon/error.png"
+                                            alt=""></div></a>
                         <!---->
                         <!---->
                         <!---->

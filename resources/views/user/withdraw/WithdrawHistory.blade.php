@@ -159,9 +159,12 @@
                         <div data-v-decd48ac="" class="headers on">
                             <div data-v-29c52665="" data-v-4c275272="" class="head head0" data-v-decd48ac="">
                                 <div data-v-29c52665="" class="container flex">
-                                    <div data-v-29c52665="" class="back"><img data-v-29c52665=""
+                                <a href="{{route('user.profile')}}">
+                                    <div data-v-29c52665="" class="back">
+                                        
+                                    <img data-v-29c52665=""
                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE+SURBVHgB3diLDYIwEAbgwy7gCLoBbOIGtiM4gbqBE0DdSCcQJ5AN8GrAIPIobXNH+JOG0jbhCyVpC8DSIqVcmwKBsgKPKKX2URQ9sLwQdYQAicAxBoMX3Wwry3Krtc7BI05vqAtTpQDPTAb1YXDaFL4db9CkKRvCpGmqIUCsQRQYaxAVxgpEiRkFUWMGQRyYXhAXphPEifkDcWN+QHPAfEEDaxNVciynLMuu9Vp2At5ssFxMpQYF22B55LMwf0C4jzkAbwr8Vs+m8v2occcnsTHrGCzN3AJRRF25YeI4fiJq1xqzS5Ikx+47EEQ0b+aAEu0GbpToauREib4OLpQY6uRAibEB1KhREDXKCkSJsgZRoZzO9j3LTFGd7b1Or05ne3yoxoerVnOQHYPz75g2yqzWIc723ql+WG1gqXkDGBPa7OTyg7AAAAAASUVORK5CYII="
-                                            alt=""></div>
+                                            alt=""></div></a>
                                     <!---->
                                     <div data-v-29c52665="" class="name tac">Deposit and Withdrawal Records</div>
                                     <div data-v-29c52665="" class="flex1"></div>
