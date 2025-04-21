@@ -3,11 +3,14 @@
 <head>
     <meta charset="utf-8">
     <title>Deposit and Withdrawal Records</title>
+    <title>Deposit and Withdrawal Records</title>
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="expires" content="0">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <link rel="icon" href="/logo.png">
+    <meta name="google" content="notranslate">
     <link rel="icon" href="/logo.png">
     <meta name="google" content="notranslate">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -105,8 +108,99 @@
         100% {
             transform: rotate(-360deg);
         }
+    <style type="text/css">
+        .page-loading-con {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
+        .page-loading {
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+        }
+
+        .loader-outter,
+        .loader-inner {
+            position: absolute;
+            border: 0.1em solid #0b53b4;
+            border-radius: 50%;
+        }
+
+        .loader-outter {
+            border-left-color: transparent;
+            border-bottom: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-animation: loader-outter 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+            animation: loader-outter 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+        }
+
+        .loader-inner {
+            width: 1em;
+            height: 1em;
+            left: calc(50% - 0.5em);
+            top: calc(50% - 0.5em);
+            border-right: 0;
+            border-top-color: transparent;
+            -webkit-animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+            animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+        }
+
+        @-webkit-keyframes loader-outter {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        <blade keyframes|%20loader-outter%20%7B>0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+
+        @-webkit-keyframes loader-inner {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
+
+        <blade keyframes|%20loader-inner%20%7B>0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(-360deg);
+        }
+        }
+
+    </style>
+  
     </style>
   
     <style>
@@ -120,9 +214,28 @@
         body {
             width: 100%;
             text-transform: capitalize;
+            text-transform: capitalize;
         }
 
     </style>
+   
+    <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="preload" as="style">
+    <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
+    <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="preload" as="style">
+    <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="stylesheet">
+    <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="stylesheet">
+    <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-5e3ca19c.d046fd46.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-5e3ca19c.77374a8b.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-5576a184.9f52f39a.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-5576a184.c49d8c14.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-7cbde8e8.788c4ae8.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-7cbde8e8.43936207.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-4f89519c.2a0f3cea.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-4f89519c.5238fa59.1744307594169.chunk.js"></script>
+    <script charset="utf-8" src="/js1744307594169/chunk-4006da76.e92bfa42.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-4a423c40.9e22073a.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-4a423c40.e4024504.1744307594169.chunk.js"></script>
    
     <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="preload" as="style">
     <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
@@ -150,6 +263,13 @@
             <div class="loader-inner"></div>
         </div>
     </div>
+<body class="mein_cn">
+    <div class="page-loading-con" id="loaderInit" style="display: none;">
+        <div class="page-loading">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+        </div>
+    </div>
     <div id="app" class="applang">
         <div data-v-6302a7bf="">
             <div data-v-6302a7bf="" class="van-pull-refresh">
@@ -159,55 +279,31 @@
                         <div data-v-decd48ac="" class="headers on">
                             <div data-v-29c52665="" data-v-4c275272="" class="head head0" data-v-decd48ac="">
                                 <div data-v-29c52665="" class="container flex">
-
-                                <a href="{{route('user.profile')}}">
                                     <div data-v-29c52665="" class="back"><img data-v-29c52665=""
                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE+SURBVHgB3diLDYIwEAbgwy7gCLoBbOIGtiM4gbqBE0DdSCcQJ5AN8GrAIPIobXNH+JOG0jbhCyVpC8DSIqVcmwKBsgKPKKX2URQ9sLwQdYQAicAxBoMX3Wwry3Krtc7BI05vqAtTpQDPTAb1YXDaFL4db9CkKRvCpGmqIUCsQRQYaxAVxgpEiRkFUWMGQRyYXhAXphPEifkDcWN+QHPAfEEDaxNVciynLMuu9Vp2At5ssFxMpQYF22B55LMwf0C4jzkAbwr8Vs+m8v2occcnsTHrGCzN3AJRRF25YeI4fiJq1xqzS5Ikx+47EEQ0b+aAEu0GbpToauREib4OLpQY6uRAibEB1KhREDXKCkSJsgZRoZzO9j3LTFGd7b1Or05ne3yoxoerVnOQHYPz75g2yqzWIc723ql+WG1gqXkDGBPa7OTyg7AAAAAASUVORK5CYII="
                                             alt=""></div>
-
-    </a>
+                                    <!---->
                                     <div data-v-29c52665="" class="name tac">Deposit and Withdrawal Records</div>
                                     <div data-v-29c52665="" class="flex1"></div>
-                                
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
                                 </div>
                             </div>
                         </div>
                         <div data-v-decd48ac="" id="scroll" class="content-container" style="padding-top: 44px;">
                             <div data-v-decd48ac="" id="content" class="content-scroll">
                                 <div data-v-4c275272="" data-v-decd48ac="" class="container">
-                                   
-                                <ul class="flex tab">
-    <li class="{{ request()->routeIs('user.DepositHistory') ? 'active' : '' }}">
-        <a href="{{ route('user.DepositHistory') }}">Recharge</a>
-    </li>
-    <li class="{{ request()->routeIs('user.Withdraw-History') ? 'active' : '' }}">
-        <a href="{{ route('user.Withdraw-History') }}">Withdrawal</a>
-    </li>
-</ul>
-
-<style>
-
-
-.flex.tab li {
-    padding: 10px 15px;
-    border-bottom: 2px solid transparent;
-    display: inline-block;
-}
-
-.flex.tab li.active {
-    border-bottom: 2px solid #007bff; /* blue underline */
-}
-
-.flex.tab li a {
-    text-decoration: none;
-    color: black;
-}
-    </style>
-
-
-
-
-
+                                    <ul data-v-4c275272="" data-v-decd48ac="" class="flex tab">
+                                        <li data-v-4c275272="" data-v-decd48ac="" class="on"> Recharge </li>
+                                        <li data-v-4c275272="" data-v-decd48ac="" class=""> Withdrawal </li>
+                                    </ul>
                                     <ul data-v-4c275272="" data-v-decd48ac="" class="setBox flex">
                                         <li data-v-4c275272="" data-v-decd48ac="" class="on">
                                             <div data-v-4c275272="" data-v-decd48ac="" class="n">Currency</div>
@@ -238,41 +334,23 @@
                                     <div data-v-4c275272="" class="van-pull-refresh" data-v-decd48ac="">
                                         <div class="van-pull-refresh__track" style="transition-duration: 0ms;">
                                             <div class="van-pull-refresh__head" style="height: 50px;"></div>
-
-
-
-                                            <?php if(is_array($withdraw_report) || is_object($withdraw_report)){ ?>
-
-<?php
- date_default_timezone_set('UTC');
-  $cnt = 0; ?>
-  @foreach($withdraw_report as $value)
-  
                                             <div data-v-4c275272="" role="feed" class="van-list">
                                                 <ul data-v-4c275272="" class="list">
                                                     <li data-v-4c275272="" class="flex">
                                                         <div data-v-4c275272="" class="flex1">
-                                                            <div data-v-4c275272="" class="n">Withdrawal</div>
+                                                            <div data-v-4c275272="" class="n">Recharge</div>
                                                             <!---->
-                                                            <div data-v-4c275272="" class="time">{{ date('D, d M Y H:i:s', strtotime($value->created_at)) }}
+                                                            <div data-v-4c275272="" class="time">2025-04-21 05:46:40
                                                             </div>
                                                         </div>
                                                         <div data-v-4c275272="" class="str">
-                                                            <div data-v-4c275272="" class="price">{{$value->amount}} USDT</div>
+                                                            <div data-v-4c275272="" class="price">13.5 USDT</div>
                                                             <!---->
                                                             <div data-v-4c275272="" class="s"><span data-v-4c275272=""
-                                                                    class="s1"><?=($value->status=="Active")?'completed':$value->status?> </span></div>
+                                                                    class="s1">Completed</span></div>
                                                         </div>
                                                     </li>
                                                 </ul>
-
-
-                                                @endforeach   
-                            
-                            <?php }?>  
-
-
-
                                                 <div class="van-list__finished-text">No more</div>
                                                 <div class="van-list__placeholder"></div>
                                             </div>
@@ -290,7 +368,17 @@
                                             <li data-v-4c275272="" class=""> Failed </li>
                                         </ul>
                                         <div data-v-4c275272="" class="cancel"> Cancel </div>
+                                        <div data-v-4c275272="" class="cancel"> Cancel </div>
                                     </div>
+                                </div>
+                                <div class="van-overlay" style="z-index: 2007; display: none;"></div>
+                                <div data-v-4c275272="" class="van-popup van-popup--bottom"
+                                    style="background: none; z-index: 2008; display: none;">
+                                    <div data-v-4c275272="" class="pop_type">
+                                        <ul data-v-4c275272="">
+                                            <li data-v-4c275272="" class="on"> All </li>
+                                            <li data-v-4c275272="" class=""> USDT </li>
+                                            <li data-v-4c275272="" class=""> USDC </li>
                                 </div>
                                 <div class="van-overlay" style="z-index: 2007; display: none;"></div>
                                 <div data-v-4c275272="" class="van-popup van-popup--bottom"
@@ -302,10 +390,12 @@
                                             <li data-v-4c275272="" class=""> USDC </li>
                                         </ul>
                                         <div data-v-4c275272="" class="cancel"> Cancel </div>
+                                        <div data-v-4c275272="" class="cancel"> Cancel </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!---->
                         <!---->
                     </div>
                 </div>
@@ -324,7 +414,16 @@
             <p data-v-b68a32e2="">Loading...</p>
         </div>
         <!---->
+        <div data-v-b68a32e2="" class="page-loading-con" style="display: none;">
+            <div data-v-b68a32e2="" class="page-loading">
+                <div data-v-b68a32e2="" class="loader-outter"></div>
+                <div data-v-b68a32e2="" class="loader-inner"></div>
+            </div>
+            <p data-v-b68a32e2="">Loading...</p>
+        </div>
+        <!---->
     </div>
+  
   
 </body>
 
