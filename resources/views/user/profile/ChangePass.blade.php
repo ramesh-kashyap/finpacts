@@ -246,11 +246,7 @@
         </div>
         <!---->
     </div>
-    <script src="/js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
-    <script src="/js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
-    <script src="/js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
-    <script src="/js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script>
-    <script src="/js1744307594169/app.46ba12d9.1744307594169.js"></script>
+  
     <div class="van-toast van-toast--middle van-toast--text" style="z-index: 2042; display: none;">
         <div class="van-toast__text">The current user has been disabled, please contact the administrator</div>
     </div>
