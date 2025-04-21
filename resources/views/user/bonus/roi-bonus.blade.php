@@ -1,4 +1,5 @@
 <html style="font-size: 50px;" translate="no">
+<html style="font-size: 50px;" translate="no">
 
 <head>
     <meta charset="utf-8">
@@ -8,6 +9,8 @@
     <meta http-equiv="expires" content="0">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <link rel="icon" href="/logo.png">
+    <meta name="google" content="notranslate">
     <link rel="icon" href="/logo.png">
     <meta name="google" content="notranslate">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -109,7 +112,7 @@
             }
         }
     </style>
-
+   
     <style>
         * {
             margin: 0;
@@ -121,39 +124,39 @@
         body {
             width: 100%;
             text-transform: capitalize;
+            text-transform: capitalize;
         }
     </style>
-    <link href="{{ asset('') }}js1744307594169/app.46ba12d9.1744307594169.js" rel="preload" as="script">
-    <link href="{{ asset('') }}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js" rel="preload"
-        as="script">
-    <link href="{{ asset('') }}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js" rel="preload"
-        as="script">
-    <link href="{{ asset('') }}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js" rel="preload"
-        as="script">
-    <link href="{{ asset('') }}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js" rel="preload"
-        as="script">
-    <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="preload" as="style">
-    <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
-    <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="preload" as="style">
-    <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="stylesheet">
-    <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="stylesheet">
-    <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-0594a2c1.01b2fad7.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-5576a184.9f52f39a.css">
-    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-5576a184.c49d8c14.1744307594169.chunk.js">
-    </script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-7cbde8e8.788c4ae8.css">
-    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-7cbde8e8.43936207.1744307594169.chunk.js">
-    </script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-4f89519c.2a0f3cea.css">
-    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-4f89519c.5238fa59.1744307594169.chunk.js">
-    </script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-693d0a34.f05eb557.css">
-    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-693d0a34.843d936b.1744307594169.chunk.js">
-    </script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-40a3a1c6.8126c634.css">
+    <link href="{{asset('')}}js1744307594169/app.46ba12d9.1744307594169.js" rel="preload" as="script">
+    <link href="{{asset('')}}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js" rel="preload" as="script">
+    <link href="{{asset('')}}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js" rel="preload" as="script">
+    <link href="{{asset('')}}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js" rel="preload" as="script">
+    <link href="{{asset('')}}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js" rel="preload" as="script">
+    <link href="{{asset('')}}static/css/app.c3049ff2.css" rel="preload" as="style">
+    <link href="{{asset('')}}static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
+    <link href="{{asset('')}}static/css/chunk-vendors.794edbf9.css" rel="preload" as="style">
+    <link href="{{asset('')}}static/css/chunk-vant.d14f5539.css" rel="stylesheet">
+    <link href="{{asset('')}}static/css/chunk-vendors.794edbf9.css" rel="stylesheet">
+    <link href="{{asset('')}}static/css/app.c3049ff2.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-0594a2c1.01b2fad7.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-5576a184.9f52f39a.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-5576a184.c49d8c14.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-7cbde8e8.788c4ae8.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-7cbde8e8.43936207.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-4f89519c.2a0f3cea.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-4f89519c.5238fa59.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-693d0a34.f05eb557.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-693d0a34.843d936b.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-40a3a1c6.8126c634.css">
 </head>
 
+<body class="mein_cn">
+    <div class="page-loading-con" id="loaderInit" style="display: none;">
+        <div class="page-loading">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+        </div>
+    </div>
 <body class="mein_cn">
     <div class="page-loading-con" id="loaderInit" style="display: none;">
         <div class="page-loading">
@@ -173,7 +176,7 @@
                                 <div data-v-29c52665="" class="container flex"><!---->
                                     <div data-v-29c52665="" class="myName">
                                         <div data-v-29c52665=""><img data-v-29c52665=""
-                                                src="{{ asset('') }}static/img/0feefd89860da746f3a51ec0d8063854.png"
+                                                src="{{asset('')}}static/img/0feefd89860da746f3a51ec0d8063854.png"
                                                 alt=""></div>
                                     </div>
                                     <div data-v-29c52665="" class="name tac"></div>
@@ -206,7 +209,37 @@
                                                     <img data-v-6e348d44="" data-v-decd48ac=""
                                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
                                                         alt="">
+                        <div data-v-decd48ac="" id="scroll" class="content-container"
+                            style="padding-top: 44px; padding-bottom: 60px;">
+                            <div data-v-decd48ac="" id="content" class="content-scroll">
+                                <div data-v-6e348d44="" data-v-decd48ac="" class="container">
+                                    <div data-v-6e348d44="" data-v-decd48ac="" class="card">
+                                        <div data-v-6e348d44="" data-v-decd48ac="" class="income income0">
+                                            <div data-v-6e348d44="" data-v-decd48ac="" class="name">Cumulative
+                                                total income</div>
+                                            <div data-v-6e348d44="" data-v-decd48ac="" class="am"> 0 USDT </div>
+                                        </div>
+                                        <ul data-v-6e348d44="" data-v-decd48ac="" class="tab">
+                                            <li data-v-6e348d44="" data-v-decd48ac="">
+                                                <div data-v-6e348d44="" data-v-decd48ac="" class="flex">
+                                                    <div data-v-6e348d44="" data-v-decd48ac="" class="n flex1">
+                                                        Personal income</div>
+                                                    <div data-v-6e348d44="" data-v-decd48ac="" class="s">0<span
+                                                            data-v-6e348d44="" data-v-decd48ac="">USDT</span></div>
+                                                    <img data-v-6e348d44="" data-v-decd48ac=""
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
+                                                        alt="">
                                                 </div>
+                                            </li>
+                                            <li data-v-6e348d44="" data-v-decd48ac="">
+                                                <div data-v-6e348d44="" data-v-decd48ac="" class="flex">
+                                                    <div data-v-6e348d44="" data-v-decd48ac="" class="n flex1">Team
+                                                        Benefits</div>
+                                                    <div data-v-6e348d44="" data-v-decd48ac="" class="s">0<span
+                                                            data-v-6e348d44="" data-v-decd48ac="">USDT</span></div>
+                                                    <img data-v-6e348d44="" data-v-decd48ac=""
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
+                                                        alt="">
                                             </li>
                                             <li data-v-6e348d44="" data-v-decd48ac="">
                                                 <div data-v-6e348d44="" data-v-decd48ac="" class="flex">
@@ -226,8 +259,7 @@
                                             <div data-v-6e348d44="" data-v-decd48ac="" class="earnings">
                                                 <div data-v-6e348d44="" data-v-decd48ac="" class="info_box"><img
                                                         data-v-6e348d44="" data-v-decd48ac=""
-                                                        src="{{ asset('') }}static/img/td-0.e57690a8.png"
-                                                        alt="">
+                                                        src="{{asset('')}}static/img/td-0.e57690a8.png" alt="">
                                                     <div data-v-6e348d44="" data-v-decd48ac="" class="info">
                                                         <div data-v-6e348d44="" data-v-decd48ac="" class="title">
                                                             Contract income</div>
@@ -244,8 +276,7 @@
                                             <div data-v-6e348d44="" data-v-decd48ac="" class="earnings">
                                                 <div data-v-6e348d44="" data-v-decd48ac="" class="info_box"><img
                                                         data-v-6e348d44="" data-v-decd48ac=""
-                                                        src="{{ asset('') }}static/img/jk-0.e73a5edd.png"
-                                                        alt="">
+                                                        src="{{asset('')}}static/img/jk-0.e73a5edd.png" alt="">
                                                     <div data-v-6e348d44="" data-v-decd48ac="" class="info">
                                                         <div data-v-6e348d44="" data-v-decd48ac="" class="title">
                                                             Team Benefits</div>
@@ -263,60 +294,71 @@
                                     </div>
                                 </div>
                                 <div data-v-6e348d44="" data-v-decd48ac="" class="main">
-                                   
-
-                                    <div data-v-6e348d44="" data-v-decd48ac=""
-                                        class="list-box today_earnings container">
-                                        <div data-v-6e348d44="" data-v-decd48ac="" class="name">
+                                    <div data-v-6e348d44="" data-v-decd48ac="" class="total-income container">
+                                        <div data-v-6e348d44="" data-v-decd48ac="" class="name flex">
                                             <div data-v-6e348d44="" data-v-decd48ac="" class="flex1 ti-be ti0"><span
-                                                    data-v-6e348d44="" data-v-decd48ac="">Income Record</span></div>
-                                            <div data-v-6e348d44="" data-v-decd48ac="" class="sift"><span
-                                                    data-v-6e348d44="" data-v-decd48ac="">2025-04</span><img
+                                                    data-v-6e348d44="" data-v-decd48ac="">Total revenue</span></div>
+                                            <div data-v-6e348d44="" data-v-decd48ac="" class="set"><span
+                                                    data-v-6e348d44="" data-v-decd48ac="">Nearly seven days</span><img
                                                     data-v-6e348d44="" data-v-decd48ac=""
-                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABoSURBVHgBdU4xEgARDFxKLb/xG1paSl7oJ0qjdCeFYYZtkk022WWttZFSQq0VNyilkHMGF0IQeUFKianhk3jvaXD7Zq2lnoTzIsZIdReFEJYb3xfOuSU0xhyR2Pix25VS0HuH1vqI8QFftx3YJNdVOAAAAABJRU5ErkJggg=="
+                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADBSURBVHgBnc/dDYIwEAfwu5YBdANHcAQeeWQEHAAIE4gT8DUAjsEjI7iBk9B6l2hStaWFf3Lppb37JQWgNE0TU6WwM7SbUZ24R26klM/3270oissGC9q2HYUQGffLshwFnQfjPev7fgy0vjBOFEVnUVXVQ2t924r+YmzkeT7j56LruhoRr8aO8/s2rCzLmns0B0PQNewP9KE+zAq6UKUU+DAn6EDBh3EkODJN05wkCZkYh2KroA31YcEZhiGlikNmX7p6eni6eTdOAAAAAElFTkSuQmCC"
                                                     alt=""></div>
                                         </div>
-                                        <div data-v-6e348d44="" data-v-decd48ac="" class="empty db"
-                                            style="display: none;">
-                                            <div data-v-6e348d44="" data-v-decd48ac="" class="flexs">
+                                        <div data-v-6e348d44="" data-v-decd48ac="" class="info">
+                                            <div data-v-6e348d44="" data-v-decd48ac="" id="myChart"
+                                                style="width: 100%; height: 5.6rem; user-select: none;"
+                                                _echarts_instance_="ec_1745235972236">
+                                                <div
+                                                    style="position: relative; width: 399px; height: 280px; padding: 0px; margin: 0px; border-width: 0px;">
+                                                    <canvas
+                                                        style="position: absolute; left: 0px; top: 0px; width: 399px; height: 280px; user-select: none; padding: 0px; margin: 0px; border-width: 0px;"
+                                                        data-zr-dom-id="zr_0" width="798" height="560"></canvas>
+                                                </div>
+                                            </div>
+                                            <div data-v-6e348d44="" data-v-decd48ac="" class="img">
                                                 <div data-v-5f0c154b="" data-v-6e348d44=""
                                                     class="empty db custom-image" data-v-decd48ac="">
                                                     <div data-v-5f0c154b="" class="flexs">
                                                         <div data-v-5f0c154b="" class="custom-image van-empty">
                                                             <div class="van-empty__image"><img
-                                                                    src="/static/img/none0.f307acfc.png"></div>
+                                                                    src="{{asset('')}}static/img/none0.f307acfc.png"></div>
                                                             <p class="van-empty__description">No data yet</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div data-v-6e348d44="" class="van-pull-refresh" data-v-decd48ac="">
-                                            <div class="van-pull-refresh__track" style="transition-duration: 0ms;">
-                                                <div class="van-pull-refresh__head" style="height: 50px;"></div>
-                                                <div data-v-6e348d44="" role="feed" class="van-list">
-                                                    <ul data-v-6e348d44="">
-                                                        <li data-v-6e348d44="">
-                                                            <div data-v-6e348d44="" class="flex1">
-                                                                <div data-v-6e348d44="" class="n">Contract
-                                                                    income(ID:694194)</div>
-                                                                <div data-v-6e348d44="" class="time">2025-04-22
-                                                                    01:52:05</div>
-                                                            </div>
-                                                            <div data-v-6e348d44="" class="s">+0.03 USDT</div>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="van-list__finished-text">No more</div>
-                                                    <div class="van-list__placeholder"></div>
+                                    </div>
+                                    <div data-v-6e348d44="" data-v-decd48ac=""
+                                        class="list-box today_earnings container">
+                                        <div data-v-6e348d44="" data-v-decd48ac="" class="name">
+                                            <div data-v-6e348d44="" data-v-decd48ac="" class="flex1 ti-be ti0"><span
+                                                    data-v-6e348d44="" data-v-decd48ac="">Income Record</span></div>
+                                            <div data-v-6e348d44="" data-v-decd48ac="" class="sift"><span
+                                                    data-v-6e348d44="" data-v-decd48ac=""></span><img
+                                                    data-v-6e348d44="" data-v-decd48ac=""
+                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABoSURBVHgBdU4xEgARDFxKLb/xG1paSl7oJ0qjdCeFYYZtkk022WWttZFSQq0VNyilkHMGF0IQeUFKianhk3jvaXD7Zq2lnoTzIsZIdReFEJYb3xfOuSU0xhyR2Pix25VS0HuH1vqI8QFftx3YJNdVOAAAAABJRU5ErkJggg=="
+                                                    alt=""></div>
+                                        </div>
+                                        <div data-v-6e348d44="" data-v-decd48ac="" class="empty db" style="">
+                                            <div data-v-6e348d44="" data-v-decd48ac="" class="flexs">
+                                                <div data-v-5f0c154b="" data-v-6e348d44=""
+                                                    class="empty db custom-image" data-v-decd48ac="">
+                                                    <div data-v-5f0c154b="" class="flexs">
+                                                        <div data-v-5f0c154b="" class="custom-image van-empty">
+                                                            <div class="van-empty__image"><img
+                                                                    src="{{asset('')}}static/img/none0.f307acfc.png"></div>
+                                                            <p class="van-empty__description">No data yet</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div><!---->
                                     </div>
-
                                 </div><!----><!----><!---->
                             </div>
                         </div>
-
+               
                         @include('layouts.upnl.footer')
                     </div>
                 </div>
@@ -334,11 +376,18 @@
             </div>
             <p data-v-b68a32e2="">Loading...</p>
         </div><!---->
+        <div data-v-b68a32e2="" class="page-loading-con" style="display: none;">
+            <div data-v-b68a32e2="" class="page-loading">
+                <div data-v-b68a32e2="" class="loader-outter"></div>
+                <div data-v-b68a32e2="" class="loader-inner"></div>
+            </div>
+            <p data-v-b68a32e2="">Loading...</p>
+        </div><!---->
     </div>
-    <script src="{{ asset('') }}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
-    <script src="{{ asset('') }}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
-    <script src="{{ asset('') }}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
-    <script src="{{ asset('') }}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script>
+    <script src="{{asset('')}}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
+    <script src="{{asset('')}}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
+    <script src="{{asset('')}}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
+    <script src="{{asset('')}}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script>
 </body>
 
 </html>
