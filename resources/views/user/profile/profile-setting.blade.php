@@ -262,17 +262,17 @@
                                             alt=""></div>
                                     <div data-v-3eefa016="" data-v-decd48ac="" class="container">
                                         <ul data-v-3eefa016="" data-v-decd48ac="" class="line2 flex">
-<a href="{{route('user.WithdrawHistory')}}">
+
 
                                             <li data-v-3eefa016="" data-v-decd48ac="">
                                                 <div data-v-3eefa016="" data-v-decd48ac="" class="ico"><img
                                                         data-v-3eefa016="" data-v-decd48ac=""
                                                         src="{{ asset('') }}static/img/ct-0.2f282e7c.png" alt=""></div>
-                                                <p data-v-3eefa016="" data-v-decd48ac="">Deposit and Withdrawal Records
+                                                <p data-v-3eefa016="" data-v-decd48ac=""><a href="{{route('user.Withdraw-History')}}">Deposit and Withdrawal Records    </a>
+
                                                 </p>
                                             </li>
 
-    </a>
 
                                             <li data-v-3eefa016="" data-v-decd48ac="">
                                                 <div data-v-3eefa016="" data-v-decd48ac="" class="ico"><img
