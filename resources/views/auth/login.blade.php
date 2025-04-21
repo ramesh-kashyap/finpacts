@@ -193,11 +193,15 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+                                <form action="{{ route('loginAction') }}" method="POST" name="login_frm" id="form-id">
+                                {{ csrf_field() }}
                                 <div data-v-67a36a02="" data-v-decd48ac="" class="main">
                                     <div data-v-67a36a02="" data-v-decd48ac="" class="container">
                                         <ul data-v-67a36a02="" data-v-decd48ac="" class="tab">
-                                            <li data-v-67a36a02="" data-v-decd48ac="" class="on">Account </li>
-                                            <li data-v-67a36a02="" data-v-decd48ac="" class="">email </li>
+                                            <!-- <li data-v-67a36a02="" data-v-decd48ac="" class="on">Account </li> -->
+                                            <li data-v-67a36a02="" data-v-decd48ac="" class="">Mobile phone </li>
                                         </ul>
                                         <ul data-v-67a36a02="" data-v-decd48ac="" class="line">
                                             <li data-v-67a36a02="" data-v-decd48ac="" class="">
@@ -205,12 +209,20 @@
                                                         data-v-67a36a02="" data-v-decd48ac="">Account</span>
                                                     <!---->
                                                 </div>
+
+                                                <div data-v-39429002="" class="set_area" class="phone_code" id="phone_code"
+                                        style="padding-left: 10px">
+                                        <input type="hidden" id="country-name" name="country" value="CANADA">
+                                        <input type="hidden" id="dial-code" name="dialCode" value="1">
+                                        <input type="hidden" id="country_iso" name="country_iso"
+                                            value="CA">
                                                 <div data-v-67a36a02="" data-v-decd48ac="" class="flex">
-                                                    <!---->
                                                     <div data-v-67a36a02="" data-v-decd48ac="" class="flex1">
-                                                        <!---->
-                                                        <!----><input data-v-67a36a02="" data-v-decd48ac="" type="text"
-                                                            placeholder="Please enter your account number"></div>
+                                                        
+                                                        <input data-v-67a36a02="" data-v-decd48ac="" type="text"
+                                                        name="phone" data-v-6e2d35de=""
+                                                    type="text" onkeyup="this.value=this.value.replace(/[ ]/g,'')"
+                                                    placeholder="Please enter your phone number"></div>
                                                     <!---->
                                                 </div>
                                             </li>
@@ -218,9 +230,13 @@
                                                 <div data-v-67a36a02="" data-v-decd48ac="" class="name"><span
                                                         data-v-67a36a02="" data-v-decd48ac="">password</span></div>
                                                 <div data-v-67a36a02="" data-v-decd48ac="" class="flex">
-                                                    <div data-v-67a36a02="" data-v-decd48ac="" class="flex1"><input
+                                                    <div data-v-67a36a02="" data-v-decd48ac="" class="flex1">
+                                                        
+                                                    <input
                                                             data-v-67a36a02="" data-v-decd48ac=""
-                                                            placeholder="The password should be a combination of 6-20 letters and numbers"
+                                                            id="passwordInput"  name="password"
+                                                 placeholder="Please enter your password"
+                                                onkeyup="this.value=this.value.replace(/[ ]/g,'')"
                                                             type="password"></div>
                                                     <div data-v-67a36a02="" data-v-decd48ac="" class="arr"><img
                                                             data-v-67a36a02="" data-v-decd48ac=""
@@ -228,6 +244,10 @@
                                                     </div>
                                                 </div>
                                             </li>
+
+
+
+
                                             <li data-v-67a36a02="" data-v-decd48ac="" class="fog"><span
                                                     data-v-67a36a02="" data-v-decd48ac="">Forgot password？</span></li>
                                         </ul><button data-v-67a36a02="" data-v-decd48ac="" class="btn on"> Login
@@ -236,6 +256,8 @@
                                                 data-v-67a36a02="" data-v-decd48ac="">Register now</span></div>
                                     </div>
                                 </div>
+
+                                <form>
                                 <!---->
                             </div>
                         </div>
