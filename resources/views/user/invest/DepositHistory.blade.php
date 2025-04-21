@@ -1,260 +1,289 @@
-<html lang="en" class="van-theme-light pc" style="font-size: 50px;">
+<html style="font-size: 50px;" translate="no">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="{{ asset('') }}static/img//favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Deposit and Withdrawal Records</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <link rel="icon" href="/logo.png">
+    <meta name="google" content="notranslate">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="full-screen" content="true">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+    <meta name="renderer" content="webkit">
     <meta name="robots" content="noindex, nofollow">
-    <title>{{siteName()}}</title>
-    <script type="module" crossorigin="" src="{{ asset('') }}assets/js/index-Cu3eXXG0.js"></script>
-    <link rel="modulepreload" crossorigin="" href="{{ asset('') }}assets/js/vant-3s7b3naM.js">
-    <link rel="modulepreload" crossorigin="" href="{{ asset('') }}assets/js/vuei18n-CA58nVJV.js">
-    <link rel="modulepreload" crossorigin="" href="{{ asset('') }}assets/js/corejs-C4iS2aBk.js">
-    <link rel="modulepreload" crossorigin="" href="{{ asset('') }}assets/js/vuex-MbEfqX8_.js">
-    <link rel="modulepreload" crossorigin="" href="{{ asset('') }}assets/js/cryptojs-BILcvZe1.js">
-    <link rel="modulepreload" crossorigin="" href="{{ asset('') }}assets/js/qrcodejs2fix-CnmRM6Pf.js">
-    <link rel="modulepreload" crossorigin="" href="{{ asset('') }}assets/js/vueclipboard3-C7DdPEQF.js">
-    <link rel="modulepreload" crossorigin="" href="{{ asset('') }}assets/js/uaParserJs-QZjeYS1Z.js">
-    <link rel="modulepreload" crossorigin="" href="{{ asset('') }}assets/js/vuerouter-7dy5tY0D.js">
-    <link rel="modulepreload" crossorigin="" href="{{ asset('') }}assets/js/axios-Cm0UX6qg.js">
-    <link rel="modulepreload" crossorigin="" href="{{ asset('') }}assets/js/swiper-C1TWdcvt.js">
-    <link rel="modulepreload" crossorigin="" href="{{ asset('') }}assets/js/bignumberjs-DOH-f-tm.js">
-    <link rel="modulepreload" crossorigin="" href="{{ asset('') }}assets/js/validator-DnYg83Z5.js">
-    <link rel="modulepreload" crossorigin="" href="{{ asset('') }}assets/js/vanttouchemulator-Cv_in60N.js">
-    <link rel="stylesheet" crossorigin="" href="{{ asset('') }}assets/css/index-CFWvmehk.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/index-B8Wpqfi2.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/index-DTz0zoMQ.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/echartsCharts-RcjN-jxb.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/index-DzB4lFNc.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/PageScroll-BjR-l6de.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/PageScroll-B0U5qQ_M.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/MainHeader-D3h2V_im.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/MainHeader-DmTIx4Xq.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/ComPicker-D2IkiGpm.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/FloatingBubble-CGxu3QJe.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/FloatingBubble-Dntr2w2Z.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/MainFooter-Bwjvfc67.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/MainFooter-KaNE-uqv.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/index-BTvxA5JQ.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/index-BblBrGU_.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/InsideHeader-BqE9d46l.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/icon_back_white-Fd3ZFuzm.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/InsideHeader-k_Fsd2wZ.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/ComList-CInCVZJE.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/ComList-De3GxwF0.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/ListEmpty-5pO20G0l.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/ListEmpty-BnV8Jpo-.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/index-Dt82l3-u.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/icon_copy_min-DeS-a5w4.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/index-CN2cg-QD.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/ComImage-DYXlRKis.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/ComImage-C3FUzSnY.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/index-BDuupn1p.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/icon_record-C7zQIaVK.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/index-BZLleKh5.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/ComSticky-BzIdbyp2.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/index-B2dh4aS5.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/index-3m6MC6us.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/index-D4ACcMsm.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/icon_copy-BwRkM0m9.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/icon_tips-BV3W61Vo.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/index-DF07rLbC.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/index-CbQiSdtC.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/index-C9hSSQFb.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/index-ko4d_xox.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/index-CB8PRsXb.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{ asset('') }}assets/js/index-xPBJ99Wx.js">
-    <link rel="stylesheet" href="{{ asset('') }}assets/css/index-D0RfEik9.css">
-    <link rel="icon"  href="{{ asset('static/img/logo2.png') }}">
+    <style type="text/css">
+        .page-loading-con {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
+        .page-loading {
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+        }
+
+        .loader-outter,
+        .loader-inner {
+            position: absolute;
+            border: 0.1em solid #0b53b4;
+            border-radius: 50%;
+        }
+
+        .loader-outter {
+            border-left-color: transparent;
+            border-bottom: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-animation: loader-outter 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+            animation: loader-outter 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+        }
+
+        .loader-inner {
+            width: 1em;
+            height: 1em;
+            left: calc(50% - 0.5em);
+            top: calc(50% - 0.5em);
+            border-right: 0;
+            border-top-color: transparent;
+            -webkit-animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+            animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+        }
+
+        @-webkit-keyframes loader-outter {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        <blade keyframes|%20loader-outter%20%7B>0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+
+        @-webkit-keyframes loader-inner {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
+
+        <blade keyframes|%20loader-inner%20%7B>0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(-360deg);
+        }
+        }
+
+    </style>
+  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            text-transform: capitalize;
+        }
+
+    </style>
+   
+    <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="preload" as="style">
+    <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
+    <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="preload" as="style">
+    <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="stylesheet">
+    <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="stylesheet">
+    <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-5e3ca19c.d046fd46.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-5e3ca19c.77374a8b.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-5576a184.9f52f39a.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-5576a184.c49d8c14.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-7cbde8e8.788c4ae8.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-7cbde8e8.43936207.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-4f89519c.2a0f3cea.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-4f89519c.5238fa59.1744307594169.chunk.js"></script>
+    <script charset="utf-8" src="/js1744307594169/chunk-4006da76.e92bfa42.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-4a423c40.9e22073a.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-4a423c40.e4024504.1744307594169.chunk.js"></script>
 </head>
 
-<body class="">
-    <div id="app" data-v-app="">
-        <div class="van-config-provider">
-            <!---->
+<body class="mein_cn">
+    <div class="page-loading-con" id="loaderInit" style="display: none;">
+        <div class="page-loading">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
         </div>
-        
-        <style>
-            .list .item[data-v-74600836] {
-    background: #f5f5f5;
-    margin-bottom: .32rem;
-    border-radius: .24rem;
-    background: #0f0e11;
-    border-radius: .32rem;
-    background: #0f0e11;
-}
-.list .item .item-top .name[data-v-74600836] {
-    font-size: .28rem;
-    font-weight: 500;
-    line-height: 1em;
-    color: #000;
-}
-.list .item .item-top .time[data-v-74600836] {
-    margin-top: .16rem;
-    font-size: .24rem;
-    line-height: 1em;
-    color: #817777;
-}
-        </style>
-        <div data-v-e85f0186="" data-v-6ebc7169="" class="page" style="background-color: rgb(255, 255, 255);">
-            <div data-v-e85f0186="" class="headers">
-                <div data-v-54adc729="" data-v-e85f0186="" class="inside-header">
-                    <div data-v-54adc729="" class="left">
-                        <div data-v-54adc729="" class="back"> <a href="{{route('user.invest')}}"> <img data-v-54adc729=""
-                                src="data:image/png;base64,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"
-                                class="icon"></a></div>
-                    </div>
-                </div>
-            </div>
-            <div data-v-e85f0186="" class="page-container">
-                <div data-v-e85f0186="" class="scroll">
-                    <div data-v-6ebc7169="" style="">
-                        <div class="van-sticky" style="">
-                            <div data-v-6ebc7169="" class="tabs-con container">
-                                <div data-v-6ebc7169="" class="title_heand">Deposit History</div>
-                                
+    </div>
+    <div id="app" class="applang">
+        <div data-v-6302a7bf="">
+            <div data-v-6302a7bf="" class="van-pull-refresh">
+                <div class="van-pull-refresh__track" style="transition-duration: 0ms;">
+                    <div class="van-pull-refresh__head" style="height: 60px;"></div>
+                    <div data-v-decd48ac="" data-v-4c275272="" class="page">
+                        <div data-v-decd48ac="" class="headers on">
+                            <div data-v-29c52665="" data-v-4c275272="" class="head head0" data-v-decd48ac="">
+                                <div data-v-29c52665="" class="container flex">
+                                    <div data-v-29c52665="" class="back"><img data-v-29c52665=""
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE+SURBVHgB3diLDYIwEAbgwy7gCLoBbOIGtiM4gbqBE0DdSCcQJ5AN8GrAIPIobXNH+JOG0jbhCyVpC8DSIqVcmwKBsgKPKKX2URQ9sLwQdYQAicAxBoMX3Wwry3Krtc7BI05vqAtTpQDPTAb1YXDaFL4db9CkKRvCpGmqIUCsQRQYaxAVxgpEiRkFUWMGQRyYXhAXphPEifkDcWN+QHPAfEEDaxNVciynLMuu9Vp2At5ssFxMpQYF22B55LMwf0C4jzkAbwr8Vs+m8v2occcnsTHrGCzN3AJRRF25YeI4fiJq1xqzS5Ikx+47EEQ0b+aAEu0GbpToauREib4OLpQY6uRAibEB1KhREDXKCkSJsgZRoZzO9j3LTFGd7b1Or05ne3yoxoerVnOQHYPz75g2yqzWIc723ql+WG1gqXkDGBPa7OTyg7AAAAAASUVORK5CYII="
+                                            alt=""></div>
+                                    <!---->
+                                    <div data-v-29c52665="" class="name tac">Deposit and Withdrawal Records</div>
+                                    <div data-v-29c52665="" class="flex1"></div>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div data-v-24f31d9d="" data-v-6ebc7169="" class="van-pull-refresh van-refresh-com container">
-                        <div class="van-pull-refresh__track" style="transition-duration: 0ms;">
-                            <div class="van-pull-refresh__head" style="height: 100px;"></div>
-                            <div data-v-24f31d9d="" role="feed" class="van-list" aria-busy="false">
-                            <?php if(is_array($deposit_list) || is_object($deposit_list)){ ?>
-
-                               <?php
-                                date_default_timezone_set('UTC');
-                                 $cnt = 0; ?>
-                                 @foreach($deposit_list as $value)
-                                <div data-v-74600836="" data-v-6ebc7169="" class="list" style="margin-top: 5px;">
-                                    <div data-v-74600836="" class="item">
-                                        <div data-v-74600836="" class="item-top">                                        
-                                            <div data-v-5f911827="" data-v-74600836="" class="com-image avatar">
-                                                <div data-v-5f911827="" class="van-image image">
-                                                <span><img src="{{asset('static/img//logo.png')}}" class="van-image__img" style="object-fit: cover;">
-                                                    </span>
+                        <div data-v-decd48ac="" id="scroll" class="content-container" style="padding-top: 44px;">
+                            <div data-v-decd48ac="" id="content" class="content-scroll">
+                                <div data-v-4c275272="" data-v-decd48ac="" class="container">
+                                    <ul data-v-4c275272="" data-v-decd48ac="" class="flex tab">
+                                        <li data-v-4c275272="" data-v-decd48ac="" class="on"> Recharge </li>
+                                        <li data-v-4c275272="" data-v-decd48ac="" class=""> Withdrawal </li>
+                                    </ul>
+                                    <ul data-v-4c275272="" data-v-decd48ac="" class="setBox flex">
+                                        <li data-v-4c275272="" data-v-decd48ac="" class="on">
+                                            <div data-v-4c275272="" data-v-decd48ac="" class="n">Currency</div>
+                                            <div data-v-4c275272="" data-v-decd48ac="" class="val flex">
+                                                <div data-v-4c275272="" data-v-decd48ac="" class="flex1"><span
+                                                        data-v-4c275272="" data-v-decd48ac="">All</span></div><i
+                                                    data-v-4c275272="" data-v-decd48ac=""
+                                                    class="van-icon van-icon-arrow-down">
+                                                    <!----></i>
+                                            </div>
+                                        </li>
+                                        <!---->
+                                    </ul>
+                                    <div data-v-4c275272="" data-v-decd48ac="" class="empty db" style="display: none;">
+                                        <div data-v-4c275272="" data-v-decd48ac="" class="flexs">
+                                            <div data-v-5f0c154b="" data-v-4c275272="" class="empty db custom-image"
+                                                data-v-decd48ac="">
+                                                <div data-v-5f0c154b="" class="flexs">
+                                                    <div data-v-5f0c154b="" class="custom-image van-empty">
+                                                        <div class="van-empty__image"><img
+                                                                src="/static/img/none0.f307acfc.png"></div>
+                                                        <p class="van-empty__description">No data yet</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div data-v-74600836="" class="right">
-                                                <div data-v-74600836="" class="name">{{ $value->amount }} {{generalDetail()->cur_text}}<span
-                                                        data-v-74600836="">（TID: {{ $value->transaction_id }}） </span></div>
-                                                <div data-v-74600836="" class="time">{{date("D, d M Y H:i:s ", strtotime($value->created_at))}}</div>
-                                            </div>                                                                                     
-                                            @if($value->status=="Pending")                                          
-                                            <a  href="{{route('user.cancel-payment',['id'=>$value->orderId])}}"
-                                                name="balance/oper_frm_btncancel" data-v-74600836="" 
-                                                class="copy-btn" style="     background: #df3131;
-                                                padding: 3px;
-                                                color: #0f0e11;
-                                                text-decoration: none;
-                                                border-radius: 7px; background: #df3131;padding-bottom:10px" >                                          
-                                            Cancel</a> 
-                                            @else
-                                                            <span>Completed</span>                                       
-                                                        @endif
                                         </div>
-                                        
-                                        @endforeach   
-                                                                            
-                                        <?php }?>    
-                                        
-                                           <div style="margin-bottom: 30em;"> <br><br><br><br><br><br><br><br><br><br></div>
+                                    </div>
+                                    <div data-v-4c275272="" class="van-pull-refresh" data-v-decd48ac="">
+                                        <div class="van-pull-refresh__track" style="transition-duration: 0ms;">
+                                            <div class="van-pull-refresh__head" style="height: 50px;"></div>
+                                            <div data-v-4c275272="" role="feed" class="van-list">
+                                                <ul data-v-4c275272="" class="list">
+                                                    <li data-v-4c275272="" class="flex">
+                                                        <div data-v-4c275272="" class="flex1">
+                                                            <div data-v-4c275272="" class="n">Recharge</div>
+                                                            <!---->
+                                                            <div data-v-4c275272="" class="time">2025-04-21 05:46:40
+                                                            </div>
+                                                        </div>
+                                                        <div data-v-4c275272="" class="str">
+                                                            <div data-v-4c275272="" class="price">13.5 USDT</div>
+                                                            <!---->
+                                                            <div data-v-4c275272="" class="s"><span data-v-4c275272=""
+                                                                    class="s1">Completed</span></div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="van-list__finished-text">No more</div>
+                                                <div class="van-list__placeholder"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <!---->
-                                <!---->
-                                <div class="van-list__placeholder"></div>
+                                <div class="van-overlay" style="z-index: 2005; display: none;"></div>
+                                <div data-v-4c275272="" class="van-popup van-popup--bottom"
+                                    style="background: none; z-index: 2006; display: none;">
+                                    <div data-v-4c275272="" class="pop_type">
+                                        <ul data-v-4c275272="">
+                                            <li data-v-4c275272="" class="on"> All </li>
+                                            <li data-v-4c275272="" class=""> Completed </li>
+                                            <li data-v-4c275272="" class=""> Under review </li>
+                                            <li data-v-4c275272="" class=""> Failed </li>
+                                        </ul>
+                                        <div data-v-4c275272="" class="cancel"> Cancel </div>
+                                    </div>
+                                </div>
+                                <div class="van-overlay" style="z-index: 2007; display: none;"></div>
+                                <div data-v-4c275272="" class="van-popup van-popup--bottom"
+                                    style="background: none; z-index: 2008; display: none;">
+                                    <div data-v-4c275272="" class="pop_type">
+                                        <ul data-v-4c275272="">
+                                            <li data-v-4c275272="" class="on"> All </li>
+                                            <li data-v-4c275272="" class=""> USDT </li>
+                                            <li data-v-4c275272="" class=""> USDC </li>
+                                        </ul>
+                                        <div data-v-4c275272="" class="cancel"> Cancel </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <!---->
                     </div>
                 </div>
-                <div data-v-8b363259="" data-v-e85f0186="" class="touch-move-con" style="top: 1.88rem; right: 0.2rem;">
-                </div>
             </div>
-            <!---->
-     
-
-
-    <div class="van-overlay" role="button" tabindex="0" style="z-index: 2004; display: none;">
-        <!---->
-    </div>
-    <div role="dialog" tabindex="0" class="van-popup van-popup--bottom" style="z-index: 2004; display: none;">
-        <div class="van-picker">
-            <div class="van-picker__toolbar"><button type="button"
-                    class="van-picker__cancel van-haptics-feedback">Cancel</button>
-                <!----><button type="button" class="van-picker__confirm van-haptics-feedback">Confirm</button></div>
-            <!---->
-            <!---->
-            <div class="van-picker__columns" style="height: 264px;">
-                <div class="van-picker-column">
-                    <ul class="van-picker-column__wrapper"
-                        style="transform: translate3d(0px, 110px, 0px); transition-duration: 0ms; transition-property: none;">
-                        <li role="button" tabindex="0" class="van-picker-column__item van-picker-column__item--selected"
-                            style="height: 44px;">
-                            <div class="van-ellipsis">All</div>
-                        </li>
-                        <li role="button" tabindex="0" class="van-picker-column__item" style="height: 44px;">
-                            <div class="van-ellipsis">Today</div>
-                        </li>
-                        <li role="button" tabindex="0" class="van-picker-column__item" style="height: 44px;">
-                            <div class="van-ellipsis">Last 7 Days</div>
-                        </li>
-                        <li role="button" tabindex="0" class="van-picker-column__item" style="height: 44px;">
-                            <div class="van-ellipsis">Last 30 Days</div>
-                        </li>
-                        <li role="button" tabindex="0" class="van-picker-column__item" style="height: 44px;">
-                            <div class="van-ellipsis">Last 60 Days</div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="van-picker__mask" style="background-size: 100% 110px;"></div>
-                <div class="van-hairline-unset--top-bottom van-picker__frame" style="height: 44px;"></div>
+        </div>
+        <div data-v-a7d12cfc="" class="global-loading default" style="display: none;">
+            <div data-v-a7d12cfc="" class="global-spinner"><img data-v-a7d12cfc=""
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAArCAYAAAADgWq5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAF6WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMi0wNC0xMlQxNTo0MTowNiswODowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjItMDQtMTJUMTU6NDM6MTQrMDg6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjItMDQtMTJUMTU6NDM6MTQrMDg6MDAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NWU0ZGQwNmEtMWExNS1kYjRmLTkyZmQtZjIzNTAwNzJkMGNmIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjlGMTI0NjE1NTQzQzExRThCQzhCQzEyQjVDOUMzOEJGIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6OUYxMjQ2MTU1NDNDMTFFOEJDOEJDMTJCNUM5QzM4QkYiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiBwaG90b3Nob3A6SUNDUHJvZmlsZT0ic1JHQiBJRUM2MTk2Ni0yLjEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5RjEyNDYxMjU0M0MxMUU4QkM4QkMxMkI1QzlDMzhCRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5RjEyNDYxMzU0M0MxMUU4QkM4QkMxMkI1QzlDMzhCRiIvPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo1ZTRkZDA2YS0xYTE1LWRiNGYtOTJmZC1mMjM1MDA3MmQwY2YiIHN0RXZ0OndoZW49IjIwMjItMDQtMTJUMTU6NDM6MTQrMDg6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+hddYGwAABHhJREFUWIXN2XuoFVUUx/HPXG9WmmIPJQtNwQwqe5paEI1pCBZCRvVXDwlKCsLpIURgIZZG1KEXRVJJWPRnIv3TAw/0UCsrUlBLLQ1T01Ip6eZr+mPPOHOP56jXcz3XHxzu3nv2nv29a/bstdaeyJIXdYOG4bLs77k4AzvQFyvxKw7gJ/xZHpjGSZcmam8Csg/uxU0Yi8HHMGYz1uAtfIh/uzrp8QBPwFO4HgfR1oWx52e/CViX3ef9rkwedWFJXIQncE+da7uwHcuwF1uQClbvi1G4tMF9V+GuNE5+6C7gUzANT2Joqb0Dm/A6XsO+I9yjD/7DaMzArTi1ps/iNE6mNAvcjqfxKE4rtS/BXHxytAnqqBcuwHQ8XnNtP0amcfJLo8FHWn/98QIeK8Fuw3W48ThhCbvFBsxEhMWla+3YEFUrfbsKfDpewcOKR/e5sBssPU7QusqWwTTBurlWN+rfCHg67i7V3xasurFZwHpK42QBxmFP1jQkqlbW1utbD3g0ygt7Fe7T2QLdrjROVmBSqWlkVK28WtuvHvB7pfImXNvNbA2VxsmXeKnU9FBUrVxT7lMLHGNkVt6JO/DPiQKspzROZuC3UtM7UbVyiLMMPBDzSvWFWHFC6RprrLCbwCU4ZOUy8G24OivvxCwneN02UhonWwSD5Xo3L5SBpypii/mCu+1JzRHcOwyPqpVhFMD9MSYr78OnLUWrozRO1gk7FCE8mEwBPE7hzVbiu5bSNdabpfKkqFqJcuCr0Dsrr1ETZPegPiiVJ6dxkubAQwW/TohTTxa1K4x3IKpWLmwToqfhWWMqpDEnhdI42SrENYSYpqNN2O+uyBojfN16tPqKqpV2fJNVD+LK3MJbS/0GtRqskdI42Y+zsmob/moTlkHuVQ7qHKifDCpnJtvbBMg8XmjD2S1HaqCoWhmgCDl3o1e+S3xf6tey6OwY1K4IxrZhcw68rNRpjJNHA4WsG7ancbI7B/5CcagxCv1aTVarLKS8OaumAuMh17xFsVb64YaW0tVXO27PyvuxiAL4oJC35Xq+dVwNdbEiDv5btmzL4eXcUnmEwpn0lGYpwoVFaZykdAbeJZziEB7HG0JY13JF1crlyE+BdmQsODynm60ImkcIS6WliqqVQXhO8MCEg5Yf8+u1wFvxANbjfoUHbImiaqU3XsbErGkf5qRx0pH3qXfcOj/79YSeFXaG3JAz0zjZUO7QzIF2tymLyp7BI4oXbYVg7U7qceCoWhmKBRhfal6NKWmcHPYOdeX0/EQoxkc6wy7FxDROfq83oKcsfIvw+MfXtC8VLLuj0cBmgXsLb/RIfCVkK72FrXGfELjsEXLGFHcK580DdI5zd2F2GieVo03YLPCDwqF3nmr1Ek6N1grfN7Zn/8xenNPgHsuFbxw/H8uEzQLvVLwH+UZ/pnDOQfg0UKsD2biPMS+Nk5VdmbBZ4IVCVjtVyAXPE2LYsjqEtGs9vhWCrM8cp1NqFviA4OdzXz9ESLcGC+Abhe9yy4Vk8o8m5/M/9rYMi48jzWIAAAAASUVORK5CYII="
+                    alt=""></div>
+        </div>
+        <div data-v-b68a32e2="" class="page-loading-con" style="display: none;">
+            <div data-v-b68a32e2="" class="page-loading">
+                <div data-v-b68a32e2="" class="loader-outter"></div>
+                <div data-v-b68a32e2="" class="loader-inner"></div>
             </div>
-            <!---->
-            <!---->
-        
-    
-    <div class="van-overlay" role="button" tabindex="0" style="z-index: 2005; display: none;">
-        <!---->
-    </div>
-    <div role="dialog" tabindex="0" class="van-popup van-popup--bottom" style="z-index: 2005; display: none;">
-        <div class="van-picker">
-            <div class="van-picker__toolbar"><button type="button"
-                    class="van-picker__cancel van-haptics-feedback">Cancel</button>
-                <!----><button type="button" class="van-picker__confirm van-haptics-feedback">Confirm</button></div>
-            <!---->
-            <!---->
-            <div class="van-picker__columns" style="height: 264px;">
-                <div class="van-picker-column">
-                    <ul class="van-picker-column__wrapper"
-                        style="transform: translate3d(0px, 110px, 0px); transition-duration: 0ms; transition-property: none;">
-                        <li role="button" tabindex="0" class="van-picker-column__item van-picker-column__item--selected"
-                            style="height: 44px;">
-                            <div class="van-ellipsis">All</div>
-                        </li>
-                        <li role="button" tabindex="0" class="van-picker-column__item" style="height: 44px;">
-                            <div class="van-ellipsis">Today</div>
-                        </li>
-                        <li role="button" tabindex="0" class="van-picker-column__item" style="height: 44px;">
-                            <div class="van-ellipsis">Last 7 Days</div>
-                        </li>
-                        <li role="button" tabindex="0" class="van-picker-column__item" style="height: 44px;">
-                            <div class="van-ellipsis">Last 30 Days</div>
-                        </li>
-                        <li role="button" tabindex="0" class="van-picker-column__item" style="height: 44px;">
-                            <div class="van-ellipsis">Last 60 Days</div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="van-picker__mask" style="background-size: 100% 110px;"></div>
-                <div class="van-hairline-unset--top-bottom van-picker__frame" style="height: 44px;"></div>
-            </div>
-            <!---->
-            <!---->
+            <p data-v-b68a32e2="">Loading...</p>
         </div>
         <!---->
     </div>
-        </div>
-    </div>
+  
+</body>
 
+</html>
