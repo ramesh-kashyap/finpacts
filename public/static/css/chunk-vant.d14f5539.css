@@ -3856,7 +3856,7 @@ ul {
 }
 
 .van-pull-refresh {
-    overflow: hidden;
+    overflow: scroll;
     -webkit-user-select: none;
     user-select: none
 }

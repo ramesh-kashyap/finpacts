@@ -189,7 +189,7 @@
                             <div data-v-decd48ac="" id="content" class="content-scroll">
                                 <div data-v-0bbb1260="" data-v-2a245038="" data-v-decd48ac="">
                                     <div data-v-0bbb1260="" class="info_tip_box">
-                                        <div data-v-0bbb1260="" class="info_tip">
+                                        {{-- <div data-v-0bbb1260="" class="info_tip">
                                             <div data-v-0bbb1260="" class="img"><img data-v-0bbb1260=""
                                                     src="{{asset('')}}static/img/logo.95f8e869.png" alt=""></div>
                                             <div data-v-0bbb1260="" class="text_box">
@@ -199,7 +199,7 @@
                                                 </div>
                                             </div><i data-v-0bbb1260=""
                                                 class="cross van-icon van-icon-cross"><!----></i>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                                 <div data-v-2a245038="" data-v-decd48ac="" class="home">
