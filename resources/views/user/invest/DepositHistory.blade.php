@@ -156,8 +156,138 @@
     <script charset="utf-8" src="/js1744307594169/chunk-4006da76.e92bfa42.1744307594169.chunk.js"></script>
     <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-4a423c40.9e22073a.css">
     <script charset="utf-8" src="/js1744307594169/chunk-4a423c40.e4024504.1744307594169.chunk.js"></script>
+    <style type="text/css">
+        .page-loading-con {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page-loading {
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+        }
+
+        .loader-outter,
+        .loader-inner {
+            position: absolute;
+            border: 0.1em solid #0b53b4;
+            border-radius: 50%;
+        }
+
+        .loader-outter {
+            border-left-color: transparent;
+            border-bottom: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-animation: loader-outter 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+            animation: loader-outter 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+        }
+
+        .loader-inner {
+            width: 1em;
+            height: 1em;
+            left: calc(50% - 0.5em);
+            top: calc(50% - 0.5em);
+            border-right: 0;
+            border-top-color: transparent;
+            -webkit-animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+            animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+        }
+
+        @-webkit-keyframes loader-outter {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        <blade keyframes|%20loader-outter%20%7B>0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+
+        @-webkit-keyframes loader-inner {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
+
+        <blade keyframes|%20loader-inner%20%7B>0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(-360deg);
+        }
+        }
+
+    </style>
+  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            text-transform: capitalize;
+        }
+
+    </style>
+   
+    <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="preload" as="style">
+    <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
+    <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="preload" as="style">
+    <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="stylesheet">
+    <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="stylesheet">
+    <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-5e3ca19c.d046fd46.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-5e3ca19c.77374a8b.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-5576a184.9f52f39a.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-5576a184.c49d8c14.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-7cbde8e8.788c4ae8.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-7cbde8e8.43936207.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-4f89519c.2a0f3cea.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-4f89519c.5238fa59.1744307594169.chunk.js"></script>
+    <script charset="utf-8" src="/js1744307594169/chunk-4006da76.e92bfa42.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-4a423c40.9e22073a.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-4a423c40.e4024504.1744307594169.chunk.js"></script>
 </head>
 
+<body class="mein_cn">
+    <div class="page-loading-con" id="loaderInit" style="display: none;">
+        <div class="page-loading">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
 <body class="mein_cn">
     <div class="page-loading-con" id="loaderInit" style="display: none;">
         <div class="page-loading">
@@ -255,6 +385,62 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div data-v-4c275272="" class="van-pull-refresh" data-v-decd48ac="">
+                                        <div class="van-pull-refresh__track" style="transition-duration: 0ms;">
+                                            <div class="van-pull-refresh__head" style="height: 50px;"></div>
+                                            <div data-v-4c275272="" role="feed" class="van-list">
+                                                <ul data-v-4c275272="" class="list">
+                                                    <li data-v-4c275272="" class="flex">
+                                                        <div data-v-4c275272="" class="flex1">
+                                                            <div data-v-4c275272="" class="n">Recharge</div>
+                                                            <!---->
+                                                            <div data-v-4c275272="" class="time">2025-04-21 05:46:40
+                                                            </div>
+                                                        </div>
+                                                        <div data-v-4c275272="" class="str">
+                                                            <div data-v-4c275272="" class="price">13.5 USDT</div>
+                                                            <!---->
+                                                            <div data-v-4c275272="" class="s"><span data-v-4c275272=""
+                                                                    class="s1">Completed</span></div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="van-list__finished-text">No more</div>
+                                                <div class="van-list__placeholder"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="van-overlay" style="z-index: 2005; display: none;"></div>
+                                <div data-v-4c275272="" class="van-popup van-popup--bottom"
+                                    style="background: none; z-index: 2006; display: none;">
+                                    <div data-v-4c275272="" class="pop_type">
+                                        <ul data-v-4c275272="">
+                                            <li data-v-4c275272="" class="on"> All </li>
+                                            <li data-v-4c275272="" class=""> Completed </li>
+                                            <li data-v-4c275272="" class=""> Under review </li>
+                                            <li data-v-4c275272="" class=""> Failed </li>
+                                        </ul>
+                                        <div data-v-4c275272="" class="cancel"> Cancel </div>
+                                    </div>
+                                </div>
+                                <div class="van-overlay" style="z-index: 2007; display: none;"></div>
+                                <div data-v-4c275272="" class="van-popup van-popup--bottom"
+                                    style="background: none; z-index: 2008; display: none;">
+                                    <div data-v-4c275272="" class="pop_type">
+                                        <ul data-v-4c275272="">
+                                            <li data-v-4c275272="" class="on"> All </li>
+                                            <li data-v-4c275272="" class=""> USDT </li>
+                                            <li data-v-4c275272="" class=""> USDC </li>
+                                        </ul>
+                                        <div data-v-4c275272="" class="cancel"> Cancel </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                    </div>
                                     </div>
                                     <div data-v-4c275272="" class="van-pull-refresh" data-v-decd48ac="">
                                         <div class="van-pull-refresh__track" style="transition-duration: 0ms;">
