@@ -1,50 +1,115 @@
-<html class="pc" style="font-size: 50px;">
+<html style="font-size: 50px;" translate="no">
 
 <head>
     <meta charset="utf-8">
-    <title>Strategy</title>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Contract</title>
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="expires" content="0">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <link rel="icon" href="/logo.png">
+    <meta name="google" content="notranslate">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="full-screen" content="true">
     <meta name="x5-fullscreen" content="true">
     <meta name="360-fullscreen" content="true">
     <meta name="renderer" content="webkit">
     <meta name="robots" content="noindex, nofollow">
-    <link rel="manifest" href="/manifest.json">
-    <script>
-        window.addEventListener("error", function(event) {
-            if (event.message.indexOf("Unexpected token '<'") > -1) {
-                location.reload();
-            }
-        });
-        if ("standalone" in window.navigator && window.navigator.standalone) {
-            var noddy,
-                remotes = false;
-            document.addEventListener(
-                "click",
-                function(event) {
-                    noddy = event.target;
-                    while (noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
-                        noddy = noddy.parentNode;
-                    }
-                    if (
-                        "href" in noddy &&
-                        noddy.href.indexOf("http") !== -1 &&
-                        (noddy.href.indexOf(document.location.host) !== -1 || remotes)
-                    ) {
-                        event.preventDefault();
-                        document.location.href = noddy.href;
-                    }
-                },
-                false
-            );
+    <style type="text/css">
+        .page-loading-con {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-    </script>
+
+        .page-loading {
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+        }
+
+        .loader-outter,
+        .loader-inner {
+            position: absolute;
+            border: 0.1em solid #0b53b4;
+            border-radius: 50%;
+        }
+
+        .loader-outter {
+            border-left-color: transparent;
+            border-bottom: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-animation: loader-outter 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+            animation: loader-outter 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+        }
+
+        .loader-inner {
+            width: 1em;
+            height: 1em;
+            left: calc(50% - 0.5em);
+            top: calc(50% - 0.5em);
+            border-right: 0;
+            border-top-color: transparent;
+            -webkit-animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+            animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+        }
+
+        @-webkit-keyframes loader-outter {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes loader-outter {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes loader-inner {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes loader-inner {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+ 
     <style>
         * {
             margin: 0;
@@ -55,1310 +120,632 @@
         html,
         body {
             width: 100%;
-        }
-
-        #startLogo {
-            width: 100%;
-            min-width: 7.5rem;
-            height: 100vh;
-            max-width: 8.5rem;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1000000;
-            background: #020503;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            display: none;
-        }
-
-        #startLogo img {
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
+            text-transform: capitalize;
         }
     </style>
-    <link href="/js1743475952730/app.fe8857a9.1743475952730.js?v=1743475952730" rel="preload" as="script">
-    <link href="/js1743475952730/axios.fe8857a9.1743475952730.js?v=1743475952730" rel="preload" as="script">
-    <link href="/js1743475952730/compressorjs.fe8857a9.1743475952730.js?v=1743475952730" rel="preload" as="script">
-    <link href="/js1743475952730/core-js.fe8857a9.1743475952730.js?v=1743475952730" rel="preload" as="script">
-    <link href="/js1743475952730/crypto-js.fe8857a9.1743475952730.js?v=1743475952730" rel="preload" as="script">
-    <link href="/js1743475952730/vant.fe8857a9.1743475952730.js?v=1743475952730" rel="preload" as="script">
-    <link href="/js1743475952730/vendors~app.fe8857a9.1743475952730.js?v=1743475952730" rel="preload" as="script">
-    <link href="/js1743475952730/vue.fe8857a9.1743475952730.js?v=1743475952730" rel="preload" as="script">
-    <link href="{{ asset('') }}static/css/app.6328f701.css" rel="preload" as="style">
-    <link href="{{ asset('') }}static/css/vant.d14f5539.css" rel="preload" as="style">
-    <link href="{{ asset('') }}static/css/vant.d14f5539.css" rel="stylesheet">
-    <link href="{{ asset('') }}static/css/app.6328f701.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-6f896b4e.5bb66763.css">
-    <script charset="utf-8" src="/js1743475952730/chunk-6f896b4e.fe8857a9.1743475952730.js?v=1743475952730"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-5576a184.9f52f39a.css">
-    <script charset="utf-8" src="/js1743475952730/chunk-5576a184.fe8857a9.1743475952730.js?v=1743475952730"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-60c8a75a.d6f6b692.css">
-    <script charset="utf-8" src="/js1743475952730/chunk-60c8a75a.fe8857a9.1743475952730.js?v=1743475952730"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-a7d8f170.c87a4291.css">
-    <script charset="utf-8" src="/js1743475952730/chunk-a7d8f170.fe8857a9.1743475952730.js?v=1743475952730"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-67912ed2.ae8d438d.css">
-    <script charset="utf-8" src="/js1743475952730/chunk-67912ed2.fe8857a9.1743475952730.js?v=1743475952730"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-bcc45786.50818f65.css">
-    <script charset="utf-8" src="/js1743475952730/chunk-bcc45786.fe8857a9.1743475952730.js?v=1743475952730"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-00b1464f.674dbd13.css">
-    <script charset="utf-8" src="/js1743475952730/chunk-00b1464f.fe8857a9.1743475952730.js?v=1743475952730"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-7f362702.6a53b834.css">
-    <script charset="utf-8" src="/js1743475952730/chunk-7f362702.fe8857a9.1743475952730.js?v=1743475952730"></script>
-    <script charset="utf-8" src="/js1743475952730/echarts.fe8857a9.1743475952730.js?v=1743475952730"></script>
-    <script charset="utf-8" src="/js1743475952730/chunk-0119f9da.fe8857a9.1743475952730.js?v=1743475952730"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-0b116a05.250ed6be.css">
-    <script charset="utf-8" src="/js1743475952730/chunk-0b116a05.fe8857a9.1743475952730.js?v=1743475952730"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-353b28dc.5ad553f6.css">
-    <script charset="utf-8" src="/js1743475952730/chunk-353b28dc.fe8857a9.1743475952730.js?v=1743475952730"></script>
-    <script charset="utf-8" src="/js1743475952730/chunk-5b5516a4.fe8857a9.1743475952730.js?v=1743475952730"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-bb17762c.89cc2aa3.css">
-    <script charset="utf-8" src="/js1743475952730/chunk-bb17762c.fe8857a9.1743475952730.js?v=1743475952730"></script>
-    <link rel="icon"  href="{{ asset('static/img/logo2.png') }}">
-
+    <link href="{{asset('')}}js1744307594169/app.46ba12d9.1744307594169.js" rel="preload" as="script">
+    <link href="{{asset('')}}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js" rel="preload" as="script">
+    <link href="{{asset('')}}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js" rel="preload" as="script">
+    <link href="{{asset('')}}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js" rel="preload" as="script">
+    <link href="{{asset('')}}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js" rel="preload" as="script">
+    <link href="{{asset('')}}static/css/app.c3049ff2.css" rel="preload" as="style">
+    <link href="{{asset('')}}static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
+    <link href="{{asset('')}}static/css/chunk-vendors.794edbf9.css" rel="preload" as="style">
+    <link href="{{asset('')}}static/css/chunk-vant.d14f5539.css" rel="stylesheet">
+    <link href="{{asset('')}}static/css/chunk-vendors.794edbf9.css" rel="stylesheet">
+    <link href="{{asset('')}}static/css/app.c3049ff2.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-7c54221e.86e4aaa2.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-7c54221e.a353e3ff.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-5576a184.9f52f39a.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-5576a184.c49d8c14.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-7cbde8e8.788c4ae8.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-7cbde8e8.43936207.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-4f89519c.2a0f3cea.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-4f89519c.5238fa59.1744307594169.chunk.js"></script>
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-4006da76.e92bfa42.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-693d0a34.f05eb557.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-693d0a34.843d936b.1744307594169.chunk.js"></script>
 </head>
-<style>
-    .btn_box .btn[data-v-c95fb5c2] {
-        height: .88rem;
-        line-height: .88rem;
-        text-align: center;
-        color: #ffffff;
-        font-size: .28rem;
-        border-radius: .16rem !important;
-        background: #212423 !important;
-    }
-
-    .info-com[data-v-73226123] {
-        display: flex;
-        margin-bottom: .32rem;
-        flex-wrap: wrap;
-        background: linear-gradient(180deg, #111116, #141519);
-        border: .02rem solid hsla(0, 0%, 100%, .1);
-        padding: 13px;
-        border-radius: 11px;
-    }
-
-    .info-com li.on .val[data-v-73226123] {
-        color: #f5e1e1;
-    }
-
-    .tab li[data-v-427eef2e] {
-        color: #ffffff;
-        padding: .18rem;
-        flex: 1;
-        text-align: center;
-    }
-
-    .card {
-        background-color: #e4ad53;
-        padding: 20px;
-        border-radius: 12px;
-        width: 100%;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .header {
-        display: flex;
-        justify-content: space-between;
-        font-weight: bold;
-        margin-bottom: 10px;
-        color: #000;
-    }
-
-    .progress-bar {
-        height: 10px;
-        background-color: #96c907;
-        border-radius: 10px;
-        overflow: hidden;
-        margin-bottom: 20px;
-    }
-
-    .progress-fill {
-        width: 50%;
-        /* 3 out of 6 = 50% */
-        height: 100%;
-        background: linear-gradient(90deg, var(--token-c56d9be0-ff1a-4142-9896-10e19a52f142, rgb(255, 91, 255)) 0%, var(--token-66f80229-774a-4cca-92cb-b110eff3766a, rgb(4, 182, 216)) 48.91786%, var(--token-f05fe42a-0284-4847-be0d-a2808346fd91, rgb(11, 229, 116)) 100%);
-        border-radius: 10px 0 0 10px;
-    }
-
-    .button {
-        background-color: #96c907;
-        color: black;
-        border: none;
-        padding: 10px;
-        width: 100%;
-        border-radius: 10px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-top: 10px;
-    }
-
-    .button:hover {
-        background-color: #96c907;
-    }
-
-
-
-        .card {
-            background-color: #2b2b2b;
-            border: 1px solid #444;
-        }
-
-        .header {
-            color: #fff;
-        }
-
-        .progress-bar {
-            background-color: #444;
-        }
-
-        .progress-fill {
-            background-color: #96c907;
-        }
-
-        .button {
-            background-color: #96c907;
-            color: #000;
-        }
-
-        .button:hover {
-            background-color: #96c907;
-        }
-
-
-    .order-box {
-        background-color: #e4ad53;
-        border-radius: 12px;
-        padding: 20px;
-        width: 100%;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .order-box h3 {
-        margin-top: 0;
-        text-align: center;
-        font-size: 16px;
-        font-weight: bold;
-        color: #000;
-        margin-bottom: 15px;
-    }
-
-    .order-box p {
-        font-size: 14px;
-        color: #000;
-        margin: 0 0 10px 0;
-        line-height: 1.5;
-    }
-
-
-        .order-box {
-            background-color: #2b2b2b;
-            border: 1px solid #444;
-        }
-
-        .order-box h3,
-        .order-box p {
-            color: #fff;
-        }
-    
-
-
-    /* From Uiverse.io by ZacharyCrespin */
-    @keyframes square-animation {
-        0% {
-            left: 0;
-            top: 0;
-        }
-
-        10.5% {
-            left: 0;
-            top: 0;
-        }
-
-        12.5% {
-            left: 32px;
-            top: 0;
-        }
-
-        23% {
-            left: 32px;
-            top: 0;
-        }
-
-        25% {
-            left: 64px;
-            top: 0;
-        }
-
-        35.5% {
-            left: 64px;
-            top: 0;
-        }
-
-        37.5% {
-            left: 64px;
-            top: 32px;
-        }
-
-        48% {
-            left: 64px;
-            top: 32px;
-        }
-
-        50% {
-            left: 32px;
-            top: 32px;
-        }
-
-        60.5% {
-            left: 32px;
-            top: 32px;
-        }
-
-        62.5% {
-            left: 32px;
-            top: 64px;
-        }
-
-        73% {
-            left: 32px;
-            top: 64px;
-        }
-
-        75% {
-            left: 0;
-            top: 64px;
-        }
-
-        85.5% {
-            left: 0;
-            top: 64px;
-        }
-
-        87.5% {
-            left: 0;
-            top: 32px;
-        }
-
-        98% {
-            left: 0;
-            top: 32px;
-        }
-
-        100% {
-            left: 0;
-            top: 0;
-        }
-    }
-
-    .loader {
-        position: relative;
-        width: 96px;
-        height: 96px;
-        transform: rotate(45deg);
-    }
-
-    .loader-square {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 28px;
-        height: 28px;
-        margin: 2px;
-        border-radius: 0px;
-        background: #96c907;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        animation: square-animation 10s ease-in-out infinite both;
-    }
-
-    .loader-square:nth-of-type(0) {
-        animation-delay: 0s;
-    }
-
-    .loader-square:nth-of-type(1) {
-        animation-delay: -1.4285714286s;
-    }
-
-    .loader-square:nth-of-type(2) {
-        animation-delay: -2.8571428571s;
-    }
-
-    .loader-square:nth-of-type(3) {
-        animation-delay: -4.2857142857s;
-    }
-
-    .loader-square:nth-of-type(4) {
-        animation-delay: -5.7142857143s;
-    }
-
-    .loader-square:nth-of-type(5) {
-        animation-delay: -7.1428571429s;
-    }
-
-    .loader-square:nth-of-type(6) {
-        animation-delay: -8.5714285714s;
-    }
-
-    .loader-square:nth-of-type(7) {
-        animation-delay: -10s;
-    }
-
-    .global-loading.default[data-v-a7d12cfc] {
-        /* width: 1.2rem; */
-        /* height: 1.2rem; */
-        top: 50%;
-        left: 43%;
-        transform: translate(-50%, -50%);
-    }
-
-    .modal {
-        background-color: #e4ad53;
-        border-radius: 12px;
-        padding: 24px;
-        width: 100%;
-        max-width: 400px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        position: relative;
-    }
-
-    .modal h2 {
-        margin-top: 0;
-        font-size: 20px;
-    }
-
-    .modal p {
-        margin: 8px 0;
-        font-size: 14px;
-    }
-
-    .modal img {
-        height: 50px;
-        width: 50px;
-        margin-right: 10px;
-        vertical-align: middle;
-        border-radius: 8px;
-    }
-
-    .payment-info {
-        display: flex;
-        align-items: center;
-        margin: 12px 0;
-    }
-
-    .commission {
-        font-weight: bold;
-        margin-top: 10px;
-    }
-
-    .commission span {
-        color: red;
-        float: right;
-    }
-
-    .modal-footer {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-    }
-
-    .modal-footer button {
-        flex: 1;
-        margin: 0 5px;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 8px;
-        font-weight: bold;
-        cursor: pointer;
-        background: linear-gradient(to bottom right, #e48f53, #e4ad53);
-        color: black;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    .modal-footer button:hover {
-        background: linear-gradient(to bottom right, #d5773f, #db9947);
-    }
-
-    .close-btn {
-        position: absolute;
-        top: 12px;
-        right: 16px;
-        font-size: 20px;
-        cursor: pointer;
-    }
-
-    /* === DARK MODE === */
-    @media (prefers-color-scheme: dark) {
-        body {
-            background-color: #1a1a1a;
-        }
-
-        .modal {
-            background-color: #2b2b2b;
-            color: white;
-            border: 1px solid #444;
-        }
-
-        .modal-footer button {
-            background: linear-gradient(to bottom right, #ff7f50, #ffaa33);
-            color: black;
-        }
-
-        .modal-footer button:hover {
-            background: linear-gradient(to bottom right, #e67340, #ff9933);
-        }
-
-        .commission span {
-            color: #ff6b6b;
-        }
-
-        .close-btn {
-            color: white;
-        }
-    }
-
-    .button {
-        --black-700: hsla(0 0% 12% / 1);
-        /* --border_radius: 9999px; */
-        --transtion: 0.3s ease-in-out;
-        --offset: 2px;
-        cursor: pointer;
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: 0px;
-        transform-origin: center;
-        padding: 15px;
-        background-color: transparent;
-        border: none;
-        border-radius: var(--border_radius);
-        transform: scale(calc(1 + (var(--active, 0) * 0.1)));
-        transition: transform var(--transtion);
-    }
-
-    .button::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        width: 100%;
-        height: 100%;
-        background-color: var(--black-700);
-
-        border-radius: var(--border_radius);
-        box-shadow: inset 0 0.5px hsl(0, 0%, 100%), inset 0 -1px 2px 0 hsl(0, 0%, 0%),
-            0px 4px 10px -4px hsla(0 0% 0% / calc(1 - var(--active, 0))),
-            0 0 0 calc(var(--active, 0) * 0.375rem) hsl(260 97% 50% / 0.75);
-
-        transition: all var(--transtion);
-        z-index: 0;
-    }
-
-    .button::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        width: 100%;
-        height: 100%;
-        background-color: hsla(260 97% 61% / 0.75);
-        background-image: radial-gradient(at 51% 89%,
-                hsla(266, 45%, 74%, 1) 0px,
-                transparent 50%),
-            radial-gradient(at 100% 100%, hsla(266, 36%, 60%, 1) 0px, transparent 50%),
-            radial-gradient(at 22% 91%, hsla(266, 36%, 60%, 1) 0px, transparent 50%);
-        background-position: top;
-
-        opacity: var(--active, 0);
-        border-radius: var(--border_radius);
-        transition: opacity var(--transtion);
-        z-index: 2;
-    }
-
-    /* .button:is(:hover, :focus-visible) {
-  --active: 1;
-} */
-    .button:active {
-        transform: scale(1);
-    }
-
-    .button .dots_border {
-        --size_border: calc(100% + 2px);
-
-        overflow: hidden;
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        width: var(--size_border);
-        height: var(--size_border);
-        background-color: transparent;
-
-        border-radius: var(--border_radius);
-        z-index: -10;
-    }
-
-    .button .dots_border::before {
-        content: "";
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transform-origin: left;
-        transform: rotate(0deg);
-
-        width: 100%;
-        height: 2rem;
-        background-color: white;
-
-        mask: linear-gradient(transparent 0%, white 120%);
-        animation: rotate 2s linear infinite;
-    }
-
-    @keyframes rotate {
-        to {
-            transform: rotate(360deg);
-        }
-    }
-
-    .button .sparkle {
-        position: relative;
-        z-index: 10;
-        margin: -8px auto;
-        width: 0.75rem;
-    }
-
-    .button .sparkle .path {
-        fill: currentColor;
-        stroke: currentColor;
-
-        transform-origin: center;
-
-        color: hsl(0, 0%, 100%);
-    }
-
-    .button:is(:hover, :focus) .sparkle .path {
-        animation: path 1.5s linear 0.5s infinite;
-    }
-
-    .button .sparkle .path:nth-child(1) {
-        --scale_path_1: 1.2;
-    }
-
-    .button .sparkle .path:nth-child(2) {
-        --scale_path_2: 1.2;
-    }
-
-    .button .sparkle .path:nth-child(3) {
-        --scale_path_3: 1.2;
-    }
-
-    @keyframes path {
-
-        0%,
-        34%,
-        71%,
-        100% {
-            transform: scale(1);
-        }
-
-        17% {
-            transform: scale(var(--scale_path_1, 1));
-        }
-
-        49% {
-            transform: scale(var(--scale_path_2, 1));
-        }
-
-        83% {
-            transform: scale(var(--scale_path_3, 1));
-        }
-    }
-
-    .button .text_button {
-        position: relative;
-        z-index: 10;
-        background-image: linear-gradient(90deg, hsla(0 0% 100% / 1) 0%, hsla(0 0% 100% / var(--active, 0)) 120%);
-        background-clip: text;
-        font-size: 20px;
-        color: transparent;
-        margin: 0px auto;
-    }
-    .info-com li[data-v-73226123]:nth-child(-n+3) {
- 
-    border-image: linear-gradient(90deg, var(--token-f05fe42a-0284-4847-be0d-a2808346fd91, rgb(11, 229, 116)) 0%, var(--token-66f80229-774a-4cca-92cb-b110eff3766a, rgb(4, 182, 216)) 48.09%, var(--token-c56d9be0-ff1a-4142-9896-10e19a52f142, rgb(255, 91, 255)) 100%);
-    border-image-slice: 1;
-    }
-</style>
 
 <body class="mein_cn">
+    <div class="page-loading-con" id="loaderInit" style="display: none;">
+        <div class="page-loading">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+        </div>
+    </div>
     <div id="app" class="applang">
-        <div data-v-6e2d35de="" data-v-427eef2e="" class="page">
-            <div data-v-6e2d35de="" class="headers">
-                <div data-v-b73557e2="" data-v-427eef2e="" class="head" data-v-6e2d35de="">
-                    <div data-v-b73557e2="" class="safe"></div>
-                    <div data-v-b73557e2="" class="container flex" style=" background: #0f0e11=">
-
-                        <!---->
-                        <!---->
-                        <!---->
-                        <div data-v-b73557e2="" class="name tac"> Marketing traffic</div>
-                        <!---->
-                        <!---->
-                        <!---->
-                        <div data-v-b73557e2="" class="flex1"></div>
-                        <!---->
-                        <!---->
-                        <!---->
-                        <!---->
-                        <!---->
-                        <div data-v-b73557e2="" class="head_right"><img data-v-427eef2e="" data-v-b73557e2=""
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAOVBMVEUAAAD///////////////////////////////////////////////////////////////////////8KOjVvAAAAEnRSTlMA30Ag73AQz59gf7+QUDCwoI/U2H/IAAABWElEQVQ4y7VUQYLDIAhcFcVEk7T+/7ErWhaidnsqJwMDw0wSf74dzkcDpQBe3v0D21JRgdsbmDVlCLOChmerQfSHtdY/etczTMsh5ZNVBI821A04Q0l7T55mQgZKPSaakEmTTtN++0rgTnsqW+pjFsZts39TaFHZqBIbLh14kxuopgeewtUDWXw9s511RmT1zcpsVDVV17goa+TuR4BSLjWyW+TVFuk1PKtcbfLtcFFRtthfuaSE9zpyR5sObvBLGEE75ULHUQMbVh/aQbRIpQD5JWqWQAddugYy9aGBkf1gIFMbFjNYpMSglq/f/D4wXNwBtwmYhFkzulFNkKO8QnntMhGMuzOjfGZ6JN53PKFsw4crXxBVBIl6DS384PFz5Hc/19gScHkrhMjtwwVwzpfRGlmiVbBEmRkZckub6K21h4/QYavlN1PWMcvc8CNSruYLYYX8QvwC0IwcS/jNkO0AAAAASUVORK5CYII="
-                                alt="" class="headRight"></div>
-                    </div>
-                    <div data-v-b73557e2="">
-                        <!---->
-                    </div>
-                </div>
-            </div>
-
-
-            <?php
-            
-            $quantifiable_count = 0;
-            if ($balance >= 30 && $balance < 500) {
-                $quantifiable_count = 6;
-            } elseif ($balance >= 500 && $balance < 2999 && $userDirect >= 5) {
-                $quantifiable_count = 6;
-            } elseif ($balance >= 3000 && $userDirect >= 10) {
-                $quantifiable_count = 6;
-            } else {
-                $quantifiable_count = 6;
-            }
-            // dd($userDirect);
-            ?>
-
-
-            <div data-v-6e2d35de="" id="scroll" class="content-container">
-                <div data-v-6e2d35de="" id="content" class="content-scroll">
-                    <div data-v-427eef2e="" data-v-6e2d35de="" class="main">
-                        <div data-v-427eef2e="" data-v-6e2d35de="" class="container">
-                            <ul data-v-73226123="" data-v-427eef2e="" class="info-com" data-v-6e2d35de="">
-                                <li data-v-73226123="">
-                                    <div data-v-73226123="" class="title">My level</div>
-                                    <div data-v-73226123="" class="val"><img data-v-73226123=""
-                                            src="{{ asset('static/img/' . (Auth::user()->rank > 0 ? 'rank' . Auth::user()->rank : 'V0_icon.69de7dcc') . '.png') }}" alt="">VIP{{Auth::user()->rank}} </div>
-                                </li>
-                                <li data-v-73226123="">
-                                    <div data-v-73226123="" class="title">Wallet balance(USDT)</div>
-                                    <div data-v-73226123="" class="val">
-                                        {{ number_format(Auth::user()->available_balance(), 2) }} USDT </div>
-                                </li>
-                                <li data-v-73226123="">
-                                    <div data-v-73226123="" class="title">Current Package</div>
-                                    <div data-v-73226123="" class="val">{{number_format(Auth::user()->package,2)}} USDT</div>
-                                </li>
-                                <li data-v-73226123="" class="on">
-                                    <div data-v-73226123="" class="title">Today's earnings</div>
-                                    <div data-v-73226123="" class="val">{{ number_format($todaysLevelIncome, 2) }}
-                                    </div>
-                                </li>
-                                <li data-v-73226123="">
-                                    <div data-v-73226123="" class="title">Cumulative Income</div>
-                                    <div data-v-73226123="" class="val">
-                                        <?= Auth::user()->tradeAmt <= 0 && $todaysRoi < $quantifiable_count ? number_format($balance, 2) : number_format(Auth::user()->tradeAmt, 2) ?>
-                                        / {{ number_format($balance, 2) }}
-                                    </div>
-                                </li>
-                                <li data-v-73226123="">
-                                    <div data-v-73226123="" class="title">Team benefits(USDT)</div>
-                                    <div data-v-73226123="" class="val">{{ number_format($totalLevelIncome, 2) }}
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul data-v-427eef2e="" data-v-6e2d35de="" class="tab flex">
-                                <li data-v-427eef2e="" data-v-6e2d35de="" class="on" id="strategyButton"
-                                    id="strategyButton"> Strategy </li>
-                                <li data-v-427eef2e="" data-v-6e2d35de="" class="" id="todayButton"> Today
-                                </li>
-                                <li data-v-427eef2e="" data-v-6e2d35de="" class="" id="billButton"> Bill </li>
-                            </ul>
-
-                            <div id="defaultContent" style="display: block;">
-                                <div data-v-427eef2e="" data-v-6e2d35de="" class="select-level-tab">
-                                    <div data-v-427eef2e="" data-v-6e2d35de="" class="ico"><img data-v-427eef2e=""
-                                            data-v-6e2d35de="" src="{{ asset('static/img/' . (Auth::user()->rank > 0 ? 'rank' . Auth::user()->rank : 'V0_icon.69de7dcc') . '.png') }}"
-                                            alt="">
-                                    </div>
-                                    <div data-v-427eef2e="" data-v-6e2d35de="" class="flex1">
-                                        <div data-v-427eef2e="" data-v-6e2d35de="" class="title">VIP{{Auth::user()->rank}}</div>
-                                        <div data-v-427eef2e="" data-v-6e2d35de="" class="rate">Reward: {{ number_format(getPackageRoi(Auth::user()->package), 2) }}</div>
-                                    </div>
-                                    <div data-v-427eef2e="" data-v-6e2d35de="" class="val">{{number_format(Auth::user()->package,2)}} USDT </div><i
-                                        data-v-427eef2e="" data-v-6e2d35de="" class="van-icon van-icon-arrow">
-                                        <!---->
-                                    </i>
-                                </div>
-                               
-
-                                {{-- loader --}}
-
-                                <div id="loader-overlay" class="van-overlay" style="z-index: 2001; display:none">
-                                </div>
-                                <div id="loader" data-v-a7d12cfc="" class="global-loading default"
-                                    style="display: none;">
-                                    <div data-v-a7d12cfc="" class="global-spinner">
-                                        <div class="loader">
-                                            <div class="loader-square"></div>
-                                            <div class="loader-square"></div>
-                                            <div class="loader-square"></div>
-                                            <div class="loader-square"></div>
-                                            <div class="loader-square"></div>
-                                            <div class="loader-square"></div>
-                                            <div class="loader-square"></div>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-
-
-
-
-
-                                {{-- end loader --}}
-
-
-
-                                {{-- model popup --}}
-                                <div id="modal-overlay" class="van-overlay" style="z-index: 2001; display:none;">
-                                </div>
-                                <div id="modal" data-v-a7d12cfc="" class="van-popup van-popup--round"
-                                    style="display: none; z-index: 2003;    width: 94%;    top: 4rem;">
-
-                                    <div class="modal">
-                                        <div class="close-btn" onclick="hideModal()">&times;</div>
-                                        <h2>Submit order</h2>
-                                        <p><strong>Submit order time:</strong> <span id="modalTime">--</span></p>
-                                        <p><strong>Order Number:</strong> <span id="modalOrderNo">--</span></p>
-
-                                        <div class="payment-info">
-                                            <img id="modalCompanyLogo" src="" alt="Company Logo" />
-                                            <span id="modalCompanyName">--</span>
-                                        </div>
-
-                                        <div class="commission">
-                                            Commission:
-                                            <span id="modalROI">--</span>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-
-
-                                {{-- end model popup --}}
-
-                                <div class="card">
-                                    <div class="header">
-                                        <span>Starting</span>
-                                        <span id="progressText">{{ $todaysRoi }}/{{ $quantifiable_count }}</span>
-                                    </div>
-
-                                    <?php 
-                                     $quantifiableCount = 6;
-                                      $completedtask = $todaysRoi;
-                                      $process = ($completedtask / $quantifiableCount) * 100;
-                                    ?>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" id="progressFill" style="width: {{$process}}%"></div>
-                                    </div>
-
-
-
-                                    @php
-                                    $hourdiff = round((strtotime(date('Y-m-d H:i:s')) -
-                                    strtotime(Auth::user()->last_trade)) / 3600);
-                                    @endphp
-
-                                    @if ($hourdiff >= 24)
-                                    <button class="button" id="submitOrderBtn" onclick="submitOrder()">
-                                        <div class="dots_border"></div>
-
-                                        <p class="text_button"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 24 24" class="sparkle">
-                                                <path class="path" stroke-linejoin="round" stroke-linecap="round"
-                                                    stroke="black" fill="black"
-                                                    d="M14.187 8.096L15 5.25L15.813 8.096C16.0231 8.83114 16.4171 9.50062 16.9577 10.0413C17.4984 10.5819 18.1679 10.9759 18.903 11.186L21.75 12L18.904 12.813C18.1689 13.0231 17.4994 13.4171 16.9587 13.9577C16.4181 14.4984 16.0241 15.1679 15.814 15.903L15 18.75L14.187 15.904C13.9769 15.1689 13.5829 14.4994 13.0423 13.9587C12.5016 13.4181 11.8321 13.0241 11.097 12.814L8.25 12L11.096 11.187C11.8311 10.9769 12.5006 10.5829 13.0413 10.0423C13.5819 9.50162 13.9759 8.83214 14.186 8.097L14.187 8.096Z">
-                                                </path>
-                                                <path class="path" stroke-linejoin="round" stroke-linecap="round"
-                                                    stroke="black" fill="black"
-                                                    d="M6 14.25L5.741 15.285C5.59267 15.8785 5.28579 16.4206 4.85319 16.8532C4.42059 17.2858 3.87853 17.5927 3.285 17.741L2.25 18L3.285 18.259C3.87853 18.4073 4.42059 18.7142 4.85319 19.1468C5.28579 19.5794 5.59267 20.1215 5.741 20.715L6 21.75L6.259 20.715C6.40725 20.1216 6.71398 19.5796 7.14639 19.147C7.5788 18.7144 8.12065 18.4075 8.714 18.259L9.75 18L8.714 17.741C8.12065 17.5925 7.5788 17.2856 7.14639 16.853C6.71398 16.4204 6.40725 15.8784 6.259 15.285L6 14.25Z">
-                                                </path>
-                                                <path class="path" stroke-linejoin="round" stroke-linecap="round"
-                                                    stroke="black" fill="black"
-                                                    d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z">
-                                                </path>
-
-                                            </svg> GET TO WORK</p>
-
-                                    </button>
-
-                                    @else
-                                    <script src="https://code.jquery.com//jquery-3.3.1.min.js"></script>
-
-
-                                    <?php
-                                        
-                                        $date1 = Auth::user()->last_trade;
-                                        $date1 = strtotime($date1);
-                                        $date1 = strtotime(' + 24 hours', $date1);
-                                        $new_date1 = date('Y-m-d H:i:s', $date1);
-                                        
-                                        //   echo $new_date1;
-                                        
-                                        ?>
-
-                                    <script>
-                                        // Set the date we're counting down to
-                                            timer = setInterval(function() {
-                                                countdownTimeStart();
-
-                                            }, 1000);
-
-
-                                            function countdownTimeStart() {
-
-                                                var countDownDate = new Date("{{ $new_date1 }}").getTime();
-
-                                                // Get todays date and time
-                                                // var now = new Date().getTime();
-                                                var now = new Date(new Date().toLocaleString('en-US', {
-                                                    timeZone: 'Asia/Kolkata'
-                                                }))
-
-                                                // Find the distance between now an the count down date
-                                                var distance = countDownDate - now;
-
-                                                // Time calculations for days, hours, minutes and seconds
-                                                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                                                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                                                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                                                // Output the result in an element with id="demo"
-
-
-
-                                                document.getElementById("tiles").innerHTML = "<span>" + hours + ":</span><span>" + minutes + ":</span><span>" +
-                                                    seconds + "</span>";
-                                                //   $('#left_time').html('Hello');
-
-                                                // If the count down is over, write some text 
-                                                if (distance < 0) {
-                                                    clearInterval(timer);
-                                                    document.getElementById("tiles").innerHTML = "EXPIRED";
-                                                }
-
-                                            }
-                                    </script>
-
-                                    <button class="button" >
-                                        <div class="dots_border"></div>
-
-                                      <p class="text_button" >   Next Task : <span  id='tiles'>---</span></p>
-
-                                    </button>
-                                    @endif
-
-
-
-
-                                </div>
-                                <br>
-
-                                <div class="order-box">
-                                    <h3>ORDER DESCRIPTION</h3>
-                                    <p>Task orders are intelligently matched through TTMD’s cloud system, based on your current VIP level.</p>
-                                    <p>Receive commissions that align with your VIP tier — the higher your level, the greater your earnings.</p>
-                                </div>
-
-
-                                <!---->
-                                <div data-v-4dc539c5="" data-v-427eef2e="" class="list" data-v-6e2d35de="">
-                                    <div data-v-4dc539c5=""
-                                        class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-autoheight">
-
-                                    </div>
-                                    <div data-v-4dc539c5="">
-                                        <div data-v-4dc539c5="" class="swiper-prev my-button-disabled" tabindex="0"
-                                            role="button" aria-label="Previous slide" aria-disabled="true"
-                                            style="display: none;"><img data-v-4dc539c5=""
-                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAxlBMVEUAAABVVVlTU1dYWFhWVllSUVRSUVRUVFdUU1dVVFdSUlRUU1dQUFBQUFhVVVpSUVRTU1ZWVlpXV1lVVFZQUFBWVlhSUVRTU1ZUVFlUVFonJikrKy8sLDAoJyoqKi7///8pKCtSUVQqKSxVVVlWVllTU1Y2NTkyMTVGRklQUFMwMDNCQkU/PkJNTE85OTzl5eVLS048Oz+VlZdPTlGwsLGIiIpISExHR0ry8vLY2NjKysvx8fG9vb57e33X19eioqR5eHpubnE+vFK4AAAAGnRSTlMA348g7+/fz2Cvf0AQIJ+fv39wUCCAcG9wgNK0k0kAAARfSURBVFjDlVdpY9owDA2BlhRG1667cRyM7ZyQQemx+/j/f2qWXVt2EsqmtkA/vJenJ8nI0bEYJ/HFdMSFEKPpxfXNOPqvmMfnjEkVXNgYXc7/Ff1idsYYO5SbtqjpkpAib5ud5FyMkvG/wSWr9sXHj+lqvQYCHcu8qYSYxCcp3qmnPxYfFTwFgiUllmFJ8x3no+RZ+OKKsRLgEOlaETgFOuoHRTF+9vHbIjVwmwIK0CT7ik9eHcPHjG1WIN4RoAQAU/inLjm/Hsa/lFULwECBIyBAoGPDxeUQfsqqOrXYfgrq10ZR8enA89l26Z5tq4AKQAAogD9SV30NM8CnBq4CPmoPEA9YG7UUccd/Jmv7ePRgtabUJ9BOEJ0F50EtFmesdbgUCWwKyGC92PCJ3w/nrMFHIxMQkNCDpZXRiCvEJ76B7l3hvRRsEeDdGIlJLM5l7uOxlVEBwu2HnE9euA4sERaWEYfBwrEaO37tHCSpRWKEKVg4thNKSFAAEnSrgDhMZieun0pQHCcAvHzE1L0XkosJ4OdsG2SfdhXcZdm9kkB1IwRZSD7XQ7h5wqUWDi+ulW+zLPuCIKJ5TFINj00GaagdFdA1vc9U3FkTqH63QnIxiqLX8mDFh61splEC/lOJuVPfRynG0Q3WoNMI4EH5SeE/A97MgXYBc3ngiZrjvUb0ORRBDniwED3wy0AaNdUXLPfhyAUKvgP+NpwFX8KeX0RTViAmrOfqFvDfAY9DFMgo+FQVYdlXb97utYEtaCWIN3WEHyAYRYwBoguHwlZPBdBhoD0hggMBik59iq9AwIgvoGclR4JeL6dA8FlqdJeBGgYk0K3Y7eXqm04B0GhBJ7gAEwE+ICP9ncEYtNYE14RoZ61MnEriIzEDW8a7wAKoAHVicj6FRsLMDRSH6Q4bKfCOEDNYrWqkmG0C9fBjcoJW/gkMPwY9NPP8JkpYc6SVV2s7TDJ0D7Xs+E20YAdsA4vGcWamFIEL1DHAOKsy1EMlsKfyD0jiK/FmGD/mfKS/FfY9A/FM7B5pQS0bcakP1YNrfwxvwfiVZX+06/jVYrqAVlwvn2dwrPfQ/rHeElc7NNBkADGTZYgd3NL6nUx2IjG7qZaQhpNkPdCjD0F7X461WxFm7LGvIA23NFcG5HmAbwWU0Av0wITF4XmIO+tbuV2HpewTYBmpSaDi3tp8hQOBsdIEJgdzBvpRqhJgvNZLVupP1LACMDNYslwS7FD3TmWFdwTBeU5hzXvfXbQPxCV/asGgyoAPQ6tu6lZVeA0XTd0PuCxfDi3bWwK44TIimtJc4rIdamBtfxodmtgSbmT/+bYjWbN8dskCnoZDBw7HW3Xlye25hMPkb3o5G7zy4M6qRBBcNLubKtzbrp6/+SXncO3zGwkfn+8En7yPTsTr+Iyx7abuNlKuvBOTN7CbnqQAFawq93lBgKAo9s2DFALhp2P+0l2+OVdQ9TeK59F/xeJmpq7/kuvrf3z82v0XzBlpna+fUZ4AAAAASUVORK5CYII="
-                                                alt=""></div>
-                                        <div data-v-4dc539c5="" class="swiper-next my-button-disabled" tabindex="0"
-                                            role="button" aria-label="Next slide" aria-disabled="true"
-                                            style="display: none;"><img data-v-4dc539c5=""
-                                                src="data:image/png;base64,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"
+        <div data-v-6302a7bf="">
+            <div data-v-6302a7bf="" class="van-pull-refresh">
+                <div class="van-pull-refresh__track" style="transition-duration: 0ms;">
+                    <div class="van-pull-refresh__head" style="height: 60px;"></div>
+                    <div data-v-decd48ac="" data-v-5959a183="" class="page">
+                        <div data-v-decd48ac="" class="headers on">
+                            <div data-v-29c52665="" data-v-5959a183="" class="head head0" data-v-decd48ac="">
+                                <div data-v-29c52665="" class="container flex"><!---->
+                                    <div data-v-29c52665="" class="myName">
+                                        <div data-v-29c52665=""><img data-v-29c52665=""
+                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20231025/0feefd89860da746f3a51ec0d8063854.png"
                                                 alt=""></div>
                                     </div>
+                                    <div data-v-29c52665="" class="name tac">Contract</div>
+                                    <div data-v-29c52665="" class="flex1"></div><!----><!----><!----><!----><!---->
+                                    <div data-v-29c52665="" class="str"> Order Record </div><!----><!----><!---->
                                 </div>
                             </div>
-
-
-
-
-
-
-
-                            <div data-v-68c18260="" class="list" id="billContent" style="display: none;">
-                                @if (is_array($level_income) || $level_income)
-                                @foreach ($level_income as $value)
-                                <div data-v-68c18260="" class="list-item">
-                                    <div data-v-68c18260="" class="com1">
-                                        <div data-v-68c18260="" class="left">
-                                            <div data-v-68c18260="" class="title"></div>
-                                            <div data-v-68c18260="" class="time">
-                                                {{ date('D, d M Y', strtotime($value->created_at)) }}</div>
-                                        </div>
-                                        <div data-v-68c18260="" class="right">
-                                            <div data-v-68c18260=""></div>
-                                            <span data-v-68c18260="">Completed</span>
-                                            <i data-v-68c18260="" class="van-icon van-icon-arrow"></i>
+                        </div>
+                        <div data-v-decd48ac="" id="scroll" class="content-container"
+                            style="padding-top: 44px; padding-bottom: 60px;">
+                            <div data-v-decd48ac="" id="content" class="content-scroll">
+                                <div data-v-5959a183="" data-v-decd48ac="" class="bann">
+                                    <div data-v-5959a183="" data-v-decd48ac="" class="container">
+                                        <div data-v-5959a183="" class="van-swipe" data-v-decd48ac="">
+                                            <div class="van-swipe__track"
+                                                style="transition-duration: 0ms; transform: translateX(0px); width: 2240px;">
+                                                <div data-v-5959a183="" class="van-swipe-item" style="width: 320px;">
+                                                    <div data-v-5959a183="" class="swiper flex v0"
+                                                        style="pointer-events: none;">
+                                                        <div data-v-5959a183="" class="flex1">
+                                                            <div data-v-5959a183="">
+                                                                <div data-v-5959a183="" class="dj">
+                                                                    <div data-v-5959a183=""
+                                                                        class="dj-bg themeLevelLabel0"></div><span
+                                                                        data-v-5959a183="">Current level</span>
+                                                                </div>
+                                                                <div data-v-5959a183="" class="name themeColor0">
+                                                                    <div data-v-5959a183="" class="icon"></div>
+                                                                    Junior Ally
+                                                                </div>
+                                                            </div>
+                                                            <div data-v-5959a183="" class="str themeColor0"><span
+                                                                    data-v-5959a183=""> This level has been reached
+                                                                </span></div>
+                                                        </div>
+                                                        <div data-v-5959a183="" class="ico"><img
+                                                                data-v-5959a183=""
+                                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241203/bc3cf11087b69389ded07723adf92b4a.png"
+                                                                alt="" style="pointer-events: none;"></div>
+                                                    </div>
+                                                </div>
+                                                <div data-v-5959a183="" class="van-swipe-item" style="width: 320px;">
+                                                    <div data-v-5959a183="" class="swiper flex v1"
+                                                        style="pointer-events: none;">
+                                                        <div data-v-5959a183="" class="flex1">
+                                                            <div data-v-5959a183="">
+                                                                <div data-v-5959a183="" class="dj">
+                                                                    <div data-v-5959a183=""
+                                                                        class="dj-bg themeLevelLabel1"></div><span
+                                                                        data-v-5959a183="">Current level</span>
+                                                                </div>
+                                                                <div data-v-5959a183="" class="name themeColor1">
+                                                                    <div data-v-5959a183="" class="icon"></div>
+                                                                    Level 1 Ally
+                                                                </div>
+                                                            </div>
+                                                            <div data-v-5959a183="" class="str themeColor1"><span
+                                                                    data-v-5959a183=""> Not unlocked </span></div>
+                                                        </div>
+                                                        <div data-v-5959a183="" class="ico"><img
+                                                                data-v-5959a183=""
+                                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241203/3ef4d33c9bfec649c5a233f9bf6c8a07.png"
+                                                                alt="" style="pointer-events: none;"></div>
+                                                    </div>
+                                                </div>
+                                                <div data-v-5959a183="" class="van-swipe-item" style="width: 320px;">
+                                                    <div data-v-5959a183="" class="swiper flex v2"
+                                                        style="pointer-events: none;">
+                                                        <div data-v-5959a183="" class="flex1">
+                                                            <div data-v-5959a183="">
+                                                                <div data-v-5959a183="" class="dj">
+                                                                    <div data-v-5959a183=""
+                                                                        class="dj-bg themeLevelLabel2"></div><span
+                                                                        data-v-5959a183="">Current level</span>
+                                                                </div>
+                                                                <div data-v-5959a183="" class="name themeColor2">
+                                                                    <div data-v-5959a183="" class="icon"></div>
+                                                                    Level 2 Ally
+                                                                </div>
+                                                            </div>
+                                                            <div data-v-5959a183="" class="str themeColor2"><span
+                                                                    data-v-5959a183=""> Not unlocked </span></div>
+                                                        </div>
+                                                        <div data-v-5959a183="" class="ico"><img
+                                                                data-v-5959a183=""
+                                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241203/e84156ccdb1b6d531814aec74fc68f87.png"
+                                                                alt="" style="pointer-events: none;"></div>
+                                                    </div>
+                                                </div>
+                                                <div data-v-5959a183="" class="van-swipe-item" style="width: 320px;">
+                                                    <div data-v-5959a183="" class="swiper flex v3"
+                                                        style="pointer-events: none;">
+                                                        <div data-v-5959a183="" class="flex1">
+                                                            <div data-v-5959a183="">
+                                                                <div data-v-5959a183="" class="dj">
+                                                                    <div data-v-5959a183=""
+                                                                        class="dj-bg themeLevelLabel3"></div><span
+                                                                        data-v-5959a183="">Current level</span>
+                                                                </div>
+                                                                <div data-v-5959a183="" class="name themeColor3">
+                                                                    <div data-v-5959a183="" class="icon"></div>
+                                                                    Level 3 Ally
+                                                                </div>
+                                                            </div>
+                                                            <div data-v-5959a183="" class="str themeColor3"><span
+                                                                    data-v-5959a183=""> Not unlocked </span></div>
+                                                        </div>
+                                                        <div data-v-5959a183="" class="ico"><img
+                                                                data-v-5959a183=""
+                                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241203/5a927157d4c65dd50b6e79204b700238.png"
+                                                                alt="" style="pointer-events: none;"></div>
+                                                    </div>
+                                                </div>
+                                                <div data-v-5959a183="" class="van-swipe-item" style="width: 320px;">
+                                                    <div data-v-5959a183="" class="swiper flex v4"
+                                                        style="pointer-events: none;">
+                                                        <div data-v-5959a183="" class="flex1">
+                                                            <div data-v-5959a183="">
+                                                                <div data-v-5959a183="" class="dj">
+                                                                    <div data-v-5959a183=""
+                                                                        class="dj-bg themeLevelLabel4"></div><span
+                                                                        data-v-5959a183="">Current level</span>
+                                                                </div>
+                                                                <div data-v-5959a183="" class="name themeColor4">
+                                                                    <div data-v-5959a183="" class="icon"></div>
+                                                                    Level 4 Ally
+                                                                </div>
+                                                            </div>
+                                                            <div data-v-5959a183="" class="str themeColor4"><span
+                                                                    data-v-5959a183=""> Not unlocked </span></div>
+                                                        </div>
+                                                        <div data-v-5959a183="" class="ico"><img
+                                                                data-v-5959a183=""
+                                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241203/801aeb5622b9a5316256390053248c92.png"
+                                                                alt="" style="pointer-events: none;"></div>
+                                                    </div>
+                                                </div>
+                                                <div data-v-5959a183="" class="van-swipe-item" style="width: 320px;">
+                                                    <div data-v-5959a183="" class="swiper flex v5"
+                                                        style="pointer-events: none;">
+                                                        <div data-v-5959a183="" class="flex1">
+                                                            <div data-v-5959a183="">
+                                                                <div data-v-5959a183="" class="dj">
+                                                                    <div data-v-5959a183=""
+                                                                        class="dj-bg themeLevelLabel5"></div><span
+                                                                        data-v-5959a183="">Current level</span>
+                                                                </div>
+                                                                <div data-v-5959a183="" class="name themeColor5">
+                                                                    <div data-v-5959a183="" class="icon"></div>
+                                                                    Level 5 Ally
+                                                                </div>
+                                                            </div>
+                                                            <div data-v-5959a183="" class="str themeColor5"><span
+                                                                    data-v-5959a183=""> Not unlocked </span></div>
+                                                        </div>
+                                                        <div data-v-5959a183="" class="ico"><img
+                                                                data-v-5959a183=""
+                                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241203/d8d58144ff82da22c5a4675d125dd9fd.png"
+                                                                alt="" style="pointer-events: none;"></div>
+                                                    </div>
+                                                </div>
+                                                <div data-v-5959a183="" class="van-swipe-item" style="width: 320px;">
+                                                    <div data-v-5959a183="" class="swiper flex v6"
+                                                        style="pointer-events: none;">
+                                                        <div data-v-5959a183="" class="flex1">
+                                                            <div data-v-5959a183="">
+                                                                <div data-v-5959a183="" class="dj">
+                                                                    <div data-v-5959a183=""
+                                                                        class="dj-bg themeLevelLabel6"></div><span
+                                                                        data-v-5959a183="">Current level</span>
+                                                                </div>
+                                                                <div data-v-5959a183="" class="name themeColor6">
+                                                                    <div data-v-5959a183="" class="icon"></div>
+                                                                    Level 6 Ally
+                                                                </div>
+                                                            </div>
+                                                            <div data-v-5959a183="" class="str themeColor6"><span
+                                                                    data-v-5959a183=""> Not unlocked </span></div>
+                                                        </div>
+                                                        <div data-v-5959a183="" class="ico"><img
+                                                                data-v-5959a183=""
+                                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241203/d32a35a2d9ac4acc4fca025fce1ad2c1.png"
+                                                                alt="" style="pointer-events: none;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <ul data-v-68c18260="" class="flex">
-                                        <li data-v-68c18260="">
-                                            <img style="    width: 40px;height: 40px;    margin-left: 41px;"
-                                                src="{{ $value->company_logo }}" alt="Company Logo"
-                                                class="w-12 h-12 rounded-xl object-cover" />
-                                            <div class="font-semibold" style="margin:10px">{{ $value->company_name }}
-                                            </div>
-                                        </li>
-
-                                        <li data-v-68c18260="">
-                                            <div data-v-68c18260="" class="title">Commission</div>
-                                            <div data-v-68c18260="" class="val">
-                                                {{ $value->roi ?? '0' }} USDT</div>
-                                        </li>
-                                    </ul>
                                 </div>
-                                @endforeach
-                                @else
-                                <p style="color: #000;">No bill history available.</p>
-                                @endif
-                            </div>
-
-
-
-
-                            <div data-v-68c18260="" class="list" id="todayContent" style="display: none;">
-
-                                @if (is_array($todaysTrade) || $todaysTrade)
-                                @foreach ($todaysTrade as $value)
-                                <div data-v-68c18260="" class="list-item">
-                                    <div data-v-68c18260="" class="com1">
-                                        <div data-v-68c18260="" class="left">
-                                            <div data-v-68c18260="" class="title"></div>
-                                            <div data-v-68c18260="" class="time">
-                                                {{ date('D, d M Y', strtotime($value->created_at)) }}</div>
-                                        </div>
-                                        <div data-v-68c18260="" class="right">
-                                            <div data-v-68c18260=""></div>
-                                            <span data-v-68c18260="">Completed</span>
-                                            <i data-v-68c18260="" class="van-icon van-icon-arrow"></i>
+                                <div data-v-5959a183="" data-v-decd48ac="" class="box">
+                                    <div data-v-5959a183="" data-v-decd48ac="" class="empty db"
+                                        style="display: none;">
+                                        <div data-v-5959a183="" data-v-decd48ac="" class="flexs">
+                                            <div data-v-5f0c154b="" data-v-5959a183="" class="empty db custom-image"
+                                                data-v-decd48ac="">
+                                                <div data-v-5f0c154b="" class="flexs">
+                                                    <div data-v-5f0c154b="" class="custom-image van-empty">
+                                                        <div class="van-empty__image"><img
+                                                                src="{{asset('')}}static/img/none0.f307acfc.png"></div>
+                                                        <p class="van-empty__description">No data yet</p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <ul data-v-68c18260="" class="flex">
-                                        <li data-v-68c18260="">
-                                            <img style="    width: 40px;height: 40px;    margin-left: 41px;"
-                                                src="{{ $value->company_logo }}" alt="Company Logo"
-                                                class="w-12 h-12 rounded-xl object-cover" />
-                                            <div class="font-semibold" style="margin:10px">{{ $value->company_name }}
+                                    <div data-v-5959a183="" data-v-decd48ac="" class="list-box">
+                                        <div data-v-5959a183="" data-v-decd48ac="" class="list">
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
+                                                        data-v-5959a183="" data-v-decd48ac="" alt=""
+                                                        data-src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        lazy="loaded"></div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">Special
+                                                        contract for vouchers</div><span data-v-5959a183=""
+                                                        data-v-decd48ac="">USDT</span>
+                                                </div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="s"><img
+                                                        data-v-5959a183="" data-v-decd48ac=""
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAYCAYAAADOMhxqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEcSURBVHgBlVO7EcIwDLXNBGwAHWXoKKHKpYMJgA2SCQgTJJmAEQhdUgEdHYzACNkgPN05d0J2+OjOSSS9J+sptlKwLMvmWEv1g2kAN1rrg/WfbdtOkyRp+ggG4DXzR4zsJ6DiVcSWRVHseglYOdaDB1Ek7dOk6YEktXKmlliusXqeDsGS5pbEzRmC6T4QvCCZCIIzhAF36rq+hWE4BGjGwpMoilRVVde3HZilyjMETG79poHbpyF4CZYUgHQXO52M+tP+bsm7gwdM7WzpJzqEPM8zD3gPcOm0RIeORihqlHEcrzrHsL4DD5iOxpYHjAWTyKMAk8iFvEzmm0hRRJlvIh0CkmMRKwFOVY9RSxfmOyKldTcuwCuw1ZtPhBd5gJ02bhlOjAAAAABJRU5ErkJggg=="
+                                                        alt=""></div>
                                             </div>
-                                        </li>
-
-                                        <li data-v-68c18260="">
-                                            <div data-v-68c18260="" class="title">Commission</div>
-                                            <div data-v-68c18260="" class="val">
-                                                {{ $value->roi ?? '0' }} USDT</div>
-                                        </li>
-                                    </ul>
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="sn flex">
+                                                <ul data-v-5959a183="" data-v-decd48ac="" class="flex li flex1">
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Contract number</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            XHE8954BB78</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Contract days</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">2
+                                                            days</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Daily rate of return</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            1.5%</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Fund Scope</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            300-300U</div>
+                                                    </li>
+                                                </ul>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
+                                                        data-v-5959a183="" data-v-decd48ac=""
+                                                        src="{{asset('')}}static/img/jh_on0.9a3e055f.png" alt=""></div>
+                                            </div>
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="jd">
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="flex">
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                        Progress </div>
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
+                                                            data-v-5959a183="" data-v-decd48ac=""
+                                                            class="themeColor0">6223885</span>/15646542 </div>
+                                                </div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
+                                                        data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
+                                                        style="width: 39%;"><i data-v-5959a183="" data-v-decd48ac=""
+                                                            class="themeLineBg0"></i></span></div>
+                                            </div>
+                                        </div>
+                                        <div data-v-5959a183="" data-v-decd48ac="" class="list">
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
+                                                        data-v-5959a183="" data-v-decd48ac="" alt=""
+                                                        data-src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        lazy="loaded"></div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">3-day
+                                                        Experience-based Contract</div><span data-v-5959a183=""
+                                                        data-v-decd48ac="">USDT</span>
+                                                </div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="s"><img
+                                                        data-v-5959a183="" data-v-decd48ac=""
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAYCAYAAADOMhxqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEcSURBVHgBlVO7EcIwDLXNBGwAHWXoKKHKpYMJgA2SCQgTJJmAEQhdUgEdHYzACNkgPN05d0J2+OjOSSS9J+sptlKwLMvmWEv1g2kAN1rrg/WfbdtOkyRp+ggG4DXzR4zsJ6DiVcSWRVHseglYOdaDB1Ek7dOk6YEktXKmlliusXqeDsGS5pbEzRmC6T4QvCCZCIIzhAF36rq+hWE4BGjGwpMoilRVVde3HZilyjMETG79poHbpyF4CZYUgHQXO52M+tP+bsm7gwdM7WzpJzqEPM8zD3gPcOm0RIeORihqlHEcrzrHsL4DD5iOxpYHjAWTyKMAk8iFvEzmm0hRRJlvIh0CkmMRKwFOVY9RSxfmOyKldTcuwCuw1ZtPhBd5gJ02bhlOjAAAAABJRU5ErkJggg=="
+                                                        alt=""></div>
+                                            </div>
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="sn flex">
+                                                <ul data-v-5959a183="" data-v-decd48ac="" class="flex li flex1">
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Contract number</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            FRO97475045MZ</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Contract days</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">3
+                                                            days</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Daily rate of return</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            0.5%</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Fund Scope</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            6-300U</div>
+                                                    </li>
+                                                </ul>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
+                                                        data-v-5959a183="" data-v-decd48ac=""
+                                                        src="{{asset('')}}static/img/jh_on0.9a3e055f.png" alt=""></div>
+                                            </div>
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="jd">
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="flex">
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                        Progress </div>
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
+                                                            data-v-5959a183="" data-v-decd48ac=""
+                                                            class="themeColor0">658054.779</span>/900000 </div>
+                                                </div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
+                                                        data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
+                                                        style="width: 73%;"><i data-v-5959a183="" data-v-decd48ac=""
+                                                            class="themeLineBg0"></i></span></div>
+                                            </div>
+                                        </div>
+                                        <div data-v-5959a183="" data-v-decd48ac="" class="list">
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
+                                                        data-v-5959a183="" data-v-decd48ac="" alt=""
+                                                        data-src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        lazy="loaded"></div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">7-day
+                                                        Beginner Type Contract</div><span data-v-5959a183=""
+                                                        data-v-decd48ac="">USDT</span>
+                                                </div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="s"><img
+                                                        data-v-5959a183="" data-v-decd48ac=""
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAYCAYAAADOMhxqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEcSURBVHgBlVO7EcIwDLXNBGwAHWXoKKHKpYMJgA2SCQgTJJmAEQhdUgEdHYzACNkgPN05d0J2+OjOSSS9J+sptlKwLMvmWEv1g2kAN1rrg/WfbdtOkyRp+ggG4DXzR4zsJ6DiVcSWRVHseglYOdaDB1Ek7dOk6YEktXKmlliusXqeDsGS5pbEzRmC6T4QvCCZCIIzhAF36rq+hWE4BGjGwpMoilRVVde3HZilyjMETG79poHbpyF4CZYUgHQXO52M+tP+bsm7gwdM7WzpJzqEPM8zD3gPcOm0RIeORihqlHEcrzrHsL4DD5iOxpYHjAWTyKMAk8iFvEzmm0hRRJlvIh0CkmMRKwFOVY9RSxfmOyKldTcuwCuw1ZtPhBd5gJ02bhlOjAAAAABJRU5ErkJggg=="
+                                                        alt=""></div>
+                                            </div>
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="sn flex">
+                                                <ul data-v-5959a183="" data-v-decd48ac="" class="flex li flex1">
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Contract number</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            FRO97475141NJ</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Contract days</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">7
+                                                            days</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Daily rate of return</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">1%
+                                                        </div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Fund Scope</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            50-300U</div>
+                                                    </li>
+                                                </ul>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
+                                                        data-v-5959a183="" data-v-decd48ac=""
+                                                        src="{{asset('')}}static/img/jh_on0.9a3e055f.png" alt=""></div>
+                                            </div>
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="jd">
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="flex">
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                        Progress </div>
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
+                                                            data-v-5959a183="" data-v-decd48ac=""
+                                                            class="themeColor0">3055066.91</span>/8545354 </div>
+                                                </div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
+                                                        data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
+                                                        style="width: 35%;"><i data-v-5959a183="" data-v-decd48ac=""
+                                                            class="themeLineBg0"></i></span></div>
+                                            </div>
+                                        </div>
+                                        <div data-v-5959a183="" data-v-decd48ac="" class="list">
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
+                                                        data-v-5959a183="" data-v-decd48ac="" alt=""
+                                                        data-src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        lazy="loaded"></div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">30-day
+                                                        Stable Contract</div><span data-v-5959a183=""
+                                                        data-v-decd48ac="">USDT</span>
+                                                </div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="s"><img
+                                                        data-v-5959a183="" data-v-decd48ac=""
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAYCAYAAADOMhxqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEcSURBVHgBlVO7EcIwDLXNBGwAHWXoKKHKpYMJgA2SCQgTJJmAEQhdUgEdHYzACNkgPN05d0J2+OjOSSS9J+sptlKwLMvmWEv1g2kAN1rrg/WfbdtOkyRp+ggG4DXzR4zsJ6DiVcSWRVHseglYOdaDB1Ek7dOk6YEktXKmlliusXqeDsGS5pbEzRmC6T4QvCCZCIIzhAF36rq+hWE4BGjGwpMoilRVVde3HZilyjMETG79poHbpyF4CZYUgHQXO52M+tP+bsm7gwdM7WzpJzqEPM8zD3gPcOm0RIeORihqlHEcrzrHsL4DD5iOxpYHjAWTyKMAk8iFvEzmm0hRRJlvIh0CkmMRKwFOVY9RSxfmOyKldTcuwCuw1ZtPhBd5gJ02bhlOjAAAAABJRU5ErkJggg=="
+                                                        alt=""></div>
+                                            </div>
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="sn flex">
+                                                <ul data-v-5959a183="" data-v-decd48ac="" class="flex li flex1">
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Contract number</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            FRO9747694WMD</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Contract days</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">30
+                                                            days</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Daily rate of return</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">3%
+                                                        </div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Fund Scope</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            50-300U</div>
+                                                    </li>
+                                                </ul>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
+                                                        data-v-5959a183="" data-v-decd48ac=""
+                                                        src="{{asset('')}}static/img/jh_on0.9a3e055f.png" alt=""></div>
+                                            </div>
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="jd">
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="flex">
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                        Progress </div>
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
+                                                            data-v-5959a183="" data-v-decd48ac=""
+                                                            class="themeColor0">4582442.35</span>/7546845 </div>
+                                                </div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
+                                                        data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
+                                                        style="width: 60%;"><i data-v-5959a183="" data-v-decd48ac=""
+                                                            class="themeLineBg0"></i></span></div>
+                                            </div>
+                                        </div>
+                                        <div data-v-5959a183="" data-v-decd48ac="" class="list">
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
+                                                        data-v-5959a183="" data-v-decd48ac="" alt=""
+                                                        data-src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        src="{{asset('')}}static/img/error.2872d899.png" lazy="loading"></div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">60-day
+                                                        Growth Contract</div><span data-v-5959a183=""
+                                                        data-v-decd48ac="">USDT</span>
+                                                </div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="s"><img
+                                                        data-v-5959a183="" data-v-decd48ac=""
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAYCAYAAADOMhxqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEcSURBVHgBlVO7EcIwDLXNBGwAHWXoKKHKpYMJgA2SCQgTJJmAEQhdUgEdHYzACNkgPN05d0J2+OjOSSS9J+sptlKwLMvmWEv1g2kAN1rrg/WfbdtOkyRp+ggG4DXzR4zsJ6DiVcSWRVHseglYOdaDB1Ek7dOk6YEktXKmlliusXqeDsGS5pbEzRmC6T4QvCCZCIIzhAF36rq+hWE4BGjGwpMoilRVVde3HZilyjMETG79poHbpyF4CZYUgHQXO52M+tP+bsm7gwdM7WzpJzqEPM8zD3gPcOm0RIeORihqlHEcrzrHsL4DD5iOxpYHjAWTyKMAk8iFvEzmm0hRRJlvIh0CkmMRKwFOVY9RSxfmOyKldTcuwCuw1ZtPhBd5gJ02bhlOjAAAAABJRU5ErkJggg=="
+                                                        alt=""></div>
+                                            </div>
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="sn flex">
+                                                <ul data-v-5959a183="" data-v-decd48ac="" class="flex li flex1">
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Contract number</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            FRO97476A4ZMZ</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Contract days</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">60
+                                                            days</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Daily rate of return</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">5%
+                                                        </div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Fund Scope</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            50-300U</div>
+                                                    </li>
+                                                </ul>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
+                                                        data-v-5959a183="" data-v-decd48ac=""
+                                                        src="{{asset('')}}static/img/jh_on0.9a3e055f.png" alt=""></div>
+                                            </div>
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="jd">
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="flex">
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                        Progress </div>
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
+                                                            data-v-5959a183="" data-v-decd48ac=""
+                                                            class="themeColor0">6657486.17</span>/9254658 </div>
+                                                </div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
+                                                        data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
+                                                        style="width: 71%;"><i data-v-5959a183="" data-v-decd48ac=""
+                                                            class="themeLineBg0"></i></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                @endforeach
-                                @else
-                                <p style="color: #000;">No bill history available.</p>
-                                @endif
-
                             </div>
-
-
-                            <!---->
+                        </div>
+                        <div data-v-decd48ac="" class="footer">
+                            <div data-v-46204c6a="" data-v-5959a183="" class="footers" data-v-decd48ac="">
+                                <div data-v-46204c6a="" class="item">
+                                    <div data-v-46204c6a="" class="">
+                                        <div data-v-46204c6a=""><img data-v-46204c6a=""
+                                                src="data:image/png;base64,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"
+                                                alt=""></div><span data-v-46204c6a=""> Homepage </span>
+                                    </div>
+                                </div>
+                                <div data-v-46204c6a="" class="item">
+                                    <div data-v-46204c6a="" class="themeColor0">
+                                        <div data-v-46204c6a=""><img data-v-46204c6a=""
+                                                src="{{asset('')}}static/img/b_jc_on.f2d87739.png" alt=""></div><span
+                                            data-v-46204c6a=""> Contract </span>
+                                    </div>
+                                </div>
+                                <div data-v-46204c6a="" class="item">
+                                    <div data-v-46204c6a="" class="">
+                                        <div data-v-46204c6a=""><img data-v-46204c6a=""
+                                                src="{{asset('')}}static/img/b_sy.85a4fc63.png" alt=""></div><span
+                                            data-v-46204c6a=""> Income </span>
+                                    </div>
+                                </div>
+                                <div data-v-46204c6a="" class="item">
+                                    <div data-v-46204c6a="" class="">
+                                        <div data-v-46204c6a=""><img data-v-46204c6a=""
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABYCAYAAABxlTA0AAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPBSURBVHgB7Z1BTttAFIafk0oxu/QG7glKd901EgcoPUHhBCQbVCIkk02irBxO0HCC0gOgwq476Ak6PUFhF1jgvlcsgWyPE4OfnEn+TxoRxmMLvozHM2P7DREAAIC68MoUDsOw7ft+lz9+4BQkadm45nTKaXBwcGCoZhYSPBqNAv7xlVOH3MHMZrN3g8HgmmqkMa/AeDyWGntJbskVgo2Njc9UM6+KNnLNPbq/vw/JUeI43qSasdbgpOY6K1fwPO+KaiZXsLS5LtfcBMM1+DvVjK2JELltchfTbDY/7e/vG6qZTC8i6TH8nrOf4dNvwrW89lMwDf9N5vDw8A8tCZkazOI+8qlVtM+Uuz+9urs/rpBpg1nudkF5A7nlyLvIWbs20ixAbjnyBFsvbsvY5i47c0dy4GVAsDIQrAwEK5M30IgJpJGe0xX3ok5l+F1mnhmCn8eUFpzQRxPxPHa4Jl8Oh8PuvIIQ/Ey4uWhzimTOvKgcBL+csKgmQ3A1hMksZAYIrgBpLujhpnB2WzqjqBfBB+qu43xEo9HY5IuaNANBUTmeaXydngwrvOmZRuT2+/0LWj8uoig6YYET/my9U91qtfb4x+BpHpqIBen1etfJQzfGVobP8E46D4JLIJJlTrygSJDOgOCScFv8q2BzkM6AYGUgWBkIVgaClYFgZSBYGQhWBoKVgWBlIFgZCFYGgpWBYGUgWBkIVgaClYFgZSBYGQhWBoKVgWBlIFgZCFYGgpUp9WzasjAcDrc9z5PnwDpUAXEcywONk36/f0IV41wNHo1GOyz3G1UY4oaPt8lpKl8cVYyLTcQeKZGcFZXiomDNODwdqhgXBRvSw1DFOCeYL0jHpAQfe0oV45xgvtJPWMQRVYs899vlYw+oYpzspomIMAyPW63WW3oh/GXd3N3dGa1AI04KFhIhS/++CEZyykCwMhCsDAQrA8HKQLAyEKwMBCuTJ9hYCzcatUeUrhseUltHjzwqzIwGSwmWV/plJQJaU+R/T8Ia5JIXcTsv+uo52Ql834/WUXKyxIW8CB7YykjYr0xeOiOKovZsNvtLxfwP0DznxeiVQZqFRQJyMG/Sob5y19Hg+14/SGF2f8WZstzddKatFyEFESd4ccRV7lxyrmCp5nxKVD75vKpwE3JkiwLYtO10dnb2c2trKzdMCnhE7q6w3LFte7NoZ5Z8wZJvWPJ7/tUn8BS5zfSlSK5QZrEoWVtjh4Bwzml3keCgpZY7E9HJMhDyBIyM6talP2zoYWWZ89vb22MsFAAAAG7wD45kNnyGOhVoAAAAAElFTkSuQmCC"
+                                                alt=""></div><span data-v-46204c6a=""> Assets </span>
+                                    </div>
+                                </div>
+                                <div data-v-46204c6a="" class="item">
+                                    <div data-v-46204c6a="" class="">
+                                        <div data-v-46204c6a=""><img data-v-46204c6a=""
+                                                src="data:image/png;base64,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"
+                                                alt=""></div><span data-v-46204c6a=""> my </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <style>
-                        .van-popup--center.van-popup--round {
-                            border-radius: .42667rem;
-                        }
-
-                        .van-overlay,
-                        .van-popup {
-                            position: absolute;
-                        }
-
-                        .van-popup--center {
-                            top: 50%;
-                            left: 50%;
-                            -webkit-transform: translate3d(-50%, -50%, 0);
-                            transform: translate3d(-50%, -50%, 0);
-                        }
-
-                        .van-popup {
-                            position: fixed;
-                            max-height: 100%;
-                            overflow-y: auto;
-                            background-color: linear-gradient(180deg, #111116, #141519);
-                            -webkit-transition: -webkit-transform .3s;
-                            transition: -webkit-transform .3s;
-                            transition: transform .3s;
-                            transition: transform .3s, -webkit-transform .3s;
-                            -webkit-overflow-scrolling: touch;
-                            border: .02rem solid hsla(0, 0%, 100%, .1);
-                        }
-
-                        .tw-text-center {
-                            text-align: center;
-                        }
-
-                        .tw-p-16px {
-                            padding: .42667rem;
-                        }
-
-                        .tw-w-32 {
-                            width: 8rem;
-                        }
-
-                        .tw-text-16px {
-                            font-size: .42667rem;
-                        }
-
-                        .tw-mb-16px {
-                            margin-bottom: .42667rem;
-                        }
-
-                        .tw-w-140px {
-                            width: 3.73333rem;
-                        }
-
-                        .tw-mx-auto {
-                            margin-left: auto;
-                            margin-right: auto;
-                        }
-
-                        img {
-                            max-width: 100%;
-                            max-height: 100%;
-                            vertical-align: top;
-                        }
-
-                        .tw-mt-16px {
-                            margin-top: .42667rem;
-                        }
-
-                        .tw-text-14px {
-                            font-size: .37333rem;
-                        }
-
-                        .tw-mb-16px {
-                            margin-bottom: .42667rem;
-                        }
-
-                        .tw-mt-10px {
-                            margin-top: .26667rem;
-                        }
-
-                        .tw-items-center {
-                            align-items: center;
-                        }
-
-                        .tw-flex {
-                            display: flex;
-                        }
-
-                        .btn1[data-v-29a06c8f] {
-                            border-radius: .26667rem;
-                            border: .03733rem solid #96c907;
-                            background: linear-gradient(180deg, #111116, #141519);
-                            color: #96c907;
-                        }
-
-                        .tw-text-14px {
-                            font-size: .37333rem;
-                        }
-
-                        .btn2 {
-                            height: .86rem;
-                            background: var(--CObackgroundLinear2);
-                            border-radius: .2rem;
-                            color: var(--COcolor4);
-                            font-weight: 500;
-                            font-size: 0.32rem;
-                            width: 100%;
-                            border: 0;
-                            margin: 5px;
-                        }
-                    </style>
-                    <div class="van-overlay" style="z-index: 2009;display:none"></div>
-                    <div data-v-29a06c8f="" class="van-popup van-popup--round van-popup--center"
-                        style="z-index: 2010; display:none">
-                        <div data-v-29a06c8f="" class="tw-w-32 tw-text-center tw-p-16px">
-                            <div data-v-29a06c8f="" class="tw-mb-16px tw-text-16px">Strategy Complete</div><img
-                                data-v-29a06c8f="" src="{{ asset('') }}static/img/icon_13.bf296378.png" alt=""
-                                class="tw-mx-auto tw-w-140px">
-                            <div data-v-29a06c8f="" class="tw-mt-16px">Congratulations to get</div>
-                            <div data-v-29a06c8f="" class="tw-mt-10px tw-mb-16px tw-text-14px">
-                                <div data-v-29a06c8f=""> 0.0951 USDT </div>
-                                <!---->
-                            </div>
-                            <div data-v-29a06c8f="" class="tw-flex tw-items-center"
-                                style="justify-content: space-between;"><button data-v-29a06c8f=""
-                                    class="btn1 btns tw-text-14px"> View Order </button><button data-v-29a06c8f=""
-                                    class="btn2 btns"> Confirm </button></div>
-                        </div><i role="button" tabindex="0"
-                            class="van-icon van-icon-cross van-popup__close-icon van-popup__close-icon--top-right">
-                            <!---->
-                        </i>
-                    </div>
-
-                    <div data-v-22717aba="" data-v-427eef2e="" data-v-6e2d35de=""></div>
-                    <div data-v-11b54ad9="" data-v-427eef2e="" info="[object Object]" data-v-6e2d35de=""></div>
-                    <div data-v-52c6a81e="" data-v-427eef2e="" data-v-6e2d35de=""></div>
-                    <!---->
-
-
-
-
-
-
-
-
-
                 </div>
             </div>
-            <script>
-                async function submitOrder() {
-                    // Show loader
-                    document.getElementById('loader-overlay').style.display = 'block';
-                    document.getElementById('loader').style.display = 'block';
+        </div>
+        <div data-v-a7d12cfc="" class="global-loading default" style="display: none;">
+            <div data-v-a7d12cfc="" class="global-spinner"><img data-v-a7d12cfc=""
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAArCAYAAAADgWq5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAF6WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMi0wNC0xMlQxNTo0MTowNiswODowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjItMDQtMTJUMTU6NDM6MTQrMDg6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjItMDQtMTJUMTU6NDM6MTQrMDg6MDAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NWU0ZGQwNmEtMWExNS1kYjRmLTkyZmQtZjIzNTAwNzJkMGNmIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjlGMTI0NjE1NTQzQzExRThCQzhCQzEyQjVDOUMzOEJGIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6OUYxMjQ2MTU1NDNDMTFFOEJDOEJDMTJCNUM5QzM4QkYiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiBwaG90b3Nob3A6SUNDUHJvZmlsZT0ic1JHQiBJRUM2MTk2Ni0yLjEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5RjEyNDYxMjU0M0MxMUU4QkM4QkMxMkI1QzlDMzhCRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5RjEyNDYxMzU0M0MxMUU4QkM4QkMxMkI1QzlDMzhCRiIvPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo1ZTRkZDA2YS0xYTE1LWRiNGYtOTJmZC1mMjM1MDA3MmQwY2YiIHN0RXZ0OndoZW49IjIwMjItMDQtMTJUMTU6NDM6MTQrMDg6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+hddYGwAABHhJREFUWIXN2XuoFVUUx/HPXG9WmmIPJQtNwQwqe5paEI1pCBZCRvVXDwlKCsLpIURgIZZG1KEXRVJJWPRnIv3TAw/0UCsrUlBLLQ1T01Ip6eZr+mPPOHOP56jXcz3XHxzu3nv2nv29a/bstdaeyJIXdYOG4bLs77k4AzvQFyvxKw7gJ/xZHpjGSZcmam8Csg/uxU0Yi8HHMGYz1uAtfIh/uzrp8QBPwFO4HgfR1oWx52e/CViX3ef9rkwedWFJXIQncE+da7uwHcuwF1uQClbvi1G4tMF9V+GuNE5+6C7gUzANT2Joqb0Dm/A6XsO+I9yjD/7DaMzArTi1ps/iNE6mNAvcjqfxKE4rtS/BXHxytAnqqBcuwHQ8XnNtP0amcfJLo8FHWn/98QIeK8Fuw3W48ThhCbvFBsxEhMWla+3YEFUrfbsKfDpewcOKR/e5sBssPU7QusqWwTTBurlWN+rfCHg67i7V3xasurFZwHpK42QBxmFP1jQkqlbW1utbD3g0ygt7Fe7T2QLdrjROVmBSqWlkVK28WtuvHvB7pfImXNvNbA2VxsmXeKnU9FBUrVxT7lMLHGNkVt6JO/DPiQKspzROZuC3UtM7UbVyiLMMPBDzSvWFWHFC6RprrLCbwCU4ZOUy8G24OivvxCwneN02UhonWwSD5Xo3L5SBpypii/mCu+1JzRHcOwyPqpVhFMD9MSYr78OnLUWrozRO1gk7FCE8mEwBPE7hzVbiu5bSNdabpfKkqFqJcuCr0Dsrr1ETZPegPiiVJ6dxkubAQwW/TohTTxa1K4x3IKpWLmwToqfhWWMqpDEnhdI42SrENYSYpqNN2O+uyBojfN16tPqKqpV2fJNVD+LK3MJbS/0GtRqskdI42Y+zsmob/moTlkHuVQ7qHKifDCpnJtvbBMg8XmjD2S1HaqCoWhmgCDl3o1e+S3xf6tey6OwY1K4IxrZhcw68rNRpjJNHA4WsG7ancbI7B/5CcagxCv1aTVarLKS8OaumAuMh17xFsVb64YaW0tVXO27PyvuxiAL4oJC35Xq+dVwNdbEiDv5btmzL4eXcUnmEwpn0lGYpwoVFaZykdAbeJZziEB7HG0JY13JF1crlyE+BdmQsODynm60ImkcIS6WliqqVQXhO8MCEg5Yf8+u1wFvxANbjfoUHbImiaqU3XsbErGkf5qRx0pH3qXfcOj/79YSeFXaG3JAz0zjZUO7QzIF2tymLyp7BI4oXbYVg7U7qceCoWhmKBRhfal6NKWmcHPYOdeX0/EQoxkc6wy7FxDROfq83oKcsfIvw+MfXtC8VLLuj0cBmgXsLb/RIfCVkK72FrXGfELjsEXLGFHcK580DdI5zd2F2GieVo03YLPCDwqF3nmr1Ek6N1grfN7Zn/8xenNPgHsuFbxw/H8uEzQLvVLwH+UZ/pnDOQfg0UKsD2biPMS+Nk5VdmbBZ4IVCVjtVyAXPE2LYsjqEtGs9vhWCrM8cp1NqFviA4OdzXz9ESLcGC+Abhe9yy4Vk8o8m5/M/9rYMi48jzWIAAAAASUVORK5CYII="
+                    alt=""></div>
+        </div>
+        <div data-v-b68a32e2="" class="page-loading-con" style="display: none;">
+            <div data-v-b68a32e2="" class="page-loading">
+                <div data-v-b68a32e2="" class="loader-outter"></div>
+                <div data-v-b68a32e2="" class="loader-inner"></div>
+            </div>
+            <p data-v-b68a32e2="">Loading...</p>
+        </div><!---->
+    </div>
+    <script src="{{asset('')}}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
+    <script src="{{asset('')}}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
+    <script src="{{asset('')}}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
+    <script src="{{asset('')}}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script>
+    <script src="{{asset('')}}js1744307594169/app.46ba12d9.1744307594169.js"></script>
+</body>
 
-                    // Wait 10 seconds
-                    setTimeout(async () => {
-                        try {
-                            // Hide loader
-                            document.getElementById('loader-overlay').style.display = 'none';
-                            document.getElementById('loader').style.display = 'none';
-
-                            // Make API call (example using Fetch)
-                            const response = await fetch('/user/tradeOn', {
-                                method: 'GET',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                },
-                            });
-
-                            const result = await response.json();
-                            console.log("API Result:", result);
-                            // Show modal popup
-                            if (result.status) {
-                                const quantifiableCount = 6;
-                                const tradesCompleted = result.data.totalTask;
-                                // Populate modal with data
-                                document.getElementById('modalTime').innerText = result.data.dateTime;
-                                document.getElementById('modalOrderNo').innerText = result.data.orderNo;
-                                document.getElementById('modalCompanyName').innerText = result.data.company;
-                                document.getElementById('modalCompanyLogo').src = result.data.logo;
-                                document.getElementById('modalROI').innerText = result.data.roi_amount;
-                                const progress = (tradesCompleted / quantifiableCount) * 100;
-                                document.getElementById('progressFill').style.width = `${progress}%`;
-                                document.getElementById('progressText').innerText = `${tradesCompleted}/6`;
-                                // Show modal
-
-                                if (tradesCompleted >= 6) {
-                                    const submitBtn = document.getElementById('submitOrderBtn');
-                                    submitBtn.disabled = true;
-                                    submitBtn.innerText = "ALL TASKS COMPLETED";
-                                    submitBtn.style.backgroundColor = "#999";
-                                    submitBtn.style.cursor = "not-allowed";
-                                    
-                                        // ✅ Reload page after 5 seconds
-                                        setTimeout(() => {
-                                            location.reload();
-                                        }, 5000);
-
-                                }
-
-                                document.getElementById('modal-overlay').style.display = 'block';
-                                document.getElementById('modal').style.display = 'block';
-                                
-                            } else {
-                                alert(result.message);
-
-                            }
-
-
-                        } catch (error) {
-                            console.error("Error submitting order:", error);
-                        }
-                    }, 10000); // 10 seconds
-                }
-
-                function hideModal() {
-                    document.getElementById('modal-overlay').style.display = 'none';
-                    document.getElementById('modal').style.display = 'none';
-                }
-            </script>
-            <script>
-                // Button IDs and corresponding content IDs
-                const tabs = {
-                    strategyButton: "defaultContent",
-                    billButton: "billContent",
-                    todayButton: "todayContent",
-                };
-
-                // Loop through each button
-                window.addEventListener("DOMContentLoaded", () => {
-                    // Attach click listeners after DOM is fully loaded
-                    Object.keys(tabs).forEach((buttonId) => {
-                        const btn = document.getElementById(buttonId);
-                        if (btn) {
-                            btn.addEventListener("click", () => {
-                                Object.values(tabs).forEach((contentId) => {
-                                    document.getElementById(contentId).style.display = "none";
-                                });
-
-                                Object.keys(tabs).forEach((btnId) => {
-                                    document.getElementById(btnId).classList.remove("on");
-                                });
-
-                                document.getElementById(tabs[buttonId]).style.display = "block";
-                                console.log("check:", tabs[buttonId]);
-
-                                btn.classList.add("on");
-                            });
-                        }
-                    });
-
-                    // Show Strategy tab by default
-                    document.getElementById("defaultContent").style.display = "block";
-                    document.getElementById("strategyButton").classList.add("on");
-                });
-            </script>
+</html>
