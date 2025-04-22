@@ -1,0 +1,42 @@
+.item[data-v-42a5ef07] {
+  padding-bottom:.1rem
+}
+.tab[data-v-42a5ef07] {
+  border-bottom:.02rem solid #ebebeb;
+  margin-top:.1rem;
+  padding-bottom:.1rem;
+  margin-bottom:.1rem
+}
+.tab[data-v-42a5ef07] .van-tabs__line {
+  display:none
+}
+.tab[data-v-42a5ef07] .van-tab--active {
+  position:relative;
+  color:#000
+}
+.tab[data-v-42a5ef07] .van-tab--active:after {
+  content:"";
+  display:block;
+  width:.64rem;
+  height:.06rem;
+  background:#fff;
+  border-radius:.12rem;
+  position:absolute;
+  bottom:0;
+  left:50%;
+  margin-left:-.32rem
+}
+.tab[data-v-42a5ef07] .van-tab--active span {
+  color:#000;
+  font-size:.28rem
+}
+ul li[data-v-42a5ef07] {
+  padding:.3rem 0;
+  background:#fff;
+  color:#222;
+  position:relative;
+  border-bottom:.02rem solid #f2f2f2
+}
+ul li .s img[data-v-42a5ef07] {
+  height:.28rem
+}
