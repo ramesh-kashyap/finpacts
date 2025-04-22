@@ -520,10 +520,7 @@
             <p data-v-b68a32e2="">Loading...</p>
         </div><!---->
     </div>
-    <script src="{{asset('')}}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
-    <script src="{{asset('')}}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
-    <script src="{{asset('')}}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
-    <script src="{{asset('')}}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script>
+  
     {{-- <script src="{{asset('')}}js1744307594169/app.46ba12d9.1744307594169.js"></script> --}}
 </body>
 
