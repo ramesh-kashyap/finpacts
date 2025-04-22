@@ -1,193 +1,472 @@
-<html lang="en" class="van-theme-light pc" style="font-size: 50px;">
+<html style="font-size: 50px;" translate="no">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="{{ asset('') }}static/img//favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="robots" content="noindex, nofollow">
+    <meta charset="utf-8">
     <title>Task Center</title>
-    <script type="module" crossorigin="" src="{{asset('')}}assets/js/index-BR72YH-E.js"></script>
-    <link rel="modulepreload" crossorigin="" href="{{asset('')}}assets/js/vant-3s7b3naM.js">
-    <link rel="modulepreload" crossorigin="" href="{{asset('')}}assets/js/vuei18n-CA58nVJV.js">
-    <link rel="modulepreload" crossorigin="" href="{{asset('')}}assets/js/corejs-C4iS2aBk.js">
-    <link rel="modulepreload" crossorigin="" href="{{asset('')}}assets/js/vuex-MbEfqX8_.js">
-    <link rel="modulepreload" crossorigin="" href="{{asset('')}}assets/js/cryptojs-BILcvZe1.js">
-    <link rel="modulepreload" crossorigin="" href="{{asset('')}}assets/js/qrcodejs2fix-CnmRM6Pf.js">
-    <link rel="modulepreload" crossorigin="" href="{{asset('')}}assets/js/vueclipboard3-C7DdPEQF.js">
-    <link rel="modulepreload" crossorigin="" href="{{asset('')}}assets/js/uaParserJs-QZjeYS1Z.js">
-    <link rel="modulepreload" crossorigin="" href="{{asset('')}}assets/js/vuerouter-7dy5tY0D.js">
-    <link rel="modulepreload" crossorigin="" href="{{asset('')}}assets/js/axios-Cm0UX6qg.js">
-    <link rel="modulepreload" crossorigin="" href="{{asset('')}}assets/js/swiper-C1TWdcvt.js">
-    <link rel="modulepreload" crossorigin="" href="{{asset('')}}assets/js/bignumberjs-DOH-f-tm.js">
-    <link rel="modulepreload" crossorigin="" href="{{asset('')}}assets/js/validator-DnYg83Z5.js">
-    <link rel="modulepreload" crossorigin="" href="{{asset('')}}assets/js/vanttouchemulator-Cv_in60N.js">
-    <link rel="stylesheet" crossorigin="" href="{{asset('')}}assets/css/index-CFWvmehk.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/PageScroll-CWe5U2pE.js">
-    <link rel="stylesheet" href="{{asset('')}}assets/css/PageScroll-B0U5qQ_M.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/MainHeader-DINvrqg3.js">
-    <link rel="stylesheet" href="{{asset('')}}assets/css/MainHeader-DmTIx4Xq.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/PhoneInp-BJMfsyKO.js">
-    <link rel="stylesheet" href="{{asset('')}}assets/css/PhoneInp-BbLd3uXE.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/PsdInp-CEndfO3Z.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/eye_close-DJdVF6pM.js">
-    <link rel="stylesheet" href="{{asset('')}}assets/css/PsdInp-B2SSuLGr.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/ComCheckbox-BI3og0hr.js">
-    <link rel="stylesheet" href="{{asset('')}}assets/css/ComCheckbox-DzGBGsDX.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/ComBtn-CB5ONs6P.js">
-    <link rel="stylesheet" href="{{asset('')}}assets/css/ComBtn-CgiT3mnI.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/FloatingBubble-CfUHYYW9.js">
-    <link rel="stylesheet" href="{{asset('')}}assets/css/FloatingBubble-Dntr2w2Z.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/AreaPopup-d_YKKHuA.js">
-    <link rel="stylesheet" href="{{asset('')}}assets/css/AreaPopup-Dy2cJYlh.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/CustomerService-uNNPIRl7.js">
-    <link rel="stylesheet" href="{{asset('')}}assets/css/CustomerService-D5uG7YzE.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/MainFooter-DradSXvN.js">
-    <link rel="stylesheet" href="{{asset('')}}assets/css/MainFooter-KaNE-uqv.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/NoticePopup-CPE0x0yj.js">
-    <link rel="stylesheet" href="{{asset('')}}assets/css/NoticePopup-SnqEssf-.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/ComImage-DHdOqV0T.js">
-    <link rel="stylesheet" href="{{asset('')}}assets/css/ComImage-C3FUzSnY.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/index-C_ZRfHL-.js">
-    <link rel="stylesheet" href="{{asset('')}}assets/css/index-O8kjhi6d.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/InsideHeader-cUb30gWX.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/icon_back_white-Fd3ZFuzm.js">
-    <link rel="stylesheet" href="{{asset('')}}assets/css/InsideHeader-k_Fsd2wZ.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/ComList-c59R4hNA.js">
-    <link rel="stylesheet" href="{{asset('')}}assets/css/ComList-N3Ynoyi4.css">
-    <link rel="modulepreload" as="script" crossorigin="" href="{{asset('')}}assets/js/ListEmpty-DvuO2CRk.js">
-    <link rel="stylesheet" href="{{asset('')}}assets/css/ListEmpty-BnV8Jpo-.css">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <link rel="icon" href="/logo.png">
+    <meta name="google" content="notranslate">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="full-screen" content="true">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+    <meta name="renderer" content="webkit">
+    <meta name="robots" content="noindex, nofollow">
+    <style type="text/css">
+        .page-loading-con {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page-loading {
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+        }
+
+        .loader-outter,
+        .loader-inner {
+            position: absolute;
+            border: 0.1em solid #0b53b4;
+            border-radius: 50%;
+        }
+
+        .loader-outter {
+            border-left-color: transparent;
+            border-bottom: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-animation: loader-outter 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+            animation: loader-outter 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+        }
+
+        .loader-inner {
+            width: 1em;
+            height: 1em;
+            left: calc(50% - 0.5em);
+            top: calc(50% - 0.5em);
+            border-right: 0;
+            border-top-color: transparent;
+            -webkit-animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+            animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+        }
+
+        @-webkit-keyframes loader-outter {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes loader-outter {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes loader-inner {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes loader-inner {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            text-transform: capitalize;
+        }
+    </style>
+    <link href="{{asset('')}}js1744307594169/app.46ba12d9.1744307594169.js" rel="preload" as="script">
+    <link href="{{asset('')}}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js" rel="preload" as="script">
+    <link href="{{asset('')}}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js" rel="preload" as="script">
+    <link href="{{asset('')}}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js" rel="preload" as="script">
+    <link href="{{asset('')}}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js" rel="preload" as="script">
+    <link href="{{asset('')}}static/css/app.c3049ff2.css" rel="preload" as="style">
+    <link href="{{asset('')}}static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
+    <link href="{{asset('')}}static/css/chunk-vendors.794edbf9.css" rel="preload" as="style">
+    <link href="{{asset('')}}static/css/chunk-vant.d14f5539.css" rel="stylesheet">
+    <link href="{{asset('')}}static/css/chunk-vendors.794edbf9.css" rel="stylesheet">
+    <link href="{{asset('')}}static/css/app.c3049ff2.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-6eb59018.9aaa1278.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-6eb59018.f0c64bc3.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-5576a184.9f52f39a.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-5576a184.c49d8c14.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-7cbde8e8.788c4ae8.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-7cbde8e8.43936207.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-4f89519c.2a0f3cea.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-4f89519c.5238fa59.1744307594169.chunk.js"></script>
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-4006da76.e92bfa42.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-7a1721c4.c20230a9.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-7a1721c4.da18abce.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-693d0a34.f05eb557.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-693d0a34.843d936b.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-bb9e60a4.6aed8065.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-bb9e60a4.386078a0.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-6d426460.4038aca3.css">
+    <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-6d426460.94243b8a.1744307594169.chunk.js"></script>
 </head>
-<style>
-    .item .item-top .right .btn.processing[data-v-d3d46c3f] {
-    background: #85f;
-    color: #0f0e11;
-}
-.task-page[data-v-6a9399e1] {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    padding: 0 .32rem .32rem;
-    overflow-y: scroll;
-}
-</style>
-<body class="">
-    <div id="app" data-v-app="">
-        <div class="van-config-provider">
-            <!---->
+
+<body class="mein_cn">
+    <div class="page-loading-con" id="loaderInit" style="display: none;">
+        <div class="page-loading">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
         </div>
-        <div data-v-e85f0186="" data-v-6a9399e1="" class="page nobg" style="background-color: rgb(254, 254, 251);">
-            <div data-v-6a9399e1="" class="bg"></div>
-            <div data-v-e85f0186="" class="headers">
-                <div data-v-54adc729="" data-v-e85f0186="" class="inside-header">
-                    <div data-v-54adc729="" class="left">
-                        <div data-v-54adc729="" class="back"> <a href="{{route('user.dashboard')}}"><img data-v-54adc729=""
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAXJSURBVHgB3VpdctNWFP7ulYFpJ8y4r7xUYiCdPmFWgLMCYAWYFSQ7QFkBYQWYFRRWELMCu0+0+UHKC6+4MylTJta9PedcyZZ/Utuyoij9ZjSyfn0/nXPPPX8KJSOK+s0RtloaaGmtHsHaFmCbgPKn77QxnaMNQ2Px0QCDh8HDHkqGQglgUgnutj1ld+mVKaFCwxnSs73E2g8Pgu0uSsBGBJkY9NYurNqbITUw1n4kKQ4g261hEATx9LORD4xoQ8vA+lqpJ/w7N7SYRteDudgPgl9jFEQhgpcQ68HiA3DeDYLHQxRAFH3yAa8NpUgTcmQVQpjRuyJE1yZ4Ev35zFPe2xli9JXLnT9RdNSywJ5S6oU7o+LEmv11VXdlgqnUXhGZvfTUlRCb/1+SqvIOx0ZK4QDmfH9VLVmJoPuTxm9wajNMiR2gQkTR8R6p7qvUIsewFzurqOxSgo7cLfqC1hfTbpOdTSb9JpiW5mok1fIXZuTIGtrznaIGpCyQ9W1CjWhMrE3LSarLXzQhZ619dz/Y7qBG+BwddZ0B+m+SCwmKQVF3+5nkAv/hY9QQUXxMYxS7cKl26YVPsrUcz7nzHdQVtrHjXD4iKWOex5wET6KjjqcUrXNsLUePr8ugrIp0KvXFulrzPAh+eZ+/rmdv9pR2X0KWgnqTY8gYrd2XA+W9lumVwxRBrRsvMtWsep3bBOlYezx2gx/38tfGBFl6FLaEckBrHW4aSON4p5XezUtxIkF9y6mmUt2boJqzSF1G3pp5KU4IWrRlb/55g3LwSt4KvEZVuESKYjlpTbFRfNRHOcjIZVtlIB6HzIWjHj4WCZLlfCpXLcqQHpMLc8f7qBISkwonjinHKtp2u6SHzbCIXIhK0eimP1qiphSGtEtSz1m1DHFNiOLTvnAibixBSQ1wZgvFUQPJTWBsIlwMEsruuWQPH8YohlqRY1iX7GLH5ZHOcisa3gDro3bkGF5KkHxTzs9KSIQ7d7wI66GW5BySNGzSTcWTkX9SzLdOhm2WXEzbO1wtYtq6q96c8WpgfXQwLykfjnQV6K5zs8b/HEUk2MW8xGLUTEUzNNIqj//ly+ef7927f7bic2G6z0j6cIt7tW7ZJXAlAIaKSUU9sTjfv3/7CeshxDQhPq5qHi5Bw3d7G2trR7/zzwS3W1gfIepJUrhYa/7SCloWRTVVuloLIWpG0qRru6VaI1tR59YoPEFxhKgRSa084SLeGafCo/jkq/O++wUrs2OEmI4oKifJBsZFR8df+VhT5ZXLxiJFgx862AwhrlmSCRdQIfNPIgq30FslkTyJ9ik2R4h5kpWBirMSySsoSQCnnozXcw0AaHOQiM0RYkKyrCTWUnBVmPSw5fK6rhIsBEVNbeIGokpTqRCuNLCHqqBdHgZK98anJldvH5QsxUoh3ou1HTkwF+MpMiZ4RVKsDlLLlNTLVE1lJppgKUo5qn0a/VGdam2Is7PT3aymojHq5q/NBblRdPIMynLDwQ0sn9mXwUybyVw8GAQP3hu3bDRZ7CUs/lcGV4mWMnvTWPsmWNBDszDgJRcnhLhwJHa1dYi6QsaWqebf4aJbFhJ0Bmf0PCsPR2cnb1EzRGdHPKbWpLVlcffHCm0k4y6jmrSRsFpupW0ky/t2VmwEWq/55qpQpClpadLJ1cCTtJuB52Sjfx1LiCwFzlr6EG1areNqjWa8iCqnSail6VUerUSax+RVNZzj0eZjtpZsUEptxsuDHNqO83SU796guhfGvNkOtouk/i/FLDHIumxezraJLEPBhljOWjU6My7dIKGv61GNsahU2YAYbHUou8BhWzs9PXSF2fODIgZuw5bmT76lNVNJukP5uUsDbkc2BmfcbN5AI17U0nyBiyY3r3vSvC6E8nmhjYhl2IhgHk51uRRu22AvqBiYCBkQQ8S+9cpYkkojmEcabrVc7ZHLc2z5lD99lySch3TPgCwHpy5pDp8Pyl5n/wWj6+bkCK0aXwAAAABJRU5ErkJggg=="
-                                class="icon"></a> </div>
-                    </div>
-                </div>
-            </div>
-            <div data-v-e85f0186="" class="page-container">
-                <div data-v-e85f0186="" class="scroll">
-                    <div data-v-6a9399e1="" class="task-page">
-                        <div data-v-6a9399e1="" class="title_heand">@lang('Task Center')</div>
-                        <div data-v-d938818c="" data-v-6a9399e1="" class="swiper-con">
-                            
-                             <div data-v-6a9399e1="" class="task-list-con">
-                            <div data-v-6a9399e1="" class="tabs">
-                                <div data-v-6a9399e1="" class="tab first"><span data-v-6a9399e1="">@lang('Long-Term Task')</span>
+    </div>
+    <div id="app" class="applang">
+        <div data-v-6302a7bf="">
+            <div data-v-6302a7bf="" class="van-pull-refresh">
+                <div class="van-pull-refresh__track" style="transition-duration: 0ms;">
+                    <div class="van-pull-refresh__head" style="height: 60px;"></div>
+
+                    <div data-v-decd48ac="" data-v-06646a51="" class="page">
+                        <div data-v-decd48ac="" class="headers on">
+                            <div data-v-29c52665="" data-v-06646a51="" class="head head0" data-v-decd48ac="">
+                                <div data-v-29c52665="" class="container flex">
+                                    <a href="{{ route('user.dashboard') }}">
+                                    <div data-v-29c52665="" class="back"><img data-v-29c52665=""
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE+SURBVHgB3diLDYIwEAbgwy7gCLoBbOIGtiM4gbqBE0DdSCcQJ5AN8GrAIPIobXNH+JOG0jbhCyVpC8DSIqVcmwKBsgKPKKX2URQ9sLwQdYQAicAxBoMX3Wwry3Krtc7BI05vqAtTpQDPTAb1YXDaFL4db9CkKRvCpGmqIUCsQRQYaxAVxgpEiRkFUWMGQRyYXhAXphPEifkDcWN+QHPAfEEDaxNVciynLMuu9Vp2At5ssFxMpQYF22B55LMwf0C4jzkAbwr8Vs+m8v2occcnsTHrGCzN3AJRRF25YeI4fiJq1xqzS5Ikx+47EEQ0b+aAEu0GbpToauREib4OLpQY6uRAibEB1KhREDXKCkSJsgZRoZzO9j3LTFGd7b1Or05ne3yoxoerVnOQHYPz75g2yqzWIc723ql+WG1gqXkDGBPa7OTyg7AAAAAASUVORK5CYII="
+                                            alt=""></div><!---->
+                                    </a>
+                                    <div data-v-29c52665="" class="name tac">Task Center</div>
+                                    <div data-v-29c52665="" class="flex1"></div><!----><!----><!---->
+                                    <div data-v-06646a51="" data-v-29c52665="" class="rules"> Rules </div>
+                                    <!----><!----><!----><!----><!----><!---->
                                 </div>
-                                <div data-v-6a9399e1="" class="tab"> <a href="{{route('user.level-income')}}"> <span data-v-6a9399e1="">@lang('Daily Tasks') </a></span></div>
                             </div>
-                            <div data-v-6a9399e1="" class="task-con first">
-                                <div data-v-3aad496f="" data-v-6a9399e1="" class="van-pull-refresh van-refresh-com">
-                                    <div class="van-pull-refresh__track" style="transition-duration: 0ms;">
-                                        <div class="van-pull-refresh__head" style="height: 100px;"></div>
-                                        <div data-v-3aad496f="" role="feed" class="van-list" aria-busy="false">
-                                            <div data-v-d3d46c3f="" data-v-6a9399e1="" class="list">
-                                                <div data-v-d3d46c3f="" class="item">
-                                                    <div data-v-d3d46c3f="" class="item-top">
-                                                        <div data-v-d3d46c3f="" class="left">
-                                                            <div data-v-d3d46c3f="" class="title">@lang('Inviting 1 valid user will reward you with 5 USDT')</div>
-                                                            <p data-v-d3d46c3f="">@lang("If the number of invited users reaches 1 and the user's first deposit exceeds 100 USDT, he or she will be considered a valid user. This reward can only be obtained once and cannot be obtained repeatedly.")
-                                                            </p>
-                                                        </div>
-                                                        <div data-v-d3d46c3f="" class="right"><span data-v-d3d46c3f=""
-                                                                class="btn processing"> {{($userDirect>=1)?"Completed":"In Progress"}} </span></div>
-                                                    </div>
-                                                    <!---->
-                                                </div>
-                                                <div data-v-d3d46c3f="" class="item">
-                                                    <div data-v-d3d46c3f="" class="item-top">
-                                                        <div data-v-d3d46c3f="" class="left">
-                                                            <div data-v-d3d46c3f="" class="title">@lang('Inviting 5 valid user will reward you with 30 USDT')</div>
-                                                            <p data-v-d3d46c3f="">@lang("If the number of invited users reaches 5 and the first deposit of 5 users exceeds 100 USDT,they will be considered as valid users. This reward can only be obtained once and cannot be obtained repeatedly.")
-                                                            </p>
-                                                        </div>
-                                                        <div data-v-d3d46c3f="" class="right"><span data-v-d3d46c3f=""
-                                                                class="btn processing">{{($userDirect>=6)?"Completed":"In Progress"}}</span></div>
-                                                    </div>
-                                                    <!---->
-                                                </div>
-                                                <div data-v-d3d46c3f="" class="item">
-                                                    <div data-v-d3d46c3f="" class="item-top">
-                                                        <div data-v-d3d46c3f="" class="left">
-                                                            <div data-v-d3d46c3f="" class="title">@lang('Inviting 10 valid user will reward you with 120 USDT')</div>
-                                                            <p data-v-d3d46c3f="">@lang("If the number of invited users reaches 10, and the first deposit amount of these 10 people exceeds 100 USDT, they will be regarded as 10 valid users. This reward can only be obtained once and cannot be obtained repeatedly.")</p>
-                                                        </div>
-                                                        <div data-v-d3d46c3f="" class="right"><span data-v-d3d46c3f=""
-                                                                class="btn processing">{{($userDirect>=16)?"Completed":"In Progress"}}</span></div>
-                                                    </div>
-                                                    <!---->
-                                                </div>
-                                                <div data-v-d3d46c3f="" class="item">
-                                                    <div data-v-d3d46c3f="" class="item-top">
-                                                        <div data-v-d3d46c3f="" class="left">
-                                                            <div data-v-d3d46c3f="" class="title">@lang('Inviting 20 valid user will reward you with 220 USDT')</div>
-                                                            <p data-v-d3d46c3f="">@lang("If the number of invited users reaches 20, and the first deposit amount of these 20 people exceeds 100 USDT, they will be regarded as 20 valid users. This reward can only be obtained once and cannot  be obtained repeatedly.")</p>
-                                                        </div>
-                                                        <div data-v-d3d46c3f="" class="right"><span data-v-d3d46c3f=""
-                                                                class="btn processing">{{($userDirect>=36)?"Completed":"In Progress"}}</span></div>
-                                                    </div>
-                                                    <!---->
-                                                </div>
-                                                
-                                            </div>
-                                            <!---->
-                                            <div class="van-list__finished-text"><span data-v-3aad496f="">No more
-                                                    items</span>
-                                                <div data-v-e6d916d4="" data-v-3aad496f="" class="empty"
-                                                    style="display: none;">
-                                                    <div data-v-e6d916d4="" class="van-empty custom-image">
-                                                        <div class="van-empty__image"
-                                                            style="width: 2.2rem; height: 2.2rem;"><img
-                                                                src="{{asset('')}}static/img//empty-D_AeuTry.png"></div>
-                                                        <p class="van-empty__description">No Data Available   </p>
-                                                        <!---->
-                                                    </div>
+                        </div>
+                        <div data-v-decd48ac="" id="scroll" class="content-container" style="padding-top: 44px;">
+                            <div data-v-decd48ac="" id="content" class="content-scroll">
+                                <div data-v-06646a51="" data-v-decd48ac="" class="big_box">
+                                    <div data-v-06646a51="" data-v-decd48ac="" class="container">
+                                        <div data-v-a8d9cade="" data-v-06646a51="" class="reward_card"
+                                            data-v-decd48ac="">
+                                            <div data-v-a8d9cade="" class="tips_image"><img data-v-a8d9cade=""
+                                                    src="{{asset('')}}static/img/bg.6bba3a76.png" alt="">
+                                                <div data-v-a8d9cade="" class="text_box">
+                                                    <div data-v-a8d9cade="" class="name">Finpact</div>
+                                                    <div data-v-a8d9cade="" class="tips_text">Complete tasks and
+                                                        receive benefits</div>
                                                 </div>
                                             </div>
-                                            <!---->
-                                            <div class="van-list__placeholder"></div>
+                                            <div data-v-a8d9cade="" class="total_rewards">
+                                                <div data-v-a8d9cade="" class="rewards_box">
+                                                    <div data-v-a8d9cade="">Collect the total rewards so far</div>
+                                                    <div data-v-a8d9cade="" class="themeColor0">0 USDT</div>
+                                                </div><i data-v-a8d9cade=""
+                                                    class="van-icon van-icon-arrow"><!----></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div data-v-ef18793c="" data-v-06646a51="" class="tab_box" data-v-decd48ac="">
+                                    <ul data-v-ef18793c="" class="ul0 ul">
+                                        <li data-v-ef18793c="" class="themeColor0 active"> Long-term tasks </li>
+                                        <li data-v-ef18793c="" class="noactive"> Daily tasks </li>
+                                    </ul>
+                                </div>
+                                <div data-v-06646a51="" data-v-decd48ac="" class="container lower_section">
+                                    <div data-v-ae1b0c26="" data-v-06646a51="" class="long_tasks"
+                                        data-v-decd48ac="">
+                                        <div data-v-ae1b0c26="" class="card_list">
+                                            <div data-v-ae1b0c26="" class="card">
+                                                <div data-v-ae1b0c26="" class="title_box">
+                                                    <div data-v-ae1b0c26="" class="title_top">
+                                                        <div data-v-ae1b0c26="" class="title">Upgrade to Level 1 Ally
+                                                        </div>
+                                                    </div>
+                                                    <div data-v-ae1b0c26="" class="title_bot">
+                                                        <div data-v-ae1b0c26="" class="text">
+                                                            <div data-v-ae1b0c26="" class="illustrate">Upgrade to
+                                                                Level 1 Ally and you will get 30USDT</div>
+                                                            <div data-v-ae1b0c26="" class="rewards"> Task reward：
+                                                                <span data-v-ae1b0c26="">30 USDT</span></div>
+                                                        </div>
+                                                        <div data-v-ae1b0c26="" class="btn_box">
+                                                            <div data-v-ae1b0c26="" class="btn_t1">
+                                                                <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
+                                                                <span data-v-ae1b0c26="" class="themeColor0">In
+                                                                    progress</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!---->
+                                            </div>
+                                            <div data-v-ae1b0c26="" class="card">
+                                                <div data-v-ae1b0c26="" class="title_box">
+                                                    <div data-v-ae1b0c26="" class="title_top">
+                                                        <div data-v-ae1b0c26="" class="title">Upgrade to Level 2 Ally
+                                                        </div>
+                                                    </div>
+                                                    <div data-v-ae1b0c26="" class="title_bot">
+                                                        <div data-v-ae1b0c26="" class="text">
+                                                            <div data-v-ae1b0c26="" class="illustrate">Upgrade to
+                                                                Level 2 Ally Reward 100USDT</div>
+                                                            <div data-v-ae1b0c26="" class="rewards"> Task reward：
+                                                                <span data-v-ae1b0c26="">100 USDT</span></div>
+                                                        </div>
+                                                        <div data-v-ae1b0c26="" class="btn_box">
+                                                            <div data-v-ae1b0c26="" class="btn_t1">
+                                                                <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
+                                                                <span data-v-ae1b0c26="" class="themeColor0">In
+                                                                    progress</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!---->
+                                            </div>
+                                            <div data-v-ae1b0c26="" class="card">
+                                                <div data-v-ae1b0c26="" class="title_box">
+                                                    <div data-v-ae1b0c26="" class="title_top">
+                                                        <div data-v-ae1b0c26="" class="title">Upgrade to Level 3 Ally
+                                                        </div>
+                                                    </div>
+                                                    <div data-v-ae1b0c26="" class="title_bot">
+                                                        <div data-v-ae1b0c26="" class="text">
+                                                            <div data-v-ae1b0c26="" class="illustrate">Upgrade to
+                                                                Level 3 Ally and you will get 500USDT</div>
+                                                            <div data-v-ae1b0c26="" class="rewards"> Task reward：
+                                                                <span data-v-ae1b0c26="">500 USDT</span></div>
+                                                        </div>
+                                                        <div data-v-ae1b0c26="" class="btn_box">
+                                                            <div data-v-ae1b0c26="" class="btn_t1">
+                                                                <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
+                                                                <span data-v-ae1b0c26="" class="themeColor0">In
+                                                                    progress</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!---->
+                                            </div>
+                                            <div data-v-ae1b0c26="" class="card">
+                                                <div data-v-ae1b0c26="" class="title_box">
+                                                    <div data-v-ae1b0c26="" class="title_top">
+                                                        <div data-v-ae1b0c26="" class="title">Upgrade to Level 4 Ally
+                                                        </div>
+                                                    </div>
+                                                    <div data-v-ae1b0c26="" class="title_bot">
+                                                        <div data-v-ae1b0c26="" class="text">
+                                                            <div data-v-ae1b0c26="" class="illustrate">Upgrade to
+                                                                Level 4 Ally and you will get 2000USDT</div>
+                                                            <div data-v-ae1b0c26="" class="rewards"> Task reward：
+                                                                <span data-v-ae1b0c26="">2000 USDT</span></div>
+                                                        </div>
+                                                        <div data-v-ae1b0c26="" class="btn_box">
+                                                            <div data-v-ae1b0c26="" class="btn_t1">
+                                                                <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
+                                                                <span data-v-ae1b0c26="" class="themeColor0">In
+                                                                    progress</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!---->
+                                            </div>
+                                            <div data-v-ae1b0c26="" class="card">
+                                                <div data-v-ae1b0c26="" class="title_box">
+                                                    <div data-v-ae1b0c26="" class="title_top">
+                                                        <div data-v-ae1b0c26="" class="title">Upgrade to Level 5 Ally
+                                                        </div>
+                                                    </div>
+                                                    <div data-v-ae1b0c26="" class="title_bot">
+                                                        <div data-v-ae1b0c26="" class="text">
+                                                            <div data-v-ae1b0c26="" class="illustrate">Upgrade to
+                                                                Level 5 Ally and you will get 5000USDT</div>
+                                                            <div data-v-ae1b0c26="" class="rewards"> Task reward：
+                                                                <span data-v-ae1b0c26="">5000 USDT</span></div>
+                                                        </div>
+                                                        <div data-v-ae1b0c26="" class="btn_box">
+                                                            <div data-v-ae1b0c26="" class="btn_t1">
+                                                                <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
+                                                                <span data-v-ae1b0c26="" class="themeColor0">In
+                                                                    progress</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!---->
+                                            </div>
+                                            <div data-v-ae1b0c26="" class="card">
+                                                <div data-v-ae1b0c26="" class="title_box">
+                                                    <div data-v-ae1b0c26="" class="title_top">
+                                                        <div data-v-ae1b0c26="" class="title">Upgrade to Level 6 Ally
+                                                        </div>
+                                                    </div>
+                                                    <div data-v-ae1b0c26="" class="title_bot">
+                                                        <div data-v-ae1b0c26="" class="text">
+                                                            <div data-v-ae1b0c26="" class="illustrate">Upgrade to
+                                                                Level 6 Ally and you will get 10000USDT</div>
+                                                            <div data-v-ae1b0c26="" class="rewards"> Task reward：
+                                                                <span data-v-ae1b0c26="">10000 USDT</span></div>
+                                                        </div>
+                                                        <div data-v-ae1b0c26="" class="btn_box">
+                                                            <div data-v-ae1b0c26="" class="btn_t1">
+                                                                <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
+                                                                <span data-v-ae1b0c26="" class="themeColor0">In
+                                                                    progress</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!---->
+                                            </div>
+                                            <div data-v-ae1b0c26="" class="card">
+                                                <div data-v-ae1b0c26="" class="title_box">
+                                                    <div data-v-ae1b0c26="" class="title_top">
+                                                        <div data-v-ae1b0c26="" class="title">Get F-coins through the
+                                                            team</div>
+                                                    </div>
+                                                    <div data-v-ae1b0c26="" class="title_bot">
+                                                        <div data-v-ae1b0c26="" class="text">
+                                                            <div data-v-ae1b0c26="" class="illustrate">When your L1
+                                                                member activates the account, you can get 5F coin reward
+                                                            </div>
+                                                            <div data-v-ae1b0c26="" class="rewards"> Task reward：
+                                                                <span data-v-ae1b0c26=""> 5 F Coin</span></div>
+                                                        </div>
+                                                        <div data-v-ae1b0c26="" class="btn_box">
+                                                            <div data-v-ae1b0c26="" class="btn_t1">
+                                                                <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
+                                                                <span data-v-ae1b0c26="" class="themeColor0">In
+                                                                    progress</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!---->
+                                            </div>
+                                            <div data-v-ae1b0c26="" class="card">
+                                                <div data-v-ae1b0c26="" class="title_box">
+                                                    <div data-v-ae1b0c26="" class="title_top">
+                                                        <div data-v-ae1b0c26="" class="title">Get F-coins through the
+                                                            team</div>
+                                                    </div>
+                                                    <div data-v-ae1b0c26="" class="title_bot">
+                                                        <div data-v-ae1b0c26="" class="text">
+                                                            <div data-v-ae1b0c26="" class="illustrate">When your L2
+                                                                member activates the account, you can get 2F coin reward
+                                                            </div>
+                                                            <div data-v-ae1b0c26="" class="rewards"> Task reward：
+                                                                <span data-v-ae1b0c26=""> 2 F Coin</span></div>
+                                                        </div>
+                                                        <div data-v-ae1b0c26="" class="btn_box">
+                                                            <div data-v-ae1b0c26="" class="btn_t1">
+                                                                <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
+                                                                <span data-v-ae1b0c26="" class="themeColor0">In
+                                                                    progress</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!---->
+                                            </div>
+                                            <div data-v-ae1b0c26="" class="card">
+                                                <div data-v-ae1b0c26="" class="title_box">
+                                                    <div data-v-ae1b0c26="" class="title_top">
+                                                        <div data-v-ae1b0c26="" class="title">Get F-coins through the
+                                                            team</div>
+                                                    </div>
+                                                    <div data-v-ae1b0c26="" class="title_bot">
+                                                        <div data-v-ae1b0c26="" class="text">
+                                                            <div data-v-ae1b0c26="" class="illustrate">When your L3
+                                                                member activates the account, you can get 1F coin reward
+                                                            </div>
+                                                            <div data-v-ae1b0c26="" class="rewards"> Task reward：
+                                                                <span data-v-ae1b0c26=""> 1 F Coin</span></div>
+                                                        </div>
+                                                        <div data-v-ae1b0c26="" class="btn_box">
+                                                            <div data-v-ae1b0c26="" class="btn_t1">
+                                                                <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
+                                                                <span data-v-ae1b0c26="" class="themeColor0">In
+                                                                    progress</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!---->
+                                            </div><!---->
+                                        </div>
+                                        <div data-v-a1bf5ce4="" data-v-ae1b0c26=""><!----></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        
-                            <div data-v-d938818c=""
-                                class="swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper">
-                                <div class="swiper-wrapper"></div>
-                                <!---->
-                                <!---->
-                                <!---->
-                            </div>
-                        </div>
-                       
+                        </div><!---->
                     </div>
                 </div>
-                <div data-v-8b363259="" data-v-e85f0186="" class="touch-move-con" style="top: 1.88rem; right: 0.2rem;">
+            </div>
+        </div>
+        <div data-v-a7d12cfc="" class="global-loading default" style="display: none;">
+            <div data-v-a7d12cfc="" class="global-spinner"><img data-v-a7d12cfc=""
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAArCAYAAAADgWq5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAF6WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMi0wNC0xMlQxNTo0MTowNiswODowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjItMDQtMTJUMTU6NDM6MTQrMDg6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjItMDQtMTJUMTU6NDM6MTQrMDg6MDAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NWU0ZGQwNmEtMWExNS1kYjRmLTkyZmQtZjIzNTAwNzJkMGNmIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjlGMTI0NjE1NTQzQzExRThCQzhCQzEyQjVDOUMzOEJGIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6OUYxMjQ2MTU1NDNDMTFFOEJDOEJDMTJCNUM5QzM4QkYiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiBwaG90b3Nob3A6SUNDUHJvZmlsZT0ic1JHQiBJRUM2MTk2Ni0yLjEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5RjEyNDYxMjU0M0MxMUU4QkM4QkMxMkI1QzlDMzhCRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5RjEyNDYxMzU0M0MxMUU4QkM4QkMxMkI1QzlDMzhCRiIvPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo1ZTRkZDA2YS0xYTE1LWRiNGYtOTJmZC1mMjM1MDA3MmQwY2YiIHN0RXZ0OndoZW49IjIwMjItMDQtMTJUMTU6NDM6MTQrMDg6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+hddYGwAABHhJREFUWIXN2XuoFVUUx/HPXG9WmmIPJQtNwQwqe5paEI1pCBZCRvVXDwlKCsLpIURgIZZG1KEXRVJJWPRnIv3TAw/0UCsrUlBLLQ1T01Ip6eZr+mPPOHOP56jXcz3XHxzu3nv2nv29a/bstdaeyJIXdYOG4bLs77k4AzvQFyvxKw7gJ/xZHpjGSZcmam8Csg/uxU0Yi8HHMGYz1uAtfIh/uzrp8QBPwFO4HgfR1oWx52e/CViX3ef9rkwedWFJXIQncE+da7uwHcuwF1uQClbvi1G4tMF9V+GuNE5+6C7gUzANT2Joqb0Dm/A6XsO+I9yjD/7DaMzArTi1ps/iNE6mNAvcjqfxKE4rtS/BXHxytAnqqBcuwHQ8XnNtP0amcfJLo8FHWn/98QIeK8Fuw3W48ThhCbvFBsxEhMWla+3YEFUrfbsKfDpewcOKR/e5sBssPU7QusqWwTTBurlWN+rfCHg67i7V3xasurFZwHpK42QBxmFP1jQkqlbW1utbD3g0ygt7Fe7T2QLdrjROVmBSqWlkVK28WtuvHvB7pfImXNvNbA2VxsmXeKnU9FBUrVxT7lMLHGNkVt6JO/DPiQKspzROZuC3UtM7UbVyiLMMPBDzSvWFWHFC6RprrLCbwCU4ZOUy8G24OivvxCwneN02UhonWwSD5Xo3L5SBpypii/mCu+1JzRHcOwyPqpVhFMD9MSYr78OnLUWrozRO1gk7FCE8mEwBPE7hzVbiu5bSNdabpfKkqFqJcuCr0Dsrr1ETZPegPiiVJ6dxkubAQwW/TohTTxa1K4x3IKpWLmwToqfhWWMqpDEnhdI42SrENYSYpqNN2O+uyBojfN16tPqKqpV2fJNVD+LK3MJbS/0GtRqskdI42Y+zsmob/moTlkHuVQ7qHKifDCpnJtvbBMg8XmjD2S1HaqCoWhmgCDl3o1e+S3xf6tey6OwY1K4IxrZhcw68rNRpjJNHA4WsG7ancbI7B/5CcagxCv1aTVarLKS8OaumAuMh17xFsVb64YaW0tVXO27PyvuxiAL4oJC35Xq+dVwNdbEiDv5btmzL4eXcUnmEwpn0lGYpwoVFaZykdAbeJZziEB7HG0JY13JF1crlyE+BdmQsODynm60ImkcIS6WliqqVQXhO8MCEg5Yf8+u1wFvxANbjfoUHbImiaqU3XsbErGkf5qRx0pH3qXfcOj/79YSeFXaG3JAz0zjZUO7QzIF2tymLyp7BI4oXbYVg7U7qceCoWhmKBRhfal6NKWmcHPYOdeX0/EQoxkc6wy7FxDROfq83oKcsfIvw+MfXtC8VLLuj0cBmgXsLb/RIfCVkK72FrXGfELjsEXLGFHcK580DdI5zd2F2GieVo03YLPCDwqF3nmr1Ek6N1grfN7Zn/8xenNPgHsuFbxw/H8uEzQLvVLwH+UZ/pnDOQfg0UKsD2biPMS+Nk5VdmbBZ4IVCVjtVyAXPE2LYsjqEtGs9vhWCrM8cp1NqFviA4OdzXz9ESLcGC+Abhe9yy4Vk8o8m5/M/9rYMi48jzWIAAAAASUVORK5CYII="
+                    alt=""></div>
+        </div>
+        <div data-v-b68a32e2="" class="page-loading-con" style="display: none;">
+            <div data-v-b68a32e2="" class="page-loading">
+                <div data-v-b68a32e2="" class="loader-outter"></div>
+                <div data-v-b68a32e2="" class="loader-inner"></div>
+            </div>
+            <p data-v-b68a32e2="">Loading...</p>
+        </div><!---->
+    </div>
+    <script src="{{asset('')}}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
+    <script src="{{asset('')}}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
+    <script src="{{asset('')}}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
+    <script src="{{asset('')}}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script>
+    <div class="van-overlay" style="z-index: 2001; display: none;"></div>
+    <div data-v-7e78ca37="" class="van-popup van-popup--center"
+        style="background: none; z-index: 2002; display: none;">
+        <div data-v-7e78ca37="" class="popup-box"><img data-v-7e78ca37=""
+                src="{{asset('')}}static/img/home-checkIn-icon.3b9c0bc0.png" alt="" class="icon-logo"><i
+                data-v-7e78ca37="" class="cross van-icon van-icon-cross"><!----></i>
+            <div data-v-7e78ca37="" class="content">
+                <div data-v-7e78ca37="" class="text">You haven't Check-in today yet, Check-in and get a gift!</div>
+                <div data-v-36e29cae="" data-v-7e78ca37="" class="btn_box big">
+                    <div data-v-36e29cae="" class="btn submit">Check-in now</div>
                 </div>
             </div>
-            <!---->
+        </div>
+    </div>
+</body>
+
+</html>

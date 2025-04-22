@@ -720,12 +720,14 @@
                                                     </div>
                                                 </li>
                                                 <li data-v-2a245038="" data-v-decd48ac="">
+                                                    <a href="{{route('user.level-team')}}">
                                                     <div data-v-2a245038="" data-v-decd48ac=""><img
                                                             data-v-2a245038="" data-v-decd48ac=""
                                                             src="{{asset('')}}static/img/d90754a40f81f3da840167c9230e4eb4.png"
                                                             alt="">
                                                         <p data-v-2a245038="" data-v-decd48ac="">my team</p>
                                                     </div>
+                                                    </a>
                                                 </li>
                                             </ul>
                                         </div>

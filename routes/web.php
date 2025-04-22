@@ -137,7 +137,7 @@ Route::post('/change-trxpasswword', [App\Http\Controllers\UserPanel\Profile::cla
 
 //quality
 Route::get('/tasks', [App\Http\Controllers\UserPanel\Invest::class, 'quality'])->name('user.tasks');
-Route::get('/quality/records', [App\Http\Controllers\UserPanel\Invest::class, 'records'])->name('user.record');
+Route::get('/order/records', [App\Http\Controllers\UserPanel\Invest::class, 'records'])->name('user.record');
 // add fund
 
 Route::get('/AddFund', [App\Http\Controllers\UserPanel\AddFund::class, 'index'])->name('user.AddFund');

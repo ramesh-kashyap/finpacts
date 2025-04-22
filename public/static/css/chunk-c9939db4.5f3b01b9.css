@@ -1,0 +1,26 @@
+ul[data-v-20c16f3c] {
+  margin:.24rem 0
+}
+ul li[data-v-20c16f3c] {
+  height:1rem;
+  border-bottom:.02rem solid #ebebeb;
+  align-items:center
+}
+ul li>img[data-v-20c16f3c] {
+  height:.24rem;
+  margin-left:.1rem
+}
+ul li .str[data-v-20c16f3c] {
+  color:#999
+}
+ul li .pic[data-v-20c16f3c] {
+  overflow:hidden
+}
+ul li .pic img[data-v-20c16f3c] {
+  height:.64rem
+}
+ul li .pic .file[data-v-20c16f3c] {
+  position:absolute;
+  top:0;
+  left:0
+}

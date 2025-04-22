@@ -1,0 +1,101 @@
+.tab[data-v-5b33f38b] {
+  margin-bottom:.24rem;
+  display:flex;
+  border-bottom:.02rem solid #ebebeb;
+  padding:.24rem 0
+}
+.tab .it[data-v-5b33f38b] {
+  height:.46rem;
+  align-items:center;
+  font-size:.26rem;
+  margin-right:.24rem
+}
+.tab .it img[data-v-5b33f38b] {
+  height:.1rem;
+  margin-left:.1rem
+}
+.tab-nav[data-v-5b33f38b] {
+  margin-top:.2069rem;
+  margin-bottom:.17241rem;
+  border-radius:.13793rem;
+  background:#ececec;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:.08rem
+}
+.tab-nav li[data-v-5b33f38b] {
+  flex:1;
+  padding:.16rem 0;
+  text-align:center;
+  border-radius:.12rem
+}
+.tab-nav li div[data-v-5b33f38b] {
+  font-size:.28rem;
+  color:#6e6e6e;
+  line-height:.28rem
+}
+.tab-nav li p[data-v-5b33f38b] {
+  margin-top:.04rem;
+  color:#929292;
+  font-size:.2rem
+}
+.tab-nav li.active[data-v-5b33f38b] {
+  background-color:#fff
+}
+.tab-nav li.active div[data-v-5b33f38b] {
+  color:#131315
+}
+.list[data-v-5b33f38b] {
+  padding:.2069rem .10345rem
+}
+.list-item[data-v-5b33f38b] {
+  background:#fff;
+  box-shadow:0 .06897rem .27586rem 0 rgba(0,0,0,.1);
+  border-radius:.17241rem;
+  margin-bottom:.2069rem;
+  padding:.27586rem;
+  display:flex
+}
+.list-item-info[data-v-5b33f38b] {
+  display:flex;
+  flex:1
+}
+.list-item-info-img[data-v-5b33f38b] {
+  margin-right:.2069rem
+}
+.list-item-info-img img[data-v-5b33f38b] {
+  height:.68966rem;
+  width:.68966rem
+}
+.list-item-info-text[data-v-5b33f38b] {
+  flex:1;
+  font-weight:500;
+  font-size:.28rem;
+  line-height:.39rem;
+  color:#000;
+  margin-bottom:.05rem;
+  display:flex;
+  align-items:center
+}
+.list-item-info-text>span[data-v-5b33f38b] {
+  padding-right:.17241rem;
+  display:flex;
+  align-items:center
+}
+.list-item-info-time[data-v-5b33f38b] {
+  font-weight:400;
+  font-size:.24rem;
+  line-height:.34rem;
+  color:#929292
+}
+.list-item-status[data-v-5b33f38b] {
+  width:.2069rem;
+  height:.2069rem;
+  border-radius:.2069rem;
+  background-color:#d4d4d4;
+  box-shadow:0 0 .10345rem hsla(0,0%,83.1%,.5)
+}
+.list-item-status.active[data-v-5b33f38b] {
+  background-color:#0ac68e
+}
