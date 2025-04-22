@@ -108,49 +108,7 @@
         }
 
     </style>
-    <script>
-        window.onload = function () {
-            document.querySelector('html').setAttribute('translate', 'no');
-        }
-        if ("standalone" in window.navigator && window.navigator.standalone) {
-            var noddy,
-                remotes = false;
-            document.addEventListener(
-                "click",
-                function (event) {
-                    noddy = event.target;
-                    while (noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
-                        noddy = noddy.parentNode;
-                    }
-                    if (
-                        "href" in noddy &&
-                        noddy.href.indexOf("http") !== -1 &&
-                        (noddy.href.indexOf(document.location.host) !== -1 || remotes)
-                    ) {
-                        event.preventDefault();
-                        document.location.href = noddy.href;
-                    }
-                },
-                false
-            );
-        }
-
-
-        window.addEventListener("load", function () {
-            document.getElementById("loaderInit").style.display = "none";
-        });
-        window.addEventListener(
-            "error",
-            (event) => {
-                const target = event.target;
-                if (target.tagName === "SCRIPT" && target.src) {
-                    location.reload();
-                }
-            },
-            true
-        );
-
-    </script>
+ 
     <style>
         * {
             margin: 0;
@@ -170,44 +128,34 @@
     <link href="/js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js" rel="preload" as="script">
     <link href="/js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js" rel="preload" as="script">
     <link href="/js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js" rel="preload" as="script">
-    <link href="/static/css/app.c3049ff2.css" rel="preload" as="style">
-    <link href="/static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
-    <link href="/static/css/chunk-vendors.794edbf9.css" rel="preload" as="style">
-    <link href="/static/css/chunk-vant.d14f5539.css" rel="stylesheet">
-    <link href="/static/css/chunk-vendors.794edbf9.css" rel="stylesheet">
-    <link href="/static/css/app.c3049ff2.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/static/css/chunk-7a1721c4.c20230a9.css">
+    <link href="{{asset('')}}static/css/app.c3049ff2.css" rel="preload" as="style">
+    <link href="{{asset('')}}static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
+    <link href="{{asset('')}}static/css/chunk-vendors.794edbf9.css" rel="preload" as="style">
+    <link href="{{asset('')}}static/css/chunk-vant.d14f5539.css" rel="stylesheet">
+    <link href="{{asset('')}}static/css/chunk-vendors.794edbf9.css" rel="stylesheet">
+    <link href="{{asset('')}}static/css/app.c3049ff2.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-7a1721c4.c20230a9.css">
     <script charset="utf-8" src="/js1744307594169/chunk-7a1721c4.da18abce.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/chunk-5576a184.9f52f39a.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-5576a184.9f52f39a.css">
     <script charset="utf-8" src="/js1744307594169/chunk-5576a184.c49d8c14.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/chunk-7cbde8e8.788c4ae8.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-7cbde8e8.788c4ae8.css">
     <script charset="utf-8" src="/js1744307594169/chunk-7cbde8e8.43936207.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/chunk-4f89519c.2a0f3cea.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-4f89519c.2a0f3cea.css">
     <script charset="utf-8" src="/js1744307594169/chunk-4f89519c.5238fa59.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/chunk-693d0a34.f05eb557.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-693d0a34.f05eb557.css">
     <script charset="utf-8" src="/js1744307594169/chunk-693d0a34.843d936b.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/chunk-0594a2c1.01b2fad7.css">
-    <script charset="utf-8" src="/js1744307594169/chunk-0594a2c1.63a49f03.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/chunk-11d066c4.4119687d.css">
-    <script charset="utf-8" src="/js1744307594169/chunk-11d066c4.5b467f59.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/chunk-914a5cc4.205f3334.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-914a5cc4.205f3334.css">
     <script charset="utf-8" src="/js1744307594169/chunk-914a5cc4.97cc76b3.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/chunk-b5df134e.aebe647e.css">
-    <script charset="utf-8" src="/js1744307594169/chunk-b5df134e.ae0f3c41.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/chunk-77e7c71d.6fb3bc68.css">
-    <script charset="utf-8" src="/js1744307594169/chunk-77e7c71d.69f239cd.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/chunk-3525d94c.2ba0cbc0.css">
-    <script charset="utf-8" src="/js1744307594169/chunk-3525d94c.e40fcb0e.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/chunk-bb9e60a4.6aed8065.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-bb9e60a4.6aed8065.css">
     <script charset="utf-8" src="/js1744307594169/chunk-bb9e60a4.386078a0.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/chunk-0c334b0a.bd99dde0.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-0594a2c1.01b2fad7.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-0594a2c1.63a49f03.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-0c334b0a.bd99dde0.css">
     <script charset="utf-8" src="/js1744307594169/chunk-0c334b0a.d7611963.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/chunk-60f64a44.d2532916.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-3525d94c.2ba0cbc0.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-3525d94c.e40fcb0e.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-60f64a44.d2532916.css">
     <script charset="utf-8" src="/js1744307594169/chunk-60f64a44.cffad1f6.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/chunk-6d426460.4038aca3.css">
-    <script charset="utf-8" src="/js1744307594169/chunk-6d426460.94243b8a.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/chunk-3037d06a.61cb72b7.css">
-    <script charset="utf-8" src="/js1744307594169/chunk-3037d06a.26c89200.1744307594169.chunk.js"></script>
 </head>
 
 <body class="mein_cn">
@@ -220,11 +168,8 @@
     <div id="app" class="applang">
         <div data-v-6302a7bf="">
             <div data-v-6302a7bf="" class="van-pull-refresh">
-                <div class="van-pull-refresh__track"
-                    style="transition-duration: 0ms; transform: translate3d(0px, 139px, 0px);">
-                    <div class="van-pull-refresh__head" style="height: 60px;">
-                        <div class="van-pull-refresh__text">Loose to refresh...</div>
-                    </div>
+                <div class="van-pull-refresh__track" style="transition-duration: 0ms;">
+                    <div class="van-pull-refresh__head" style="height: 60px;"></div>
                     <div data-v-decd48ac="" data-v-2848a4de="" class="page">
                         <div data-v-2848a4de="" data-v-decd48ac="" class="bg"></div>
                         <div data-v-decd48ac="" class="headers on">
@@ -283,7 +228,7 @@
                                         <div data-v-2848a4de="" data-v-decd48ac="" class="qrbox">
                                             <div data-v-2848a4de="" data-v-decd48ac="" class="m"><img data-v-2848a4de=""
                                                     data-v-decd48ac=""
-                                                    src="data:image/png;base64,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"
+                                                    src="data:image/png;base64,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"
                                                     alt=""></div>
                                         </div>
                                         <div data-v-2848a4de="" data-v-decd48ac="" class="addressBox">
@@ -292,7 +237,7 @@
                                             <div data-v-2848a4de="" data-v-decd48ac="" class="valMob">
                                                 <div data-v-2848a4de="" data-v-decd48ac="" class="inp flex">
                                                     <div data-v-2848a4de="" data-v-decd48ac="" class="flex1">
-                                                        TKS5FSexRd1zdQBQCWmjNZE5pj7SwPdVDj </div>
+                                                        TEPS79V8NNDcKnJR47537HaZfoCzpi2TNZ </div>
                                                     <div data-v-2848a4de="" data-v-decd48ac="" class="ico"><img
                                                             data-v-2848a4de="" data-v-decd48ac=""
                                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAcCAYAAAB75n/uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFVSURBVHgB7VZLTsMwEJ3JByGxCSfAN6C5QVgiIZGKDVtuADfhBt2yQQ0SEkvECQInINwgGyQUyzEzCWmjCreOFFdd9G3Glifz7PGbcRDWILp+EVKqGQ0nPAVLaMCsVtXdTzYtcEPwfEjgFZRKyTgwrVZS3eMyeAlaf4AN0DuhMwjemO+HMyMBBb9kqzUUB7WMy2xaggWidB5JP/yEdnMTBAc4unp+JZPw2APHaFI0hlpMPl5PLQkMVAyCTuki88N0Lkw+wVhqIXv2L8FYajH5LS6ZjvtlG5zx5/ve8W0kcIU9wZ5gBwm4AKmqRDcPYGS01a2bwtMATy5StOhrtZK3Lgi4Yb7xe8xtfPQUfT9eHPfnW1FR20ERT1sF2GFVLSZwirjlJvxN5YU5PdgFWEA2b8BSLUaCMPRvuh8sRBBkBQxDoxbTolc+nBdEEq/bhSlwXy0mp1+DNZn1gotjbAAAAABJRU5ErkJggg=="
@@ -351,7 +296,39 @@
                                     </div>
                                 </div>
                                 <!---->
-                                <!---->
+                                <!-- <div data-v-2848a4de="" class="van-popup van-popup--round van-popup--center"
+                                    style="z-index: 2025;">
+                                    <div data-v-2848a4de="" class="modal-con">
+                                        <div data-v-2848a4de="" class="modal-title"> Select network <img
+                                                data-v-2848a4de=""
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGNSURBVHgB7ZU9TsMwFMdfYqlSpyY5QZMsGVk70Z6AcgLEyMgJ4AgcIStbR5goN2CEfIgcIFLC1iWBZwFScL5sP4YO+UlWXNd6/5/s2AGYmBDwPO8G2yd/wj+wRLDWO29BECzF/5k4YNv2/qe7xj4URfEMhHDTNJ94F5tVVdUH1tsPCliW5RqGcUKVEMI55Ww2u8rzvBwUKMtyR5XoCmeMbaIoehXnsq4CFIm+8DiOX7rms75COhKq4YMCqhI64aMCshK64VICYxKUcI4BCriuG6LERWPoDttWN1xZoEcCdMM5UlvwJ6W9Hd+FGFuphnNMUITvOYafiuN4zZ6BBkor0PHCNdG6tqUFet72VV3Xc8q1LSUwdNSo345RAZlzTpFg1HCqBFMIHz1qOhJMNhyLXiZJ8gAjqEow2fA0TUOQhEs4jrNu1OiVaF1E1PBf8GI6x0dzu25939+OCiAWNZyTZVmJd8RGkLDEea0twKV7w+ADrsQ1hu+AAG7FYbFY3GO9Of58RKGQj8HExDHxBbuCFQ0AYUaoAAAAAElFTkSuQmCC"
+                                                alt=""></div>
+                                        <div data-v-2848a4de="" class="modal-table">
+                                            <div data-v-2848a4de="" class="isact0"><img data-v-2848a4de=""
+                                                    src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                    alt="">USDT </div>
+                                            <div data-v-2848a4de="" class=""><img data-v-2848a4de=""
+                                                    src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241228/3470d0afc2accfcd55e85eff00329630.png"
+                                                    alt="">USDC </div>
+                                        </div>
+                                        <div data-v-2848a4de="" class="modal-list">
+                                            <div data-v-2848a4de="" class="list-info">
+                                                <div data-v-2848a4de="" class="img"><img data-v-2848a4de=""
+                                                        src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241228/e5315cc0ed9748bd789c0e5af1579f6f.png"
+                                                        alt=""></div>
+                                                <div data-v-2848a4de="" class="info">
+                                                    <div data-v-2848a4de="">TRX(TRC20)</div>
+                                                    <p data-v-2848a4de="">Expected arrival time ≈1 minutes</p>
+                                                    <p data-v-2848a4de=""> Minimum deposit ≥1 USDT </p>
+                                                </div>
+                                                <div data-v-2848a4de="" class="img1"><img data-v-2848a4de=""
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAN7SURBVHgBzZnLTxNRFId/d6haCMGaqLjCEouxVUNZudFQEtia6FYTdWuihZ3QBWWhZWeRtbELXap/gAtKcOOuRqUkhTAQNz4SKzG82s71nmtb2zLtTIfp40vI0Lkzma/nPubcUwaLeCLJADj3Q8Ew4/BzDpc47co3p8WfKtpU5PhHKEp8ddIbhwVYPRe7w+sux7HdoBAbL5Ex+yAVjMc7oMysTHrVOu4zKXZ0Z1r8Ow4bYIzHzIoaCg7MrgS5poVRZ8RMPFgVPTGTCl2MGVxXHc+T5aewKWpVURBdfeSbqNasK/hvrO28BUcAzSGR3e8cUcP96coGRe9qMd4WmihH+GVAdDggmO9WP5qNCIhnVj67jLIuHoh8ucs5e4HWMrE65YsWPhQFL0SS7hz4glhw3WgtaTEe+wvjsdjFOWjTbSBHuBxOueZKZAQpelnO19FGiCieoCjKCFL00GY4jmzL9TffxSyABtNzTEFotBcvb53F6Plu4xsYC8pDPitZQAMhORLz9jqL526/2sCHzW0YSI4o0LQAmixH3Lx83Phmkc4pYpoMokFUkyMMo0cwHnCIgxsmoQc+uHYKV/q68C71B/NLP2BFbn7pJ958+g1jPzYoBJkbJgmNnSl2TeHBepJGcs/eV/9ipXCxJtIsNp3nVY6bh1dPyog2Qi6PS6nnar1xUypps5yExiC980xF8f7rr0KgD97TzgOSxNhAt61y5KYwhrTZq7d2c2L92kTy++6BNpK0WY5QFc55op47aknaLEfTeEOMQbaIOjEjeWg5QkNCLNSsrggWqCVpixwhNvwy3RJp/i9Y3Fb2ODvKJo5dcrQtTU35+h3yE+dzIpKWUi6K5PXn6/LtsrWnIfnNeGyaM2RxOsh1MJvZj+KQ0Bppm5ygA5ihoxRUw0NpzrU5tAmMsVihLPJ/T5LJhAHza2KjoLFXiB5RFKQooqShZXBWVlQqexfTfrSVXS12lXOpkDdWek63NuOJLDe79EEkRICGKk/qZjPZvb0b4vtYWsAtwRCn4pF+Uw3OPf4cZUwJooFQt66FfFVLfDXzwbXQpXEx5e+JjEeF/dCknKglR5gqAcu6DedhkYLfgQ1Q1HKZzrBePbCSuoroBVFx17CFOk6aXqnZTFfUjJglwVLkhp/21B1sEBp35zdfxZ8hKBHmDAmRMi1SxmT1Z4i/flyHRT7y5jEAAAAASUVORK5CYII="
+                                                        alt=""></div>
+                                            </div>
+                                        </div>
+                                        <div data-v-2848a4de="" class="modal-btn isact0"> OK </div>
+                                    </div>
+                                </div> -->
                             </div>
                         </div>
                         <!---->
@@ -369,22 +346,17 @@
                 <div data-v-b68a32e2="" class="loader-outter"></div>
                 <div data-v-b68a32e2="" class="loader-inner"></div>
             </div>
-            <p data-v-b68a32e2="">Loading...</p>
         </div>
         <!---->
     </div>
-    <script src="/js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
-    <script src="/js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
-    <script src="/js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
-    <script src="/js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script>
-    <script src="/js1744307594169/app.46ba12d9.1744307594169.js"></script>
-    <div class="van-toast van-toast--middle van-toast--success" style="z-index: 2059; display: none;"><i
+   
+    <!---->
+    <!---->
+    <div class="van-toast van-toast--middle van-toast--success" style="z-index: 2015; display: none;"><i
             class="van-icon van-icon-success van-toast__icon">
             <!----></i>
         <div class="van-toast__text">Registration successful</div>
     </div>
-    <!---->
-    <!---->
     <!---->
 </body>
 

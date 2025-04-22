@@ -111,101 +111,9 @@
         100% {
             transform: rotate(-360deg);
         }
-    <style type="text/css">
-        .page-loading-con {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .page-loading {
-            width: 1.5em;
-            height: 1.5em;
-            border-radius: 50%;
-            display: inline-block;
-            vertical-align: middle;
-            position: relative;
-        }
-
-        .loader-outter,
-        .loader-inner {
-            position: absolute;
-            border: 0.1em solid #0b53b4;
-            border-radius: 50%;
-        }
-
-        .loader-outter {
-            border-left-color: transparent;
-            border-bottom: 0;
-            width: 100%;
-            height: 100%;
-            -webkit-animation: loader-outter 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
-            animation: loader-outter 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
-        }
-
-        .loader-inner {
-            width: 1em;
-            height: 1em;
-            left: calc(50% - 0.5em);
-            top: calc(50% - 0.5em);
-            border-right: 0;
-            border-top-color: transparent;
-            -webkit-animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
-            animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
-        }
-
-        @-webkit-keyframes loader-outter {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
-        }
-
-        <blade keyframes|%20loader-outter%20%7B>0% {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
-        }
-
-        @-webkit-keyframes loader-inner {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(-360deg);
-                transform: rotate(-360deg);
-            }
-        }
-
-        <blade keyframes|%20loader-inner%20%7B>0% {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(-360deg);
         }
     </style>
 
-        }
-
-    </style>
- 
     <style>
         * {
             margin: 0;
@@ -220,7 +128,6 @@
             text-transform: capitalize;
             text-transform: capitalize;
         }
-
     </style>
     <link href="/js1744307594169/app.46ba12d9.1744307594169.js" rel="preload" as="script">
     <link href="/js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js" rel="preload" as="script">
@@ -1010,10 +917,6 @@
 
                         @include('layouts.upnl.footer')
 
-                                </div>
-                            </div>
-                        </div>
-                      
                     </div>
                 </div>
             </div>
@@ -1058,7 +961,7 @@
         </div>
         <!---->
     </div>
-   
+
     <div class="van-toast van-toast--middle van-toast--text" style="z-index: 2038; display: none;">
         <div class="van-toast__text">Please verify your real name first</div>
     </div>
