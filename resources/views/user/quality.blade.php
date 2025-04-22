@@ -176,12 +176,13 @@
                                 <div data-v-29c52665="" class="container flex"><!---->
                                     <div data-v-29c52665="" class="myName">
                                         <div data-v-29c52665=""><img data-v-29c52665=""
-                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20231025/0feefd89860da746f3a51ec0d8063854.png"
+                                                src="{{asset('')}}static/img/0feefd89860da746f3a51ec0d8063854.png"
                                                 alt=""></div>
                                     </div>
                                     <div data-v-29c52665="" class="name tac">Contract</div>
                                     <div data-v-29c52665="" class="flex1"></div><!----><!----><!----><!----><!---->
-                                    <div data-v-29c52665="" class="str"> Order Record </div><!----><!----><!---->
+                                    <div data-v-29c52665="" class="str">   <a
+                                        href="{{ route('user.record') }}">    Order Record </a> </div><!----><!----><!---->
                                 </div>
                             </div>
                         </div>
@@ -214,7 +215,7 @@
                                                         </div>
                                                         <div data-v-5959a183="" class="ico"><img
                                                                 data-v-5959a183=""
-                                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241203/bc3cf11087b69389ded07723adf92b4a.png"
+                                                                src="{{asset('')}}static/img/bc3cf11087b69389ded07723adf92b4a.png"
                                                                 alt="" style="pointer-events: none;"></div>
                                                     </div>
                                                 </div>
@@ -238,7 +239,7 @@
                                                         </div>
                                                         <div data-v-5959a183="" class="ico"><img
                                                                 data-v-5959a183=""
-                                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241203/3ef4d33c9bfec649c5a233f9bf6c8a07.png"
+                                                                src="{{asset('')}}static/img/3ef4d33c9bfec649c5a233f9bf6c8a07.png"
                                                                 alt="" style="pointer-events: none;"></div>
                                                     </div>
                                                 </div>
@@ -262,7 +263,7 @@
                                                         </div>
                                                         <div data-v-5959a183="" class="ico"><img
                                                                 data-v-5959a183=""
-                                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241203/e84156ccdb1b6d531814aec74fc68f87.png"
+                                                                src="{{asset('')}}static/img/e84156ccdb1b6d531814aec74fc68f87.png"
                                                                 alt="" style="pointer-events: none;"></div>
                                                     </div>
                                                 </div>
@@ -286,7 +287,7 @@
                                                         </div>
                                                         <div data-v-5959a183="" class="ico"><img
                                                                 data-v-5959a183=""
-                                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241203/5a927157d4c65dd50b6e79204b700238.png"
+                                                                src="{{asset('')}}static/img/5a927157d4c65dd50b6e79204b700238.png"
                                                                 alt="" style="pointer-events: none;"></div>
                                                     </div>
                                                 </div>
@@ -310,7 +311,7 @@
                                                         </div>
                                                         <div data-v-5959a183="" class="ico"><img
                                                                 data-v-5959a183=""
-                                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241203/801aeb5622b9a5316256390053248c92.png"
+                                                                src="{{asset('')}}static/img/801aeb5622b9a5316256390053248c92.png"
                                                                 alt="" style="pointer-events: none;"></div>
                                                     </div>
                                                 </div>
@@ -334,7 +335,7 @@
                                                         </div>
                                                         <div data-v-5959a183="" class="ico"><img
                                                                 data-v-5959a183=""
-                                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241203/d8d58144ff82da22c5a4675d125dd9fd.png"
+                                                                src="{{asset('')}}static/img/d8d58144ff82da22c5a4675d125dd9fd.png"
                                                                 alt="" style="pointer-events: none;"></div>
                                                     </div>
                                                 </div>
@@ -358,7 +359,7 @@
                                                         </div>
                                                         <div data-v-5959a183="" class="ico"><img
                                                                 data-v-5959a183=""
-                                                                src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241203/d32a35a2d9ac4acc4fca025fce1ad2c1.png"
+                                                                src="{{asset('')}}static/img/d32a35a2d9ac4acc4fca025fce1ad2c1.png"
                                                                 alt="" style="pointer-events: none;"></div>
                                                     </div>
                                                 </div>
@@ -388,8 +389,8 @@
                                             <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
                                                         data-v-5959a183="" data-v-decd48ac="" alt=""
-                                                        data-src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
-                                                        src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        data-src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
                                                         lazy="loaded"></div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">Special
@@ -451,8 +452,8 @@
                                             <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
                                                         data-v-5959a183="" data-v-decd48ac="" alt=""
-                                                        data-src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
-                                                        src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        data-src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
                                                         lazy="loaded"></div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">3-day
@@ -514,8 +515,8 @@
                                             <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
                                                         data-v-5959a183="" data-v-decd48ac="" alt=""
-                                                        data-src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
-                                                        src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        data-src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
                                                         lazy="loaded"></div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">7-day
@@ -577,8 +578,8 @@
                                             <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
                                                         data-v-5959a183="" data-v-decd48ac="" alt=""
-                                                        data-src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
-                                                        src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        data-src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
                                                         lazy="loaded"></div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">30-day
@@ -640,7 +641,7 @@
                                             <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
                                                         data-v-5959a183="" data-v-decd48ac="" alt=""
-                                                        data-src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        data-src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
                                                         src="{{ asset('') }}static/img/error.2872d899.png"
                                                         lazy="loading"></div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
