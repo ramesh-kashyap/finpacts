@@ -1,227 +1,51 @@
-<style>
-    .footers .item div.on span[data-v-2620cc76] {
-        color: #efefef;
-    }
-  /* From Uiverse.io by mrhyddenn */ 
-  .footer .loader {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  background: transparent;
-  border-radius: 50%;
-  box-shadow: 25px 25px 75px rgba(0,0,0,0.55);
-  border: 1px solid #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  margin-left: 16px;
-  cursor: pointer;
-}
+<div data-v-decd48ac="" class="footer">
+    <div data-v-46204c6a="" data-v-2a245038="" class="footers" data-v-decd48ac="">
+        <div data-v-46204c6a="" class="item">
+            <div data-v-46204c6a="" class="themeColor0"> 
+                <a href="{{route('user.dashboard')}}">
+                <div data-v-46204c6a=""><img data-v-46204c6a=""
+                        src="{{ asset('') }}static/img/b_home_on.5de83a8b.png"
+                        alt=""></div><span data-v-46204c6a=""> Homepage </span>
 
-.footer  .footer.loader::before {
-  content: '';
-  position: absolute;
-  inset: 20px;
-  background: transparent;
-  border: 1px dashed#444;
-  border-radius: 50%;
-  box-shadow: inset -5px -5px 25px rgba(0,0,0,0.25),
-  inset 5px 5px 35px rgba(0,0,0,0.25);
-}
-
-.footer .loader::after {
-  content: '';
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 1px dashed#444;
-  box-shadow: inset -5px -5px 25px rgba(0, 0, 0, 0.25), inset 5px 5px 35px rgb(11, 229, 116);
-}
-
-.footer .loader span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  height: 100%;
-  background: transparent;
-  transform-origin: top left;
-  animation: radar81 2s linear infinite;
-  border-top: 1px dashed #fff;
-}
-
-.footer .loader span::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: seagreen;
-  transform-origin: top left;
-  transform: rotate(-55deg);
-  filter: blur(30px) drop-shadow(20px 20px 20px seagreen);
-}
-
-@keyframes radar81 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.footers[data-v-2620cc76] {
-width: 100%;
-min-height: auto;
-border-radius: .32rem .32rem 0 0;
-padding: .12rem .1rem .12rem .1rem;
-display: flex;
-align-items: center;
-justify-content: center;
-background: #111015;
-border: .02rem solid hsla(0, 0%, 100%, .12);
-}
-</style>
-<div data-v-6e2d35de="" class="footer">
-    <div data-v-2620cc76="" data-v-32fa28da="" class="footers" data-v-6e2d35de="">
-    <div data-v-2620cc76="" class="item">
-
-
-    <a href="{{ route('user.dashboard') }}">
-    <div data-v-2620cc76="">
-        <img data-v-2620cc76=""
-             src="{{ Request::is('user/dashboard') ? asset('static/img/i1.png') : asset('static/img/home1.png') }}"
-             alt="">
-        <span data-v-2620cc76="">Home</span>
-    </div>
-
-
-</a>
-</div>
-
-        <div data-v-2620cc76="" class="item item_active" >
-
-        <a href="{{ route('user.asset') }}">
-            <div data-v-2620cc76="" class="on">
-            <img data-v-2620cc76=""
-             src="{{ Request::is('user/asset') ? asset('static/img/i2.png') : asset('static/img/home2.png') }}"
-             alt="">
-                    <span data-v-2620cc76="">Assets</span>
-            </div>
-</a>
-        </div>
-
-
-        <div data-v-2620cc76="" class="item" onclick="window.location.href='{{ route('user.tasks') }}'">
-            <div data-v-2620cc76="" class="">
-                <div class="loader">
-                    <span></span>
-                </div>
-
-                <span data-v-2620cc76="">TTMD </span>
+                       </a>
             </div>
         </div>
-        <div data-v-2620cc76="" class="item" >
-
-        <a href="{{ route('user.level-team') }}">
-            <div data-v-2620cc76="" class="">
-                
-            <img data-v-2620cc76=""
-             src="{{ Request::is('user/level-team') ? asset('static/img/i3.png') : asset('static/img/home3.png') }}"
-             alt="">
-                    <span data-v-2620cc76="">Community</span>
-                
-                </div>
-
-</a>
+        <div data-v-46204c6a="" class="item">
+            <div data-v-46204c6a="" class="">
+                <a href="{{route('user.tasks')}}">
+                <div data-v-46204c6a=""><img data-v-46204c6a=""
+                        src="data:image/png;base64,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"
+                        alt=""></div><span data-v-46204c6a=""> Contract </span>
+                    </a>
+            </div>
         </div>
+        <div data-v-46204c6a="" class="item">
 
-
-
-        <div data-v-2620cc76="" class="item" >
-        <a href="{{ route('user.profile') }}">
-
-            <div data-v-2620cc76="" class="">
-                
-            
-            <img data-v-2620cc76=""
-             src="{{ Request::is('user/profile') ? asset('static/img/i4.png') : asset('static/img/home4.png') }}"
-             alt="">
-                    
-                    <span data-v-2620cc76="">Mine</span>
-                
-                
-                </div>
-</a>
+            <div data-v-46204c6a="" class="">
+                <a href="{{route('user.income')}}">
+                <div data-v-46204c6a=""><img data-v-46204c6a=""
+                        src="{{ asset('') }}static/img/b_sy.85a4fc63.png" alt="">
+                </div><span data-v-46204c6a=""> Income </span>
+            </a>
+            </div>
+        </div>
+        <div data-v-46204c6a="" class="item">
+            <div data-v-46204c6a="" class="">
+                <a href="{{route('user.asset')}}">
+                <div data-v-46204c6a=""><img data-v-46204c6a=""
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABYCAYAAABxlTA0AAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPBSURBVHgB7Z1BTttAFIafk0oxu/QG7glKd901EgcoPUHhBCQbVCIkk02irBxO0HCC0gOgwq476Ak6PUFhF1jgvlcsgWyPE4OfnEn+TxoRxmMLvozHM2P7DREAAIC68MoUDsOw7ft+lz9+4BQkadm45nTKaXBwcGCoZhYSPBqNAv7xlVOH3MHMZrN3g8HgmmqkMa/AeDyWGntJbskVgo2Njc9UM6+KNnLNPbq/vw/JUeI43qSasdbgpOY6K1fwPO+KaiZXsLS5LtfcBMM1+DvVjK2JELltchfTbDY/7e/vG6qZTC8i6TH8nrOf4dNvwrW89lMwDf9N5vDw8A8tCZkazOI+8qlVtM+Uuz+9urs/rpBpg1nudkF5A7nlyLvIWbs20ixAbjnyBFsvbsvY5i47c0dy4GVAsDIQrAwEK5M30IgJpJGe0xX3ok5l+F1mnhmCn8eUFpzQRxPxPHa4Jl8Oh8PuvIIQ/Ey4uWhzimTOvKgcBL+csKgmQ3A1hMksZAYIrgBpLujhpnB2WzqjqBfBB+qu43xEo9HY5IuaNANBUTmeaXydngwrvOmZRuT2+/0LWj8uoig6YYET/my9U91qtfb4x+BpHpqIBen1etfJQzfGVobP8E46D4JLIJJlTrygSJDOgOCScFv8q2BzkM6AYGUgWBkIVgaClYFgZSBYGQhWBoKVgWBlIFgZCFYGgpWBYGUgWBkIVgaClYFgZSBYGQhWBoKVgWBlIFgZCFYGgpUp9WzasjAcDrc9z5PnwDpUAXEcywONk36/f0IV41wNHo1GOyz3G1UY4oaPt8lpKl8cVYyLTcQeKZGcFZXiomDNODwdqhgXBRvSw1DFOCeYL0jHpAQfe0oV45xgvtJPWMQRVYs899vlYw+oYpzspomIMAyPW63WW3oh/GXd3N3dGa1AI04KFhIhS/++CEZyykCwMhCsDAQrA8HKQLAyEKwMBCuTJ9hYCzcatUeUrhseUltHjzwqzIwGSwmWV/plJQJaU+R/T8Ia5JIXcTsv+uo52Ql834/WUXKyxIW8CB7YykjYr0xeOiOKovZsNvtLxfwP0DznxeiVQZqFRQJyMG/Sob5y19Hg+14/SGF2f8WZstzddKatFyEFESd4ccRV7lxyrmCp5nxKVD75vKpwE3JkiwLYtO10dnb2c2trKzdMCnhE7q6w3LFte7NoZ5Z8wZJvWPJ7/tUn8BS5zfSlSK5QZrEoWVtjh4Bwzml3keCgpZY7E9HJMhDyBIyM6talP2zoYWWZ89vb22MsFAAAAG7wD45kNnyGOhVoAAAAAElFTkSuQmCC"
+                        alt=""></div><span data-v-46204c6a=""> Assets </span>
+                </a>
+            </div>
+        </div>
+        <div data-v-46204c6a="" class="item">
+            <div data-v-46204c6a="" class="">
+                <a href="{{route('user.profile')}}">
+                <div data-v-46204c6a=""><img data-v-46204c6a=""
+                        src="data:image/png;base64,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"
+                        alt=""></div><span data-v-46204c6a=""> my </span>
+                </a>
+            </div>
         </div>
     </div>
 </div>
-</div>
-<div data-v-a7d12cfc="" class="global-loading default" style="display: none;">
-    <div data-v-a7d12cfc="" class="global-spinner"><img data-v-a7d12cfc=""
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAArCAYAAAADgWq5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAF6WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMi0wNC0xMlQxNTo0MTowNiswODowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjItMDQtMTJUMTU6NDM6MTQrMDg6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjItMDQtMTJUMTU6NDM6MTQrMDg6MDAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NWU0ZGQwNmEtMWExNS1kYjRmLTkyZmQtZjIzNTAwNzJkMGNmIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjlGMTI0NjE1NTQzQzExRThCQzhCQzEyQjVDOUMzOEJGIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6OUYxMjQ2MTU1NDNDMTFFOEJDOEJDMTJCNUM5QzM4QkYiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiBwaG90b3Nob3A6SUNDUHJvZmlsZT0ic1JHQiBJRUM2MTk2Ni0yLjEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5RjEyNDYxMjU0M0MxMUU4QkM4QkMxMkI1QzlDMzhCRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5RjEyNDYxMzU0M0MxMUU4QkM4QkMxMkI1QzlDMzhCRiIvPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo1ZTRkZDA2YS0xYTE1LWRiNGYtOTJmZC1mMjM1MDA3MmQwY2YiIHN0RXZ0OndoZW49IjIwMjItMDQtMTJUMTU6NDM6MTQrMDg6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+hddYGwAABHhJREFUWIXN2XuoFVUUx/HPXG9WmmIPJQtNwQwqe5paEI1pCBZCRvVXDwlKCsLpIURgIZZG1KEXRVJJWPRnIv3TAw/0UCsrUlBLLQ1T01Ip6eZr+mPPOHOP56jXcz3XHxzu3nv2nv29a/bstdaeyJIXdYOG4bLs77k4AzvQFyvxKw7gJ/xZHpjGSZcmam8Csg/uxU0Yi8HHMGYz1uAtfIh/uzrp8QBPwFO4HgfR1oWx52e/CViX3ef9rkwedWFJXIQncE+da7uwHcuwF1uQClbvi1G4tMF9V+GuNE5+6C7gUzANT2Joqb0Dm/A6XsO+I9yjD/7DaMzArTi1ps/iNE6mNAvcjqfxKE4rtS/BXHxytAnqqBcuwHQ8XnNtP0amcfJLo8FHWn/98QIeK8Fuw3W48ThhCbvFBsxEhMWla+3YEFUrfbsKfDpewcOKR/e5sBssPU7QusqWwTTBurlWN+rfCHg67i7V3xasurFZwHpK42QBxmFP1jQkqlbW1utbD3g0ygt7Fe7T2QLdrjROVmBSqWlkVK28WtuvHvB7pfImXNvNbA2VxsmXeKnU9FBUrVxT7lMLHGNkVt6JO/DPiQKspzROZuC3UtM7UbVyiLMMPBDzSvWFWHFC6RprrLCbwCU4ZOUy8G24OivvxCwneN02UhonWwSD5Xo3L5SBpypii/mCu+1JzRHcOwyPqpVhFMD9MSYr78OnLUWrozRO1gk7FCE8mEwBPE7hzVbiu5bSNdabpfKkqFqJcuCr0Dsrr1ETZPegPiiVJ6dxkubAQwW/TohTTxa1K4x3IKpWLmwToqfhWWMqpDEnhdI42SrENYSYpqNN2O+uyBojfN16tPqKqpV2fJNVD+LK3MJbS/0GtRqskdI42Y+zsmob/moTlkHuVQ7qHKifDCpnJtvbBMg8XmjD2S1HaqCoWhmgCDl3o1e+S3xf6tey6OwY1K4IxrZhcw68rNRpjJNHA4WsG7ancbI7B/5CcagxCv1aTVarLKS8OaumAuMh17xFsVb64YaW0tVXO27PyvuxiAL4oJC35Xq+dVwNdbEiDv5btmzL4eXcUnmEwpn0lGYpwoVFaZykdAbeJZziEB7HG0JY13JF1crlyE+BdmQsODynm60ImkcIS6WliqqVQXhO8MCEg5Yf8+u1wFvxANbjfoUHbImiaqU3XsbErGkf5qRx0pH3qXfcOj/79YSeFXaG3JAz0zjZUO7QzIF2tymLyp7BI4oXbYVg7U7qceCoWhmKBRhfal6NKWmcHPYOdeX0/EQoxkc6wy7FxDROfq83oKcsfIvw+MfXtC8VLLuj0cBmgXsLb/RIfCVkK72FrXGfELjsEXLGFHcK580DdI5zd2F2GieVo03YLPCDwqF3nmr1Ek6N1grfN7Zn/8xenNPgHsuFbxw/H8uEzQLvVLwH+UZ/pnDOQfg0UKsD2biPMS+Nk5VdmbBZ4IVCVjtVyAXPE2LYsjqEtGs9vhWCrM8cp1NqFviA4OdzXz9ESLcGC+Abhe9yy4Vk8o8m5/M/9rYMi48jzWIAAAAASUVORK5CYII="
-            alt=""></div>
-</div>
-@include('partials.notify')
-</div>
-
-<script src="/js1743475952730/core-js.fe8857a9.1743475952730.js?v=1743475952730"></script>
-<script src="/js1743475952730/vue.fe8857a9.1743475952730.js?v=1743475952730"></script>
-<script src="/js1743475952730/vant.fe8857a9.1743475952730.js?v=1743475952730"></script>
-<script src="/js1743475952730/crypto-js.fe8857a9.1743475952730.js?v=1743475952730"></script>
-<script src="/js1743475952730/axios.fe8857a9.1743475952730.js?v=1743475952730"></script>
-<script src="/js1743475952730/compressorjs.fe8857a9.1743475952730.js?v=1743475952730"></script>
-<script src="/js1743475952730/vendors~app.fe8857a9.1743475952730.js?v=1743475952730"></script>
-<script src="/js1743475952730/app.fe8857a9.1743475952730.js?v=1743475952730"></script>
-<script>
-    window.onload = function() {
-        // 禁用双指放大
-        document.addEventListener("touchstart", function(event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
-            }
-        });
-        // 禁用双击放大
-        let lastTouchEnd = 0;
-        document.addEventListener(
-            "touchend",
-            function(event) {
-                const now = new Date().getTime();
-                if (now - lastTouchEnd <= 300) {
-                    event.preventDefault();
-                }
-                lastTouchEnd = now;
-            },
-            false
-        );
-        document.addEventListener("gesturestart", function(event) {
-            event.preventDefault();
-        });
-    };
-</script>
-
-
-<script>
-    function changeHomeImage(el) {
-        const img = el.querySelector("img");
-        img.src = "{{ asset('') }}static/img/i1.png";
-
-        // Delay the redirect slightly so image update shows
-        setTimeout(function() {
-            window.location.href = "{{ route('user.dashboard') }}";
-        }, 300); // 300 milliseconds
-    }
-</script>
-
-
-<div class="van-toast van-toast--middle van-toast--success" style="z-index: 2001; display: none;"><i
-        class="van-icon van-icon-success van-toast__icon"><!----></i>
-    <div class="van-toast__text">Login successful</div>
-</div><!---->
-</body>
-
-</html>

@@ -137,7 +137,7 @@ Route::post('/change-trxpasswword', [App\Http\Controllers\UserPanel\Profile::cla
 
 //quality
 Route::get('/tasks', [App\Http\Controllers\UserPanel\Invest::class, 'quality'])->name('user.tasks');
-Route::get('/quality/records', [App\Http\Controllers\UserPanel\Invest::class, 'records'])->name('user.record');
+Route::get('/order/records', [App\Http\Controllers\UserPanel\Invest::class, 'records'])->name('user.record');
 // add fund
 
 Route::get('/AddFund', [App\Http\Controllers\UserPanel\AddFund::class, 'index'])->name('user.AddFund');
@@ -195,7 +195,7 @@ Route::any('/UsrBinaryReport',[App\Http\Controllers\UserPanel\BinaryReport::clas
 Route::get('/level-income', [App\Http\Controllers\UserPanel\Bonus::class, 'index'])->name('user.level-income');
 Route::get('/matching-bonus', [App\Http\Controllers\UserPanel\Bonus::class, 'cashback_income'])->name('user.matching-bonus');
 Route::get('/reward-bonus', [App\Http\Controllers\UserPanel\Bonus::class, 'reward_income'])->name('user.reward-bonus');
-Route::get('/roi-bonus', [App\Http\Controllers\UserPanel\Bonus::class, 'roi_income'])->name('user.roi-bonus');
+Route::get('/income', [App\Http\Controllers\UserPanel\Bonus::class, 'roi_income'])->name('user.income');
 Route::get('/dailyIncentive', [App\Http\Controllers\UserPanel\Bonus::class, 'dailyIncentive'])->name('user.dailyIncentive');
 Route::get('/activitiesBonus', [App\Http\Controllers\UserPanel\Bonus::class, 'activitiesBonus'])->name('user.activitiesBonus');
 
