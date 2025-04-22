@@ -223,7 +223,11 @@
                                         <div data-v-3eefa016="" data-v-decd48ac="" class="db">
                                             <div data-v-3eefa016="" data-v-decd48ac="" class="ico"><img
                                                     data-v-3eefa016="" data-v-decd48ac=""
+<<<<<<< HEAD
                                                     src="{{asset('')}}static/img/0feefd89860da746f3a51ec0d8063854.png"
+=======
+                                                    src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20231025/0feefd89860da746f3a51ec0d8063854.png"
+>>>>>>> 22b4802e270fbef4e8c0b86a7b9de1e73cc03dca
                                                     alt=""></div>
                                             <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">
                                                 <div data-v-3eefa016="" data-v-decd48ac="" class="n"><span
@@ -257,7 +261,11 @@
                                         <div data-v-3eefa016="" data-v-decd48ac="">
                                             <div data-v-3eefa016="" data-v-decd48ac="" class="ico"><img
                                                     data-v-3eefa016="" data-v-decd48ac=""
+<<<<<<< HEAD
                                                     src="{{asset('')}}static/img/bc3cf11087b69389ded07723adf92b4a.png"
+=======
+                                                    src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241203/bc3cf11087b69389ded07723adf92b4a.png"
+>>>>>>> 22b4802e270fbef4e8c0b86a7b9de1e73cc03dca
                                                     alt=""></div>
                                         </div>
                                         <p data-v-3eefa016="" data-v-decd48ac="" class="flex1"> Junior Ally </p>
