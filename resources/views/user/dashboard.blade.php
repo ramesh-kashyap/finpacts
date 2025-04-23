@@ -155,6 +155,211 @@
     </script>
 </head>
 
+<style>
+    .container {
+        /* max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 12px; */
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        color: #aaa;
+        margin-top: 4px;
+    }
+
+    .avatar-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .icon-button {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        font-size: 19px;
+        border-radius: 50%;
+        padding: 6px;
+        margin-right: 5px;
+    }
+
+    .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 2px solid white;
+    }
+
+    .balance-section {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 16px;
+    }
+
+    .small-label {
+        color: #aaa;
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+
+    .balance {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .decimal {
+        color: #ffffff;
+    }
+
+    .balance-change {
+        font-size: 14px;
+        color: #33f58f;
+    }
+
+    .balance-change .dim {
+        color: #888;
+    }
+
+    .card-section {
+        background: linear-gradient(72deg, #042d50, #070808);
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        margin-bottom: 20px;
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    .card-label {
+        font-size: 14px;
+        color: #aaa;
+    }
+
+    p {
+        padding-top: 9px;
+    }
+
+    .card-number {
+        font-size: 16px;
+        font-weight: 600;
+        padding-top: 9px;
+    }
+
+    .new-card-button {
+        background: rgb(253 248 248);
+    color: #000000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    }
+
+    .card-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 12px;
+        margin-bottom: 10px;
+    }
+
+    .card-info h3 {
+        font-size: 19px;
+    }
+
+    .header div {
+        padding-top: 25px;
+    }
+
+    h1 {
+
+        font-size: 20px;
+    }
+
+    .progress-bar {
+        background: #333;
+        height: 6px;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .progress {
+        height: 100%;
+        background: linear-gradient(to right, #33f58f, #67b4ff);
+        border-radius: 6px;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 12px;
+        margin-top: 8px;
+        margin-bottom: 20px;
+    }
+
+    .primary {
+        flex: 1;
+        background: white;
+        color: black;
+        font-weight: 600;
+        padding: 15px;
+        border-radius: 14px;
+        border: none;
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .primary:hover {
+        background: #f1f1f1;
+    }
+
+    .goals-section {
+        background: linear-gradient(72deg, #042d50, #070808);
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .goals-section h3 {
+        margin-bottom: 15px;
+        font-size: 19px;
+    }
+
+    .goal {
+        margin-bottom: 20px;
+    }
+
+    .goal-head {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .goal-amount {
+        color: #33f58f;
+    }
+
+    .goal-amount.orange {
+        color: #f6ad55;
+    }
+</style>
+
 <body class="mein_cn" data-new-gr-c-s-check-loaded="14.1232.0" data-gr-ext-installed="">
     <div class="page-loading-con" id="loaderInit" style="display: none;">
         <div class="page-loading">
@@ -171,24 +376,7 @@
                         <div data-v-2a245038="" data-v-decd48ac="" class="bg"></div>
                         <div data-v-decd48ac="" class="headers">
                             <div data-v-29c52665="" data-v-2a245038="" class="head head0" data-v-decd48ac="">
-                                <div data-v-29c52665="" class="container flex"><!---->
-                                    <div data-v-29c52665="" class="myName">
-                                        <div data-v-29c52665=""><img data-v-29c52665=""
-                                                src="{{asset('')}}static/img/0feefd89860da746f3a51ec0d8063854.png"
-                                                alt=""></div>
-                                    </div>
-                                    <div data-v-29c52665="" class="name tac"></div>
-                                    <div data-v-29c52665="" class="flex1"></div>
-                                    <div data-v-29c52665="" class="clear"><img data-v-29c52665=""
-                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPISURBVHgB7VhRctowEF3J0HaaMEPG0GGmH3VOUHKCOCcIOUHSE5CcgHCCpicIPUHhBKEnCD1B/dHOMA2kngTSNLasrsCAZGyDgZB+5M3AeOWV9KzV7kpLYEkYhpG9vb0zCYGi3M45tDKZ103LsmxYAgQWhCB2c3NXJoQfo5iNnIDA2ebmRnVRogsRLBQKhuOwC8Fzzi5WOq3ttdttCxKCQkIsQE5g0EesOiREYoI4UQVUcjaaucqYsz35wQ7n/ES8k/SMXq9fgYRIZGJ/9b5L3S3G6J5th5sumy0YmsYuQdqjmczGVpL9mGgFHx7cktrCq1HkBMQ7Qsgnua3X+3MECZCIICFUCSXd7lVtVh/XfTiTZc6995AACQnyd5JozdPHRoitAAsisZOsG/89wVgvzuUKJgDbx7Q18kKUxyFGeGId5oNwrtEYFv6ag8mJGENrdDrtJiQh6IeTc5/QGkDq6TQ9Ccs0UwQXzBSrgIUxcicYI1NBrWCmQDM00cTfMJ4tdSoJA457iP+GLxp4+BAHj1NZR1nBLELT0r8nA/Dq9XXnFB4Ruq5jnKRlX7RxFbflVVS8OJV6pQRiz0vV4JHBGDuVxGy/7xjy+7gwY8WlsVVhGMgn4PyvcuJ5DtTLIhXzztD1PIcnxrOJk4JzqjhJSn3JDmUZg3MdY+HKA3SAEhIi0kGY74OU48eBOuw43+3+2oY1IJfLX2JWGcVgJViPTYzkTLUbr8LaQBqSkJWvBWOCmHPLchfGtCasCSHXgv3R84BgPp8vSkssUIvLIrr+5lyEIDTNR5gB1LuYpSuyiTiUSE1mLpczxwQ9T109vHt8jhpseIjlR+IZP+o4n39bjCani81vzqMb3FKcDx1nZGJTomd1Op1m5DCclWBOBI9onLtmlK4/p6x/KCoRFJf/CJTDabxzoCnka6N9dfWzFaXrum5LJRh/5QzcofFk0y9RbDRkpVnOgaYyJbEVp+vvLVkndvVdl9bUuYiRKJMM998EeJFvzOqDH/RVErOiHBKlm06zqeISriC35IZUikd+pee5gU3OYlfQ79UMkDAjNb3pIih1HKeuNnplkVXCBkBz7cpynDONgCfmZoDEbpieP2dF7Utbg1Sn67kvaj4c3F2rlL5oYYYZe5ZcqcK928I9cwBzQNO8C+lyhBUxbU9+T6lbwvEqoFZqa1j7+TAgOCyTKYM8MSZlvYGTiAfG+MEyRZ7VQa05aqPm+/u79suXmQalfAvFIjwNaoxtHNj2j/aoIbT0MTS5UyREWwtREUkcZ6Nu29OV13/NirsKRhpnugAAAABJRU5ErkJggg=="
-                                            alt=""></div><!---->
-                                    <div data-v-29c52665="" class="notice"><img data-v-29c52665=""
-                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALQSURBVHgB7Zi/k9JAFMffJpKDYBH5MYOVsbuS0jLXnR12did/gdxfAPwFSmd3XmUpVpZiaSWlndgxc1yMM8wRDSR+d2ACF4Jkk+DpHJ8ZJiG7m/3m7XvJvkeUEsVi8aRYLH8vFMpfcTyhlGCUElwYY6Qv/lqXlxf3KAUkSokVcRyNUiI1gbsiFYHc/4LXCoVSk1IgkQ9qQJIyTSxvI6zd82jgus6RZVkDiolMMdG0kiFJ8nuIO97UB214ALmRy6k0mVx9pBjEEoiIfSFJ7BUXEGiyIGtIgSBhjBmqqlYPDpRPtm1bJICQQKyons/ffYsJnwbbsJx9RZGPHOdnB1a7j0vV6z3YIWNyTVVzPyaTSZ8iElkgnL6Bid/wiWhdXAe+Vh+NRkNYyMZydlU1/w19uUjfmnOLs1oul9cW1rS3zbs1SHggyLJyBhm1kOEDxlwurBc2tlKp6I4zw1gyaP2hIgWQ/GdxfiA8Wm9l3dns12PTNL9sGj8ejy1Y8xxuwYIiowbQRguWSqWm57FWSJPFmNeG1V6SAHNruh9gOz2k+TU+jXUSEcg//BSIxkUgPBkOhwOKwdxdMi2cPg+2QSATFejRdXEd07xoUArg3s9wOKM0BW66QVyi3v92bBZ2yV5gUvYCk7IXmJS9wKTsBSblzuofTStji+6FVgX45pV2yOr9LWu5Q/d3EDxT25Tf/m08z2uZ5qjNz32Bwe3PDeMXn1Z9sEf/DMzPnX0fzGTkOjKwFk51ukF4tqcoUov+F2KVPni0Z7PqoW1fDbb31bRsNn+MXyVK/yDCecZqOsqXg8h957qsSzTtIwm3FqJ0WZaraDcYk3hpTpv3904RnULpqrBAvI4+43VUpRjwB0Jm+FBkjPCXBOKEqlOBsT0SRFggj3YczkkMVCNYezZzTkmQ2LnuojBk4NTA0lVhnQe0rERYuIbqlttDHbE7nS79U5TftuAIIDEH5RkAAAAASUVORK5CYII="
-                                            alt=""><span data-v-29c52665=""> 2 </span></div>
-                                    <div data-v-29c52665="" class="lang"><img data-v-29c52665=""
-                                            src="data:image/png;base64,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"
-                                            alt=""></div><!----><!----><!----><!----><!---->
-                                </div>
+<div data-v-29c52665="" class="container flex"><!----><div data-v-29c52665="" class="myName"><div data-v-29c52665=""><img data-v-29c52665="" src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20231025/0feefd89860da746f3a51ec0d8063854.png" alt=""></div></div><div data-v-29c52665="" class="name tac"></div><div data-v-29c52665="" class="flex1"></div><div data-v-29c52665="" class="clear"><img data-v-29c52665="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPISURBVHgB7VhRctowEF3J0HaaMEPG0GGmH3VOUHKCOCcIOUHSE5CcgHCCpicIPUHhBKEnCD1B/dHOMA2kngTSNLasrsCAZGyDgZB+5M3AeOWV9KzV7kpLYEkYhpG9vb0zCYGi3M45tDKZ103LsmxYAgQWhCB2c3NXJoQfo5iNnIDA2ebmRnVRogsRLBQKhuOwC8Fzzi5WOq3ttdttCxKCQkIsQE5g0EesOiREYoI4UQVUcjaaucqYsz35wQ7n/ES8k/SMXq9fgYRIZGJ/9b5L3S3G6J5th5sumy0YmsYuQdqjmczGVpL9mGgFHx7cktrCq1HkBMQ7Qsgnua3X+3MECZCIICFUCSXd7lVtVh/XfTiTZc6995AACQnyd5JozdPHRoitAAsisZOsG/89wVgvzuUKJgDbx7Q18kKUxyFGeGId5oNwrtEYFv6ag8mJGENrdDrtJiQh6IeTc5/QGkDq6TQ9Ccs0UwQXzBSrgIUxcicYI1NBrWCmQDM00cTfMJ4tdSoJA457iP+GLxp4+BAHj1NZR1nBLELT0r8nA/Dq9XXnFB4Ruq5jnKRlX7RxFbflVVS8OJV6pQRiz0vV4JHBGDuVxGy/7xjy+7gwY8WlsVVhGMgn4PyvcuJ5DtTLIhXzztD1PIcnxrOJk4JzqjhJSn3JDmUZg3MdY+HKA3SAEhIi0kGY74OU48eBOuw43+3+2oY1IJfLX2JWGcVgJViPTYzkTLUbr8LaQBqSkJWvBWOCmHPLchfGtCasCSHXgv3R84BgPp8vSkssUIvLIrr+5lyEIDTNR5gB1LuYpSuyiTiUSE1mLpczxwQ9T109vHt8jhpseIjlR+IZP+o4n39bjCani81vzqMb3FKcDx1nZGJTomd1Op1m5DCclWBOBI9onLtmlK4/p6x/KCoRFJf/CJTDabxzoCnka6N9dfWzFaXrum5LJRh/5QzcofFk0y9RbDRkpVnOgaYyJbEVp+vvLVkndvVdl9bUuYiRKJMM998EeJFvzOqDH/RVErOiHBKlm06zqeISriC35IZUikd+pee5gU3OYlfQ79UMkDAjNb3pIih1HKeuNnplkVXCBkBz7cpynDONgCfmZoDEbpieP2dF7Utbg1Sn67kvaj4c3F2rlL5oYYYZe5ZcqcK928I9cwBzQNO8C+lyhBUxbU9+T6lbwvEqoFZqa1j7+TAgOCyTKYM8MSZlvYGTiAfG+MEyRZ7VQa05aqPm+/u79suXmQalfAvFIjwNaoxtHNj2j/aoIbT0MTS5UyREWwtREUkcZ6Nu29OV13/NirsKRhpnugAAAABJRU5ErkJggg==" alt=""></div><!----><div data-v-29c52665="" class="notice"><img data-v-29c52665="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALQSURBVHgB7Zi/k9JAFMffJpKDYBH5MYOVsbuS0jLXnR12did/gdxfAPwFSmd3XmUpVpZiaSWlndgxc1yMM8wRDSR+d2ACF4Jkk+DpHJ8ZJiG7m/3m7XvJvkeUEsVi8aRYLH8vFMpfcTyhlGCUElwYY6Qv/lqXlxf3KAUkSokVcRyNUiI1gbsiFYHc/4LXCoVSk1IgkQ9qQJIyTSxvI6zd82jgus6RZVkDiolMMdG0kiFJ8nuIO97UB214ALmRy6k0mVx9pBjEEoiIfSFJ7BUXEGiyIGtIgSBhjBmqqlYPDpRPtm1bJICQQKyons/ffYsJnwbbsJx9RZGPHOdnB1a7j0vV6z3YIWNyTVVzPyaTSZ8iElkgnL6Bid/wiWhdXAe+Vh+NRkNYyMZydlU1/w19uUjfmnOLs1oul9cW1rS3zbs1SHggyLJyBhm1kOEDxlwurBc2tlKp6I4zw1gyaP2hIgWQ/GdxfiA8Wm9l3dns12PTNL9sGj8ejy1Y8xxuwYIiowbQRguWSqWm57FWSJPFmNeG1V6SAHNruh9gOz2k+TU+jXUSEcg//BSIxkUgPBkOhwOKwdxdMi2cPg+2QSATFejRdXEd07xoUArg3s9wOKM0BW66QVyi3v92bBZ2yV5gUvYCk7IXmJS9wKTsBSblzuofTStji+6FVgX45pV2yOr9LWu5Q/d3EDxT25Tf/m08z2uZ5qjNz32Bwe3PDeMXn1Z9sEf/DMzPnX0fzGTkOjKwFk51ukF4tqcoUov+F2KVPni0Z7PqoW1fDbb31bRsNn+MXyVK/yDCecZqOsqXg8h957qsSzTtIwm3FqJ0WZaraDcYk3hpTpv3904RnULpqrBAvI4+43VUpRjwB0Jm+FBkjPCXBOKEqlOBsT0SRFggj3YczkkMVCNYezZzTkmQ2LnuojBk4NTA0lVhnQe0rERYuIbqlttDHbE7nS79U5TftuAIIDEH5RkAAAAASUVORK5CYII=" alt=""><span data-v-29c52665=""> 3 </span></div><div data-v-29c52665="" class="lang"><img data-v-29c52665="" src="data:image/png;base64,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" alt=""></div><!----><!----><!----><!----><!----></div>
                             </div>
                             <div data-v-2a245038="" data-v-decd48ac="" class="logo"><img data-v-2a245038=""
                                     data-v-decd48ac="" src="{{ asset('') }}static/img/logo11.7b555b58.png"
@@ -213,611 +401,101 @@
                                     </div>
                                 </div>
                                 <div data-v-2a245038="" data-v-decd48ac="" class="home">
-                                    <div data-v-2a245038="" data-v-decd48ac="" class="banner">
-                                        <div data-v-2a245038=""
-                                            class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-autoheight"
-                                            data-v-decd48ac="">
-                                            <div class="swiper-wrapper"
-                                                style="height: 181px; transform: translate3d(-1700px, 0px, 0px); transition-duration: 0ms;">
-                                                <div data-v-2a245038="" class="swiper-slide" style="width: 425px;">
-                                                    <div data-v-2a245038="" class="item"><img data-v-2a245038=""
-                                                            src="{{asset('')}}static/img/7c2c04bc60609a6ea4eea2babd770e1b.png"
-                                                            alt=""></div>
-                                                </div>
-                                                <div data-v-2a245038="" class="swiper-slide" style="width: 425px;">
-                                                    <div data-v-2a245038="" class="item"><img data-v-2a245038=""
-                                                            src="{{asset('')}}static/img/93b58a4ca388801b3b10a2c7ccfab3eb.jpg"
-                                                            alt=""></div>
-                                                </div>
-                                                <div data-v-2a245038="" class="swiper-slide" style="width: 425px;">
-                                                    <div data-v-2a245038="" class="item"><img data-v-2a245038=""
-                                                            src="{{asset('')}}static/img/ed92eba5fd824766543c9cc095b0d421.png"
-                                                            alt=""></div>
-                                                </div>
-                                                <div data-v-2a245038="" class="swiper-slide swiper-slide-prev"
-                                                    style="width: 425px;">
-                                                    <div data-v-2a245038="" class="item"><img data-v-2a245038=""
-                                                            src="{{asset('')}}static/img/8a927b72565569f07637be7da13e05f0.png"
-                                                            alt=""></div>
-                                                </div>
-                                                <div data-v-2a245038="" class="swiper-slide swiper-slide-active"
-                                                    style="width: 425px;">
-                                                    <div data-v-2a245038="" class="item"><img data-v-2a245038=""
-                                                            src="{{asset('')}}static/img/1a6490de7f3f5674795bb13a2294e500.png"
-                                                            alt=""></div>
-                                                </div>
-                                                <div data-v-2a245038="" class="swiper-slide swiper-slide-next"
-                                                    style="width: 425px;">
-                                                    <div data-v-2a245038="" class="item"><img data-v-2a245038=""
-                                                            src="{{asset('')}}static/img/5ab063a75c73bb2c043ec57f0c440549.png"
-                                                            alt=""></div>
-                                                </div>
-                                            </div> <span class="swiper-notification" aria-live="assertive"
-                                                aria-atomic="true"></span>
-                                        </div>
-                                    </div>
-                                    <div data-v-2a245038="" data-v-decd48ac="" class="itemBox2 border-radius-top">
-                                        <div data-v-2a245038="" data-v-decd48ac="" class="container">
-                                            <div data-v-2a245038="" data-v-decd48ac="" class="noticeBox">
-                                                <div data-v-2a245038="" class="seamless-warp" data-v-decd48ac="">
-                                                    <!----> <!---->
-                                                    <div
-                                                        style="transform: translate(-4302px, 0px); transition: ease-in; overflow: hidden; width: 25343px;">
-                                                        <div style="float: left; overflow: hidden;">
-                                                            <ul data-v-2a245038="" class="ul-scoll">
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            Lu***one contract funds 11.4 USDT to the
-                                                                            platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****60049 contract funds 10.08 USDT to
-                                                                            the platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            U**c contract funds 9.13 USDT to the
-                                                                            platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****74109 contract funds 9.69 USDT to
-                                                                            the platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****87398 contract funds 9.22 USDT to
-                                                                            the platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****08452 contract funds 53.55 USDT to
-                                                                            the platform 7 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****62182 contract funds 59.42 USDT to
-                                                                            the platform 30 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****91665 contract funds 9 USDT to the
-                                                                            platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93931 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93863 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93918 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93880 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****35133 contract funds 11.02 USDT to
-                                                                            the platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93731 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93841 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93797 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93815 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93772 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****27271 contract funds 11.28 USDT to
-                                                                            the platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93702 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93511 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93628 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93665 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93647 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93535 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****81454 contract funds 9.13 USDT to
-                                                                            the platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93554 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93417 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93431 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93476 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div style="float: left; overflow: hidden;">
-                                                            <ul data-v-2a245038="" class="ul-scoll">
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            Lu***one contract funds 11.4 USDT to the
-                                                                            platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****60049 contract funds 10.08 USDT to
-                                                                            the platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            U**c contract funds 9.13 USDT to the
-                                                                            platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****74109 contract funds 9.69 USDT to
-                                                                            the platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****87398 contract funds 9.22 USDT to
-                                                                            the platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****08452 contract funds 53.55 USDT to
-                                                                            the platform 7 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****62182 contract funds 59.42 USDT to
-                                                                            the platform 30 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****91665 contract funds 9 USDT to the
-                                                                            platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93931 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93863 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93918 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93880 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****35133 contract funds 11.02 USDT to
-                                                                            the platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93731 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93841 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93797 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93815 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93772 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****27271 contract funds 11.28 USDT to
-                                                                            the platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93702 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93511 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93628 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93665 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93647 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93535 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****81454 contract funds 9.13 USDT to
-                                                                            the platform 3 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93554 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93417 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93431 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li data-v-2a245038="">
-                                                                    <div data-v-2a245038="" class="item">
-                                                                        <div data-v-2a245038="" class="num"> User
-                                                                            finp*****93476 contract funds 300 USDT to
-                                                                            the platform 2 days </div>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                    <div class="container">
+
+                                        <!-- Header -->
+                                        <div class="header">
+                                            <div>
+                                                <h1>Hi Eaton!</h1>
+                                                <p class="subtitle">Let’s manage your budget</p>
                                             </div>
-                                            <ul data-v-2a245038="" data-v-decd48ac="" class="navs flex vip0">
-                                                <li data-v-2a245038="" data-v-decd48ac="">
-                                                    <div data-v-2a245038="" data-v-decd48ac=""><img
-                                                            data-v-2a245038="" data-v-decd48ac=""
-                                                            src="{{asset('')}}static/img/5a26fdd455bb38f3ee8b1e05fba5d77a.png"
-                                                            alt="">
-                                                        <p data-v-2a245038="" data-v-decd48ac="">Recharge</p>
-                                                    </div>
-                                                </li>
-                                                <li data-v-2a245038="" data-v-decd48ac="">
-                                                    <div data-v-2a245038="" data-v-decd48ac=""><img
-                                                            data-v-2a245038="" data-v-decd48ac=""
-                                                            src="{{asset('')}}static/img/1b7a5f04b0c1deee8df771cd5ecf235c.png"
-                                                            alt="">
-                                                        <p data-v-2a245038="" data-v-decd48ac="">Share</p>
-                                                    </div>
-                                                </li>
-                                                <li data-v-2a245038="" data-v-decd48ac="">
-                                                    <div data-v-2a245038="" data-v-decd48ac=""><img
-                                                            data-v-2a245038="" data-v-decd48ac=""
-                                                            src="{{asset('')}}static/img/52f7785fd93b8df124b99de899c86d2c.png"
-                                                            alt="">
-                                                        <p data-v-2a245038="" data-v-decd48ac="">Rewards</p>
-                                                    </div>
-                                                </li>
-                                                <li data-v-2a245038="" data-v-decd48ac="">
-                                                    <a href="{{route('user.level-team')}}">
-                                                    <div data-v-2a245038="" data-v-decd48ac=""><img
-                                                            data-v-2a245038="" data-v-decd48ac=""
-                                                            src="{{asset('')}}static/img/d90754a40f81f3da840167c9230e4eb4.png"
-                                                            alt="">
-                                                        <p data-v-2a245038="" data-v-decd48ac="">my team</p>
-                                                    </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div data-v-2a245038="" data-v-decd48ac="" class="itemBox2">
-                                        <div data-v-2a245038="" data-v-decd48ac="" class="container"><!---->
-                                            <ul data-v-2a245038="" data-v-decd48ac="" class="linkBox vip0">
-                                                <li data-v-2a245038="" data-v-decd48ac="" class="bps tips">
-                                                    <div data-v-2a245038="" data-v-decd48ac="" class="ico"><img
-                                                            data-v-2a245038="" data-v-decd48ac=""
-                                                            src="{{ asset('') }}static/img/vip0_ico1.41c05f1a.png"
-                                                            alt="">
-                                                    </div>
-                                                    <div data-v-2a245038="" data-v-decd48ac="" class="name"> White
-                                                        Paper </div>
-                                                </li>
-                                                <li data-v-2a245038="" data-v-decd48ac="" class="jd tips">
-                                                    <div data-v-2a245038="" data-v-decd48ac="" class="icos"><img
-                                                            data-v-2a245038="" data-v-decd48ac=""
-                                                            src="{{ asset('') }}static/img/vip0_ico2.d606c74f.png"
-                                                            alt="">
-                                                    </div>
-                                                    <div data-v-2a245038="" data-v-decd48ac="" class="abs">
-                                                        <div data-v-2a245038="" data-v-decd48ac="" class="name">
-                                                            Check-in and get rewards</div>
-                                                        <div data-v-2a245038="" data-v-decd48ac=""><button
-                                                                data-v-2a245038="" data-v-decd48ac="">F Coin
-                                                                Center</button></div>
-                                                    </div>
-                                                </li>
-                                                <li data-v-2a245038="" data-v-decd48ac="" class="flex">
-                                                    <div data-v-2a245038="" data-v-decd48ac="" class="ico"><img
-                                                            data-v-2a245038="" data-v-decd48ac=""
-                                                            src="{{ asset('') }}static/img/vip0_ico8.98a59dfc.png"
-                                                            alt="">
-                                                    </div>
-                                                    <div data-v-2a245038="" data-v-decd48ac="" class="flex1">
-                                                        <div data-v-2a245038="" data-v-decd48ac="" class="n">
-                                                            Benefit Guide</div>
-                                                        <p data-v-2a245038="" data-v-decd48ac="">Get more benefits!
-                                                        </p>
-                                                    </div>
-                                                </li>
-                                                <li data-v-2a245038="" data-v-decd48ac="" class="flex">
-                                                    <div data-v-2a245038="" data-v-decd48ac="" class="ico"><img
-                                                            data-v-2a245038="" data-v-decd48ac=""
-                                                            src="{{ asset('') }}static/img/vip0_ico4.9ff2a10d.png"
-                                                            alt="">
-                                                    </div>
-                                                    <div data-v-2a245038="" data-v-decd48ac="" class="flex1">
-                                                        <div data-v-2a245038="" data-v-decd48ac="" class="n">
-                                                            Credit improvement</div>
-                                                        <p data-v-2a245038="" data-v-decd48ac="">Get more benefits</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div data-v-2a245038="" data-v-decd48ac="" class="itemBox2">
-                                        <div data-v-6d57ba0e="" data-v-2a245038="" class="video_list"
-                                            data-v-decd48ac="">
-                                            <div data-v-6d57ba0e=""
-                                                class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-autoheight">
-                                                <div class="swiper-wrapper"
-                                                    style="transform: translate3d(0px, 0px, 0px); height: 212px;">
-                                                    <div data-v-6d57ba0e="" class="swiper-slide swiper-slide-active"
-                                                        style="width: 401px;">
-                                                        <div data-v-6d57ba0e="" class="video">
-                                                            <div data-v-55574732="" data-v-6d57ba0e=""
-                                                                class="video_box"><video data-v-55574732=""
-                                                                    controls="controls"
-                                                                    src="{{asset('')}}static/img/a12dda072fbc5e38deb1a2d8b3a80888_raw.mp4"></video><img
-                                                                    data-v-55574732=""
-                                                                    src="{{asset('')}}static/img/e287daebc5fd5ae1e7b6d95b52e6f2f7.jpg"
-                                                                    alt="" class="maskLayer"><img
-                                                                    data-v-55574732=""
-                                                                    src="{{ asset('') }}static/img/play_icon.6d066898.png"
-                                                                    alt="" class="play_icon"></div>
-                                                        </div>
-                                                    </div>
-                                                </div> <span class="swiper-notification" aria-live="assertive"
-                                                    aria-atomic="true"></span>
-                                            </div>
-                                            <div data-v-6d57ba0e=""
-                                                class="swiper-pagination swiper-pagination-bullets"><span
-                                                    class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                                            <div class="avatar-section">
+                                                <button class="new-card-button">+ Upgrade</button>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div data-v-2a245038="" data-v-decd48ac="" class="itemBox2" style="">
+
+                                        <!-- Balance -->
+                                        <div class="balance-section">
+                                            <p class="small-label">Total balance</p>
+                                            <h2 class="balance">$12,840.<span class="decimal">00</span></h2>
+                                            <p class="balance-change">↑ 1.75% <span class="dim"> Todays</span></p>
+                                        </div>
+
+                                        <!-- Card -->
+                                        {{-- <div class="card-section">
+                                            <div class="card-header">
+                                                <div>
+                                                    <p class="card-label">Contract Income</p>
+                                                    <p class="card-number">$0.0 </p>
+                                                </div>
+                                                <button class="new-card-button">+ Upgrade</button>
+                                            </div>
+                                            <div class="card-info">
+                                                <div>
+                                                    <h3>$0.00</h3>
+                                                    <p class="dim">Team Benefits</p>
+                                                </div>
+                                                <div class="right">
+                                                    <p class="dim small-label">Current Package</p>
+                                                    <p>$2,000.00</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 80%;"></div>
+                                            </div>
+                                        </div> --}}
+
+                                        <!-- Buttons -->
+                                        <div class="action-buttons">
+                                            <button class="primary">Deposit ↗</button>
+                                            <button class="primary">Withdraw ↘</button>
+                                        </div>
+
+                                        <ul data-v-2a245038="" data-v-decd48ac="" class="linkBox vip0">
+                                            <li data-v-2a245038="" data-v-decd48ac="" class="bps tips">
+                                                <div data-v-2a245038="" data-v-decd48ac="" class="ico"><img
+                                                        data-v-2a245038="" data-v-decd48ac=""
+                                                        src="/static/img/vip0_ico1.41c05f1a.png" alt=""></div>
+                                                <div data-v-2a245038="" data-v-decd48ac="" class="name"> White
+                                                    Paper </div>
+                                            </li>
+                                            <li data-v-2a245038="" data-v-decd48ac="" class="jd tips">
+                                                <div data-v-2a245038="" data-v-decd48ac="" class="icos"><img
+                                                        data-v-2a245038="" data-v-decd48ac=""
+                                                        src="/static/img/vip0_ico2.d606c74f.png" alt=""></div>
+                                                <div data-v-2a245038="" data-v-decd48ac="" class="abs">
+                                                    <div data-v-2a245038="" data-v-decd48ac="" class="name">
+                                                        Check-in and get rewards</div>
+                                                    <div data-v-2a245038="" data-v-decd48ac=""><button
+                                                            data-v-2a245038="" data-v-decd48ac="">F Coin
+                                                            Center</button></div>
+                                                </div>
+                                            </li>
+                                            <li data-v-2a245038="" data-v-decd48ac="" class="flex">
+                                                <div data-v-2a245038="" data-v-decd48ac="" class="ico"><img
+                                                        data-v-2a245038="" data-v-decd48ac=""
+                                                        src="/static/img/vip0_ico8.98a59dfc.png" alt=""></div>
+                                                <div data-v-2a245038="" data-v-decd48ac="" class="flex1">
+                                                    <div data-v-2a245038="" data-v-decd48ac="" class="n">Benefit
+                                                        Guide</div>
+                                                    <p data-v-2a245038="" data-v-decd48ac="">Get more benefits!</p>
+                                                </div>
+                                            </li>
+                                            <li data-v-2a245038="" data-v-decd48ac="" class="flex">
+                                                <div data-v-2a245038="" data-v-decd48ac="" class="ico"><img
+                                                        data-v-2a245038="" data-v-decd48ac=""
+                                                        src="/static/img/vip0_ico4.9ff2a10d.png" alt=""></div>
+                                                <div data-v-2a245038="" data-v-decd48ac="" class="flex1">
+                                                    <div data-v-2a245038="" data-v-decd48ac="" class="n">Credit
+                                                        improvement</div>
+                                                    <p data-v-2a245038="" data-v-decd48ac="">Get more benefits</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+
+                                        
+
                                         <div data-v-2a245038="" data-v-decd48ac="" class="container">
                                             <div data-v-2a245038="" data-v-decd48ac="" class="title1 flex">
                                                 <div data-v-2a245038="" data-v-decd48ac="" class="flex1">About us
@@ -860,52 +538,15 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div><!---->
-                                    <div data-v-2a245038="" data-v-decd48ac="" class="itemBox2">
-                                        <div data-v-2a245038="" data-v-decd48ac="" class="container">
-                                            <div data-v-2a245038="" data-v-decd48ac="" class="title1 flex">
-                                                <div data-v-2a245038="" data-v-decd48ac="" class="flex1">Community
-                                                </div>
-                                            </div>
-                                            <ul data-v-2a245038="" data-v-decd48ac="" class="bbsList">
-                                                <li data-v-2a245038="" data-v-decd48ac=""><img data-v-2a245038=""
-                                                        data-v-decd48ac=""
-                                                        src="{{asset('')}}static/img/ab681326c1d447ff4ccf258c2543b594.png"
-                                                        alt=""></li>
-                                                <li data-v-2a245038="" data-v-decd48ac=""><img data-v-2a245038=""
-                                                        data-v-decd48ac=""
-                                                        src="{{asset('')}}static/img/35c26f03cd70d2b27151eae5a2eb83d7.png"
-                                                        alt=""></li>
-                                                <li data-v-2a245038="" data-v-decd48ac=""><img data-v-2a245038=""
-                                                        data-v-decd48ac=""
-                                                        src="{{asset('')}}static/img/333a876f752578575e698732094bddf9.jpg"
-                                                        alt=""></li>
-                                                <li data-v-2a245038="" data-v-decd48ac=""><img data-v-2a245038=""
-                                                        data-v-decd48ac=""
-                                                        src="{{asset('')}}static/img/6732ae6241cb8133a511ca14de951204.png"
-                                                        alt=""></li>
-                                                <li data-v-2a245038="" data-v-decd48ac=""><img data-v-2a245038=""
-                                                        data-v-decd48ac=""
-                                                        src="{{asset('')}}static/img/cd1f2c3affb0e3473e8f82a690a0f184.png"
-                                                        alt=""></li>
-                                            </ul>
-                                        </div>
+
                                     </div>
-                                    <div data-v-7e78ca37="" data-v-2a245038="" data-v-decd48ac=""></div>
-                                    <div data-v-38e7bdcd="" data-v-2a245038="" class="robot" data-v-decd48ac=""
-                                        style="transform: translate(-582px, 0px);">
-                                        <div data-v-38e7bdcd="" class="img_box">
-                                            <div data-v-38e7bdcd="" class="maskLayer"></div><img data-v-38e7bdcd=""
-                                                src="{{ asset('') }}static/img/icon-welfare.0156163e.png"
-                                                alt="">
-                                        </div>
-                                        <div data-v-38e7bdcd="" style="width: 1rem; height: 0px;"></div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
                         @include('layouts.upnl.footer')
                     </div>
+
                 </div>
             </div>
         </div>

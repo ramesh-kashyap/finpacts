@@ -5,16 +5,17 @@
 
 .page .headers[data-v-decd48ac] {
     position: fixed;
-    top: 0;
+    top: 0px;
     width: 100%;
     max-width: 8.5rem;
+    height: 0.7rem;
     z-index: 100;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -ms-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
-    background: #f2f3f5
+    background: linear-gradient(81deg, #03031d, #03031f, #09096e);
 }
 
 .page .headers.on[data-v-decd48ac] {
