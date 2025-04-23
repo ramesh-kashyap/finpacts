@@ -175,20 +175,15 @@
                         <div data-v-decd48ac="" class="headers on">
                             <div data-v-29c52665="" data-v-2848a4de="" class="head head0" data-v-decd48ac="">
                                 <div data-v-29c52665="" class="container flex">
+
+                                <a href="{{route('user.asset')}}">
                                     <div data-v-29c52665="" class="back"><img data-v-29c52665=""
                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE+SURBVHgB3diLDYIwEAbgwy7gCLoBbOIGtiM4gbqBE0DdSCcQJ5AN8GrAIPIobXNH+JOG0jbhCyVpC8DSIqVcmwKBsgKPKKX2URQ9sLwQdYQAicAxBoMX3Wwry3Krtc7BI05vqAtTpQDPTAb1YXDaFL4db9CkKRvCpGmqIUCsQRQYaxAVxgpEiRkFUWMGQRyYXhAXphPEifkDcWN+QHPAfEEDaxNVciynLMuu9Vp2At5ssFxMpQYF22B55LMwf0C4jzkAbwr8Vs+m8v2occcnsTHrGCzN3AJRRF25YeI4fiJq1xqzS5Ikx+47EEQ0b+aAEu0GbpToauREib4OLpQY6uRAibEB1KhREDXKCkSJsgZRoZzO9j3LTFGd7b1Or05ne3yoxoerVnOQHYPz75g2yqzWIc723ql+WG1gqXkDGBPa7OTyg7AAAAAASUVORK5CYII="
-                                            alt=""></div>
+                                            alt=""></div></a>
                                     <!---->
                                     <div data-v-29c52665="" class="name tac">Recharge</div>
                                     <div data-v-29c52665="" class="flex1"></div>
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
+                              
                                     <div data-v-29c52665="" class="Set"><img data-v-29c52665=""
                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAR3SURBVHgB7ZyJcdswEEV/MilAqSDbQVSC0oE6MEtwB0QHdiqg0oFTAdWBnQrIVCClAoUYUgkta3EueMh8MzuyIHIBfJwEYAILCwsLCz6sGssbKxurGjvNxA5dmu8bI4wAdQmYg1guVmBAIXWpHQCcbswOXd6SkgM43bjlSMQ9gNM7MfGaSLjNZsvZAcJ94s4SmWpsg/mwhjlP2koIQYZIKow0DRCCYJ5+rSCAqe8jzB8C3z0pCFAyzgvcDgoJmzFXOmvcDhvwXZQzH5jwk+f1cyU6nx8hR45xpz067gdMBC6RHA8YT7iYQcA3n2+QasK69EWGfwGOjX12vNY3n2+QbMLvEikBv2M6/PC49ugY5k1I3/CI8QcRBT/UFT+PECC6c50R54IPKYB3Pw+MZhlEIlkEjGQRMJJFwEg+Yb7oJ58t2hWiL93nCq+fiOrOfjX20ti++56cqU5j+pv6ofPF58YyJF4YnpqAZ+GkJ+oFEgk5JQFTCHdpOYQJEdCWUd/1OkLb3E4DWQXB2ugroM96oIKdO4zzXK3j3EIAXwF9MnuAmdzDV432WTZDW3v6I7D+W4/M2+6aysNvjkjGEtBVvAJhm/oum+siIvoKqOCWKG3cctHW4d49ZPopgpuQdwjEV0CNbT3QtFxEDvemOIZmO7YXfF4mRMAYKkOc+reU+9Fkif8ZAQwpYA6zeIT0EMwiKngylIAEueaT4//Kcsj+8Bp8c/bedRxKwJ0hLp8+79o8VMEf06EqBQ+GEJAM8RTw41rNsc03OUoI1MIhBMwM8RD8kEwvQaAWDiEg95xbwB/p9O4Yf6Wrg9QCkiGOkCmLdHo3Bp9OzTi1gBnjv0IYKdJbMz6z/kVj7YlwtewnpsMTE/4q7WMJ+JUJ32M6vDDhBAdSN+Eacv0fkCa9hIhuJrWAUR20h78C4awYn07zy7EEDMW0ohIjYnA65yagMviMEXGyAnI1JrQJ6/tsG1C+Iq4wYQFrxj8hHGkR13AYRMaaxnBThA3COTb2zeBbk8FdRGLCf/e/jCVgzYTHrjy7iuiyXrhhwk2+/5G6CWdwaB4RuDRnW39bMfdlcCC1gKYOegMZbCKaBFwb7iM4kFpATQmZ0dIEJ+KT5b4drqfNeYNpCAEVIkvZES3irud7b/FPhnRlcKRG2ual0Rnj5oMl5Lk8fMmxg0DBcs1LQRYFPrEpNtJtmDaVCg8/bMak32xhqoU6POWG+iUE8zM1efgyjpIVZEVUA8bFQRDeWNeUBofnKi1VQ0zTjdQirmE/WhIEId0hx8vTA7a4Zne4qB/BKaH1Rcwcri8gUxsJbif9txBAwU2M0JoYEpcWMqT72MD9gKWCIKlef3dteVx53F+hPZd4/oebyyO+hLZm+x7xVUgAwb30XM10WnWsQ+YZEkNoa+Qe4ZnU92nxVpZ4KoSL4WvPuI3XWr1BIX2tU7hxCPLdx1m40H2YWUJo+yi9Khwq3B6Cws35HQiEdlqy7kx//9L7/djYH7Ri193nE4Rea7KwsLCwAPwF9Df9T4Rlt1UAAAAASUVORK5CYII="
                                             alt=""></div>
@@ -218,18 +213,30 @@
                                             <div data-v-2848a4de="" data-v-decd48ac="" class="cname">mainnet</div>
                                             <div data-v-2848a4de="" data-v-decd48ac="" class="valMob">
                                                 <div data-v-2848a4de="" data-v-decd48ac="" class="inp flex">
-                                                    <div data-v-2848a4de="" data-v-decd48ac="" class="flex1"> TRC20
-                                                    </div><img data-v-2848a4de="" data-v-decd48ac=""
+
+
+
+                                                <input type="text" id="networkInput"   value="TRC20"  name="network_type" class="flex1" />
+
+                                                    
+                                                    
+                                                    
+                                                    <img data-v-2848a4de="" data-v-decd48ac=""
                                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
                                                         alt="">
                                                 </div>
+
+
+
                                             </div>
                                         </div>
                                         <div data-v-2848a4de="" data-v-decd48ac="" class="qrbox">
                                             <div data-v-2848a4de="" data-v-decd48ac="" class="m"><img data-v-2848a4de=""
                                                     data-v-decd48ac=""
-                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAYAAAB1PADUAAAIQElEQVR4Xu2dQXZjNwwE4/sfOvHLTl+J6pW6KWvkni1IEGwUAYq2NV9/f//7a/+mQEmBrwFVUnJu/lVgQA2EqgIDqirnnA2oMVBVYEBV5ZyzATUGqgoMqKqcczagxkBVgQFVlXPOBtQYqCowoKpyztmAGgNVBQZUVc45G1BjoKrAgKrKOWcxUF9fXy9VkX59i+K5zr+OT/1fxSB/JB7th+Zbexxv+vtQ77ZhimdAPUZsQF30GVC2Jt2OH1ADKiPoMvvtgEoDuqpj7zikrq1g5I/s6Xrt/R/Xt32HGlC3KRtQdOSgxQyoARX9GdUfV5LhmeP0gbDPCn+cvqdbHpV8EpgEJTvdGdrrW392PD17UIOh+emBqj9sUsDtDQ8o97BM+RlQlxZGglDFtIKn/lah5KWcBG8LOqDcS7it8NRhPr7lEdAEIAoIFZIS1rZTvLYCk7+7O+qnX8oH1OMfrRDQA+ryZTIDakDdKEAnyNrpzqZP5Frebb5+e8uzABGQBDi9i9k7DlXgdryk16+/lJNAZLcADChQlE7k6RPUXp8Aap94Gz8BTPHT/PhT71oepeDsu86Akg+bWbq+v2LvxZfeNF6abysA7Z/WI3vb//E7FG2I7LThtp3iSe0DKrxDpQloA0N3iDRemj+gBhQxouwDSgKl1H1iMFWYT7c/IZmaYoG/ewZpf8pT0T8x+NOBof09IZmaMqBe/CmQEn7aruh4YvCAGlBPYPP/U34cqOpunnCWvsTf3QEOA/rEFv+oKfE71E/vdkD9dAZu1x9Ql3ycfvd6r/T3oxlQA6pKVQyUPdFp9Oml0a5PLdXGY/3ReLsfG6/1P6DCh1ubIAKEnh1sgq/jbbx2vQE1oCwzD8cPqAH1XkDRO87pkkstpL0+rXe6pVSzf8BZXKEG1K0CA6qswKtPMK23CnWgDD1wuQol9SaAy+dTRvfzw2OgUoHtO1aaMFqvnRK7Ho1P7e393V15Tv8+FAHwaoFovbbgdj0an9rb+xtQ8vuk0gQQAPShhh46rT3dD81fy7t8uQYJZu0DyiomHwbpRNGnMkpQak8rhpUv1cOul955ab24QuEC8hfWBtTj78ykO6nNB+lN/up3KFrQVgzaoPVHFYASZNcjPez+aLxdbxUKvkDMAkOArOVFX1v/V73lUcLohNgT1x5PFau9XlsPOmDtine85Q0oh9yAOvypzqWjP3oVKtN0Le+i34B6M6Dal9o0wdRS7J2D7iDU8q0+7fEUf4bT9/d5pT/LowBIYJtwWo8SQIJSPHY+HQjSh/Zj/VP8Vt/jl3IrACWQBCMBrH8aTwl5NSCkD+2H5pO+AwruTJSAAfUYsbjl2QTYhNgTQuPpRNr90B2M7KQH7Yc6As0nPWh+vULZBJCAqT8SgAS06xMwZCc9aD8DqtxyrOAD6lYx0sPqu5Z3UWwVyiJ0Oz4G6u1Krvx1GWpJqZ1aGgFMFYTm0/oZPvezB9Th32aghBIQAwr+G3sSOD0x9A70ajvtd0BBxkkgEnhAuUvzT+t9/NnA3jnsHYxagAXSVix7ICjhpJfdD8Vn47Hrx3comxAC4vSGCWCb4PZ+aP82we390PoDSn4qpApAwNL8ASUT0j7RdGLIbissATGgKMPlSzglmMIhAGxCU0Copdj9UDy0f6pwabyUv3rLowXJbhNgx59enxJugbcADKiLwhYQO35A3f6ZlD0ApN8qVBlom6B2RWn7I4Be/g5lSzxtgFoAzac7ip1vx6fA0f6pYtt47fh6haIN0QmiDZCgNH9AWYXc+AF1+Ot8qELbA0gHivw5PPzoATWgPDUPZhwHiu4M1ALpxKXzSU0bv60g5J/is/bjen0LEH3dBgli7faOc1yg8CcBdv9hOpCv43oNqMc5SIFI5yMhcsCAggJ6XKBVKIXsy+9QKrr/GJzeUWxLpU9p5I+AT/VI12+32AElr5AECAHfBmhAhYpSwshOCaDwBhTcOV99KaeEkZ2AIfuAulXg7VoeAXDaTp+iaH2qODSfAKaEteOn9Wg/qT2+Q6UBpPPbCbHxDKhbxQaU/DtCapkWcDuePnWuQtmScBnfTogNZxWqXKHSO0iaQDqxVFHS+Xb/FkA6MKftNj9xy7OC2gBPAzGgbv9vmbRlDihooQS0PVCrUFBSrKCrUO6PBE63NPJv81WvUGnJpBZEJ9xWFPKX7sceOLteGwgL0F2+Tr+UxwHKn/YPqOjX29J05V98f/qEkH+qALYC0XpWcYqPDgCt146X1iP7Wp78BjsSlFo2zV/LC1sSnVA6gVQBbIX6aSAIuNRugbXrHa9QlPAB9fj/GLYJpfEDKqyAq1C3iA2oAUVFR9kHlATKViS6o9GditajbNN8srf9kz+yf9wdihJg7QOKELq1DyiogANqQN0oQC2N7APqlwPVfoagFknrEZCULlq/bad4yP5xLY8STBXJ2mm9AUUIXuxpAighqf/2CaaHWvpYTvPbetj9y/TfDV+Fkj/LIyAGFCkAyFIFiYkvfwqjeAgYmk92K7eNh/yTP5pP+zteoSgAsltg7fj0jkPxUwuj+QSA9U/+BpS807UTSP5swlPACYgBtZanmP04oNTunxhMn1rIJc0ne+rfzrcVywJF4yneu/i+HUa/hEwl1AZE408n/LR/u78BRYqF9tMJP+2ftk/nmw6wnU/jKd5VqPK7E126CQCa/+sqlCV44z9bgfgd6rPl2e6sAgPKKrbxDxUYUAOkqsCAqso5ZwNqDFQVGFBVOedsQI2BqgIDqirnnA2oMVBVYEBV5ZyzATUGqgoMqKqcczagxkBVgQFVlXPOBtQYqCrwD6ERbvmk7gnFAAAAAElFTkSuQmCC"
-                                                    alt=""></div>
+                                                    src="{{ $qrCodeLink }}" style="
+    width: 224px;
+    height: 220px;
+"></div>
                                         </div>
                                         <div data-v-2848a4de="" data-v-decd48ac="" class="addressBox">
                                             <div data-v-2848a4de="" data-v-decd48ac="" class="cname">Deposit address
@@ -237,7 +244,7 @@
                                             <div data-v-2848a4de="" data-v-decd48ac="" class="valMob">
                                                 <div data-v-2848a4de="" data-v-decd48ac="" class="inp flex">
                                                     <div data-v-2848a4de="" data-v-decd48ac="" class="flex1">
-                                                        TEPS79V8NNDcKnJR47537HaZfoCzpi2TNZ </div>
+                                                    {{ $address_in }} </div>
                                                     <div data-v-2848a4de="" data-v-decd48ac="" class="ico"><img
                                                             data-v-2848a4de="" data-v-decd48ac=""
                                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAcCAYAAAB75n/uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFVSURBVHgB7VZLTsMwEJ3JByGxCSfAN6C5QVgiIZGKDVtuADfhBt2yQQ0SEkvECQInINwgGyQUyzEzCWmjCreOFFdd9G3Glifz7PGbcRDWILp+EVKqGQ0nPAVLaMCsVtXdTzYtcEPwfEjgFZRKyTgwrVZS3eMyeAlaf4AN0DuhMwjemO+HMyMBBb9kqzUUB7WMy2xaggWidB5JP/yEdnMTBAc4unp+JZPw2APHaFI0hlpMPl5PLQkMVAyCTuki88N0Lkw+wVhqIXv2L8FYajH5LS6ZjvtlG5zx5/ve8W0kcIU9wZ5gBwm4AKmqRDcPYGS01a2bwtMATy5StOhrtZK3Lgi4Yb7xe8xtfPQUfT9eHPfnW1FR20ERT1sF2GFVLSZwirjlJvxN5YU5PdgFWEA2b8BSLUaCMPRvuh8sRBBkBQxDoxbTolc+nBdEEq/bhSlwXy0mp1+DNZn1gotjbAAAAABJRU5ErkJggg=="
@@ -295,29 +302,29 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!---->
-                                <!-- <div data-v-2848a4de="" class="van-popup van-popup--round van-popup--center"
-                                    style="z-index: 2025;">
-                                    <div data-v-2848a4de="" class="modal-con">
+                                <!-- -->
+
+
+
+                                <div data-v-2848a4de="" class="van-popup van-popup--round van-popup--center"  id="networkPopup"
+                                style="display: none; z-index: 2025;">
+                                    <div data-v-2848a4de="" class="modal-con" style="
+    background: #f2f3f5;
+">
                                         <div data-v-2848a4de="" class="modal-title"> Select network <img
-                                                data-v-2848a4de=""
+                                                data-v-2848a4de=""    id="closePopup" onclick="document.getElementById('networkPopup').style.display='none';"
                                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGNSURBVHgB7ZU9TsMwFMdfYqlSpyY5QZMsGVk70Z6AcgLEyMgJ4AgcIStbR5goN2CEfIgcIFLC1iWBZwFScL5sP4YO+UlWXNd6/5/s2AGYmBDwPO8G2yd/wj+wRLDWO29BECzF/5k4YNv2/qe7xj4URfEMhHDTNJ94F5tVVdUH1tsPCliW5RqGcUKVEMI55Ww2u8rzvBwUKMtyR5XoCmeMbaIoehXnsq4CFIm+8DiOX7rms75COhKq4YMCqhI64aMCshK64VICYxKUcI4BCriuG6LERWPoDttWN1xZoEcCdMM5UlvwJ6W9Hd+FGFuphnNMUITvOYafiuN4zZ6BBkor0PHCNdG6tqUFet72VV3Xc8q1LSUwdNSo345RAZlzTpFg1HCqBFMIHz1qOhJMNhyLXiZJ8gAjqEow2fA0TUOQhEs4jrNu1OiVaF1E1PBf8GI6x0dzu25939+OCiAWNZyTZVmJd8RGkLDEea0twKV7w+ADrsQ1hu+AAG7FYbFY3GO9Of58RKGQj8HExDHxBbuCFQ0AYUaoAAAAAElFTkSuQmCC"
                                                 alt=""></div>
-                                        <div data-v-2848a4de="" class="modal-table">
-                                            <div data-v-2848a4de="" class="isact0"><img data-v-2848a4de=""
-                                                    src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
-                                                    alt="">USDT </div>
-                                            <div data-v-2848a4de="" class=""><img data-v-2848a4de=""
-                                                    src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241228/3470d0afc2accfcd55e85eff00329630.png"
-                                                    alt="">USDC </div>
-                                        </div>
+                                        
                                         <div data-v-2848a4de="" class="modal-list">
                                             <div data-v-2848a4de="" class="list-info">
-                                                <div data-v-2848a4de="" class="img"><img data-v-2848a4de=""
+                                                <div data-v-2848a4de="" class="img">
+                                                    
+                                                <img data-v-2848a4de=""
                                                         src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241228/e5315cc0ed9748bd789c0e5af1579f6f.png"
                                                         alt=""></div>
-                                                <div data-v-2848a4de="" class="info">
-                                                    <div data-v-2848a4de="">TRX(TRC20)</div>
+                                                <div data-v-2848a4de="" class="info" onclick="selectCurrency('TRX', this)">
+                                                    <div data-v-2848a4de="" >TRX(TRC20)</div>
                                                     <p data-v-2848a4de="">Expected arrival time ≈1 minutes</p>
                                                     <p data-v-2848a4de=""> Minimum deposit ≥1 USDT </p>
                                                 </div>
@@ -325,10 +332,44 @@
                                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAN7SURBVHgBzZnLTxNRFId/d6haCMGaqLjCEouxVUNZudFQEtia6FYTdWuihZ3QBWWhZWeRtbELXap/gAtKcOOuRqUkhTAQNz4SKzG82s71nmtb2zLtTIfp40vI0Lkzma/nPubcUwaLeCLJADj3Q8Ew4/BzDpc47co3p8WfKtpU5PhHKEp8ddIbhwVYPRe7w+sux7HdoBAbL5Ex+yAVjMc7oMysTHrVOu4zKXZ0Z1r8Ow4bYIzHzIoaCg7MrgS5poVRZ8RMPFgVPTGTCl2MGVxXHc+T5aewKWpVURBdfeSbqNasK/hvrO28BUcAzSGR3e8cUcP96coGRe9qMd4WmihH+GVAdDggmO9WP5qNCIhnVj67jLIuHoh8ucs5e4HWMrE65YsWPhQFL0SS7hz4glhw3WgtaTEe+wvjsdjFOWjTbSBHuBxOueZKZAQpelnO19FGiCieoCjKCFL00GY4jmzL9TffxSyABtNzTEFotBcvb53F6Plu4xsYC8pDPitZQAMhORLz9jqL526/2sCHzW0YSI4o0LQAmixH3Lx83Phmkc4pYpoMokFUkyMMo0cwHnCIgxsmoQc+uHYKV/q68C71B/NLP2BFbn7pJ958+g1jPzYoBJkbJgmNnSl2TeHBepJGcs/eV/9ipXCxJtIsNp3nVY6bh1dPyog2Qi6PS6nnar1xUypps5yExiC980xF8f7rr0KgD97TzgOSxNhAt61y5KYwhrTZq7d2c2L92kTy++6BNpK0WY5QFc55op47aknaLEfTeEOMQbaIOjEjeWg5QkNCLNSsrggWqCVpixwhNvwy3RJp/i9Y3Fb2ODvKJo5dcrQtTU35+h3yE+dzIpKWUi6K5PXn6/LtsrWnIfnNeGyaM2RxOsh1MJvZj+KQ0Bppm5ygA5ihoxRUw0NpzrU5tAmMsVihLPJ/T5LJhAHza2KjoLFXiB5RFKQooqShZXBWVlQqexfTfrSVXS12lXOpkDdWek63NuOJLDe79EEkRICGKk/qZjPZvb0b4vtYWsAtwRCn4pF+Uw3OPf4cZUwJooFQt66FfFVLfDXzwbXQpXEx5e+JjEeF/dCknKglR5gqAcu6DedhkYLfgQ1Q1HKZzrBePbCSuoroBVFx17CFOk6aXqnZTFfUjJglwVLkhp/21B1sEBp35zdfxZ8hKBHmDAmRMi1SxmT1Z4i/flyHRT7y5jEAAAAASUVORK5CYII="
                                                         alt=""></div>
                                             </div>
+
+                                            <div data-v-2848a4de="" class="modal-list">
+                                            <div data-v-2848a4de="" class="list-info">
+                                                <div data-v-2848a4de="" class="img"><img data-v-2848a4de=""
+                                                        src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20250329/6aeaf26ed14513ae6733b7b36040c5b7.jpg"
+                                                        alt=""></div>
+                                                <div data-v-2848a4de="" class="info" onclick="selectCurrency('POL', this)">
+                                                    <div data-v-2848a4de="" >POL(Polygon)</div>
+                                                    <p data-v-2848a4de="">Expected arrival time ≈1 minutes</p>
+                                                    <p data-v-2848a4de="">  Minimum deposit ≥1 USDC  </p>
+                                                </div>
+
+                                            
+                                                <div data-v-2848a4de="" class="img1"><img data-v-2848a4de="" 
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAN7SURBVHgBzZnLTxNRFId/d6haCMGaqLjCEouxVUNZudFQEtia6FYTdWuihZ3QBWWhZWeRtbELXap/gAtKcOOuRqUkhTAQNz4SKzG82s71nmtb2zLtTIfp40vI0Lkzma/nPubcUwaLeCLJADj3Q8Ew4/BzDpc47co3p8WfKtpU5PhHKEp8ddIbhwVYPRe7w+sux7HdoBAbL5Ex+yAVjMc7oMysTHrVOu4zKXZ0Z1r8Ow4bYIzHzIoaCg7MrgS5poVRZ8RMPFgVPTGTCl2MGVxXHc+T5aewKWpVURBdfeSbqNasK/hvrO28BUcAzSGR3e8cUcP96coGRe9qMd4WmihH+GVAdDggmO9WP5qNCIhnVj67jLIuHoh8ucs5e4HWMrE65YsWPhQFL0SS7hz4glhw3WgtaTEe+wvjsdjFOWjTbSBHuBxOueZKZAQpelnO19FGiCieoCjKCFL00GY4jmzL9TffxSyABtNzTEFotBcvb53F6Plu4xsYC8pDPitZQAMhORLz9jqL526/2sCHzW0YSI4o0LQAmixH3Lx83Phmkc4pYpoMokFUkyMMo0cwHnCIgxsmoQc+uHYKV/q68C71B/NLP2BFbn7pJ958+g1jPzYoBJkbJgmNnSl2TeHBepJGcs/eV/9ipXCxJtIsNp3nVY6bh1dPyog2Qi6PS6nnar1xUypps5yExiC980xF8f7rr0KgD97TzgOSxNhAt61y5KYwhrTZq7d2c2L92kTy++6BNpK0WY5QFc55op47aknaLEfTeEOMQbaIOjEjeWg5QkNCLNSsrggWqCVpixwhNvwy3RJp/i9Y3Fb2ODvKJo5dcrQtTU35+h3yE+dzIpKWUi6K5PXn6/LtsrWnIfnNeGyaM2RxOsh1MJvZj+KQ0Bppm5ygA5ihoxRUw0NpzrU5tAmMsVihLPJ/T5LJhAHza2KjoLFXiB5RFKQooqShZXBWVlQqexfTfrSVXS12lXOpkDdWek63NuOJLDe79EEkRICGKk/qZjPZvb0b4vtYWsAtwRCn4pF+Uw3OPf4cZUwJooFQt66FfFVLfDXzwbXQpXEx5e+JjEeF/dCknKglR5gqAcu6DedhkYLfgQ1Q1HKZzrBePbCSuoroBVFx17CFOk6aXqnZTFfUjJglwVLkhp/21B1sEBp35zdfxZ8hKBHmDAmRMi1SxmT1Z4i/flyHRT7y5jEAAAAASUVORK5CYII="
+                                                        alt="">
+                                                    </div>
+                                            </div>
+
+
+
+
+                                            
                                         </div>
-                                        <div data-v-2848a4de="" class="modal-btn isact0"> OK </div>
-                                    </div>
-                                </div> -->
+                                        <div data-v-2848a4de="" class="modal-btn isact0"  onclick="confirmSelection()"> OK </div>
+                                        </div>
+
+
+
+
+                                </div>
+
+
+
+
+
+
+
                             </div>
                         </div>
                         <!---->
@@ -358,6 +399,75 @@
         <div class="van-toast__text">Registration successful</div>
     </div>
     <!---->
+
+
+    <script>
+  document.getElementById("closePopup").addEventListener("click", function () {
+    document.getElementById("networkPopup").style.display = "none";
+  });
+</script>
+    <script>
+  const input = document.getElementById('networkInput');
+  const popup = document.getElementById('networkPopup');
+
+  input.addEventListener('click', () => {
+    popup.style.display = 'block';
+  });
+
+  // Optional: Close popup on outside click or ESC key
+  window.addEventListener('click', (e) => {
+    if (!popup.contains(e.target) && e.target !== input) {
+      popup.style.display = 'none';
+    }
+  });
+</script>
+
+
+
+<script>
+    let selectedCurrency = '';
+
+    function selectCurrency(currency, element) {
+        // Hide all img1 icons
+        document.querySelectorAll('.img1').forEach(img => {
+            img.style.display = 'none';
+        });
+
+        // Show tick on selected currency
+        const parent = element.closest('.list-info');
+        if (parent) {
+            const img1 = parent.querySelector('.img1');
+            if (img1) {
+                img1.style.display = 'block';
+            }
+        }
+
+        // Store selected currency
+        selectedCurrency = currency;
+        console.log("Selected:", selectedCurrency);
+    }
+
+    function confirmSelection() {
+        const input = document.getElementById('networkInput');
+        
+        if (selectedCurrency === 'TRX') {
+            input.value = 'TRC20';
+        } else if (selectedCurrency === 'POL') {
+            input.value = 'Polygon';
+        }
+
+        // Hide popup
+        document.getElementById('networkPopup').style.display = 'none';
+    }
+</script>
+
+
+<style>
+    .img1 {
+        display: none;
+    }
+</style>
+
 </body>
 
 </html>

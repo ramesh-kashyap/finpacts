@@ -211,7 +211,10 @@
                                                 email：rajron****@gmail.com</div>
                                             <div data-v-bc1bfcf0="" data-v-380deda1="" class="valMob"
                                                 data-v-decd48ac="">
-                                                <div data-v-bc1bfcf0="" class="val inp"><input data-v-bc1bfcf0=""
+                                                <div data-v-bc1bfcf0="" class="val inp">
+                                                    
+                                                
+                                                <input data-v-bc1bfcf0=""
                                                         type="text"
                                                         placeholder="Please enter the email verification code">
                                                     <div data-v-bc1bfcf0="" class="input_right">

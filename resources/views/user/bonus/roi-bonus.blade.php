@@ -294,41 +294,11 @@
                                     </div>
                                 </div>
                                 <div data-v-6e348d44="" data-v-decd48ac="" class="main">
-                                    <div data-v-6e348d44="" data-v-decd48ac="" class="total-income container">
-                                        <div data-v-6e348d44="" data-v-decd48ac="" class="name flex">
-                                            <div data-v-6e348d44="" data-v-decd48ac="" class="flex1 ti-be ti0"><span
-                                                    data-v-6e348d44="" data-v-decd48ac="">Total revenue</span></div>
-                                            <div data-v-6e348d44="" data-v-decd48ac="" class="set"><span
-                                                    data-v-6e348d44="" data-v-decd48ac="">Nearly seven days</span><img
-                                                    data-v-6e348d44="" data-v-decd48ac=""
-                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADBSURBVHgBnc/dDYIwEAfwu5YBdANHcAQeeWQEHAAIE4gT8DUAjsEjI7iBk9B6l2hStaWFf3Lppb37JQWgNE0TU6WwM7SbUZ24R26klM/3270oissGC9q2HYUQGffLshwFnQfjPev7fgy0vjBOFEVnUVXVQ2t924r+YmzkeT7j56LruhoRr8aO8/s2rCzLmns0B0PQNewP9KE+zAq6UKUU+DAn6EDBh3EkODJN05wkCZkYh2KroA31YcEZhiGlikNmX7p6eni6eTdOAAAAAElFTkSuQmCC"
-                                                    alt=""></div>
-                                        </div>
-                                        <div data-v-6e348d44="" data-v-decd48ac="" class="info">
-                                            <div data-v-6e348d44="" data-v-decd48ac="" id="myChart"
-                                                style="width: 100%; height: 5.6rem; user-select: none;"
-                                                _echarts_instance_="ec_1745235972236">
-                                                <div
-                                                    style="position: relative; width: 399px; height: 280px; padding: 0px; margin: 0px; border-width: 0px;">
-                                                    <canvas
-                                                        style="position: absolute; left: 0px; top: 0px; width: 399px; height: 280px; user-select: none; padding: 0px; margin: 0px; border-width: 0px;"
-                                                        data-zr-dom-id="zr_0" width="798" height="560"></canvas>
-                                                </div>
-                                            </div>
-                                            <div data-v-6e348d44="" data-v-decd48ac="" class="img">
-                                                <div data-v-5f0c154b="" data-v-6e348d44=""
-                                                    class="empty db custom-image" data-v-decd48ac="">
-                                                    <div data-v-5f0c154b="" class="flexs">
-                                                        <div data-v-5f0c154b="" class="custom-image van-empty">
-                                                            <div class="van-empty__image"><img
-                                                                    src="{{asset('')}}static/img/none0.f307acfc.png"></div>
-                                                            <p class="van-empty__description">No data yet</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
+
+
+
+
                                     <div data-v-6e348d44="" data-v-decd48ac=""
                                         class="list-box today_earnings container">
                                         <div data-v-6e348d44="" data-v-decd48ac="" class="name">
@@ -353,12 +323,57 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div><!---->
+                                        </div>
+
+
+
+                                        <?php if(is_array($level_income) || is_object($level_income)){ ?>
+
+<?php
+ date_default_timezone_set('UTC');
+  $cnt = 0; ?>
+  @foreach($level_income as $value)
+
+                                        <div data-v-6e348d44="" class="van-pull-refresh" data-v-decd48ac="">
+                                            <div class="van-pull-refresh__track" style="transition-duration: 0ms;">
+
+                             
+
+                                                <div class="van-pull-refresh__head" style="height: 50px;"></div>
+
+
+                                       
+                                                <div data-v-6e348d44="" role="feed" class="van-list">
+                                                    <ul data-v-6e348d44="">
+                                                        <li data-v-6e348d44="">
+                                                            <div data-v-6e348d44="" class="flex1">
+                                                                <div data-v-6e348d44="" class="n">Contract
+                                                                    income(ID: {{$value->user_id_fk}} )</div>
+                                                                <div data-v-6e348d44="" class="time">{{ date('D, d M Y H:i:s', strtotime($value->created_at)) }}</div>
+                                                            </div>
+                                                            <div data-v-6e348d44="" class="s">+{{$value->comm}} USDT</div>
+                                                        </li>
+                                                    </ul>
+
+
+
+                                                    @endforeach   
+                                                                            
+                                                                            <?php }?>  
+                                        
+
+                                                    <div class="van-list__finished-text">No more</div>
+                                                    <div class="van-list__placeholder"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div><!----><!----><!---->
                             </div>
                         </div>
-               
+
+
+
                         @include('layouts.upnl.footer')
                     </div>
                 </div>
@@ -384,10 +399,7 @@
             <p data-v-b68a32e2="">Loading...</p>
         </div><!---->
     </div>
-    <script src="{{asset('')}}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
-    <script src="{{asset('')}}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
-    <script src="{{asset('')}}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
-    <script src="{{asset('')}}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script>
+ 
 </body>
 
 </html>

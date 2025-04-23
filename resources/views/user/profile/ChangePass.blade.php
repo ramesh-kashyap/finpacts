@@ -328,68 +328,80 @@
                                 <div data-v-29c52665="" class="container flex">
                                     <div data-v-29c52665="" class="back"><img data-v-29c52665=""
                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE+SURBVHgB3diLDYIwEAbgwy7gCLoBbOIGtiM4gbqBE0DdSCcQJ5AN8GrAIPIobXNH+JOG0jbhCyVpC8DSIqVcmwKBsgKPKKX2URQ9sLwQdYQAicAxBoMX3Wwry3Krtc7BI05vqAtTpQDPTAb1YXDaFL4db9CkKRvCpGmqIUCsQRQYaxAVxgpEiRkFUWMGQRyYXhAXphPEifkDcWN+QHPAfEEDaxNVciynLMuu9Vp2At5ssFxMpQYF22B55LMwf0C4jzkAbwr8Vs+m8v2occcnsTHrGCzN3AJRRF25YeI4fiJq1xqzS5Ikx+47EEQ0b+aAEu0GbpToauREib4OLpQY6uRAibEB1KhREDXKCkSJsgZRoZzO9j3LTFGd7b1Or05ne3yoxoerVnOQHYPz75g2yqzWIc723ql+WG1gqXkDGBPa7OTyg7AAAAAASUVORK5CYII="
-                                            alt=""></div>
-                                    <!---->
+                                            alt=""></div></a>
                                     <div data-v-29c52665="" class="name tac">Change login password</div>
                                     <div data-v-29c52665="" class="flex1"></div>
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
+                                 
                                 </div>
                             </div>
                         </div>
+
+
+                        <form method="post" action="{{ route('user.edit-password') }}">
+                        {{ csrf_field() }}
+
                         <div data-v-decd48ac="" id="scroll" class="content-container"
                             style="padding-top: 44px; padding-bottom: 76px;">
                             <div data-v-decd48ac="" id="content" class="content-scroll">
                                 <div data-v-ff022da8="" data-v-decd48ac="" class="container">
                                     <div data-v-ff022da8="" data-v-decd48ac="" class="item valMob">
-                                        <div data-v-ff022da8="" data-v-decd48ac="" class="cname">Original password</div>
-                                        <div data-v-ff022da8="" data-v-decd48ac="" class="inp val"><input
-                                                data-v-ff022da8="" data-v-decd48ac="" type="password"
-                                                placeholder="Please enter the original password"></div>
+                                        <div data-v-ff022da8="" data-v-decd48ac="" class="cname">New password'</div>
+                                        <div data-v-ff022da8="" data-v-decd48ac="" class="inp val">
+                                            
+                                        
+                                        <input
+                                                data-v-ff022da8="" data-v-decd48ac="" type="password"  type="password" name="password" placeholder="Enter your password"
+                                              ></div>
                                         <div data-v-ff022da8="" data-v-decd48ac="" class="wjmm">Forgot password？</div>
+
+
                                     </div>
                                     <div data-v-ff022da8="" data-v-decd48ac="" class="item valMob">
-                                        <div data-v-ff022da8="" data-v-decd48ac="" class="cname">New password</div>
-                                        <div data-v-ff022da8="" data-v-decd48ac="" class="val inp"><input
-                                                data-v-ff022da8="" data-v-decd48ac="" type="password"
-                                                placeholder="Please enter a new password"></div>
+                                        <div data-v-ff022da8="" data-v-decd48ac="" class="cname">Password confirmation</div>
+                                        <div data-v-ff022da8="" data-v-decd48ac="" class="val inp">
+                                            
+                                        <input
+                                                data-v-ff022da8="" data-v-decd48ac="" type="password" name="password_confirmation" placeholder="Please confirm the login password" required></div>
                                     </div>
                                     <div data-v-ff022da8="" data-v-decd48ac="" class="item valMob">
-                                        <div data-v-ff022da8="" data-v-decd48ac="" class="cname">Password confirmation
-                        <div data-v-decd48ac="" id="scroll" class="content-container"
-                            style="padding-top: 44px; padding-bottom: 76px;">
-                            <div data-v-decd48ac="" id="content" class="content-scroll">
-                                <div data-v-ff022da8="" data-v-decd48ac="" class="container">
-                                    <div data-v-ff022da8="" data-v-decd48ac="" class="item valMob">
-                                        <div data-v-ff022da8="" data-v-decd48ac="" class="cname">Original password</div>
-                                        <div data-v-ff022da8="" data-v-decd48ac="" class="inp val"><input
-                                                data-v-ff022da8="" data-v-decd48ac="" type="password"
-                                                placeholder="Please enter the original password"></div>
-                                        <div data-v-ff022da8="" data-v-decd48ac="" class="wjmm">Forgot password？</div>
-                                    </div>
-                                    <div data-v-ff022da8="" data-v-decd48ac="" class="item valMob">
-                                        <div data-v-ff022da8="" data-v-decd48ac="" class="cname">New password</div>
-                                        <div data-v-ff022da8="" data-v-decd48ac="" class="val inp"><input
-                                                data-v-ff022da8="" data-v-decd48ac="" type="password"
-                                                placeholder="Please enter a new password"></div>
-                                    </div>
-                                    <div data-v-ff022da8="" data-v-decd48ac="" class="item valMob">
-                                        <div data-v-ff022da8="" data-v-decd48ac="" class="cname">Password confirmation
+                                        <div data-v-ff022da8="" data-v-decd48ac="" class="cname">Mailbox
                                         </div>
-                                        <div data-v-ff022da8="" data-v-decd48ac="" class="inp val"><input
-                                                data-v-ff022da8="" data-v-decd48ac="" type="password"
-                                                placeholder="Please enter the new password again"></div>
-                                        <div data-v-ff022da8="" data-v-decd48ac="" class="inp val"><input
-                                                data-v-ff022da8="" data-v-decd48ac="" type="password"
-                                                placeholder="Please enter the new password again"></div>
+                                        <div data-v-ff022da8="" data-v-decd48ac="" class="inp val">
+                                            
+                                        
+                                        <input
+                                                data-v-ff022da8="" data-v-decd48ac="" type="email" name="email" readonly=""   id="emailId" value="{{Auth::user()->email}}">
+                                            
+        
+                                            </div>
                                     </div>
+
+
+                                    <div data-v-5745725e="" data-v-7daccefc="" class="item valMob">
+                                <div data-v-5745725e="" data-v-7daccefc="" class="cname" msttexthash="314899"
+                                    msthash="59" >Verification code</div>
+                                <div data-v-5745725e="" data-v-7daccefc="" class="inp val flex">
+                                    <div data-v-5745725e="" data-v-7daccefc="" class="flex1">
+
+
+                                        <input data-v-5745725e="" data-v-7daccefc="" type="text" name="code"
+                                            placeholder="Email Verification code" >
+                                        
+                                        </div>
+                                    <div data-v-5745725e="" data-v-7daccefc="" class="code-btn sendCode"
+                                        msttexthash="43927" msthash="61"> Send </div>
+                                    <div data-v-5745725e="" data-v-7daccefc="" class="resend-btn" _msthidden="1"
+                                        style="display: none;">
+
+
+
+                                        <div data-v-5745725e="" class="van-count-down" data-v-7daccefc="" msthidden="1">
+                                            <span data-v-5745725e="" msttexthash="16328" msthidden="1" msthash="62">0
+                                                <var data-v-5745725e="">s</var></span></div>
+                                    </div>
+                                </div>
+                            </div>
+
                                 </div>
                             </div>
                         </div>
@@ -397,13 +409,10 @@
                             <div data-v-ff022da8="" data-v-decd48ac="" class="go"><button data-v-ff022da8=""
                                     data-v-decd48ac="" class="btn on">Confirm</button></div>
                         </div>
-                        <div data-v-decd48ac="" class="footer">
-                            <div data-v-ff022da8="" data-v-decd48ac="" class="go"><button data-v-ff022da8=""
-                                    data-v-decd48ac="" class="btn on">Confirm</button></div>
-                        </div>
+
+    </form>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
         <div data-v-a7d12cfc="" class="global-loading default" style="display: none;">
@@ -430,10 +439,107 @@
         </div>
         <!---->
     </div>
-  
+    <script src="/js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
+  <script src="/js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
+  <script src="/js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
+  <!-- <script src="/js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script> -->
+  <!-- <script src="/js1744307594169/app.46ba12d9.1744307594169.js"></script> -->
     <div class="van-toast van-toast--middle van-toast--text" style="z-index: 2042; display: none;">
         <div class="van-toast__text">The current user has been disabled, please contact the administrator</div>
     </div>
+
+
+
+
+
+
+   
+  
+    <script src="https://code.jquery.com//jquery-3.3.1.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+        var countdown;
+        var timer;
+
+        $('.code-btn').click(function (e) {
+            var emailId = $('#emailId').val();
+
+            if (!emailId) {
+                iziToast.error({
+                    message: 'Invalid Email!',
+                    position: "topRight"
+                });
+                return false;
+            }
+
+            startTimer(); // Start the timer after sending the code
+            $('.code-btn').hide();
+            $('.resend-btn').show();
+            $.ajax({
+                type: "POST",
+                url: "{{ route('send_forgot') }}",
+                data: {
+                    "emailId": emailId,
+                    "_token": "{{ csrf_token() }}"
+                },
+                success: function (response) {
+                    if (response) {
+                        iziToast.success({
+                            message: 'Email sent Successfully',
+                            position: "topRight"
+                        });
+
+
+
+                    } else {
+                        iziToast.error({
+                            message: 'Error!',
+                            position: "topRight"
+                        });
+                    }
+                }
+            });
+        });
+
+        function startTimer() {
+            var resendButton = $('.resend-btn');
+            countdown = 60; // 60 seconds
+            resendButton.prop('disabled', true); // Disable the resend button
+            resendButton.text('Wait ' + countdown + 's');
+
+            timer = setInterval(function () {
+                countdown--;
+                resendButton.text('Wait ' + countdown + 's');
+
+                if (countdown <= 0) {
+                    clearInterval(timer);
+                    resendButton.prop('disabled',
+                    false); // Enable the resend button after the timer ends
+                    resendButton.text('Resend Code'); // Reset button text
+                }
+            }, 1000);
+        }
+
+        // Optional: Handle Resend Button Click
+        $('.resend-btn').click(function (e) {
+            $('.code-btn').trigger('click'); // Simulate a click on the original send button
+        });
+    });
+
+</script>
+
+
 </body>
 
 </html>
