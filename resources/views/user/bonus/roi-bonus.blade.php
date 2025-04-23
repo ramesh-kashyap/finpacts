@@ -265,6 +265,9 @@
                                 <div data-v-6e348d44="" data-v-decd48ac="" class="main">
                                    
 
+
+
+
                                     <div data-v-6e348d44="" data-v-decd48ac=""
                                         class="list-box today_earnings container">
                                         <div data-v-6e348d44="" data-v-decd48ac="" class="name">
@@ -291,21 +294,44 @@
                                                 </div>
                                             </div>
                                         </div>
+
+
+
+                                        <?php if(is_array($level_income) || is_object($level_income)){ ?>
+
+<?php
+ date_default_timezone_set('UTC');
+  $cnt = 0; ?>
+  @foreach($level_income as $value)
+
                                         <div data-v-6e348d44="" class="van-pull-refresh" data-v-decd48ac="">
                                             <div class="van-pull-refresh__track" style="transition-duration: 0ms;">
+
+                             
+
                                                 <div class="van-pull-refresh__head" style="height: 50px;"></div>
+
+
+                                       
                                                 <div data-v-6e348d44="" role="feed" class="van-list">
                                                     <ul data-v-6e348d44="">
                                                         <li data-v-6e348d44="">
                                                             <div data-v-6e348d44="" class="flex1">
                                                                 <div data-v-6e348d44="" class="n">Contract
-                                                                    income(ID:694194)</div>
-                                                                <div data-v-6e348d44="" class="time">2025-04-22
-                                                                    01:52:05</div>
+                                                                    income(ID: {{$value->user_id_fk}} )</div>
+                                                                <div data-v-6e348d44="" class="time">{{ date('D, d M Y H:i:s', strtotime($value->created_at)) }}</div>
                                                             </div>
-                                                            <div data-v-6e348d44="" class="s">+0.03 USDT</div>
+                                                            <div data-v-6e348d44="" class="s">+{{$value->comm}} USDT</div>
                                                         </li>
                                                     </ul>
+
+
+
+                                                    @endforeach   
+                                                                            
+                                                                            <?php }?>  
+                                        
+
                                                     <div class="van-list__finished-text">No more</div>
                                                     <div class="van-list__placeholder"></div>
                                                 </div>
@@ -316,6 +342,8 @@
                                 </div><!----><!----><!---->
                             </div>
                         </div>
+
+
 
                         @include('layouts.upnl.footer')
                     </div>
@@ -335,10 +363,7 @@
             <p data-v-b68a32e2="">Loading...</p>
         </div><!---->
     </div>
-    <script src="{{ asset('') }}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
-    <script src="{{ asset('') }}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
-    <script src="{{ asset('') }}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
-    <script src="{{ asset('') }}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script>
+ 
 </body>
 
 </html>
