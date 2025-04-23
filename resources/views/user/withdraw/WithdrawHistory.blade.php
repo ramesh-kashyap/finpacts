@@ -3,14 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>Deposit and Withdrawal Records</title>
-    <title>Deposit and Withdrawal Records</title>
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="expires" content="0">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
-    <link rel="icon" href="/logo.png">
-    <meta name="google" content="notranslate">
     <link rel="icon" href="/logo.png">
     <meta name="google" content="notranslate">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -108,99 +105,8 @@
         100% {
             transform: rotate(-360deg);
         }
-    <style type="text/css">
-        .page-loading-con {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
         }
 
-        .page-loading {
-            width: 1.5em;
-            height: 1.5em;
-            border-radius: 50%;
-            display: inline-block;
-            vertical-align: middle;
-            position: relative;
-        }
-
-        .loader-outter,
-        .loader-inner {
-            position: absolute;
-            border: 0.1em solid #0b53b4;
-            border-radius: 50%;
-        }
-
-        .loader-outter {
-            border-left-color: transparent;
-            border-bottom: 0;
-            width: 100%;
-            height: 100%;
-            -webkit-animation: loader-outter 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
-            animation: loader-outter 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
-        }
-
-        .loader-inner {
-            width: 1em;
-            height: 1em;
-            left: calc(50% - 0.5em);
-            top: calc(50% - 0.5em);
-            border-right: 0;
-            border-top-color: transparent;
-            -webkit-animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
-            animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
-        }
-
-        @-webkit-keyframes loader-outter {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
-        }
-
-        <blade keyframes|%20loader-outter%20%7B>0% {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
-        }
-
-        @-webkit-keyframes loader-inner {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(-360deg);
-                transform: rotate(-360deg);
-            }
-        }
-
-        <blade keyframes|%20loader-inner%20%7B>0% {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(-360deg);
-        }
-        }
-
-    </style>
-  
     </style>
   
     <style>
@@ -214,28 +120,9 @@
         body {
             width: 100%;
             text-transform: capitalize;
-            text-transform: capitalize;
         }
 
     </style>
-   
-    <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="preload" as="style">
-    <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
-    <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="preload" as="style">
-    <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="stylesheet">
-    <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="stylesheet">
-    <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-5e3ca19c.d046fd46.css">
-    <script charset="utf-8" src="/js1744307594169/chunk-5e3ca19c.77374a8b.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-5576a184.9f52f39a.css">
-    <script charset="utf-8" src="/js1744307594169/chunk-5576a184.c49d8c14.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-7cbde8e8.788c4ae8.css">
-    <script charset="utf-8" src="/js1744307594169/chunk-7cbde8e8.43936207.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-4f89519c.2a0f3cea.css">
-    <script charset="utf-8" src="/js1744307594169/chunk-4f89519c.5238fa59.1744307594169.chunk.js"></script>
-    <script charset="utf-8" src="/js1744307594169/chunk-4006da76.e92bfa42.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-4a423c40.9e22073a.css">
-    <script charset="utf-8" src="/js1744307594169/chunk-4a423c40.e4024504.1744307594169.chunk.js"></script>
    
     <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="preload" as="style">
     <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
@@ -256,13 +143,6 @@
     <script charset="utf-8" src="/js1744307594169/chunk-4a423c40.e4024504.1744307594169.chunk.js"></script>
 </head>
 
-<body class="mein_cn">
-    <div class="page-loading-con" id="loaderInit" style="display: none;">
-        <div class="page-loading">
-            <div class="loader-outter"></div>
-            <div class="loader-inner"></div>
-        </div>
-    </div>
 <body class="mein_cn">
     <div class="page-loading-con" id="loaderInit" style="display: none;">
         <div class="page-loading">
@@ -368,17 +248,7 @@
                                             <li data-v-4c275272="" class=""> Failed </li>
                                         </ul>
                                         <div data-v-4c275272="" class="cancel"> Cancel </div>
-                                        <div data-v-4c275272="" class="cancel"> Cancel </div>
                                     </div>
-                                </div>
-                                <div class="van-overlay" style="z-index: 2007; display: none;"></div>
-                                <div data-v-4c275272="" class="van-popup van-popup--bottom"
-                                    style="background: none; z-index: 2008; display: none;">
-                                    <div data-v-4c275272="" class="pop_type">
-                                        <ul data-v-4c275272="">
-                                            <li data-v-4c275272="" class="on"> All </li>
-                                            <li data-v-4c275272="" class=""> USDT </li>
-                                            <li data-v-4c275272="" class=""> USDC </li>
                                 </div>
                                 <div class="van-overlay" style="z-index: 2007; display: none;"></div>
                                 <div data-v-4c275272="" class="van-popup van-popup--bottom"
@@ -390,12 +260,10 @@
                                             <li data-v-4c275272="" class=""> USDC </li>
                                         </ul>
                                         <div data-v-4c275272="" class="cancel"> Cancel </div>
-                                        <div data-v-4c275272="" class="cancel"> Cancel </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!---->
                         <!---->
                     </div>
                 </div>
@@ -414,16 +282,7 @@
             <p data-v-b68a32e2="">Loading...</p>
         </div>
         <!---->
-        <div data-v-b68a32e2="" class="page-loading-con" style="display: none;">
-            <div data-v-b68a32e2="" class="page-loading">
-                <div data-v-b68a32e2="" class="loader-outter"></div>
-                <div data-v-b68a32e2="" class="loader-inner"></div>
-            </div>
-            <p data-v-b68a32e2="">Loading...</p>
-        </div>
-        <!---->
     </div>
-  
   
 </body>
 

@@ -81,9 +81,6 @@ class Invest extends Controller
         $this->data['page'] = 'user.invest.Deposit';
         return $this->dashboard_layout();
     }  
-
-
-    
     public function showrecord(Request $request)
     {
       $user=Auth::user();
