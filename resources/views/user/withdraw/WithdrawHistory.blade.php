@@ -159,31 +159,55 @@
                         <div data-v-decd48ac="" class="headers on">
                             <div data-v-29c52665="" data-v-4c275272="" class="head head0" data-v-decd48ac="">
                                 <div data-v-29c52665="" class="container flex">
+
+                                <a href="{{route('user.profile')}}">
                                     <div data-v-29c52665="" class="back"><img data-v-29c52665=""
                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE+SURBVHgB3diLDYIwEAbgwy7gCLoBbOIGtiM4gbqBE0DdSCcQJ5AN8GrAIPIobXNH+JOG0jbhCyVpC8DSIqVcmwKBsgKPKKX2URQ9sLwQdYQAicAxBoMX3Wwry3Krtc7BI05vqAtTpQDPTAb1YXDaFL4db9CkKRvCpGmqIUCsQRQYaxAVxgpEiRkFUWMGQRyYXhAXphPEifkDcWN+QHPAfEEDaxNVciynLMuu9Vp2At5ssFxMpQYF22B55LMwf0C4jzkAbwr8Vs+m8v2occcnsTHrGCzN3AJRRF25YeI4fiJq1xqzS5Ikx+47EEQ0b+aAEu0GbpToauREib4OLpQY6uRAibEB1KhREDXKCkSJsgZRoZzO9j3LTFGd7b1Or05ne3yoxoerVnOQHYPz75g2yqzWIc723ql+WG1gqXkDGBPa7OTyg7AAAAAASUVORK5CYII="
                                             alt=""></div>
-                                    <!---->
+
+    </a>
                                     <div data-v-29c52665="" class="name tac">Deposit and Withdrawal Records</div>
                                     <div data-v-29c52665="" class="flex1"></div>
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
+                                
                                 </div>
                             </div>
                         </div>
                         <div data-v-decd48ac="" id="scroll" class="content-container" style="padding-top: 44px;">
                             <div data-v-decd48ac="" id="content" class="content-scroll">
                                 <div data-v-4c275272="" data-v-decd48ac="" class="container">
-                                    <ul data-v-4c275272="" data-v-decd48ac="" class="flex tab">
-                                        <li data-v-4c275272="" data-v-decd48ac="" class="on"> Recharge </li>
-                                        <li data-v-4c275272="" data-v-decd48ac="" class=""> Withdrawal </li>
-                                    </ul>
+                                   
+                                <ul class="flex tab">
+    <li class="{{ request()->routeIs('user.DepositHistory') ? 'active' : '' }}">
+        <a href="{{ route('user.DepositHistory') }}">Recharge</a>
+    </li>
+    <li class="{{ request()->routeIs('user.Withdraw-History') ? 'active' : '' }}">
+        <a href="{{ route('user.Withdraw-History') }}">Withdrawal</a>
+    </li>
+</ul>
+
+<style>
+
+
+.flex.tab li {
+    padding: 10px 15px;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+}
+
+.flex.tab li.active {
+    border-bottom: 2px solid #007bff; /* blue underline */
+}
+
+.flex.tab li a {
+    text-decoration: none;
+    color: black;
+}
+    </style>
+
+
+
+
+
                                     <ul data-v-4c275272="" data-v-decd48ac="" class="setBox flex">
                                         <li data-v-4c275272="" data-v-decd48ac="" class="on">
                                             <div data-v-4c275272="" data-v-decd48ac="" class="n">Currency</div>
@@ -214,23 +238,41 @@
                                     <div data-v-4c275272="" class="van-pull-refresh" data-v-decd48ac="">
                                         <div class="van-pull-refresh__track" style="transition-duration: 0ms;">
                                             <div class="van-pull-refresh__head" style="height: 50px;"></div>
+
+
+
+                                            <?php if(is_array($withdraw_report) || is_object($withdraw_report)){ ?>
+
+<?php
+ date_default_timezone_set('UTC');
+  $cnt = 0; ?>
+  @foreach($withdraw_report as $value)
+  
                                             <div data-v-4c275272="" role="feed" class="van-list">
                                                 <ul data-v-4c275272="" class="list">
                                                     <li data-v-4c275272="" class="flex">
                                                         <div data-v-4c275272="" class="flex1">
-                                                            <div data-v-4c275272="" class="n">Recharge</div>
+                                                            <div data-v-4c275272="" class="n">Withdrawal</div>
                                                             <!---->
-                                                            <div data-v-4c275272="" class="time">2025-04-21 05:46:40
+                                                            <div data-v-4c275272="" class="time">{{ date('D, d M Y H:i:s', strtotime($value->created_at)) }}
                                                             </div>
                                                         </div>
                                                         <div data-v-4c275272="" class="str">
-                                                            <div data-v-4c275272="" class="price">13.5 USDT</div>
+                                                            <div data-v-4c275272="" class="price">{{$value->amount}} USDT</div>
                                                             <!---->
                                                             <div data-v-4c275272="" class="s"><span data-v-4c275272=""
-                                                                    class="s1">Completed</span></div>
+                                                                    class="s1"><?=($value->status=="Active")?'completed':$value->status?> </span></div>
                                                         </div>
                                                     </li>
                                                 </ul>
+
+
+                                                @endforeach   
+                            
+                            <?php }?>  
+
+
+
                                                 <div class="van-list__finished-text">No more</div>
                                                 <div class="van-list__placeholder"></div>
                                             </div>
