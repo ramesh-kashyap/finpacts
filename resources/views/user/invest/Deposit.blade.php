@@ -323,7 +323,7 @@
                                                 <img data-v-2848a4de=""
                                                         src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241228/e5315cc0ed9748bd789c0e5af1579f6f.png"
                                                         alt=""></div>
-                                                <div data-v-2848a4de="" class="info" onclick="selectCurrency('TRX', this)">
+                                                <div data-v-2848a4de="" class="info" onclick="getCurrencyDetails('trc20')">
                                                     <div data-v-2848a4de="" >TRX(TRC20)</div>
                                                     <p data-v-2848a4de="">Expected arrival time ≈1 minutes</p>
                                                     <p data-v-2848a4de=""> Minimum deposit ≥1 USDT </p>
@@ -338,7 +338,7 @@
                                                 <div data-v-2848a4de="" class="img"><img data-v-2848a4de=""
                                                         src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20250329/6aeaf26ed14513ae6733b7b36040c5b7.jpg"
                                                         alt=""></div>
-                                                <div data-v-2848a4de="" class="info" onclick="selectCurrency('POL', this)">
+                                                <div data-v-2848a4de="" class="info" onclick="getCurrencyDetails('bep20')">
                                                     <div data-v-2848a4de="" >POL(Polygon)</div>
                                                     <p data-v-2848a4de="">Expected arrival time ≈1 minutes</p>
                                                     <p data-v-2848a4de="">  Minimum deposit ≥1 USDC  </p>
@@ -450,16 +450,35 @@
     function confirmSelection() {
         const input = document.getElementById('networkInput');
         
-        if (selectedCurrency === 'TRX') {
+        if (selectedCurrency === 'trc20') {
             input.value = 'TRC20';
-        } else if (selectedCurrency === 'POL') {
-            input.value = 'Polygon';
+        } else if (selectedCurrency === 'bep20') {
+            input.value = 'bep20';
         }
 
         // Hide popup
         document.getElementById('networkPopup').style.display = 'none';
     }
 </script>
+
+
+
+<script>
+function getCurrencyDetails(currency) {
+    fetch(`/get-address-details/${currency}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                document.getElementById('qrCodeImage').src = data.qr;
+                document.getElementById('depositAddressDiv').innerText = data.address;
+            } else {
+                alert(data.message || 'Failed to get address');
+            }
+        });
+}
+</script>
+
+
 
 
 <style>
