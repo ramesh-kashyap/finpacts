@@ -158,6 +158,7 @@ Route::get('/raj', [App\Http\Controllers\UserPanel\Invest::class, 'raj'])->name(
 
 Route::get('/vip', [App\Http\Controllers\UserPanel\Invest::class, 'vip'])->name('user.vip');
 Route::get('/invest', [App\Http\Controllers\UserPanel\Invest::class, 'index'])->name('user.invest');
+
 Route::get('/vip', [App\Http\Controllers\UserPanel\Invest::class, 'vip'])->name('user.vip');
 Route::get('/viewdetail/{txnId}', [App\Http\Controllers\UserPanel\Invest::class, 'viewdetail'])->name('user.viewdetail');
 Route::get('/deposit', [App\Http\Controllers\UserPanel\Invest::class, 'deposit'])->name('user.deposit');
