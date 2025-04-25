@@ -129,9 +129,10 @@
 }
 
 .btn.on {
-    background: #0b53b4;
+    background: linear-gradient(72deg, #042d50, #070808);
     box-shadow: 0 .08rem .08rem 0 rgba(11,83,180,.2);
-    color: #fff
+    color: #fff;
+    border: 1px solid;
 }
 
 .van-overlay {
@@ -807,7 +808,7 @@ input:-internal-autofill-previewed,input:-internal-autofill-selected {
     transition: background-color 5000s ease-in-out 0s!important
 }
 
-.themeBg0 {
+/* .themeBg0 {
     background: linear-gradient(180deg,#8acbf8,#f1f7ff)
 }
 
@@ -833,7 +834,7 @@ input:-internal-autofill-previewed,input:-internal-autofill-selected {
 
 .themeBg6 {
     background: linear-gradient(180deg,#f4b7a7,#fff5f3)
-}
+} */
 
 .themeLevelLabel0 {
     background: linear-gradient(114deg,#2878b8 15.49%,#76bef8 51.38%,#2878b8 84.51%)
@@ -892,7 +893,7 @@ input:-internal-autofill-previewed,input:-internal-autofill-selected {
 }
 
 .themeColor0 {
-    color: #2486d6
+    color: #ffffff;
 }
 
 .themeColor1 {

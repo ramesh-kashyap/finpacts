@@ -81,6 +81,67 @@ class Invest extends Controller
         $this->data['page'] = 'user.invest.Deposit';
         return $this->dashboard_layout();
     }  
+
+
+    
+public function getAddressDetails($currency)
+{
+    $user = Auth::user();
+    $refId = $user->phone;
+
+    // Currency-based API URL
+    if ($currency === 'bep20') {
+        $url = 'https://api.cryptapi.io/bep20/usdt/create/';
+        $address= "0x29EFD41e774E88E3374Eb741572e14076816F413";
+    } elseif ($currency === 'trc20') {
+        $url = 'https://api.cryptapi.io/trc20/usdt/create/';
+        $address= "TD4KhBToV1nKRumY4L7jJzR4cWLK9xzmyb";
+    } else {
+        return response()->json(['success' => false, 'message' => 'Invalid currency']);
+    }
+
+    $queryParams = [
+        'callback' => "https://dcxpro.world/cryptapicallback?refid={$refId}",
+        'address' =>  $address,
+        'pending' => 0,
+        'confirmations' => 1,
+        'email' => $user->email ?? 'default@example.com',
+        'post' => 0,
+        'priority' => 'default',
+        'multi_token' => 0,
+        'multi_chain' => 0,
+        'convert' => 0,
+    ];
+
+    $fullUrl = $url . '?' . http_build_query($queryParams);
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $fullUrl);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $response = curl_exec($ch);
+    curl_close($ch);
+
+    $data = json_decode($response, true);
+
+    if ($data && isset($data['status']) && $data['status'] === 'success' && isset($data['address_in'])) {
+        $qrCodeLink = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" . urlencode($data['address_in']);
+
+        return response()->json([
+            'success' => true,
+            'address' => $data['address_in'],
+            'qr' => $qrCodeLink
+        ]);
+    }
+
+    return response()->json(['success' => false, 'message' => 'API error']);
+}
+
+
+
+
+
+
+
     public function showrecord(Request $request)
     {
       $user=Auth::user();
@@ -748,73 +809,25 @@ public function viewdetail($txnId)
       date_default_timezone_set("Asia/Kolkata");   //India time (GMT+5:30)
       $user=Auth::user();
       
-         $my_level_team=$this->my_level_team_count($user->id);
-  $gen_team1 =  (array_key_exists(1,$my_level_team) ? $my_level_team[1]:array());
-  $gen_team2 =  (array_key_exists(2,$my_level_team) ? $my_level_team[2]:array());
-  $gen_team3 =  (array_key_exists(3,$my_level_team) ? $my_level_team[3]:array());
+      $my_level_team = $this->my_level_team_count($user->id);
+   
+      $gen_teams = [];
+      for ($i = 1; $i <= 3; $i++) {
+          $team_ids = $my_level_team[$i] ?? [];
 
-  $gen_team1 = User::where(function($query) use($gen_team1)
-          {
-            if(!empty($gen_team1)){
-              foreach ($gen_team1 as $key => $value) {
-              //   $f = explode(",", $value);
-              //   print_r($f)."<br>";
-                $query->orWhere('id', $value);
-              }
-            }else{$query->where('id',null);}
-          })->orderBy('id', 'DESC')->get();
-          
-    $gen_team2 = User::where(function($query) use($gen_team2)
-          {
-            if(!empty($gen_team2)){
-              foreach ($gen_team2 as $key => $value) {
-              //   $f = explode(",", $value);
-              //   print_r($f)."<br>";
-                $query->orWhere('id', $value);
-              }
-            }else{$query->where('id',null);}
-          })->orderBy('id', 'DESC')->get();
-     $gen_team3 = User::where(function($query) use($gen_team3)
-          {
-            if(!empty($gen_team3)){
-              foreach ($gen_team3 as $key => $value) {
-              //   $f = explode(",", $value);
-              //   print_r($f)."<br>";
-                $query->orWhere('id', $value);
-              }
-            }else{$query->where('id',null);}
-          })->orderBy('id', 'DESC')->get();
+          $gen_teams[$i] = User::whereIn('id', $team_ids)->get();
+      }
 
+      // Initialize VIP counts
+      foreach (range(3, 7) as $vipLevel) {
+          foreach ($gen_teams as $level => $users) {
+              $this->data["gen_team{$level}_VIP{$vipLevel}"] = $users->where('rank', '>=', $vipLevel)->count();
+          }
+      }
 
-  
-
-    $this->data['gen_team1total'] =$gen_team1->count();
-    $this->data['active_gen_team1total'] =$gen_team1->where('active_status','Active')->count();
-    $this->data['gen_team2total'] =$gen_team2->count();
-    $this->data['active_gen_team2total'] =$gen_team2->where('active_status','Active')->count();
-
-    $this->data['gen_team3total'] =$gen_team3->count();
-    $this->data['active_gen_team3total'] =$gen_team3->where('active_status','Active')->count();
-
-
-    $this->data['gen_team1Income'] =$gen_team1->count();
-
-    $notes = Order::where('user_id',$user->id)->orderBy('id','DESC')->get();
-      
-
-      $userDirect = User::where('sponsor',$user->id)->where('active_status','Active')->where('package','>=',30)->count();
-      $totalRoi = \DB::table('contract')->where('user_id',$user->id)->sum('profit');
-      $todaysRoi = \DB::table('orders')->where('user_id',$user->id)->where('ttime',date('Y-m-d'))->get();
-      $this->data['todaysTrade'] = $todaysRoi;
-      $this->data['totalRoi'] = $totalRoi;
-      $this->data['userDirect'] = $userDirect;
-      $this->data['todaysRoi'] = $todaysRoi->count();
-      $this->data['todaysRoiSum'] = \DB::table('orders')->where('user_id',$user->id)->where('ttime',date('Y-m-d'))->sum('roi');
-      $this->data['todaysLevelIncome'] = \DB::table('incomes')->where('user_id',$user->id)->where('ttime',date('Y-m-d'))->sum('comm');
-      $this->data['totalLevelIncome'] = \DB::table('incomes')->where('user_id',$user->id)->whereIn('remarks',['Level Bonus','Team Bonus'])->sum('comm');
-      $this->data['balance'] =round($user->available_balance(),2);
-      $this->data['level_income'] =$notes;
-     
+    // dd($this->data);
+        $this->data['user'] = $user;
+        $this->data['myRank'] = $user->rank;
       $this->data['page'] = 'user.quality';
       return $this->dashboard_layout();
 
@@ -877,6 +890,7 @@ public function viewdetail($txnId)
           }
 
         // dd($this->data);
+        
             $this->data['user'] = $user;
             $this->data['myRank'] = $user->rank;
             $this->data['page'] = 'user.invest.vip';
@@ -897,4 +911,3 @@ public function viewdetail($txnId)
 
 
 }
-

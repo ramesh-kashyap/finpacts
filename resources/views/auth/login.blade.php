@@ -106,9 +106,8 @@
             transform: rotate(-360deg);
         }
         }
-
     </style>
-   
+
     <style>
         * {
             margin: 0;
@@ -121,7 +120,6 @@
             width: 100%;
             text-transform: capitalize;
         }
-
     </style>
     <link href="{{ asset('') }}js1744307594169/app.46ba12d9.1744307594169.js" rel="preload" as="script">
     <link href="{{ asset('') }}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js" rel="preload" as="script">
@@ -135,14 +133,29 @@
     <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="stylesheet">
     <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-0c334b0a.bd99dde0.css">
-    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-0c334b0a.d7611963.1744307594169.chunk.js"></script>
+    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-0c334b0a.d7611963.1744307594169.chunk.js">
+    </script>
     <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-5576a184.9f52f39a.css">
-    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-5576a184.c49d8c14.1744307594169.chunk.js"></script>
+    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-5576a184.c49d8c14.1744307594169.chunk.js">
+    </script>
     <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-7cbde8e8.788c4ae8.css">
-    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-7cbde8e8.43936207.1744307594169.chunk.js"></script>
+    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-7cbde8e8.43936207.1744307594169.chunk.js">
+    </script>
     <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-3525d94c.2ba0cbc0.css">
-    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-3525d94c.e40fcb0e.1744307594169.chunk.js"></script>
+    <script charset="utf-8" src="{{ asset('') }}js1744307594169/chunk-3525d94c.e40fcb0e.1744307594169.chunk.js">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/css/flag-icons.min.css">
 </head>
+<style>
+    .page .footer[data-v-decd48ac] {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        max-width: 8.5rem;
+        z-index: 9;
+        background: transparent;
+    }
+</style>
 
 <body class="w856">
     <div class="page-loading-con" id="loaderInit" style="display: none;">
@@ -158,7 +171,7 @@
                     <div class="van-pull-refresh__head" style="height: 60px;"></div>
                     <div data-v-decd48ac="" data-v-67a36a02="" class="page">
                         <div data-v-67a36a02="" data-v-decd48ac="" class="bg"><img data-v-67a36a02="" data-v-decd48ac=""
-                                src="{{ asset('') }}static/img/bg_logo.2c5a4b9e.png" alt=""></div>
+                                src="{{ asset('') }}static/img/cb5c4e881c97bb8f1f3b14f53be186de.jpg" alt=""></div>
                         <div data-v-decd48ac="" class="headers on">
                             <div data-v-67a36a02="" data-v-decd48ac="" class="heads">
                                 <div data-v-67a36a02="" data-v-decd48ac="" class="gohome"><img data-v-67a36a02=""
@@ -184,81 +197,169 @@
                                     <div data-v-67a36a02="" data-v-decd48ac="" class="he">
                                         <div data-v-67a36a02="" data-v-decd48ac="" class="ico flex"><img
                                                 data-v-67a36a02="" data-v-decd48ac=""
-                                                src="{{ asset('') }}static/img/logo.95f8e869.png" alt="">
+                                                src="{{ asset('') }}static/img/logo-2.png" alt="">
                                             <div data-v-67a36a02="" data-v-decd48ac=""><span data-v-67a36a02=""
                                                     data-v-decd48ac="">Welcome back</span></div>
                                         </div>
                                         <div data-v-67a36a02="" data-v-decd48ac="" class="flex1">
-                                            <p data-v-67a36a02="" data-v-decd48ac="">Welcome to FINPACT</p>
+                                            <p data-v-67a36a02="" data-v-decd48ac="">Welcome to {{ siteName() }}
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
 
+                                <style>
+                                    .phone-wrapper {
+                                        display: flex;
+                                        align-items: center;
+                                        /* background: linear-gradient(90deg, #050519, #080842); */
+                                        /* border: 1px solid #999; */
+                                        border-radius: 10px;
+                                        padding: .2rem 0.02rem;
+                                        max-width: 400px;
+                                        margin: auto;
+                                        gap: 10px;
+                                    }
 
+                                    .phone-code {
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 6px;
+                                        color: white;
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                    }
+
+                                    .phone-code .dropdown-icon {
+                                        width: 12px;
+                                        height: 12px;
+                                        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(245deg) brightness(104%) contrast(104%);
+                                    }
+
+                                    .phone-input {
+                                        flex: 1;
+                                        border: none;
+                                        background: transparent;
+                                        color: white;
+                                        font-size: 16px;
+                                        outline: none;
+                                    }
+
+                                    .phone-input::placeholder {
+                                        color: #aaa;
+                                    }
+                                    .area_pop {
+                                        color: #ffffff;
+                                        background: #17181d;
+                                        }
+                                        .area_pop ul li {
+                                            border-bottom: .02rem solid #252930;
+                                            padding: .32rem 0 !important;
+                                            }
+                                            .area_pop .so {
+                                            height: .8rem;
+                                            border-radius: .16rem;
+                                            background: #23242b;
+                                            margin: .1rem .3rem;
+                                            padding: 0 .1rem;
+                                            }
+                                </style>
                                 <form action="{{ route('loginAction') }}" method="POST" name="login_frm" id="form-id">
-                                {{ csrf_field() }}
-                                <div data-v-67a36a02="" data-v-decd48ac="" class="main">
-                                    <div data-v-67a36a02="" data-v-decd48ac="" class="container">
-                                        <ul data-v-67a36a02="" data-v-decd48ac="" class="tab">
-                                            <!-- <li data-v-67a36a02="" data-v-decd48ac="" class="on">Account </li> -->
-                                            <li data-v-67a36a02="" data-v-decd48ac="" class="">Mobile phone </li>
-                                        </ul>
-                                        <ul data-v-67a36a02="" data-v-decd48ac="" class="line">
-                                            <li data-v-67a36a02="" data-v-decd48ac="" class="">
-                                                <div data-v-67a36a02="" data-v-decd48ac="" class="name"><span
-                                                        data-v-67a36a02="" data-v-decd48ac="">Account</span>
-                                                    <!---->
-                                                </div>
+                                    {{ csrf_field() }}
+                                    <div data-v-67a36a02="" data-v-decd48ac="" class="main">
+                                        <div data-v-67a36a02="" data-v-decd48ac="" class="container">
+                                            <ul data-v-67a36a02="" data-v-decd48ac="" class="tab">
+                                                {{-- <li data-v-67a36a02="" data-v-decd48ac="" class="on">Account
+                                                </li>
+                                                <li data-v-67a36a02="" data-v-decd48ac="" class="">Mobile phone
+                                                </li> --}}
+                                            </ul>
+                                            <ul data-v-67a36a02="" data-v-decd48ac="" class="line">
+                                                <li data-v-67a36a02="" data-v-decd48ac="" class="">
+                                                    <div data-v-67a36a02="" data-v-decd48ac="" class="name">
+                                                        <span data-v-67a36a02="" data-v-decd48ac="">Mobile No</span>
+                                                    </div>
 
-                                                <div data-v-39429002="" class="set_area" class="phone_code" id="phone_code"
-                                        style="padding-left: 10px">
-                                        <input type="hidden" id="country-name" name="country" value="CANADA">
-                                        <input type="hidden" id="dial-code" name="dialCode" value="1">
-                                        <input type="hidden" id="country_iso" name="country_iso"
-                                            value="CA">
-                                                <div data-v-67a36a02="" data-v-decd48ac="" class="flex">
-                                                    <div data-v-67a36a02="" data-v-decd48ac="" class="flex1">
-                                                        
-                                                        <input data-v-67a36a02="" data-v-decd48ac="" type="text"
-                                                        name="phone" data-v-6e2d35de=""
-                                                    type="text" onkeyup="this.value=this.value.replace(/[ ]/g,'')"
-                                                    placeholder="Please enter your phone number"></div>
-                                                    <!---->
-                                                </div>
-                                            </li>
-                                            <li data-v-67a36a02="" data-v-decd48ac="" class="">
-                                                <div data-v-67a36a02="" data-v-decd48ac="" class="name"><span
-                                                        data-v-67a36a02="" data-v-decd48ac="">password</span></div>
-                                                <div data-v-67a36a02="" data-v-decd48ac="" class="flex">
-                                                    <div data-v-67a36a02="" data-v-decd48ac="" class="flex1">
-                                                        
-                                                    <input
-                                                            data-v-67a36a02="" data-v-decd48ac=""
-                                                            id="passwordInput"  name="password"
-                                                 placeholder="Please enter your password"
-                                                onkeyup="this.value=this.value.replace(/[ ]/g,'')"
-                                                            type="password"></div>
-                                                    <div data-v-67a36a02="" data-v-decd48ac="" class="arr"><img
-                                                            data-v-67a36a02="" data-v-decd48ac=""
-                                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ/SURBVHgB7VfBdZtAEB0luUcl4A5IBcEnPZ2iVJC4gqAKjCsQVBC5Ais36WRSQdxBNh2oA+V/M9gIA7NI4sZ/b71+Yvn7d3bm7yIyYsSIEYNiImdgtVqF6CK0YDKZfGSvj/aHw+Efeof2tFwuczkRvQVCVIAuhqBv6Keerzm0HKLvINZJD3gLhDCKSVXYOVj3EeolEOIWEPZT/CNmwUEkNC431sB31oAsy24h7kEuJ45gzj6Q2xr4vushCbDSRIZDNJ/PZbvd/m4b0LrF2FYWwkpssGIz9LkUxcBIB2gL33zV7U7FVyArFeR/xSa+RxeDfN/B8yiv9tMGLvIaPE/1Bx+aRiupJS4DYVwVI4UnUiy9z7Hh92sPkVMtwk/1B2+KRBM3kG44tESFTdM0fWTEOQmTn/+XBUCRWMyN2AjBlXQKZBRAFhtEoj72vK1a4VHDmIR5rCJzKXK0E+D6oX7bLFCKqPjYyXOugCxqEleZ8LYi+JfY4Nxxq0AQfhEPVJI5MoZO9bwmnHiAUZQ2gQNjLyfgSKD6mQmtWCI3hrpKtEPxw9HxV48gzdJnpd/5x0r+6oI904d+eCdtAlmZPlHkCVFWG8Z/VcOuT/RyOljFVEK91R3N1TQQvvZH7C1Zx3H84m+67XyHwjelDfU4TRz4ruo/th11oZJalrPRSLkWnkhPiMDgYfSumngucVlwUtyW7+XVSkK9KCw83u9/WaiITKpmOwT0VErannfeB3e7XT6bzaBxEskAsMQRfa783O5ALgNW+c1FrvwEiXhfa7CTU7DWgjDFEad+djI3P4t/RPe6uHSwz84mqAHT+wJtpS05KU4k9md9uI8YMWLEwPgPjJRCnnYugEEAAAAASUVORK5CYII=">
+                                                    <div class="phone-wrapper">
+                                                        <div class="phone-code" id="phone_code">
+                                                            <input type="hidden" id="country-name" name="country" value="CANADA">
+                                                            <input type="hidden" id="dial-code" name="dialCode" value="1">
+                                                            <input type="hidden" id="country_iso" name="country_iso"
+                                                                value="CA">
+                                                            <span>+1</span>
+                                                            <img class="dropdown-icon"
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADwSURBVHgB3ZI9CsJAEIXfbC6glT9Y6A2iIFpqZ+sN9AjeQG/gDfQmWgaFuDcwjZIydoKw465RCSHBJDbiB4HJ7M7HwFvg16FX0en0VgyeoAAEXrrufhbWGtvuN0moI76AlWhJ6Xgi/L0GYHgoip41MlM+hFLKgFkMdRkgL1r2nMVbGEodj5UaIyfMavrazmBFD33/7FUrjQsRRsgAAwt52K+jPSt+yfdPTrVWLxOoj08ydzeP9yltoN3ubkA0SJQxb/Vmw6QzgbQN+DZOTN702JqmzaUKE5N/JhoNIbMwlL6T1++Ug3iihbHtQcl8+AvuSPhz6vUs/okAAAAASUVORK5CYII="
+                                                                alt="dropdown" />
+                                                        </div>
+                                                        <input type="text" name="phone" id="phone"
+                                                            placeholder="Please enter your phone number"
+                                                            onkeyup="this.value=this.value.replace(/[ ]/g,'')"
+                                                            class="phone-input" />
+                                                    </div>
+                                                </li>
+                                                <li data-v-67a36a02="" data-v-decd48ac="" class="">
+                                                    <div data-v-67a36a02="" data-v-decd48ac="" class="name">
+                                                        <span data-v-67a36a02="" data-v-decd48ac="">password</span>
+                                                    </div>
+                                                    <div data-v-67a36a02="" data-v-decd48ac="" class="flex">
+                                                        <div data-v-67a36a02="" data-v-decd48ac="" class="flex1">
+
+                                                            <input data-v-67a36a02="" data-v-decd48ac=""
+                                                                id="passwordInput" name="password"
+                                                                placeholder="Please enter your password"
+                                                                onkeyup="this.value=this.value.replace(/[ ]/g,'')"
+                                                                type="password">
+                                                        </div>
+                                                        <div data-v-67a36a02="" data-v-decd48ac="" class="arr">
+                                                            <img data-v-67a36a02="" data-v-decd48ac=""
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ/SURBVHgB7VfBdZtAEB0luUcl4A5IBcEnPZ2iVJC4gqAKjCsQVBC5Ais36WRSQdxBNh2oA+V/M9gIA7NI4sZ/b71+Yvn7d3bm7yIyYsSIEYNiImdgtVqF6CK0YDKZfGSvj/aHw+Efeof2tFwuczkRvQVCVIAuhqBv6Keerzm0HKLvINZJD3gLhDCKSVXYOVj3EeolEOIWEPZT/CNmwUEkNC431sB31oAsy24h7kEuJ45gzj6Q2xr4vushCbDSRIZDNJ/PZbvd/m4b0LrF2FYWwkpssGIz9LkUxcBIB2gL33zV7U7FVyArFeR/xSa+RxeDfN/B8yiv9tMGLvIaPE/1Bx+aRiupJS4DYVwVI4UnUiy9z7Hh92sPkVMtwk/1B2+KRBM3kG44tESFTdM0fWTEOQmTn/+XBUCRWMyN2AjBlXQKZBRAFhtEoj72vK1a4VHDmIR5rCJzKXK0E+D6oX7bLFCKqPjYyXOugCxqEleZ8LYi+JfY4Nxxq0AQfhEPVJI5MoZO9bwmnHiAUZQ2gQNjLyfgSKD6mQmtWCI3hrpKtEPxw9HxV48gzdJnpd/5x0r+6oI904d+eCdtAlmZPlHkCVFWG8Z/VcOuT/RyOljFVEK91R3N1TQQvvZH7C1Zx3H84m+67XyHwjelDfU4TRz4ruo/th11oZJalrPRSLkWnkhPiMDgYfSumngucVlwUtyW7+XVSkK9KCw83u9/WaiITKpmOwT0VErannfeB3e7XT6bzaBxEskAsMQRfa783O5ALgNW+c1FrvwEiXhfa7CTU7DWgjDFEad+djI3P4t/RPe6uHSwz84mqAHT+wJtpS05KU4k9md9uI8YMWLEwPgPjJRCnnYugEEAAAAASUVORK5CYII=">
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+
+
+
+                                                <li data-v-67a36a02="" data-v-decd48ac="" class="fog"><span
+                                                        data-v-67a36a02="" data-v-decd48ac="">Forgot password？</span>
+                                                </li>
+                                            </ul><button data-v-67a36a02="" data-v-decd48ac="" class="btn on"> Login
+                                            </button>
+                                            <div data-v-67a36a02="" data-v-decd48ac="" class="p"> No account
+                                                yet？ <a href="{{ route('register') }}"><span data-v-67a36a02=""
+                                                        data-v-decd48ac="">Register now</span></a></div>
+                                        </div>
+                                    </div>
+
+                                    <form>
+
+                                        <div class="van-overlay" style="z-index: 2005;  display: none" id="overlay">
+                                        </div>
+                                        <div data-v-a84105cc="" class="van-popup van-popup--round van-popup--bottom"
+                                            style="z-index: 2010; display: none" id="popup">
+                                            <div data-v-a84105cc="" class="area_pop">
+                                                <div data-v-a84105cc="" class="title rel"> Choose the international area
+                                                    code <div data-v-a84105cc="" class="abs"><i data-v-a84105cc=""
+                                                            id="cancel"
+                                                            class="fa-solid fa-xmark van-icon van-icon-cross"><!----></i>
                                                     </div>
                                                 </div>
-                                            </li>
+                                                <div data-v-a84105cc="" class="so db">
+                                                    <div data-v-a84105cc="" class="ico"></div>
+                                                    <div data-v-a84105cc="" class="flexs"><input data-v-a84105cc=""
+                                                            type="text" placeholder="Area Code Search"
+                                                            id="country-search"autocomplete="off">
+                                                    </div><!---->
+            
+                                                </div>
+                                                <ul data-v-a84105cc="">
+                                                    <div class="country-list" id="country-list"></div>
+                                                </ul>
+            
+                                            </div>
+                                        </div>
 
-
-
-
-                                            <li data-v-67a36a02="" data-v-decd48ac="" class="fog"><span
-                                                    data-v-67a36a02="" data-v-decd48ac="">Forgot password？</span></li>
-                                        </ul><button data-v-67a36a02="" data-v-decd48ac="" class="btn on"> Login
-                                        </button>
-                                        <div data-v-67a36a02="" data-v-decd48ac="" class="p"> No account yet？<span
-                                                data-v-67a36a02="" data-v-decd48ac="">Register now</span></div>
-                                    </div>
-                                </div>
-
-                                <form>
-                                <!---->
+                                        <!---->
                             </div>
                         </div>
                         <div data-v-decd48ac="" class="footer">
@@ -286,6 +387,113 @@
         </div>
         <!---->
     </div>
+
+    <script src="https://code.jquery.com//jquery-3.3.1.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+
+            $("#phone_code").click(function() {
+                $("#popup").show();
+                $("#overlay").show();
+            });
+            $("#cancel").click(function() {
+                $("#popup").hide();
+                $("#overlay").hide();
+            });
+        });
+    </script>
+    <?php
+    $countries = \DB::table('country')
+        ->select('phonecode as code', 'name', 'iso as flag')
+        ->get()
+        ->map(function ($country) {
+            return [
+                'code' => '+' . ltrim($country->code, '+'),
+                'name' => $country->name,
+                'flag' => strtolower($country->flag),
+            ];
+        })
+        ->toArray();
+    ?>
+    <script>
+        const countries = <?php echo json_encode($countries, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES); ?>;
+    </script>
+    <script>
+        (function($) {
+            function populateList(filteredCountries) {
+                const $list = $('#country-list');
+                $list.empty();
+                filteredCountries.forEach(country => {
+                    $list.append(`
+                
+                                                <li data-v-a84105cc="" class="db">
+                    <div class="db" data-code="${country.code}" data-flag="${country.flag}">
+                        <span class="fi fi-${country.flag}"></span>
+                        ${country.name} (${country.code})
+                    </div>
+                    </li>
+                    
+                `);
+                });
+            }
+
+            $(document).ready(function() {
+                const $popup = $('#popup');
+                const $overlay = $('#overlay');
+                const $search = $('#country-search');
+                const $countryList = $('#country-list');
+                const $phone_code = $('#phone_code');
+                const $country_iso = $('#country_iso');
+                populateList(countries); // Initial population of the list
+
+                // Show popup when input is focused
+                $search.on('focus', function() {
+                    $popup.show();
+                    $overlay.show();
+                });
+
+                // Hide popup when clicking outside
+                $overlay.on('click', function() {
+                    $popup.hide();
+                    $overlay.hide();
+                });
+
+                // Filter the list based on search input
+                $search.on('input', function() {
+                    const searchTerm = $(this).val().toLowerCase();
+                    const filteredCountries = countries.filter(country =>
+                        country.name.toLowerCase().includes(searchTerm) || country.code.includes(
+                            searchTerm)
+                    );
+                    populateList(filteredCountries);
+                });
+
+                // Handle country selection
+                $countryList.on('click', 'div', function() {
+                    const countryCode = $(this).data('code');
+                    const countryIso = $(this).data('flag'); // Correct way to get the ISO code
+                    $phone_code.find('span').text(countryCode);
+                    $('#country-name').val($(this).text().split('(')[0].trim());
+                    $('#dial-code').val(countryCode.replace('+', ''));
+                    $('#country_iso').val(countryIso.toUpperCase()); // Set the ISO code correctly
+                    $popup.hide();
+                    $overlay.hide();
+                });
+                // Hide popup when the close icon is clicked
+                $('#cancel').on('click', function() {
+                    $popup.hide();
+                    $overlay.hide();
+                });
+            });
+        }(jQuery));
+    </script>
+  
+
+
+  
+
     <script src="{{ asset('') }}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
     <script src="{{ asset('') }}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
     <script src="{{ asset('') }}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>

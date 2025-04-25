@@ -153,6 +153,581 @@
     </script>
     <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-40a3a1c6.8126c634.css">
 </head>
+<style>
+    .card2 {
+        /* background-color: #e4ad53; */
+        padding: 20px;
+        border-radius: 12px;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #000;
+    }
+
+    .progress-bar {
+        height: 10px;
+        background-color: #3ca6fd;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .progress-fill {
+        width: 50%;
+        /* 3 out of 6 = 50% */
+        height: 100%;
+        /* background: linear-gradient(90deg, var(--token-c56d9be0-ff1a-4142-9896-10e19a52f142, rgb(255, 91, 255)) 0%, var(--token-66f80229-774a-4cca-92cb-b110eff3766a, rgb(4, 182, 216)) 48.91786%, var(--token-f05fe42a-0284-4847-be0d-a2808346fd91, rgb(11, 229, 116)) 100%); */
+        border-radius: 10px 0 0 10px;
+    }
+
+    .button {
+        background-color: #96c907;
+        color: black;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .button:hover {
+        background-color: #96c907;
+    }
+
+
+
+    .card2 {
+        background: linear-gradient(72deg, #042d50, #070808);
+        border: 1px solid #444;
+    }
+
+    .header {
+        color: #fff;
+    }
+
+    .progress-bar {
+        background-color: #444;
+    }
+
+    .progress-fill {
+        background-color: #37a1f8;
+    }
+
+    .button {
+        background-color: #96c907;
+        color: #000;
+    }
+
+    .button:hover {
+        background-color: #96c907;
+    }
+
+
+    .order-box {
+        background-color: #e4ad53;
+        border-radius: 12px;
+        padding: 20px;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .order-box h3 {
+        margin-top: 0;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 15px;
+    }
+
+    .order-box p {
+        font-size: 14px;
+        color: #000;
+        margin: 0 0 10px 0;
+        line-height: 1.5;
+    }
+
+
+    .order-box {
+        background-color: #2b2b2b;
+        border: 1px solid #444;
+    }
+
+    .order-box h3,
+    .order-box p {
+        color: #fff;
+    }
+
+
+
+    /* From Uiverse.io by ZacharyCrespin */
+    @keyframes square-animation {
+        0% {
+            left: 0;
+            top: 0;
+        }
+
+        10.5% {
+            left: 0;
+            top: 0;
+        }
+
+        12.5% {
+            left: 32px;
+            top: 0;
+        }
+
+        23% {
+            left: 32px;
+            top: 0;
+        }
+
+        25% {
+            left: 64px;
+            top: 0;
+        }
+
+        35.5% {
+            left: 64px;
+            top: 0;
+        }
+
+        37.5% {
+            left: 64px;
+            top: 32px;
+        }
+
+        48% {
+            left: 64px;
+            top: 32px;
+        }
+
+        50% {
+            left: 32px;
+            top: 32px;
+        }
+
+        60.5% {
+            left: 32px;
+            top: 32px;
+        }
+
+        62.5% {
+            left: 32px;
+            top: 64px;
+        }
+
+        73% {
+            left: 32px;
+            top: 64px;
+        }
+
+        75% {
+            left: 0;
+            top: 64px;
+        }
+
+        85.5% {
+            left: 0;
+            top: 64px;
+        }
+
+        87.5% {
+            left: 0;
+            top: 32px;
+        }
+
+        98% {
+            left: 0;
+            top: 32px;
+        }
+
+        100% {
+            left: 0;
+            top: 0;
+        }
+    }
+
+    .loader {
+        position: relative;
+        width: 96px;
+        height: 96px;
+        transform: rotate(45deg);
+    }
+
+    .loader-square {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 28px;
+        height: 28px;
+        margin: 2px;
+        border-radius: 0px;
+        background: #1774c0;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        animation: square-animation 10s ease-in-out infinite both;
+    }
+
+    .loader-square:nth-of-type(0) {
+        animation-delay: 0s;
+    }
+
+    .loader-square:nth-of-type(1) {
+        animation-delay: -1.4285714286s;
+    }
+
+    .loader-square:nth-of-type(2) {
+        animation-delay: -2.8571428571s;
+    }
+
+    .loader-square:nth-of-type(3) {
+        animation-delay: -4.2857142857s;
+    }
+
+    .loader-square:nth-of-type(4) {
+        animation-delay: -5.7142857143s;
+    }
+
+    .loader-square:nth-of-type(5) {
+        animation-delay: -7.1428571429s;
+    }
+
+    .loader-square:nth-of-type(6) {
+        animation-delay: -8.5714285714s;
+    }
+
+    .loader-square:nth-of-type(7) {
+        animation-delay: -10s;
+    }
+
+    .global-loading.default[data-v-a7d12cfc] {
+        /* width: 1.2rem; */
+        /* height: 1.2rem; */
+        top: 48%;
+        left: 47%;
+        transform: translate(-50%, -50%);
+    }
+
+    .modal {
+        background: linear-gradient(72deg, #042d50, #070808);
+        border-radius: 12px;
+        padding: 24px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        position: relative;
+    }
+
+    .modal h2 {
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    .modal p {
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    .modal img {
+        height: 50px;
+        width: 50px;
+        margin-right: 10px;
+        vertical-align: middle;
+        border-radius: 8px;
+    }
+
+    .payment-info {
+        display: flex;
+        align-items: center;
+        margin: 12px 0;
+    }
+
+    .commission {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .commission span {
+        color: red;
+        float: right;
+    }
+
+    .modal-footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .modal-footer button {
+        flex: 1;
+        margin: 0 5px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        background: linear-gradient(to bottom right, #e48f53, #e4ad53);
+        color: black;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-footer button:hover {
+        background: linear-gradient(to bottom right, #d5773f, #db9947);
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    /* === DARK MODE === */
+    @media (prefers-color-scheme: dark) {
+
+
+        .modal {
+            background: linear-gradient(72deg, #042d50, #070808);
+            color: white;
+            border: 1px solid #444;
+        }
+
+        .modal-footer button {
+            background: linear-gradient(to bottom right, #ff7f50, #ffaa33);
+            color: black;
+        }
+
+        .modal-footer button:hover {
+            background: linear-gradient(to bottom right, #e67340, #ff9933);
+        }
+
+        .commission span {
+            color: #ff6b6b;
+        }
+
+        .close-btn {
+            color: white;
+        }
+    }
+
+    .button {
+        --black-700: hsla(0 0% 12% / 1);
+        /* --border_radius: 9999px; */
+        --transtion: 0.3s ease-in-out;
+        --offset: 2px;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 0px;
+        transform-origin: center;
+        padding: 15px;
+        background-color: transparent;
+        border: none;
+        border-radius: var(--border_radius);
+        transform: scale(calc(1 + (var(--active, 0) * 0.1)));
+        transition: transform var(--transtion);
+    }
+
+    .button::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 100%;
+        height: 100%;
+        background-color: var(--black-700);
+
+        border-radius: var(--border_radius);
+        box-shadow: inset 0 0.5px hsl(0, 0%, 100%), inset 0 -1px 2px 0 hsl(0, 0%, 0%),
+            0px 4px 10px -4px hsla(0 0% 0% / calc(1 - var(--active, 0))),
+            0 0 0 calc(var(--active, 0) * 0.375rem) hsl(260 97% 50% / 0.75);
+
+        transition: all var(--transtion);
+        z-index: 0;
+    }
+
+    .button::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 100%;
+        height: 100%;
+        background-color: hsla(260 97% 61% / 0.75);
+        background-image: radial-gradient(at 51% 89%,
+                hsla(266, 45%, 74%, 1) 0px,
+                transparent 50%),
+            radial-gradient(at 100% 100%, hsla(266, 36%, 60%, 1) 0px, transparent 50%),
+            radial-gradient(at 22% 91%, hsla(266, 36%, 60%, 1) 0px, transparent 50%);
+        background-position: top;
+
+        opacity: var(--active, 0);
+        border-radius: var(--border_radius);
+        transition: opacity var(--transtion);
+        z-index: 2;
+    }
+
+    /* .button:is(:hover, :focus-visible) {
+  --active: 1;
+} */
+    .button:active {
+        transform: scale(1);
+    }
+
+    .button .dots_border {
+        --size_border: calc(100% + 2px);
+
+        overflow: hidden;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: var(--size_border);
+        height: var(--size_border);
+        background-color: transparent;
+
+        border-radius: var(--border_radius);
+        z-index: -10;
+    }
+
+    .button .dots_border::before {
+        content: "";
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: left;
+        transform: rotate(0deg);
+
+        width: 100%;
+        height: 2rem;
+        background-color: white;
+
+        mask: linear-gradient(transparent 0%, white 120%);
+        animation: rotate 2s linear infinite;
+    }
+
+    @keyframes rotate {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .button .sparkle {
+        position: relative;
+        z-index: 10;
+        margin: -8px auto;
+        width: 0.75rem;
+    }
+
+    .button .sparkle .path {
+        fill: currentColor;
+        stroke: currentColor;
+
+        transform-origin: center;
+
+        color: hsl(0, 0%, 100%);
+    }
+
+    .button:is(:hover, :focus) .sparkle .path {
+        animation: path 1.5s linear 0.5s infinite;
+    }
+
+    .button .sparkle .path:nth-child(1) {
+        --scale_path_1: 1.2;
+    }
+
+    .button .sparkle .path:nth-child(2) {
+        --scale_path_2: 1.2;
+    }
+
+    .button .sparkle .path:nth-child(3) {
+        --scale_path_3: 1.2;
+    }
+
+    @keyframes path {
+
+        0%,
+        34%,
+        71%,
+        100% {
+            transform: scale(1);
+        }
+
+        17% {
+            transform: scale(var(--scale_path_1, 1));
+        }
+
+        49% {
+            transform: scale(var(--scale_path_2, 1));
+        }
+
+        83% {
+            transform: scale(var(--scale_path_3, 1));
+        }
+    }
+
+    .button .text_button {
+        position: relative;
+        z-index: 10;
+        background-image: linear-gradient(90deg, hsla(0 0% 100% / 1) 0%, hsla(0 0% 100% / var(--active, 0)) 120%);
+        background-clip: text;
+        font-size: 20px;
+        color: transparent;
+        margin: 0px auto;
+    }
+
+    .info-com li[data-v-73226123]:nth-child(-n+3) {
+
+        border-image: linear-gradient(90deg, var(--token-f05fe42a-0284-4847-be0d-a2808346fd91, rgb(11, 229, 116)) 0%, var(--token-66f80229-774a-4cca-92cb-b110eff3766a, rgb(4, 182, 216)) 48.09%, var(--token-c56d9be0-ff1a-4142-9896-10e19a52f142, rgb(255, 91, 255)) 100%);
+        border-image-slice: 1;
+    }
+
+    [data-v-6e348d44] .van-popup {
+        width: 94% !important;
+        max-width: 8rem;
+        background-color: transparent;
+    }
+
+    .bg[data-v-6e348d44]::before {
+        position: absolute;
+        display: block;
+        content: "";
+        top: -.9rem;
+        left: 0;
+        width: 100%;
+        height: 3.2rem;
+        background: linear-gradient(72deg, #042d50, #070808);
+        background-size: auto;
+        background-size: 100% 100%;
+        border-radius: 0 0 .48rem .48rem;
+    }
+    .page .headers.on[data-v-decd48ac] {
+    background: linear-gradient(72deg, #042d50, #070808) !important;
+}.page .headers[data-v-decd48ac] {
+
+    height: 1rem;
+ 
+}
+</style>
 
 <body class="mein_cn">
     <div class="page-loading-con" id="loaderInit" style="display: none;">
@@ -170,21 +745,28 @@
                         <div data-v-6e348d44="" data-v-decd48ac="" class="bg bg0"></div>
                         <div data-v-decd48ac="" class="headers on">
                             <div data-v-29c52665="" data-v-6e348d44="" class="head head0" data-v-decd48ac="">
-                                <div data-v-29c52665="" class="container flex"><!---->
+                                <div data-v-29c52665="" class="container flex">
+                                    <!---->
                                     <div data-v-29c52665="" class="myName">
                                         <div data-v-29c52665=""><img data-v-29c52665=""
-                                                src="{{ asset('') }}static/img/0feefd89860da746f3a51ec0d8063854.png"
-                                                alt=""></div>
+                                                src="{{ asset('') }}static/img/logo-2.png" alt=""></div>
                                     </div>
                                     <div data-v-29c52665="" class="name tac"></div>
                                     <div data-v-29c52665="" class="flex1"></div>
-                                    <!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
                                 </div>
                             </div>
                             <div data-v-6e348d44="" data-v-decd48ac="" class="logo"><img data-v-6e348d44=""
-                                    data-v-decd48ac=""
-                                    src="data:image/png;base64,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"
-                                    alt=""></div>
+                                    data-v-decd48ac="" src="{{ asset('static/img/logo.png') }}" alt="">
+                            </div>
                         </div>
                         <div data-v-decd48ac="" id="scroll" class="content-container"
                             style="padding-top: 44px; padding-bottom: 60px;">
@@ -194,14 +776,14 @@
                                         <div data-v-6e348d44="" data-v-decd48ac="" class="income income0">
                                             <div data-v-6e348d44="" data-v-decd48ac="" class="name">Cumulative
                                                 total income</div>
-                                            <div data-v-6e348d44="" data-v-decd48ac="" class="am"> 0 USDT </div>
+                                            <div data-v-6e348d44="" data-v-decd48ac="" class="am"> {{number_format(Auth::user()->users_incomes(),2)}} USDT </div>
                                         </div>
                                         <ul data-v-6e348d44="" data-v-decd48ac="" class="tab">
                                             <li data-v-6e348d44="" data-v-decd48ac="">
                                                 <div data-v-6e348d44="" data-v-decd48ac="" class="flex">
                                                     <div data-v-6e348d44="" data-v-decd48ac="" class="n flex1">
                                                         Personal income</div>
-                                                    <div data-v-6e348d44="" data-v-decd48ac="" class="s">0<span
+                                                    <div data-v-6e348d44="" data-v-decd48ac="" class="s">{{number_format(Auth::user()->roi_bonus->sum('comm'),2)}} <span
                                                             data-v-6e348d44="" data-v-decd48ac="">USDT</span></div>
                                                     <img data-v-6e348d44="" data-v-decd48ac=""
                                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
@@ -210,9 +792,9 @@
                                             </li>
                                             <li data-v-6e348d44="" data-v-decd48ac="">
                                                 <div data-v-6e348d44="" data-v-decd48ac="" class="flex">
-                                                    <div data-v-6e348d44="" data-v-decd48ac="" class="n flex1">Team
+                                                    <div data-v-6e348d44="" data-v-decd48ac="" class="n flex1">Todays
                                                         Benefits</div>
-                                                    <div data-v-6e348d44="" data-v-decd48ac="" class="s">0<span
+                                                    <div data-v-6e348d44="" data-v-decd48ac="" class="s">{{number_format(Auth::user()->todays_bonus->sum('comm'),2)}} <span
                                                             data-v-6e348d44="" data-v-decd48ac="">USDT</span></div>
                                                     <img data-v-6e348d44="" data-v-decd48ac=""
                                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
@@ -231,15 +813,13 @@
                                                     <div data-v-6e348d44="" data-v-decd48ac="" class="info">
                                                         <div data-v-6e348d44="" data-v-decd48ac="" class="title">
                                                             Contract income</div>
-                                                        <div data-v-6e348d44="" data-v-decd48ac="" class="value"> 0
-                                                            items </div>
+                                                        <div data-v-6e348d44="" data-v-decd48ac="" class="value">$ {{number_format(Auth::user()->roi_bonus->sum('comm'),2)}} </div>
                                                     </div><i data-v-6e348d44="" data-v-decd48ac=""
-                                                        class="icon_right van-icon van-icon-arrow"><!----></i>
+                                                        class="icon_right van-icon van-icon-arrow">
+                                                        <!---->
+                                                    </i>
                                                 </div>
-                                                <div data-v-6e348d44="" data-v-decd48ac="" class="receive_btn">
-                                                    <div data-v-6e348d44="" data-v-decd48ac=""
-                                                        class="btn_e btn_e_bg"> Received </div>
-                                                </div>
+                                                {{--  --}}
                                             </div>
                                             <div data-v-6e348d44="" data-v-decd48ac="" class="earnings">
                                                 <div data-v-6e348d44="" data-v-decd48ac="" class="info_box"><img
@@ -249,19 +829,159 @@
                                                     <div data-v-6e348d44="" data-v-decd48ac="" class="info">
                                                         <div data-v-6e348d44="" data-v-decd48ac="" class="title">
                                                             Team Benefits</div>
-                                                        <div data-v-6e348d44="" data-v-decd48ac="" class="value"> 0
-                                                            items </div>
+                                                        <div data-v-6e348d44="" data-v-decd48ac="" class="value"> $ {{number_format(Auth::user()->level_bonus->sum('comm'),2)}}  </div>
                                                     </div><i data-v-6e348d44="" data-v-decd48ac=""
-                                                        class="icon_right van-icon van-icon-arrow"><!----></i>
+                                                        class="icon_right van-icon van-icon-arrow">
+                                                        <!---->
+                                                    </i>
                                                 </div>
-                                                <div data-v-6e348d44="" data-v-decd48ac="" class="receive_btn">
+                                                {{-- <div data-v-6e348d44="" data-v-decd48ac="" class="receive_btn">
                                                     <div data-v-6e348d44="" data-v-decd48ac=""
-                                                        class="btn_e btn_e_bg"> Received </div>
-                                                </div>
+                                                        class="btn_e btn_e_bg">
+                                                        Received </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+
+                                {{-- loader --}}
+
+                                <div id="loader-overlay" class="van-overlay" style="z-index: 2001; display:none">
+                                </div>
+                                <div id="loader" data-v-a7d12cfc="" class="global-loading default"
+                                    style="display: none;">
+                                    <div data-v-a7d12cfc="" class="global-spinner">
+                                        <div class="loader">
+                                            <div class="loader-square"></div>
+                                            <div class="loader-square"></div>
+                                            <div class="loader-square"></div>
+                                            <div class="loader-square"></div>
+                                            <div class="loader-square"></div>
+                                            <div class="loader-square"></div>
+                                            <div class="loader-square"></div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+
+
+                                {{-- end loader --}}
+
+                                {{-- model popup --}}
+                                <div id="modal-overlay" class="van-overlay" style="z-index: 2001; display:none;">
+                                </div>
+                                <div id="modal" data-v-a7d12cfc="" class="van-popup van-popup--round"
+                                    style="display: none; z-index: 2003;    width: 94%;    top: 4rem;    margin: 12px;">
+
+                                    <div class="modal">
+                                        <div class="close-btn" onclick="hideModal()">&times;</div>
+                                        <h2>Submit order</h2>
+                                        <p><strong>Submit order time:</strong> <span id="modalTime">--</span></p>
+                                        <p><strong>Order Number:</strong> <span id="modalOrderNo">--</span></p>
+
+                                        <div class="payment-info">
+                                            <img id="modalCompanyLogo" src="" alt="Company Logo" />
+                                            <span id="modalCompanyName">--</span>
+                                        </div>
+
+                                        <div class="commission">
+                                            Commission:
+                                            <span id="modalROI">--</span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                                {{-- end model popup --}}
+
+
+                                <?php
+                                $quantifiableCount = 1;
+                                $completedtask = $todaysRoi;
+                                $process = ($completedtask / $quantifiableCount) * 100;
+                                ?>
+
+                                <div data-v-6e348d44="" data-v-decd48ac="" class="container">
+                                    <div class="card2">
+                                        <div class="header">
+                                            <span>Starting</span>
+                                            <span id="progressText">{{ $todaysRoi }}/1</span>
+                                        </div>
+
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" id="progressFill"
+                                                style="width: {{ $process }}%"></div>
+                                        </div>
+
+
+
+                                        @php
+                                            $hourdiff = round(
+                                                (strtotime(date('Y-m-d H:i:s')) - strtotime(Auth::user()->last_trade)) /
+                                                    3600,
+                                            );
+                                        @endphp
+
+                                        @if ($hourdiff >= 24)
+                                            <button class="button" id="submitOrderBtn" onclick="submitOrder()">
+                                                <div class="dots_border"></div>
+
+                                                <p class="text_button"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        fill="none" viewBox="0 0 24 24" class="sparkle">
+                                                        <path class="path" stroke-linejoin="round"
+                                                            stroke-linecap="round" stroke="black" fill="black"
+                                                            d="M14.187 8.096L15 5.25L15.813 8.096C16.0231 8.83114 16.4171 9.50062 16.9577 10.0413C17.4984 10.5819 18.1679 10.9759 18.903 11.186L21.75 12L18.904 12.813C18.1689 13.0231 17.4994 13.4171 16.9587 13.9577C16.4181 14.4984 16.0241 15.1679 15.814 15.903L15 18.75L14.187 15.904C13.9769 15.1689 13.5829 14.4994 13.0423 13.9587C12.5016 13.4181 11.8321 13.0241 11.097 12.814L8.25 12L11.096 11.187C11.8311 10.9769 12.5006 10.5829 13.0413 10.0423C13.5819 9.50162 13.9759 8.83214 14.186 8.097L14.187 8.096Z">
+                                                        </path>
+                                                        <path class="path" stroke-linejoin="round"
+                                                            stroke-linecap="round" stroke="black" fill="black"
+                                                            d="M6 14.25L5.741 15.285C5.59267 15.8785 5.28579 16.4206 4.85319 16.8532C4.42059 17.2858 3.87853 17.5927 3.285 17.741L2.25 18L3.285 18.259C3.87853 18.4073 4.42059 18.7142 4.85319 19.1468C5.28579 19.5794 5.59267 20.1215 5.741 20.715L6 21.75L6.259 20.715C6.40725 20.1216 6.71398 19.5796 7.14639 19.147C7.5788 18.7144 8.12065 18.4075 8.714 18.259L9.75 18L8.714 17.741C8.12065 17.5925 7.5788 17.2856 7.14639 16.853C6.71398 16.4204 6.40725 15.8784 6.259 15.285L6 14.25Z">
+                                                        </path>
+                                                        <path class="path" stroke-linejoin="round"
+                                                            stroke-linecap="round" stroke="black" fill="black"
+                                                            d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z">
+                                                        </path>
+
+                                                    </svg> GET TO WORK</p>
+
+                                            </button>
+                                        @else
+                                            <button class="button" style="cursor: not-allowed;opacity: 0.7;">
+                                                <div class="dots_border"></div>
+
+                                                <p class="text_button"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        fill="none" viewBox="0 0 24 24" class="sparkle">
+                                                        <path class="path" stroke-linejoin="round"
+                                                            stroke-linecap="round" stroke="black" fill="black"
+                                                            d="M14.187 8.096L15 5.25L15.813 8.096C16.0231 8.83114 16.4171 9.50062 16.9577 10.0413C17.4984 10.5819 18.1679 10.9759 18.903 11.186L21.75 12L18.904 12.813C18.1689 13.0231 17.4994 13.4171 16.9587 13.9577C16.4181 14.4984 16.0241 15.1679 15.814 15.903L15 18.75L14.187 15.904C13.9769 15.1689 13.5829 14.4994 13.0423 13.9587C12.5016 13.4181 11.8321 13.0241 11.097 12.814L8.25 12L11.096 11.187C11.8311 10.9769 12.5006 10.5829 13.0413 10.0423C13.5819 9.50162 13.9759 8.83214 14.186 8.097L14.187 8.096Z">
+                                                        </path>
+                                                        <path class="path" stroke-linejoin="round"
+                                                            stroke-linecap="round" stroke="black" fill="black"
+                                                            d="M6 14.25L5.741 15.285C5.59267 15.8785 5.28579 16.4206 4.85319 16.8532C4.42059 17.2858 3.87853 17.5927 3.285 17.741L2.25 18L3.285 18.259C3.87853 18.4073 4.42059 18.7142 4.85319 19.1468C5.28579 19.5794 5.59267 20.1215 5.741 20.715L6 21.75L6.259 20.715C6.40725 20.1216 6.71398 19.5796 7.14639 19.147C7.5788 18.7144 8.12065 18.4075 8.714 18.259L9.75 18L8.714 17.741C8.12065 17.5925 7.5788 17.2856 7.14639 16.853C6.71398 16.4204 6.40725 15.8784 6.259 15.285L6 14.25Z">
+                                                        </path>
+                                                        <path class="path" stroke-linejoin="round"
+                                                            stroke-linecap="round" stroke="black" fill="black"
+                                                            d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z">
+                                                        </path>
+
+                                                    </svg> GET TO WORK </p>
+
+                                            </button>
+                                        @endif
+
+
+
+
+                                    </div>
+                                </div>
+
                                 <div data-v-6e348d44="" data-v-decd48ac="" class="main">
 
 
@@ -272,12 +992,9 @@
                                         class="list-box today_earnings container">
                                         <div data-v-6e348d44="" data-v-decd48ac="" class="name">
                                             <div data-v-6e348d44="" data-v-decd48ac="" class="flex1 ti-be ti0"><span
-                                                    data-v-6e348d44="" data-v-decd48ac="">Income Record</span></div>
+                                                    data-v-6e348d44="" data-v-decd48ac="">Contract Record</span></div>
                                             <div data-v-6e348d44="" data-v-decd48ac="" class="sift"><span
-                                                    data-v-6e348d44="" data-v-decd48ac="">2025-04</span><img
-                                                    data-v-6e348d44="" data-v-decd48ac=""
-                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABoSURBVHgBdU4xEgARDFxKLb/xG1paSl7oJ0qjdCeFYYZtkk022WWttZFSQq0VNyilkHMGF0IQeUFKianhk3jvaXD7Zq2lnoTzIsZIdReFEJYb3xfOuSU0xhyR2Pix25VS0HuH1vqI8QFftx3YJNdVOAAAAABJRU5ErkJggg=="
-                                                    alt=""></div>
+                                                    data-v-6e348d44="" data-v-decd48ac="">view all</span></div>
                                         </div>
                                         <div data-v-6e348d44="" data-v-decd48ac="" class="empty db"
                                             style="display: none;">
@@ -296,58 +1013,294 @@
                                         </div>
 
 
+                                        <style>
+                                            .list .list-item[data-v-68c18260] {
+                                                border-radius: .24rem;
+                                                border: .02rem solid hsla(0, 0%, 100%, .1);
+                                                background: linear-gradient(72deg, #042d50, #070808);
+                                                margin-bottom: .24rem;
+                                                padding: .332rem .28rem;
+                                                line-height: 100%;
+                                                margin-top: 15px;
+                                            }
 
-                                        <?php if(is_array($level_income) || is_object($level_income)){ ?>
+                                            .list .list-item .com1[data-v-68c18260] {
+                                                display: flex;
+                                                border-bottom: .02rem solid hsla(0, 0%, 100%, .1);
+                                                padding-bottom: .32rem;
+                                                margin-bottom: .32rem;
+                                            }
 
-                                        <?php
-                                        date_default_timezone_set('UTC');
-                                        $cnt = 0; ?>
-                                        @foreach ($level_income as $value)
-                                            <div data-v-6e348d44="" class="van-pull-refresh" data-v-decd48ac="">
-                                                <div class="van-pull-refresh__track"
-                                                    style="transition-duration: 0ms;">
+                                            .list .list-item .com1 .left[data-v-68c18260] {
+                                                flex: 1;
+                                                margin-right: .24rem;
+                                            }
+
+                                            .list .list-item .com1 .left .title[data-v-68c18260] {
+                                                font-weight: 500;
+                                                margin-bottom: .16rem;
+                                            }
+
+                                            .list .list-item .com1 .left .time[data-v-68c18260] {
+                                                color: #7d7d88;
+                                                font-size: .24rem;
+                                            }
+
+                                            .list .list-item .com1 .right[data-v-68c18260] {
+                                                display: flex;
+                                                align-items: center;
+                                            }
+
+                                            .list .list-item .com1 .right div[data-v-68c18260] {
+                                                width: .12rem;
+                                                height: .12rem;
+                                                border-radius: 50%;
+                                                background: #00fc83;
+                                                filter: drop-shadow(0 0 .06897rem rgba(0, 252, 131, .6));
+                                            }
+
+                                            .list .list-item .com1 .right span[data-v-68c18260] {
+                                                opacity: .6;
+                                                font-size: .24rem;
+                                                margin: 0 .1rem;
+                                            }
+
+                                            .list .list-item .com1 .right i[data-v-68c18260] {
+                                                opacity: .6;
+                                                font-size: .24rem;
+                                            }
+
+                                            .van-icon,
+                                            .van-icon:before {
+                                                display: inline-block;
+                                            }
+
+                                            .van-icon {
+                                                position: relative;
+                                                font: normal normal normal .24138rem / 1 vant-icon;
+                                                font: normal normal normal .24138rem / 1 var(--van-icon-font-family, "vant-icon");
+                                                font-size: inherit;
+                                                text-rendering: auto;
+                                                -webkit-font-smoothing: antialiased;
+                                            }
+
+                                            .flex {
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                            }
+
+                                            li,
+                                            ol,
+                                            ul {
+                                                list-style: none;
+                                            }
+
+                                            .list .list-item ul li[data-v-68c18260] {
+                                                flex: 1;
+                                            }
+
+                                            li,
+                                            ol,
+                                            ul {
+                                                list-style: none;
+                                            }
+
+                                            .list .list-item ul li[data-v-68c18260]:nth-child(2) {
+                                                text-align: center;
+                                            }
+
+                                            .list .list-item ul li[data-v-68c18260]:last-child {
+                                                text-align: right;
+                                            }
+
+                                            .list .list-item ul li[data-v-68c18260] {
+                                                flex: 1;
+                                            }
+
+                                            .list .list-item ul li .title[data-v-68c18260] {
+                                                font-size: .24rem;
+                                                color: #7d7d88;
+                                                margin-bottom: .16rem;
+                                            }
+
+                                            .list .list-item ul li:last-child .val[data-v-68c18260] {
+                                                color: #96c906;
+                                            }
+
+                                            blockquote,
+                                            body,
+                                            dd,
+                                            del,
+                                            div,
+                                            dl,
+                                            dt,
+                                            fieldset,
+                                            form,
+                                            h1,
+                                            h2,
+                                            h3,
+                                            h4,
+                                            h5,
+                                            h6,
+                                            input,
+                                            li,
+                                            menu,
+                                            ol,
+                                            p,
+                                            pre,
+                                            td,
+                                            textarea,
+                                            th,
+                                            ul {
+                                                margin: 0;
+                                                padding: 0;
+                                            }
+                                        </style>
+
+
+                                        @if (is_array($level_income) || $level_income)
+                                            @foreach ($level_income as $value)
+                                                <div data-v-6e348d44="" class="van-pull-refresh" data-v-decd48ac="">
+                                                    <div class="van-pull-refresh__track"
+                                                        style="transition-duration: 0ms;">
 
 
 
-                                                    <div class="van-pull-refresh__head" style="height: 50px;"></div>
+                                                        <div class="van-pull-refresh__head" style="height: 50px;">
+                                                        </div>
 
 
 
-                                                    <div data-v-6e348d44="" role="feed" class="van-list">
-                                                        <ul data-v-6e348d44="">
-                                                            <li data-v-6e348d44="">
-                                                                <div data-v-6e348d44="" class="flex1">
-                                                                    <div data-v-6e348d44="" class="n">Contract
-                                                                        income(ID: {{ $value->user_id_fk }} )</div>
-                                                                    <div data-v-6e348d44="" class="time">
-                                                                        {{ date('D, d M Y H:i:s', strtotime($value->created_at)) }}
+                                                        <div data-v-6e348d44="" role="feed" class="van-list list">
+                                                            <div data-v-68c18260="" class="list-item">
+                                                                <div data-v-68c18260="" class="com1">
+                                                                    <div data-v-68c18260="" class="left">
+                                                                        <div data-v-68c18260="" class="title"></div>
+                                                                        <div data-v-68c18260="" class="time">
+                                                                            {{ date('D, d M Y H:i:s', strtotime($value->created_at)) }}
+                                                                        </div>
+                                                                    </div>
+                                                                    <div data-v-68c18260="" class="right">
+                                                                        <div data-v-68c18260=""></div>
+                                                                        <span data-v-68c18260="">Completed</span>
+                                                                        <i data-v-68c18260=""
+                                                                            class="van-icon van-icon-arrow"></i>
                                                                     </div>
                                                                 </div>
-                                                                <div data-v-6e348d44="" class="s">
-                                                                    +{{ $value->comm }} USDT</div>
-                                                            </li>
-                                                        </ul>
-                                        @endforeach
+                                                                <ul data-v-68c18260="" class="flex">
+                                                                    <li data-v-68c18260="">
+                                                                        <img style="    width: 40px;height: 40px;    margin-left: 41px;"
+                                                                            src="{{ $value->company_logo }}"
+                                                                            alt="Company Logo"
+                                                                            class="w-12 h-12 rounded-xl object-cover">
+                                                                        <div class="font-semibold"
+                                                                            style="margin:10px">
+                                                                            {{ $value->company_name }}
+                                                                        </div>
+                                                                    </li>
 
-                                        <?php }?>
+                                                                    <li data-v-68c18260="">
+                                                                        <div data-v-68c18260="" class="title">
+                                                                            Commission</div>
+                                                                        <div data-v-68c18260="" class="val">
+                                                                            {{ $value->roi ?? '0' }} USDT</div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            @endforeach
+                                        @else
+                                        @endif
 
 
-                                        <div class="van-list__finished-text">No more</div>
-                                        <div class="van-list__placeholder"></div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
-
-                    </div><!----><!----><!---->
+                        <!---->
+                        <!---->
+                        <!---->
+                    </div>
                 </div>
+                <script>
+                    async function submitOrder() {
+                        // Show loader
+                        document.getElementById('loader-overlay').style.display = 'block';
+                        document.getElementById('loader').style.display = 'block';
+
+                        // Wait 10 seconds
+                        setTimeout(async () => {
+                            try {
+                                // Hide loader
+                                document.getElementById('loader-overlay').style.display = 'none';
+                                document.getElementById('loader').style.display = 'none';
+
+                                // Make API call (example using Fetch)
+                                const response = await fetch('/user/tradeOn', {
+                                    method: 'GET',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                    },
+                                });
+
+                                const result = await response.json();
+                                console.log("API Result:", result);
+                                // Show modal popup
+                                if (result.status) {
+                                    const quantifiableCount = 1;
+                                    const tradesCompleted = result.data.totalTask;
+                                    // Populate modal with data
+                                    document.getElementById('modalTime').innerText = result.data.dateTime;
+                                    document.getElementById('modalOrderNo').innerText = result.data.orderNo;
+                                    document.getElementById('modalCompanyName').innerText = result.data.company;
+                                    document.getElementById('modalCompanyLogo').src = result.data.logo;
+                                    document.getElementById('modalROI').innerText = result.data.roi_amount;
+                                    const progress = (tradesCompleted / quantifiableCount) * 100;
+                                    document.getElementById('progressFill').style.width = `${progress}%`;
+                                    document.getElementById('progressText').innerText = `${tradesCompleted}/6`;
+                                    // Show modal
+
+                                    if (tradesCompleted >= 1) {
+                                        const submitBtn = document.getElementById('submitOrderBtn');
+                                        submitBtn.disabled = true;
+                                        submitBtn.innerText = "ALL TASKS COMPLETED";
+                                        submitBtn.style.backgroundColor = "#999";
+                                        submitBtn.style.cursor = "not-allowed";
+
+                                        // ✅ Reload page after 5 seconds
+                                        setTimeout(() => {
+                                            location.reload();
+                                        }, 5000);
+
+                                    }
+
+                                    document.getElementById('modal-overlay').style.display = 'block';
+                                    document.getElementById('modal').style.display = 'block';
+
+                                } else {
+                                    alert(result.message);
+
+                                }
+
+
+                            } catch (error) {
+                                console.error("Error submitting order:", error);
+                            }
+                        }, 10000); // 10 seconds
+                    }
+
+                    function hideModal() {
+                        document.getElementById('modal-overlay').style.display = 'none';
+                        document.getElementById('modal').style.display = 'none';
+                    }
+                </script>
+
+
+                @include('layouts.upnl.footer')
             </div>
-
-
-
-            @include('layouts.upnl.footer')
         </div>
-    </div>
     </div>
     </div>
     <div data-v-a7d12cfc="" class="global-loading default" style="display: none;">
@@ -361,7 +1314,8 @@
             <div data-v-b68a32e2="" class="loader-inner"></div>
         </div>
         <p data-v-b68a32e2="">Loading...</p>
-    </div><!---->
+    </div>
+    <!---->
     </div>
 
 </body>

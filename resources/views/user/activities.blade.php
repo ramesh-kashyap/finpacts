@@ -191,7 +191,7 @@
                                             <div data-v-a8d9cade="" class="tips_image"><img data-v-a8d9cade=""
                                                     src="{{asset('')}}static/img/bg.6bba3a76.png" alt="">
                                                 <div data-v-a8d9cade="" class="text_box">
-                                                    <div data-v-a8d9cade="" class="name">Finpact</div>
+                                                    <div data-v-a8d9cade="" class="name">TTMD</div>
                                                     <div data-v-a8d9cade="" class="tips_text">Complete tasks and
                                                         receive benefits</div>
                                                 </div>

@@ -19,7 +19,7 @@
 }
 
 .page .headers.on[data-v-decd48ac] {
-    background: #fff
+    background: transparent;
 }
 
 .page .headers.fixed[data-v-decd48ac] {
@@ -35,7 +35,7 @@
     width: 100%;
     max-width: 8.5rem;
     z-index: 9;
-    background: #fff
+    background: transparent;
 }
 
 .page .content-container[data-v-decd48ac] {

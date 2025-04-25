@@ -179,9 +179,11 @@
                     <div class="van-pull-refresh__head" style="height: 60px;">
                     </div>
                     <div data-v-decd48ac="" data-v-3eefa016="" class="page">
-                        <div data-v-3eefa016="" data-v-decd48ac="" class="bg"><img data-v-3eefa016=""
+                        <div data-v-3eefa016="" data-v-decd48ac="" class="bg">
+                            {{-- <img data-v-3eefa016=""
                                 data-v-decd48ac="" src="{{ asset('') }}static/img/bg-0.29a64366.png"
-                                alt=""></div>
+                                alt=""> --}}
+                        </div>
                         <div data-v-decd48ac="" class="headers on">
                             <div data-v-29c52665="" data-v-3eefa016="" class="head head0" data-v-decd48ac="">
                                 <div data-v-29c52665="" class="container flex">
@@ -192,22 +194,22 @@
                                     <!---->
                                     <!---->
                                     <!---->
-                                    <a href="{{route('user.terms')}}">
-                                    <img data-v-3eefa016="" data-v-29c52665=""
-                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAApCAYAAABHomvIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJiSURBVHgB7ZjBbdswFIYfpSAoYgQhEjrQkSOkG6gbNMfenAnSTOD22Ft77M2ZwOkEViZIugF7Myo5IBC0KRBL7CNqK5TR2KSp2kKhD7BIPpPgL1J8fCSBv8BYFCtVnGP2BGpFCaVIsrsbXI7HY2HTgpgFzjm9v/8xxGwM/xaBXV9MJt+vVlWsCGSse6NU3aO2pHOiXmVZliyrszPPHB11e4viCIFbTCTUBE4vxyc3yn1MkmVtyhHE0RuhwLj8w+LtXKE04kGQD/HFT2z7CeYZUxw2+1K3OI2UYxEE6sK0EUL4sjblCOIUK8MuZr/awdGj1U9JJWgVaJdo/7q/37kSQshVArcJjjKcpmmqv/+nKW4QvChgFEUR14UmCtTQx8dcr/AnN7PAYDJJz2CD6BUehsXIcEOxfjRmBPUKx+TaMHH9aOoUl7QCfdlxqayjHSl/UVgDSl9I0wHbYi2QseM+hmLvwhDWAtviZnB8ahNimVhPsVLqLfjTA0esBc5CL0+UAEesp3g6Dc/CMI9XRR/PURSFvLvLPoIj1gJnjnQAG+b/cTM6uphO83OM2WzdzDXu5wPwxOEbzIeOB6oeY0z4RuYObubP5u2CUsFaTt3ExQ++B4cTHrqlJM/3EvDEeopnLsLRTaTgSxvN+NIK9KUV6Esr0JeGCSwOFi3GTkKEcarv4WWSvhr7BhtDHeB+/7pUQ8htRSDunZdYoW+0wBvX7V14Yd+fdFq5oz487N6Yt5/bQp9/six9qfOVQ+TDw8/Pnc4eig44Fr1DpTWQeCX8AWPIN3MDea4mpZTDhpFSikXbb3+w4GJWc6aDAAAAAElFTkSuQmCC"
-                                        alt="" class="headRight">
+                                    <a href="{{ route('user.terms') }}">
+                                        <img data-v-3eefa016="" data-v-29c52665=""
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAApCAYAAABHomvIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJiSURBVHgB7ZjBbdswFIYfpSAoYgQhEjrQkSOkG6gbNMfenAnSTOD22Ft77M2ZwOkEViZIugF7Myo5IBC0KRBL7CNqK5TR2KSp2kKhD7BIPpPgL1J8fCSBv8BYFCtVnGP2BGpFCaVIsrsbXI7HY2HTgpgFzjm9v/8xxGwM/xaBXV9MJt+vVlWsCGSse6NU3aO2pHOiXmVZliyrszPPHB11e4viCIFbTCTUBE4vxyc3yn1MkmVtyhHE0RuhwLj8w+LtXKE04kGQD/HFT2z7CeYZUxw2+1K3OI2UYxEE6sK0EUL4sjblCOIUK8MuZr/awdGj1U9JJWgVaJdo/7q/37kSQshVArcJjjKcpmmqv/+nKW4QvChgFEUR14UmCtTQx8dcr/AnN7PAYDJJz2CD6BUehsXIcEOxfjRmBPUKx+TaMHH9aOoUl7QCfdlxqayjHSl/UVgDSl9I0wHbYi2QseM+hmLvwhDWAtviZnB8ahNimVhPsVLqLfjTA0esBc5CL0+UAEesp3g6Dc/CMI9XRR/PURSFvLvLPoIj1gJnjnQAG+b/cTM6uphO83OM2WzdzDXu5wPwxOEbzIeOB6oeY0z4RuYObubP5u2CUsFaTt3ExQ++B4cTHrqlJM/3EvDEeopnLsLRTaTgSxvN+NIK9KUV6Esr0JeGCSwOFi3GTkKEcarv4WWSvhr7BhtDHeB+/7pUQ8htRSDunZdYoW+0wBvX7V14Yd+fdFq5oz487N6Yt5/bQp9/six9qfOVQ+TDw8/Pnc4eig44Fr1DpTWQeCX8AWPIN3MDea4mpZTDhpFSikXbb3+w4GJWc6aDAAAAAElFTkSuQmCC"
+                                            alt="" class="headRight">
                                     </a>
                                     <div data-v-29c52665="" class="lang"><img data-v-29c52665=""
                                             src="data:image/png;base64,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"
                                             alt=""></div>
 
                                     <div data-v-29c52665="" class="Set">
-                                        <a href="{{route('user.showinfo')}}">
-                                        <img data-v-29c52665=""
-                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAApCAYAAABHomvIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAN5SURBVHgBzZi9UttAEMf3JDwTDBMUS2YozRv4EUyXDtOlIzwBpkqJXKYyfgKTLlSkTIfo0oU3wCWDJUcpQBnLkrJryx4jdJZ8kjz8Zwy6D939dLcr3S6DHKQoSk2S5BZj0mEQgI1Vd77vtm3b7kNGMcggBFMkaeOUMdaiYrQ9CALd98ffsoDKIKhKRWvhql0j3Ecsvovrg20NxuRmubz513GcOxDQyiuoKFpDkliPMaitch9ufZ8xv21Z1uUq96UGJDBZhnO8pcHpcstYoE9hpB7+rcV3CwzPG5+k3fZEwKmdlS5wxY45XcgpzixrcLlYqarVzzj8OQ8UV/QyjSOx5WB8ByAwbOuOx6MLnMTmjaNpuzo6yylnjJkjdXljxDpJkgPg03fx6Y+GQ+vnPxQs0fPzk7Gz8/7K94MPWKxH20NH+sRzpBcrGDpAB7ezzpnvVpKgNRgMhDxyb2+v5rqejpex5hLnSHNATdPOg4DpnLEnDmCapgE5SFXVJm5eh2+fgT4cmu05IH0JZLl0H9M31gHy0jJH8rzgwLZNQ6ICOkMz0k4O0PY8d78oOBKNbVmP+zQXTBdjLjSliZlJYfmFh+ESd03zUV/mnXmK5qI5I9XKImAhUkJBBhUGWK1W62TX+PtTqVQ7IKhCAAnO9+EGwm3C11aL6kBAuQNG4WaSZVnInnMF5MHh+7X98PDQBwHlBrgMbjh81EFQuQAWBUfKDFgkHCkTYNFwJGHAdcCRhADpcLEOOJLoCiqwBjiSKGAfvw/9WaEoONIGCIhOOXg6PnBdt45HJRuPTQYUJCFAUvhl6EPB4mwxO6b4BNak6VzsMK4tPFGDsVhJWQNZZjd4TOqRx0JhYEpNVbUbmisaqOFbwpiwzCpUdfcazb0ZN1DaIHsFsFnMrXO6YCgwOKGLeVzsOE9XW1vbBNyI9qanoyTQ5maZOc7zL8gAVi5vf8GY+3sYc0dFsdBXjIXas3j7VWZBJHZNIwo1MWfT4Sed2I9SSTqLHsu4qQ8CHY28a14QT6BoJ0e2vTyIT5t04sXcickj0STQNNbe6PHBGO3ESVIyIHX6LS0oXtoJDjBJOlGoCSm0UgIztE/Kdp1CPCSuyuvv9CJYUjYsE2AEVAfg5gyj08Q6QKo7IYOSHAlyTjoJi+wTX/T3+D+gH36Bfk8zWG9MYaajBjnqP7Dc3ZC7KaPhAAAAAElFTkSuQmCC"
-                                            alt="">
+                                        <a href="{{ route('user.showinfo') }}">
+                                            <img data-v-29c52665=""
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAApCAYAAABHomvIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAN5SURBVHgBzZi9UttAEMf3JDwTDBMUS2YozRv4EUyXDtOlIzwBpkqJXKYyfgKTLlSkTIfo0oU3wCWDJUcpQBnLkrJryx4jdJZ8kjz8Zwy6D939dLcr3S6DHKQoSk2S5BZj0mEQgI1Vd77vtm3b7kNGMcggBFMkaeOUMdaiYrQ9CALd98ffsoDKIKhKRWvhql0j3Ecsvovrg20NxuRmubz513GcOxDQyiuoKFpDkliPMaitch9ufZ8xv21Z1uUq96UGJDBZhnO8pcHpcstYoE9hpB7+rcV3CwzPG5+k3fZEwKmdlS5wxY45XcgpzixrcLlYqarVzzj8OQ8UV/QyjSOx5WB8ByAwbOuOx6MLnMTmjaNpuzo6yylnjJkjdXljxDpJkgPg03fx6Y+GQ+vnPxQs0fPzk7Gz8/7K94MPWKxH20NH+sRzpBcrGDpAB7ezzpnvVpKgNRgMhDxyb2+v5rqejpex5hLnSHNATdPOg4DpnLEnDmCapgE5SFXVJm5eh2+fgT4cmu05IH0JZLl0H9M31gHy0jJH8rzgwLZNQ6ICOkMz0k4O0PY8d78oOBKNbVmP+zQXTBdjLjSliZlJYfmFh+ESd03zUV/mnXmK5qI5I9XKImAhUkJBBhUGWK1W62TX+PtTqVQ7IKhCAAnO9+EGwm3C11aL6kBAuQNG4WaSZVnInnMF5MHh+7X98PDQBwHlBrgMbjh81EFQuQAWBUfKDFgkHCkTYNFwJGHAdcCRhADpcLEOOJLoCiqwBjiSKGAfvw/9WaEoONIGCIhOOXg6PnBdt45HJRuPTQYUJCFAUvhl6EPB4mwxO6b4BNak6VzsMK4tPFGDsVhJWQNZZjd4TOqRx0JhYEpNVbUbmisaqOFbwpiwzCpUdfcazb0ZN1DaIHsFsFnMrXO6YCgwOKGLeVzsOE9XW1vbBNyI9qanoyTQ5maZOc7zL8gAVi5vf8GY+3sYc0dFsdBXjIXas3j7VWZBJHZNIwo1MWfT4Sed2I9SSTqLHsu4qQ8CHY28a14QT6BoJ0e2vTyIT5t04sXcickj0STQNNbe6PHBGO3ESVIyIHX6LS0oXtoJDjBJOlGoCSm0UgIztE/Kdp1CPCSuyuvv9CJYUjYsE2AEVAfg5gyj08Q6QKo7IYOSHAlyTjoJi+wTX/T3+D+gH36Bfk8zWG9MYaajBjnqP7Dc3ZC7KaPhAAAAAElFTkSuQmCC"
+                                                alt="">
                                         </a>
-                                        </div>
+                                    </div>
                                     <!---->
                                     <!---->
                                     <!---->
@@ -223,11 +225,11 @@
                                         <div data-v-3eefa016="" data-v-decd48ac="" class="db">
                                             <div data-v-3eefa016="" data-v-decd48ac="" class="ico"><img
                                                     data-v-3eefa016="" data-v-decd48ac=""
-                                                    src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20231025/0feefd89860da746f3a51ec0d8063854.png"
+                                                    src="{{asset('')}}static/img/logo-2.png"
                                                     alt=""></div>
                                             <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">
                                                 <div data-v-3eefa016="" data-v-decd48ac="" class="n"><span
-                                                        data-v-3eefa016="" data-v-decd48ac="">Finpact-694233</span>
+                                                        data-v-3eefa016="" data-v-decd48ac="">TTMD-694233</span>
                                                 </div>
                                                 <div data-v-3eefa016="" data-v-decd48ac="" class="copy"> UID:
                                                     694233
@@ -242,7 +244,7 @@
                                                     <!----></i></div>
                                         </div>
                                     </div>
-                                    <div data-v-3eefa016="" data-v-decd48ac="" class="invateBox flex vip0"><img
+                                    {{-- <div data-v-3eefa016="" data-v-decd48ac="" class="invateBox flex vip0"><img
                                             data-v-3eefa016="" data-v-decd48ac=""
                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJOSURBVHgB5VY9b9QwGH7txIXTDQSJBYRE2BhP6i/oWB1I/QCJkQmEhFT4Bb37BXRBCAZaNiTQcUNPHekfqHorNwWWLkgElVI4JzGvi2MludhJCmKAR4r88b72E/v9MsC/DmISeLd3fB4n3tHr7rhMfu7+h3moCfbjePLpxbVD2XeLwtbqaI2C6HEee3LcXt0OQJD+0aC7VVB9BjXBz7TuYbMn+zQraK+M7iDZBna9zLQPRGy2VrYfwh9AjhA3XjcqEjDKmkBfafvWqAOJ8C26nrRr+GoxUOPnFt159ZkJY05Dx4nBBulEaf/L0ytGQnSou5WE34eLATpICHn7ZRGYPLaIhDq7rogP0rFDycEM4QkI9EHA49Jd0FOhJg6fXJ5gMymTzcRh+yZ6Y4GUENH/+uZGDyzwlt56Uzq3hjt2CAgPf/AlS6bDcLgcGgnPLu34aMd3IEMhj4AxZyHjMHDadbmwcJxkvWSRhI+JYBMMaLJOn1BeCXfYZ7CAxfx88YqartMnjFy3AxXgbM6vM2fTodAARCQzIcP4NKhal9VpRFgGdVW7Zg2ylTWDjkNBaIjubFn4S6dsHm20jHbch1nHGTNGc/FrrIdNocraRnZOCNL7NuiWE1548PFSnAid/yLivFcZ41RkKRIBj44H17VMXymPxUVsdAmiIpbJuRYhkhlrpSprmlCfUD0ZslV8T32lSKuFKmv7YAFmm6tptnEtesaapnBCKENFVLhCFEU+NoHs/3ZYNMVfJ9RXKp9y6nXVbIMoGmNaXKjSgf8GPwFUG+obGk+mkQAAAABJRU5ErkJggg=="
                                             alt="">
@@ -252,7 +254,7 @@
                                                 data-v-3eefa016="" data-v-decd48ac=""
                                                 class="van-icon van-icon-arrow">
                                                 <!----></i></div>
-                                    </div>
+                                    </div> --}}
                                     <div data-v-3eefa016="" data-v-decd48ac="" class="vip flex vip0">
                                         <div data-v-3eefa016="" data-v-decd48ac="">
                                             <div data-v-3eefa016="" data-v-decd48ac="" class="ico"><img
@@ -286,22 +288,22 @@
                                                 </p>
                                             </li>
 
-                                        
-                                            <li data-v-3eefa016="" data-v-decd48ac="" >
-                                              
+
+                                            <li data-v-3eefa016="" data-v-decd48ac="">
+
                                                 <div data-v-3eefa016="" data-v-decd48ac="" class="ico">
-                                                    
-                                                    <img
-                                                        data-v-3eefa016="" data-v-decd48ac=""
+
+                                                    <img data-v-3eefa016="" data-v-decd48ac=""
                                                         src="{{ asset('') }}static/img/jc-0.7c91f686.png"
-                                                        alt=""></div>
-                                                        <a
-                                                        href="{{ route('user.record') }}">      
-                                                <p data-v-3eefa016="" data-v-decd48ac="">Order Record </a></p>
-                                         
-                                         
+                                                        alt="">
+                                                </div>
+                                                <a href="{{ route('user.record') }}">
+                                                    <p data-v-3eefa016="" data-v-decd48ac="">Order Record
+                                                </a></p>
+
+
                                             </li>
-                                         
+
                                         </ul>
                                         <div data-v-3eefa016="" data-v-decd48ac="" class="line">
                                             <ul data-v-3eefa016="" data-v-decd48ac="">
@@ -357,7 +359,8 @@
                                                         <div data-v-3eefa016="" data-v-decd48ac="" class="ico">
                                                             <img data-v-3eefa016="" data-v-decd48ac=""
                                                                 src="{{ asset('') }}static/img/icon/changepass.png"
-                                                                alt="" class=""></div>
+                                                                alt="" class="">
+                                                        </div>
                                                         <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">
                                                             Login
                                                             password</div>
@@ -371,7 +374,7 @@
                                                             alt="" class="view">
                                                     </li>
                                                 </a>
-                                                    <!-- <li data-v-3eefa016="" data-v-decd48ac="" class="db">
+                                                <!-- <li data-v-3eefa016="" data-v-decd48ac="" class="db">
                                                         <div data-v-3eefa016="" data-v-decd48ac="" class="ico">
                                                             <img data-v-3eefa016="" data-v-decd48ac=""
                                                                 src="{{ asset('') }}static/img/icon/payemt.png"
@@ -385,54 +388,62 @@
                                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
                                                             alt="" class="view">
                                                     </li> -->
-                                             
+
 
 
 
 
 
                                                 @if (empty(Auth::user()->email))
-                                                <a href="{{ route('user.bindMail') }}">
-                                                    <li data-v-3eefa016="" data-v-decd48ac="" class="db">
-                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="ico">
-                                                            <img data-v-3eefa016="" data-v-decd48ac=""
-                                                                src="{{ asset('') }}static/img/icon/bind.png"
-                                                                alt="" class=""></div>
-                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">
-                                                            Bind email
-                                                        </div>
-                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="status">
-                                                            <!---->
-                                                            <!---->
-                                                            <!---->
-                                                            <!---->
-                                                        </div><img data-v-3eefa016="" data-v-decd48ac=""
-                                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
-                                                            alt="" class="view">
-                                                    </li>
-    </a>
-                                                    @else
+                                                    <a href="{{ route('user.bindMail') }}">
+                                                        <li data-v-3eefa016="" data-v-decd48ac="" class="db">
+                                                            <div data-v-3eefa016="" data-v-decd48ac=""
+                                                                class="ico">
+                                                                <img data-v-3eefa016="" data-v-decd48ac=""
+                                                                    src="{{ asset('') }}static/img/icon/bind.png"
+                                                                    alt="" class="">
+                                                            </div>
+                                                            <div data-v-3eefa016="" data-v-decd48ac=""
+                                                                class="flexs">
+                                                                Bind email
+                                                            </div>
+                                                            <div data-v-3eefa016="" data-v-decd48ac=""
+                                                                class="status">
+                                                                <!---->
+                                                                <!---->
+                                                                <!---->
+                                                                <!---->
+                                                            </div><img data-v-3eefa016="" data-v-decd48ac=""
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
+                                                                alt="" class="view">
+                                                        </li>
+                                                    </a>
+                                                @else
                                                     <a href="{{ route('user.ChangeMail') }}">
-                                                    <li data-v-3eefa016="" data-v-decd48ac="" class="db">
-                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="ico">
-                                                            <img data-v-3eefa016="" data-v-decd48ac=""
-                                                                src="{{ asset('') }}static/img/icon/bind.png"
-                                                                alt="" class=""></div>
-                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">
-                                                            Bind email
-                                                        </div>
-                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="status">
-                                                            <!---->
-                                                            <!---->
-                                                            <!---->
-                                                            <!---->
-                                                        </div><img data-v-3eefa016="" data-v-decd48ac=""
-                                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
-                                                            alt="" class="view">
-                                                    </li>
+                                                        <li data-v-3eefa016="" data-v-decd48ac="" class="db">
+                                                            <div data-v-3eefa016="" data-v-decd48ac=""
+                                                                class="ico">
+                                                                <img data-v-3eefa016="" data-v-decd48ac=""
+                                                                    src="{{ asset('') }}static/img/icon/bind.png"
+                                                                    alt="" class="">
+                                                            </div>
+                                                            <div data-v-3eefa016="" data-v-decd48ac=""
+                                                                class="flexs">
+                                                                Bind email
+                                                            </div>
+                                                            <div data-v-3eefa016="" data-v-decd48ac=""
+                                                                class="status">
+                                                                <!---->
+                                                                <!---->
+                                                                <!---->
+                                                                <!---->
+                                                            </div><img data-v-3eefa016="" data-v-decd48ac=""
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
+                                                                alt="" class="view">
+                                                        </li>
 
-    </a>
-                                                    @endif
+                                                    </a>
+                                                @endif
 
 
 
@@ -502,12 +513,28 @@
                                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
                                                         alt="" class="view">
                                                 </li>
+
+                                                <li data-v-3eefa016="" data-v-decd48ac="" class="db">
+                                                    <div data-v-3eefa016="" data-v-decd48ac="" class="ico"><img
+                                                            data-v-3eefa016="" data-v-decd48ac=""
+                                                            src="{{ asset('') }}static/img/icon/right.png"
+                                                            alt="" class="smallimg"></div>
+                                                    <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">Log
+                                                        out
+                                                    </div>
+                                                    <div data-v-3eefa016="" data-v-decd48ac="" class="status">
+                                                        <!---->
+                                                        <!---->
+                                                        <!---->
+                                                        <!---->
+                                                    </div><img data-v-3eefa016="" data-v-decd48ac=""
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
+                                                        alt="" class="view">
+                                                </li>
+
                                             </ul>
                                         </div>
-                                        <div data-v-3eefa016="" data-v-decd48ac="" class="go"><img
-                                                data-v-3eefa016="" data-v-decd48ac=""
-                                                src="{{ asset('') }}static/img/icon/right.png" alt="">Log
-                                            out </div>
+                                       
                                     </div>
                                 </div>
                             </div>

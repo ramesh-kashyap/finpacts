@@ -1,5 +1,5 @@
 .bg[data-v-7e039ef0] {
-  background:#f2f3f5;
+  background: linear-gradient(81deg, #03031d, #03031f, #09096e);
   width:100%;
   height:50%
 }
@@ -41,7 +41,7 @@
   color:#fff
 }
 .main[data-v-7e039ef0] {
-  background:#fff;
+  background: transparent;
   border-radius:.32rem .32rem 0 0;
   padding:.24rem 0
 }
@@ -49,7 +49,7 @@
   font-weight:600;
   font-size:.3rem;
   line-height:.42rem;
-  color:#000;
+  color: #ffffff;
   position:relative
 }
 .main .tab[data-v-7e039ef0] {
@@ -93,7 +93,7 @@
 .line1 .x[data-v-7e039ef0] {
   width:100%;
   height:.02rem;
-  background:#ebebeb;
+  background: none;
   padding:0;
   margin:.1rem 0
 }
@@ -103,7 +103,7 @@
   align-items:center;
   border-radius:.16rem;
   padding:.24rem;
-  background:#fff
+  background: linear-gradient(72deg, #042d50, #070808);
 }
 .line1 li img[data-v-7e039ef0] {
   height:.56rem
@@ -115,11 +115,11 @@
   font-weight:400;
   font-size:.24rem;
   line-height:.34rem;
-  color:#929292
+  color: #c9c0c0;
 }
 .line1 li .s[data-v-7e039ef0] {
   font-weight:500;
   font-size:.28rem;
   line-height:.39rem;
-  color:#000
+  color: #ffffff;
 }

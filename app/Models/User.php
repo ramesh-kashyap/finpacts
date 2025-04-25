@@ -90,8 +90,18 @@ class User extends Authenticatable
         
     public function level_bonus()
     {
-        return $this->hasMany('App\Models\Income','user_id','id')->where('remarks','Direct Income');
+        return $this->hasMany('App\Models\Income','user_id','id')->where('remarks','Level Income');
     } 
+    public function roi_bonus()
+    {
+        return $this->hasMany('App\Models\Income','user_id','id')->where('remarks','Contract Income');
+    } 
+    
+    public function todays_bonus()
+    {
+        return $this->hasMany('App\Models\Income','user_id','id')->where('ttime',Date("Y-m-d"));
+    } 
+    
       
     public function trading_profit()
     {

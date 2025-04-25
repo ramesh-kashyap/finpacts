@@ -122,6 +122,22 @@
             width: 100%;
             text-transform: capitalize;
         }
+
+        .van-swipe__track {
+            transition-duration: 500ms;
+            transform: translateX(-320px);
+            width: 2240px
+        }
+
+        .van-swipe-item {
+            flex-shrink: 0;
+            width: 320px;
+        }
+
+        .list-box-wrapper {
+            width: 232px;
+            overflow: hidden;
+        }
     </style>
     <link href="{{ asset('') }}js1744307594169/app.46ba12d9.1744307594169.js" rel="preload" as="script">
     <link href="{{ asset('') }}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js" rel="preload"
@@ -157,6 +173,38 @@
     </script>
 
 </head>
+<style>
+    .upgrade-btn {
+        transition: background 0.3s ease;
+        width: 90%;
+        max-width: 300px;
+        margin-bottom: 13px;
+        align-items: center;
+        justify-content: center;
+        height: .88rem;
+        flex: 1;
+        background: white;
+        color: black;
+        font-weight: 600;
+        /* padding: 15px; */
+        border-radius: 14px;
+        border: none;
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .upgrade-btn:hover {
+        background: white;
+    }
+
+    span.themeColor0 {
+        color: #ffffff;
+    }
+    .themeColor0 {
+    color: #191717;
+}
+</style>
 
 <body class="mein_cn">
     <div class="page-loading-con" id="loaderInit" style="display: none;">
@@ -176,16 +224,34 @@
                                 <div data-v-29c52665="" class="container flex"><!---->
                                     <div data-v-29c52665="" class="myName">
                                         <div data-v-29c52665=""><img data-v-29c52665=""
-                                                src="{{asset('')}}static/img/0feefd89860da746f3a51ec0d8063854.png"
+                                                src="{{ asset('') }}static/img/logo-2.png"
                                                 alt=""></div>
                                     </div>
                                     <div data-v-29c52665="" class="name tac">Contract</div>
                                     <div data-v-29c52665="" class="flex1"></div><!----><!----><!----><!----><!---->
-                                    <div data-v-29c52665="" class="str">   <a
-                                        href="{{ route('user.record') }}">    Order Record </a> </div><!----><!----><!---->
+                                    <div data-v-29c52665="" class="str" > <a href="{{ route('user.record') }}"> Order Record</a> </div><!----><!----><!---->
                                 </div>
                             </div>
                         </div>
+                        <?php
+                        $balance = round(Auth::user()->available_balance(), 2);
+                        
+                        ?>
+
+                        @php
+                            $vipRules = [
+                                1 => ['amount' => 60, 'requires' => 0],
+                                2 => ['amount' => 120, 'requires' => 1],
+                                3 => ['amount' => 360, 'requires' => 2],
+                                4 => ['amount' => 840, 'requires' => 3],
+                                5 => ['amount' => 1680, 'requires' => 4],
+                                6 => ['amount' => 3600, 'requires' => 5],
+                                7 => ['amount' => 7560, 'requires' => 6],
+                                8 => ['amount' => 15000, 'requires' => 7],
+                            ];
+                        @endphp
+
+
                         <div data-v-decd48ac="" id="scroll" class="content-container"
                             style="padding-top: 44px; padding-bottom: 60px;">
                             <div data-v-decd48ac="" id="content" class="content-scroll">
@@ -202,20 +268,38 @@
                                                                 <div data-v-5959a183="" class="dj">
                                                                     <div data-v-5959a183=""
                                                                         class="dj-bg themeLevelLabel0"></div><span
-                                                                        data-v-5959a183="">Current level</span>
+                                                                        data-v-5959a183="">
+
+                                                                        @if ($myRank == 1)
+                                                                            Current level
+                                                                        @elseif($myRank > 1)
+                                                                            Unlocked
+                                                                        @else
+                                                                            Locked
+                                                                        @endif
+
+                                                                    </span>
                                                                 </div>
                                                                 <div data-v-5959a183="" class="name themeColor0">
                                                                     <div data-v-5959a183="" class="icon"></div>
-                                                                    Junior Ally
+                                                                    VIP 1
                                                                 </div>
                                                             </div>
                                                             <div data-v-5959a183="" class="str themeColor0"><span
-                                                                    data-v-5959a183=""> This level has been reached
+                                                                    data-v-5959a183="">
+                                                                    @if ($myRank >= 1)
+                                                                        It has
+                                                                        reached this
+                                                                        level
+                                                                    @else
+                                                                        Not reached this level
+                                                                    @endif
+
                                                                 </span></div>
                                                         </div>
                                                         <div data-v-5959a183="" class="ico"><img
                                                                 data-v-5959a183=""
-                                                                src="{{asset('')}}static/img/bc3cf11087b69389ded07723adf92b4a.png"
+                                                                src="{{ asset('') }}static/img/bc3cf11087b69389ded07723adf92b4a.png"
                                                                 alt="" style="pointer-events: none;"></div>
                                                     </div>
                                                 </div>
@@ -227,19 +311,35 @@
                                                                 <div data-v-5959a183="" class="dj">
                                                                     <div data-v-5959a183=""
                                                                         class="dj-bg themeLevelLabel1"></div><span
-                                                                        data-v-5959a183="">Current level</span>
+                                                                        data-v-5959a183="">
+                                                                        @if ($myRank == 2)
+                                                                            Current level
+                                                                        @elseif($myRank > 2)
+                                                                            Unlocked
+                                                                        @else
+                                                                            Locked
+                                                                        @endif
+                                                                    </span>
                                                                 </div>
                                                                 <div data-v-5959a183="" class="name themeColor1">
                                                                     <div data-v-5959a183="" class="icon"></div>
-                                                                    Level 1 Ally
+                                                                    VIP 2
                                                                 </div>
                                                             </div>
                                                             <div data-v-5959a183="" class="str themeColor1"><span
-                                                                    data-v-5959a183=""> Not unlocked </span></div>
+                                                                    data-v-5959a183="">
+                                                                    @if ($myRank >= 2)
+                                                                        It has
+                                                                        reached this
+                                                                        level
+                                                                    @else
+                                                                        Not reached this level
+                                                                    @endif
+                                                                </span></div>
                                                         </div>
                                                         <div data-v-5959a183="" class="ico"><img
                                                                 data-v-5959a183=""
-                                                                src="{{asset('')}}static/img/3ef4d33c9bfec649c5a233f9bf6c8a07.png"
+                                                                src="{{ asset('') }}static/img/3ef4d33c9bfec649c5a233f9bf6c8a07.png"
                                                                 alt="" style="pointer-events: none;"></div>
                                                     </div>
                                                 </div>
@@ -251,19 +351,35 @@
                                                                 <div data-v-5959a183="" class="dj">
                                                                     <div data-v-5959a183=""
                                                                         class="dj-bg themeLevelLabel2"></div><span
-                                                                        data-v-5959a183="">Current level</span>
+                                                                        data-v-5959a183="">
+                                                                        @if ($myRank == 3)
+                                                                            Current level
+                                                                        @elseif($myRank > 3)
+                                                                            Unlocked
+                                                                        @else
+                                                                            Locked
+                                                                        @endif
+                                                                    </span>
                                                                 </div>
                                                                 <div data-v-5959a183="" class="name themeColor2">
                                                                     <div data-v-5959a183="" class="icon"></div>
-                                                                    Level 2 Ally
+                                                                    VIP 3
                                                                 </div>
                                                             </div>
                                                             <div data-v-5959a183="" class="str themeColor2"><span
-                                                                    data-v-5959a183=""> Not unlocked </span></div>
+                                                                    data-v-5959a183="">
+                                                                    @if ($myRank >= 3)
+                                                                        It has
+                                                                        reached this
+                                                                        level
+                                                                    @else
+                                                                        Not reached this level
+                                                                    @endif
+                                                                </span></div>
                                                         </div>
                                                         <div data-v-5959a183="" class="ico"><img
                                                                 data-v-5959a183=""
-                                                                src="{{asset('')}}static/img/e84156ccdb1b6d531814aec74fc68f87.png"
+                                                                src="{{ asset('') }}static/img/e84156ccdb1b6d531814aec74fc68f87.png"
                                                                 alt="" style="pointer-events: none;"></div>
                                                     </div>
                                                 </div>
@@ -275,19 +391,35 @@
                                                                 <div data-v-5959a183="" class="dj">
                                                                     <div data-v-5959a183=""
                                                                         class="dj-bg themeLevelLabel3"></div><span
-                                                                        data-v-5959a183="">Current level</span>
+                                                                        data-v-5959a183="">
+                                                                        @if ($myRank == 4)
+                                                                            Current level
+                                                                        @elseif($myRank > 4)
+                                                                            Unlocked
+                                                                        @else
+                                                                            Locked
+                                                                        @endif
+                                                                    </span>
                                                                 </div>
                                                                 <div data-v-5959a183="" class="name themeColor3">
                                                                     <div data-v-5959a183="" class="icon"></div>
-                                                                    Level 3 Ally
+                                                                    VIP 4
                                                                 </div>
                                                             </div>
                                                             <div data-v-5959a183="" class="str themeColor3"><span
-                                                                    data-v-5959a183=""> Not unlocked </span></div>
+                                                                    data-v-5959a183="">
+                                                                    @if ($myRank >= 4)
+                                                                        It has
+                                                                        reached this
+                                                                        level
+                                                                    @else
+                                                                        Not reached this level
+                                                                    @endif
+                                                                </span></div>
                                                         </div>
                                                         <div data-v-5959a183="" class="ico"><img
                                                                 data-v-5959a183=""
-                                                                src="{{asset('')}}static/img/5a927157d4c65dd50b6e79204b700238.png"
+                                                                src="{{ asset('') }}static/img/5a927157d4c65dd50b6e79204b700238.png"
                                                                 alt="" style="pointer-events: none;"></div>
                                                     </div>
                                                 </div>
@@ -299,19 +431,35 @@
                                                                 <div data-v-5959a183="" class="dj">
                                                                     <div data-v-5959a183=""
                                                                         class="dj-bg themeLevelLabel4"></div><span
-                                                                        data-v-5959a183="">Current level</span>
+                                                                        data-v-5959a183="">
+                                                                        @if ($myRank == 5)
+                                                                            Current level
+                                                                        @elseif($myRank > 5)
+                                                                            Unlocked
+                                                                        @else
+                                                                            Locked
+                                                                        @endif
+                                                                    </span>
                                                                 </div>
                                                                 <div data-v-5959a183="" class="name themeColor4">
                                                                     <div data-v-5959a183="" class="icon"></div>
-                                                                    Level 4 Ally
+                                                                    VIP 5
                                                                 </div>
                                                             </div>
                                                             <div data-v-5959a183="" class="str themeColor4"><span
-                                                                    data-v-5959a183=""> Not unlocked </span></div>
+                                                                    data-v-5959a183="">
+                                                                    @if ($myRank >= 5)
+                                                                        It has
+                                                                        reached this
+                                                                        level
+                                                                    @else
+                                                                        Not reached this level
+                                                                    @endif
+                                                                </span></div>
                                                         </div>
                                                         <div data-v-5959a183="" class="ico"><img
                                                                 data-v-5959a183=""
-                                                                src="{{asset('')}}static/img/801aeb5622b9a5316256390053248c92.png"
+                                                                src="{{ asset('') }}static/img/801aeb5622b9a5316256390053248c92.png"
                                                                 alt="" style="pointer-events: none;"></div>
                                                     </div>
                                                 </div>
@@ -323,19 +471,35 @@
                                                                 <div data-v-5959a183="" class="dj">
                                                                     <div data-v-5959a183=""
                                                                         class="dj-bg themeLevelLabel5"></div><span
-                                                                        data-v-5959a183="">Current level</span>
+                                                                        data-v-5959a183="">
+                                                                        @if ($myRank == 6)
+                                                                            Current level
+                                                                        @elseif($myRank > 6)
+                                                                            Unlocked
+                                                                        @else
+                                                                            Locked
+                                                                        @endif
+                                                                    </span>
                                                                 </div>
                                                                 <div data-v-5959a183="" class="name themeColor5">
                                                                     <div data-v-5959a183="" class="icon"></div>
-                                                                    Level 5 Ally
+                                                                    VIP 6
                                                                 </div>
                                                             </div>
                                                             <div data-v-5959a183="" class="str themeColor5"><span
-                                                                    data-v-5959a183=""> Not unlocked </span></div>
+                                                                    data-v-5959a183="">
+                                                                    @if ($myRank >= 6)
+                                                                        It has
+                                                                        reached this
+                                                                        level
+                                                                    @else
+                                                                        Not reached this level
+                                                                    @endif
+                                                                </span></div>
                                                         </div>
                                                         <div data-v-5959a183="" class="ico"><img
                                                                 data-v-5959a183=""
-                                                                src="{{asset('')}}static/img/d8d58144ff82da22c5a4675d125dd9fd.png"
+                                                                src="{{ asset('') }}static/img/d8d58144ff82da22c5a4675d125dd9fd.png"
                                                                 alt="" style="pointer-events: none;"></div>
                                                     </div>
                                                 </div>
@@ -347,19 +511,75 @@
                                                                 <div data-v-5959a183="" class="dj">
                                                                     <div data-v-5959a183=""
                                                                         class="dj-bg themeLevelLabel6"></div><span
-                                                                        data-v-5959a183="">Current level</span>
+                                                                        data-v-5959a183="">
+                                                                        @if ($myRank == 7)
+                                                                            Current level
+                                                                        @elseif($myRank > 7)
+                                                                            Unlocked
+                                                                        @else
+                                                                            Locked
+                                                                        @endif
+                                                                    </span>
                                                                 </div>
                                                                 <div data-v-5959a183="" class="name themeColor6">
                                                                     <div data-v-5959a183="" class="icon"></div>
-                                                                    Level 6 Ally
+                                                                    VIP 7
                                                                 </div>
                                                             </div>
                                                             <div data-v-5959a183="" class="str themeColor6"><span
-                                                                    data-v-5959a183=""> Not unlocked </span></div>
+                                                                    data-v-5959a183="">
+                                                                    @if ($myRank >= 7)
+                                                                        It has
+                                                                        reached this
+                                                                        level
+                                                                    @else
+                                                                        Not reached this level
+                                                                    @endif
+                                                                </span></div>
                                                         </div>
                                                         <div data-v-5959a183="" class="ico"><img
                                                                 data-v-5959a183=""
-                                                                src="{{asset('')}}static/img/d32a35a2d9ac4acc4fca025fce1ad2c1.png"
+                                                                src="{{ asset('') }}static/img/d32a35a2d9ac4acc4fca025fce1ad2c1.png"
+                                                                alt="" style="pointer-events: none;"></div>
+                                                    </div>
+                                                </div>
+                                                <div data-v-5959a183="" class="van-swipe-item" style="width: 320px;">
+                                                    <div data-v-5959a183="" class="swiper flex v6"
+                                                        style="pointer-events: none;">
+                                                        <div data-v-5959a183="" class="flex1">
+                                                            <div data-v-5959a183="">
+                                                                <div data-v-5959a183="" class="dj">
+                                                                    <div data-v-5959a183=""
+                                                                        class="dj-bg themeLevelLabel6"></div><span
+                                                                        data-v-5959a183="">
+                                                                        @if ($myRank == 8)
+                                                                            Current level
+                                                                        @elseif($myRank > 8)
+                                                                            Unlocked
+                                                                        @else
+                                                                            Locked
+                                                                        @endif
+                                                                    </span>
+                                                                </div>
+                                                                <div data-v-5959a183="" class="name themeColor6">
+                                                                    <div data-v-5959a183="" class="icon"></div>
+                                                                    VIP 8
+                                                                </div>
+                                                            </div>
+                                                            <div data-v-5959a183="" class="str themeColor6"><span
+                                                                    data-v-5959a183="">
+                                                                    @if ($myRank >= 8)
+                                                                        It has
+                                                                        reached this
+                                                                        level
+                                                                    @else
+                                                                        Not reached this level
+                                                                    @endif
+                                                                </span></div>
+                                                        </div>
+                                                        <div data-v-5959a183="" class="ico"><img
+                                                                data-v-5959a183=""
+                                                                src="{{ asset('') }}static/img/d32a35a2d9ac4acc4fca025fce1ad2c1.png"
                                                                 alt="" style="pointer-events: none;"></div>
                                                     </div>
                                                 </div>
@@ -384,18 +604,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div data-v-5959a183="" data-v-decd48ac="" class="list-box">
+                                    <div data-v-5959a183="" data-v-decd48ac="" class="list-box"
+                                        style="transition-duration: 0ms; transform: translateX(0px);">
                                         <div data-v-5959a183="" data-v-decd48ac="" class="list">
                                             <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
                                                         data-v-5959a183="" data-v-decd48ac="" alt=""
-                                                        data-src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
-                                                        src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        src="{{ asset('') }}static/img/bc3cf11087b69389ded07723adf92b4a.png"
                                                         lazy="loaded"></div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
-                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">Special
-                                                        contract for vouchers</div><span data-v-5959a183=""
-                                                        data-v-decd48ac="">USDT</span>
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">VIP 1
+                                                        Upgrade Candition</div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="s"><img
                                                         data-v-5959a183="" data-v-decd48ac=""
@@ -413,52 +632,89 @@
                                                     <li data-v-5959a183="" data-v-decd48ac="">
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                             Contract days</div>
-                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">2
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">365
                                                             days</div>
                                                     </li>
                                                     <li data-v-5959a183="" data-v-decd48ac="">
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                             Daily rate of return</div>
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="s">
-                                                            1.5%</div>
+                                                            2 USDT</div>
                                                     </li>
                                                     <li data-v-5959a183="" data-v-decd48ac="">
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="n">
-                                                            Fund Scope</div>
+                                                            Unlock Balance</div>
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="s">
-                                                            300-300U</div>
+                                                            60 USDT</div>
                                                     </li>
                                                 </ul>
-                                                <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
-                                                        data-v-5959a183="" data-v-decd48ac=""
-                                                        src="{{ asset('') }}static/img/jh_on0.9a3e055f.png"
-                                                        alt=""></div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="str">
+
+                                                    <img data-v-5959a183="" data-v-decd48ac=""
+                                                        src="{{ asset('static/img/' . ($myRank >= 1 ? 'jh_on0.9a3e055f.png' : 'jh_off.f212c34c.png')) }}"
+                                                        alt="">
+                                                </div>
                                             </div>
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">
-                                                        Progress </div>
+                                                        Running Days </div>
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
                                                             data-v-5959a183="" data-v-decd48ac=""
-                                                            class="themeColor0">6223885</span>/15646542 </div>
+                                                            class="themeColor0">0</span>/365 </div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
                                                         data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
                                                         style="width: 39%;"><i data-v-5959a183="" data-v-decd48ac=""
                                                             class="themeLineBg0"></i></span></div>
                                             </div>
+                                            <div class="upgrade-btn-wrapper"
+                                                style="margin-top: 15px; text-align: center;">
+                                                @php
+                                                    $vipLevel = 1; // Adjust dynamically for each card if needed
+                                                    $rule = $vipRules[$vipLevel];
+                                                    $requiredAmount = $rule['amount'];
+                                                    $currentPackage = $user->package ?? 0;
+                                                    $amountToPay = max(0, $requiredAmount - $currentPackage);
+                                                @endphp
+
+                                                @if ($myRank >= $vipLevel)
+                                                @elseif ($myRank < $rule['requires'])
+                                                    <button class="upgrade-btn" disabled
+                                                        style="background: #888; cursor: not-allowed;"
+                                                        title="Requires VIP {{ $rule['requires'] }} to unlock this">
+                                                        Locked
+                                                    </button>
+                                                @elseif ($balance >= $amountToPay && $amountToPay > 0)
+                                                    <form method="POST" action="{{ route('user.fundActivation') }}">
+                                                        @csrf
+                                                        <input type="hidden" name="rank"
+                                                            value="{{ $vipLevel }}">
+                                                        <input type="hidden" name="amount"
+                                                            value="{{ $amountToPay }}">
+                                                        <button type="submit" class="upgrade-btn">
+                                                            Upgrade VIP {{ $vipLevel }}
+                                                            (${{ number_format($amountToPay, 2) }})
+                                                        </button>
+                                                    </form>
+                                                @else
+                                                    <button class="upgrade-btn" disabled
+                                                        style="background: #888; cursor: not-allowed;"
+                                                        title="You need ${{ number_format($amountToPay, 2) }} to upgrade">
+                                                        Insufficient Balance
+                                                    </button>
+                                                @endif
+                                            </div>
                                         </div>
                                         <div data-v-5959a183="" data-v-decd48ac="" class="list">
                                             <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
                                                         data-v-5959a183="" data-v-decd48ac="" alt=""
-                                                        data-src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
-                                                        src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        src="{{ asset('static/img/3ef4d33c9bfec649c5a233f9bf6c8a07.png') }}"
                                                         lazy="loaded"></div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
-                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">3-day
-                                                        Experience-based Contract</div><span data-v-5959a183=""
-                                                        data-v-decd48ac="">USDT</span>
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">VIP 2
+                                                        Upgrade Candition</div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="s"><img
                                                         data-v-5959a183="" data-v-decd48ac=""
@@ -476,52 +732,89 @@
                                                     <li data-v-5959a183="" data-v-decd48ac="">
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                             Contract days</div>
-                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">3
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">365
                                                             days</div>
                                                     </li>
                                                     <li data-v-5959a183="" data-v-decd48ac="">
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                             Daily rate of return</div>
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="s">
-                                                            0.5%</div>
+                                                            4 USDT</div>
                                                     </li>
                                                     <li data-v-5959a183="" data-v-decd48ac="">
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="n">
-                                                            Fund Scope</div>
+                                                            Unlock Balance</div>
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="s">
-                                                            6-300U</div>
+                                                            120 USDT</div>
                                                     </li>
                                                 </ul>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
                                                         data-v-5959a183="" data-v-decd48ac=""
-                                                        src="{{ asset('') }}static/img/jh_on0.9a3e055f.png"
+                                                        src="{{ asset('static/img/' . ($myRank >= 2 ? 'jh_on0.9a3e055f.png' : 'jh_off.f212c34c.png')) }}"
                                                         alt=""></div>
                                             </div>
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">
-                                                        Progress </div>
+                                                        Running Days </div>
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
                                                             data-v-5959a183="" data-v-decd48ac=""
-                                                            class="themeColor0">658054.779</span>/900000 </div>
+                                                            class="themeColor0">0</span>/365 </div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
                                                         data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
                                                         style="width: 73%;"><i data-v-5959a183="" data-v-decd48ac=""
                                                             class="themeLineBg0"></i></span></div>
                                             </div>
+
+                                            <div class="upgrade-btn-wrapper"
+                                                style="margin-top: 15px; text-align: center;">
+                                                @php
+                                                    $vipLevel = 2; // Adjust dynamically for each card if needed
+                                                    $rule = $vipRules[$vipLevel];
+                                                    $requiredAmount = $rule['amount'];
+                                                    $currentPackage = $user->package ?? 0;
+                                                    $amountToPay = max(0, $requiredAmount - $currentPackage);
+                                                @endphp
+
+                                                @if ($myRank >= $vipLevel)
+                                                @elseif ($myRank < $rule['requires'])
+                                                    <button class="upgrade-btn" disabled
+                                                        style="background: #888; cursor: not-allowed;"
+                                                        title="Requires VIP {{ $rule['requires'] }} to unlock this">
+                                                        Locked
+                                                    </button>
+                                                @elseif ($balance >= $amountToPay && $amountToPay > 0)
+                                                    <form method="POST" action="{{ route('user.fundActivation') }}">
+                                                        @csrf
+                                                        <input type="hidden" name="rank"
+                                                            value="{{ $vipLevel }}">
+                                                        <input type="hidden" name="amount"
+                                                            value="{{ $amountToPay }}">
+                                                        <button type="submit" class="upgrade-btn">
+                                                            Upgrade VIP {{ $vipLevel }}
+                                                            (${{ number_format($amountToPay, 2) }})
+                                                        </button>
+                                                    </form>
+                                                @else
+                                                    <button class="upgrade-btn" disabled
+                                                        style="background: #888; cursor: not-allowed;"
+                                                        title="You need ${{ number_format($amountToPay, 2) }} to upgrade">
+                                                        Insufficient Balance
+                                                    </button>
+                                                @endif
+                                            </div>
+
                                         </div>
                                         <div data-v-5959a183="" data-v-decd48ac="" class="list">
                                             <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
                                                         data-v-5959a183="" data-v-decd48ac="" alt=""
-                                                        data-src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
-                                                        src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        src="{{ asset('static/img/e84156ccdb1b6d531814aec74fc68f87.png') }}"
                                                         lazy="loaded"></div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
-                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">7-day
-                                                        Beginner Type Contract</div><span data-v-5959a183=""
-                                                        data-v-decd48ac="">USDT</span>
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">VIP 3
+                                                        Upgrade Candition</div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="s"><img
                                                         data-v-5959a183="" data-v-decd48ac=""
@@ -539,52 +832,91 @@
                                                     <li data-v-5959a183="" data-v-decd48ac="">
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                             Contract days</div>
-                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">7
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">365
                                                             days</div>
                                                     </li>
                                                     <li data-v-5959a183="" data-v-decd48ac="">
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                             Daily rate of return</div>
-                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">1%
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">12
+                                                            USDT
                                                         </div>
                                                     </li>
                                                     <li data-v-5959a183="" data-v-decd48ac="">
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="n">
-                                                            Fund Scope</div>
+                                                            Unlock
+                                                            Balance</div>
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="s">
-                                                            50-300U</div>
+                                                            360 USDT</div>
                                                     </li>
                                                 </ul>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
                                                         data-v-5959a183="" data-v-decd48ac=""
-                                                        src="{{ asset('') }}static/img/jh_on0.9a3e055f.png"
+                                                        src="{{ asset('static/img/' . ($myRank >= 3 ? 'jh_on0.9a3e055f.png' : 'jh_off.f212c34c.png')) }}"
                                                         alt=""></div>
                                             </div>
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">
-                                                        Progress </div>
+                                                        Running Days </div>
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
                                                             data-v-5959a183="" data-v-decd48ac=""
-                                                            class="themeColor0">3055066.91</span>/8545354 </div>
+                                                            class="themeColor0">0</span>/365 </div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
                                                         data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
                                                         style="width: 35%;"><i data-v-5959a183="" data-v-decd48ac=""
                                                             class="themeLineBg0"></i></span></div>
                                             </div>
+
+                                            <div class="upgrade-btn-wrapper"
+                                                style="margin-top: 15px; text-align: center;">
+                                                @php
+                                                    $vipLevel = 3; // Adjust dynamically for each card if needed
+                                                    $rule = $vipRules[$vipLevel];
+                                                    $requiredAmount = $rule['amount'];
+                                                    $currentPackage = $user->package ?? 0;
+                                                    $amountToPay = max(0, $requiredAmount - $currentPackage);
+                                                @endphp
+
+                                                @if ($myRank >= $vipLevel)
+                                                @elseif ($myRank < $rule['requires'])
+                                                    <button class="upgrade-btn" disabled
+                                                        style="background: #888; cursor: not-allowed;"
+                                                        title="Requires VIP {{ $rule['requires'] }} to unlock this">
+                                                        Locked
+                                                    </button>
+                                                @elseif ($balance >= $amountToPay && $amountToPay > 0)
+                                                    <form method="POST" action="{{ route('user.fundActivation') }}">
+                                                        @csrf
+                                                        <input type="hidden" name="rank"
+                                                            value="{{ $vipLevel }}">
+                                                        <input type="hidden" name="amount"
+                                                            value="{{ $amountToPay }}">
+                                                        <button type="submit" class="upgrade-btn">
+                                                            Upgrade VIP {{ $vipLevel }}
+                                                            (${{ number_format($amountToPay, 2) }})
+                                                        </button>
+                                                    </form>
+                                                @else
+                                                    <button class="upgrade-btn" disabled
+                                                        style="background: #888; cursor: not-allowed;"
+                                                        title="You need ${{ number_format($amountToPay, 2) }} to upgrade">
+                                                        Insufficient Balance
+                                                    </button>
+                                                @endif
+                                            </div>
+
                                         </div>
                                         <div data-v-5959a183="" data-v-decd48ac="" class="list">
                                             <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
                                                         data-v-5959a183="" data-v-decd48ac="" alt=""
-                                                        data-src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
-                                                        src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                        src="{{asset('static/img/5a927157d4c65dd50b6e79204b700238.png')}}"
                                                         lazy="loaded"></div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
-                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">30-day
-                                                        Stable Contract</div><span data-v-5959a183=""
-                                                        data-v-decd48ac="">USDT</span>
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">VIP 4
+                                                        Upgrade Candition</div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="s"><img
                                                         data-v-5959a183="" data-v-decd48ac=""
@@ -602,52 +934,89 @@
                                                     <li data-v-5959a183="" data-v-decd48ac="">
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                             Contract days</div>
-                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">30
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">365
                                                             days</div>
                                                     </li>
                                                     <li data-v-5959a183="" data-v-decd48ac="">
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                             Daily rate of return</div>
-                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">3%
-                                                        </div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">28 USDT</div>
                                                     </li>
                                                     <li data-v-5959a183="" data-v-decd48ac="">
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="n">
-                                                            Fund Scope</div>
+                                                            Unlock
+                                                                    Balance</div>
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="s">
-                                                            50-300U</div>
+                                                            840 USDT</div>
                                                     </li>
                                                 </ul>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
                                                         data-v-5959a183="" data-v-decd48ac=""
-                                                        src="{{ asset('') }}static/img/jh_on0.9a3e055f.png"
+                                                        src="{{ asset('static/img/' . ($myRank >= 4 ? 'jh_on0.9a3e055f.png' : 'jh_off.f212c34c.png')) }}"
                                                         alt=""></div>
                                             </div>
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">
-                                                        Progress </div>
+                                                        Running Days </div>
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
                                                             data-v-5959a183="" data-v-decd48ac=""
-                                                            class="themeColor0">4582442.35</span>/7546845 </div>
+                                                            class="themeColor0">0</span>/365 </div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
                                                         data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
                                                         style="width: 60%;"><i data-v-5959a183="" data-v-decd48ac=""
                                                             class="themeLineBg0"></i></span></div>
                                             </div>
+                                            <div class="upgrade-btn-wrapper" style="margin-top: 15px; text-align: center;">
+                                                @php
+                                                    $vipLevel = 4;
+                                                    $rule = $vipRules[$vipLevel];
+                                                    $amountToPay = max(0, $rule['amount'] - $currentPackage);
+                                                    $totalTeam23 = $gen_team2_VIP3 + $gen_team3_VIP3;
+                                                    $canUpgrade = $myRank == 3 && $gen_team1_VIP3 >= 3 && $totalTeam23 >= 12;
+                                                @endphp
+                                            
+                                                @if ($myRank >= $vipLevel)
+                                                  
+                                            
+                                                @elseif ($myRank < $rule['requires'])
+                                                    <button class="upgrade-btn" disabled style="background: #888;" title="Requires VIP {{ $rule['requires'] }}">
+                                                        Locked
+                                                    </button>
+                                            
+                                                @elseif ($balance >= $amountToPay && $amountToPay > 0 && $canUpgrade)
+                                                    <form method="POST" action="{{ route('user.fundActivation') }}">
+                                                        @csrf
+                                                        <input type="hidden" name="rank" value="{{ $vipLevel }}">
+                                                        <input type="hidden" name="amount" value="{{ $amountToPay }}">
+                                                        <button type="submit" class="upgrade-btn">
+                                                            Upgrade VIP {{ $vipLevel }} (${{ number_format($amountToPay, 2) }})
+                                                        </button>
+                                                    </form>
+                                            
+                                                @elseif (!$canUpgrade)
+                                                    <button class="upgrade-btn" disabled style="background: #888;" title="Need VIP 3 + 3 Gen1 VIP3 + 12 Gen2/3 VIP3">
+                                                        Team Requirements Not Met
+                                                    </button>
+                                            
+                                                @else
+                                                    <button class="upgrade-btn" disabled style="background: #888;" title="Need ${{ number_format($amountToPay, 2) }} to upgrade">
+                                                        Insufficient Balance
+                                                    </button>
+                                                @endif
+                                            </div>
                                         </div>
                                         <div data-v-5959a183="" data-v-decd48ac="" class="list">
                                             <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
                                                         data-v-5959a183="" data-v-decd48ac="" alt=""
-                                                        data-src="{{asset('')}}static/img/e6ab0d3d4109e0a08784508341f5d1fc.png"
-                                                        src="{{ asset('') }}static/img/error.2872d899.png"
+                                                       
+                                                        src="{{ asset('') }}static/img/801aeb5622b9a5316256390053248c92.png"
                                                         lazy="loading"></div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
-                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">60-day
-                                                        Growth Contract</div><span data-v-5959a183=""
-                                                        data-v-decd48ac="">USDT</span>
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">VIP 5
+                                                        Upgrade Candition</div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="s"><img
                                                         data-v-5959a183="" data-v-decd48ac=""
@@ -665,40 +1034,409 @@
                                                     <li data-v-5959a183="" data-v-decd48ac="">
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                             Contract days</div>
-                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">60
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">365
                                                             days</div>
                                                     </li>
                                                     <li data-v-5959a183="" data-v-decd48ac="">
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                             Daily rate of return</div>
-                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">5%
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">60 USDT
                                                         </div>
                                                     </li>
                                                     <li data-v-5959a183="" data-v-decd48ac="">
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="n">
-                                                            Fund Scope</div>
+                                                            Unlock
+                                                            Balance</div>
                                                         <div data-v-5959a183="" data-v-decd48ac="" class="s">
-                                                            50-300U</div>
+                                                            1680 USDT</div>
                                                     </li>
                                                 </ul>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
                                                         data-v-5959a183="" data-v-decd48ac=""
-                                                        src="{{ asset('') }}static/img/jh_on0.9a3e055f.png"
+                                                        src="{{ asset('static/img/' . ($myRank >= 5 ? 'jh_on0.9a3e055f.png' : 'jh_off.f212c34c.png')) }}"
                                                         alt=""></div>
                                             </div>
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">
-                                                        Progress </div>
+                                                        Running Days </div>
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
                                                             data-v-5959a183="" data-v-decd48ac=""
-                                                            class="themeColor0">6657486.17</span>/9254658 </div>
+                                                            class="themeColor0">0</span>/365 </div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
                                                         data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
                                                         style="width: 71%;"><i data-v-5959a183="" data-v-decd48ac=""
                                                             class="themeLineBg0"></i></span></div>
                                             </div>
+
+                                            <div class="upgrade-btn-wrapper" style="margin-top: 15px; text-align: center;">
+                                                @php
+                                                    $vipLevel = 5;
+                                                    $requiredAmount = 1680;
+                                                    $requiredRank = 4;
+                                                    $amountToPay = max(0, $requiredAmount - ($user->package ?? 0));
+                                                    $canUpgrade = $myRank == $requiredRank && $gen_team1_VIP4 >= 3 && ($gen_team2_VIP4 + $gen_team3_VIP4) >= 25;
+                                                @endphp
+                                            
+                                                @if ($myRank >= $vipLevel)
+                                                   
+                                            
+                                                @elseif ($myRank < $requiredRank)
+                                                    <button class="upgrade-btn" disabled style="background: #888; cursor: not-allowed;" 
+                                                            title="Requires VIP {{ $requiredRank }}">
+                                                        Locked
+                                                    </button>
+                                            
+                                                @elseif ($balance >= $amountToPay && $canUpgrade)
+                                                    <form method="POST" action="{{ route('user.fundActivation') }}">
+                                                        @csrf
+                                                        <input type="hidden" name="rank" value="{{ $vipLevel }}">
+                                                        <input type="hidden" name="amount" value="{{ $amountToPay }}">
+                                                        <button type="submit" class="upgrade-btn">
+                                                            Upgrade VIP {{ $vipLevel }} (${{ number_format($amountToPay, 2) }})
+                                                        </button>
+                                                    </form>
+                                            
+                                                @elseif (!$canUpgrade)
+                                                    <button class="upgrade-btn" disabled style="background: #888; cursor: not-allowed;" 
+                                                            title="Requires: VIP 4 + 3 Gen1 VIP4 + 25 Gen2/3 VIP4">
+                                                        Team Requirements Not Met
+                                                    </button>
+                                            
+                                                @else
+                                                    <button class="upgrade-btn" disabled style="background: #888; cursor: not-allowed;" 
+                                                            title="You need ${{ number_format($amountToPay, 2) }} to upgrade">
+                                                        Insufficient Balance
+                                                    </button>
+                                                @endif
+                                            </div>
+                                        </div>
+                                        <div data-v-5959a183="" data-v-decd48ac="" class="list">
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
+                                                        data-v-5959a183="" data-v-decd48ac="" alt=""
+                                                        
+                                                        src="{{ asset('') }}static/img/d8d58144ff82da22c5a4675d125dd9fd.png"
+                                                        lazy="loading"></div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">VIP 6
+                                                        Upgrade Candition</div>
+                                                </div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="s"><img
+                                                        data-v-5959a183="" data-v-decd48ac=""
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAYCAYAAADOMhxqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEcSURBVHgBlVO7EcIwDLXNBGwAHWXoKKHKpYMJgA2SCQgTJJmAEQhdUgEdHYzACNkgPN05d0J2+OjOSSS9J+sptlKwLMvmWEv1g2kAN1rrg/WfbdtOkyRp+ggG4DXzR4zsJ6DiVcSWRVHseglYOdaDB1Ek7dOk6YEktXKmlliusXqeDsGS5pbEzRmC6T4QvCCZCIIzhAF36rq+hWE4BGjGwpMoilRVVde3HZilyjMETG79poHbpyF4CZYUgHQXO52M+tP+bsm7gwdM7WzpJzqEPM8zD3gPcOm0RIeORihqlHEcrzrHsL4DD5iOxpYHjAWTyKMAk8iFvEzmm0hRRJlvIh0CkmMRKwFOVY9RSxfmOyKldTcuwCuw1ZtPhBd5gJ02bhlOjAAAAABJRU5ErkJggg=="
+                                                        alt=""></div>
+                                            </div>
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="sn flex">
+                                                <ul data-v-5959a183="" data-v-decd48ac="" class="flex li flex1">
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Contract number</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            FRO97476A4ZMZ</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Contract days</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">365
+                                                            days</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Daily rate of return</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">120 USDT
+                                                        </div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Unlock
+                                                                    Balance</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            3600 USDT</div>
+                                                    </li>
+                                                </ul>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
+                                                        data-v-5959a183="" data-v-decd48ac=""
+                                                        src="{{ asset('static/img/' . ($myRank >= 6 ? 'jh_on0.9a3e055f.png' : 'jh_off.f212c34c.png')) }}"
+                                                        alt=""></div>
+                                            </div>
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="jd">
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="flex">
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                        Running Days </div>
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
+                                                            data-v-5959a183="" data-v-decd48ac=""
+                                                            class="themeColor0">0</span>/365 </div>
+                                                </div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
+                                                        data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
+                                                        style="width: 71%;"><i data-v-5959a183="" data-v-decd48ac=""
+                                                            class="themeLineBg0"></i></span></div>
+                                            </div>
+
+                                            <div class="upgrade-btn-wrapper" style="margin-top: 15px; text-align: center;">
+                                                @php
+                                                    $vipLevel = 6;
+                                                    $requiredAmount = 3600;
+                                                    $requiredRank = 5;
+                                                    $amountToPay = max(0, $requiredAmount - ($user->package ?? 0));
+                                                    $canUpgrade = $myRank == $requiredRank && $gen_team1_VIP5 >= 3 && ($gen_team2_VIP5 + $gen_team3_VIP5) >= 50;
+                                                @endphp
+                                            
+                                                @if ($myRank >= $vipLevel)
+                                                  
+                                            
+                                                @elseif ($myRank < $requiredRank)
+                                                    <button class="upgrade-btn" disabled style="background: #888; cursor: not-allowed;" 
+                                                            title="Requires VIP {{ $requiredRank }}">
+                                                        Locked
+                                                    </button>
+                                            
+                                                @elseif ($balance >= $amountToPay && $canUpgrade)
+                                                    <form method="POST" action="{{ route('user.fundActivation') }}">
+                                                        @csrf
+                                                        <input type="hidden" name="rank" value="{{ $vipLevel }}">
+                                                        <input type="hidden" name="amount" value="{{ $amountToPay }}">
+                                                        <button type="submit" class="upgrade-btn">
+                                                            Upgrade VIP {{ $vipLevel }} (${{ number_format($amountToPay, 2) }})
+                                                        </button>
+                                                    </form>
+                                            
+                                                @elseif (!$canUpgrade)
+                                                    <button class="upgrade-btn" disabled style="background: #888; cursor: not-allowed;" 
+                                                            title="Requires: VIP 5 + 3 Gen1 VIP5 + 50 Gen2/3 VIP5">
+                                                        Team Requirements Not Met
+                                                    </button>
+                                            
+                                                @else
+                                                    <button class="upgrade-btn" disabled style="background: #888; cursor: not-allowed;" 
+                                                            title="You need ${{ number_format($amountToPay, 2) }} to upgrade">
+                                                        Insufficient Balance
+                                                    </button>
+                                                @endif
+                                            </div>
+                                        </div>
+                                        <div data-v-5959a183="" data-v-decd48ac="" class="list">
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
+                                                        data-v-5959a183="" data-v-decd48ac="" alt=""
+                                                        src="{{ asset('') }}static/img/d32a35a2d9ac4acc4fca025fce1ad2c1.png"
+                                                        lazy="loading"></div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                        VIP 7
+                                                        Upgrade Candition</div>
+                                                </div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="s"><img
+                                                        data-v-5959a183="" data-v-decd48ac=""
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAYCAYAAADOMhxqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEcSURBVHgBlVO7EcIwDLXNBGwAHWXoKKHKpYMJgA2SCQgTJJmAEQhdUgEdHYzACNkgPN05d0J2+OjOSSS9J+sptlKwLMvmWEv1g2kAN1rrg/WfbdtOkyRp+ggG4DXzR4zsJ6DiVcSWRVHseglYOdaDB1Ek7dOk6YEktXKmlliusXqeDsGS5pbEzRmC6T4QvCCZCIIzhAF36rq+hWE4BGjGwpMoilRVVde3HZilyjMETG79poHbpyF4CZYUgHQXO52M+tP+bsm7gwdM7WzpJzqEPM8zD3gPcOm0RIeORihqlHEcrzrHsL4DD5iOxpYHjAWTyKMAk8iFvEzmm0hRRJlvIh0CkmMRKwFOVY9RSxfmOyKldTcuwCuw1ZtPhBd5gJ02bhlOjAAAAABJRU5ErkJggg=="
+                                                        alt=""></div>
+                                            </div>
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="sn flex">
+                                                <ul data-v-5959a183="" data-v-decd48ac="" class="flex li flex1">
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Contract number</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            FRO9748928921</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Contract days</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            365
+                                                            days</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Daily rate of return</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            240 USDT
+                                                        </div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Unlock
+                                                            Balance</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            7560 USDT</div>
+                                                    </li>
+                                                </ul>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
+                                                        data-v-5959a183="" data-v-decd48ac=""
+                                                        src="{{ asset('static/img/' . ($myRank >= 7 ? 'jh_on0.9a3e055f.png' : 'jh_off.f212c34c.png')) }}"
+                                                        alt=""></div>
+                                            </div>
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="jd">
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="flex">
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                        Running Days </div>
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                        <span data-v-5959a183="" data-v-decd48ac=""
+                                                            class="themeColor0">0</span>/365
+                                                    </div>
+                                                </div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
+                                                        data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
+                                                        style="width: 71%;"><i data-v-5959a183=""
+                                                            data-v-decd48ac="" class="themeLineBg0"></i></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="upgrade-btn-wrapper" style="margin-top: 15px; text-align: center;">
+                                                @php
+                                                    $vipLevel = 7;
+                                                    $requiredAmount = 7560;
+                                                    $requiredRank = 6;
+                                                    $amountToPay = max(0, $requiredAmount - ($user->package ?? 0));
+                                                    $canUpgrade = $myRank == $requiredRank && $gen_team1_VIP6 >= 3 && ($gen_team2_VIP6 + $gen_team3_VIP6) >= 100;
+                                                @endphp
+                                            
+                                                @if ($myRank >= $vipLevel)
+                                                  
+                                            
+                                                @elseif ($myRank < $requiredRank)
+                                                    <button class="upgrade-btn" disabled style="background: #888; cursor: not-allowed;" 
+                                                            title="Requires VIP {{ $requiredRank }}">
+                                                        Locked
+                                                    </button>
+                                            
+                                                @elseif ($balance >= $amountToPay && $canUpgrade)
+                                                    <form method="POST" action="{{ route('user.fundActivation') }}">
+                                                        @csrf
+                                                        <input type="hidden" name="rank" value="{{ $vipLevel }}">
+                                                        <input type="hidden" name="amount" value="{{ $amountToPay }}">
+                                                        <button type="submit" class="upgrade-btn">
+                                                            Upgrade VIP {{ $vipLevel }} (${{ number_format($amountToPay, 2) }})
+                                                        </button>
+                                                    </form>
+                                            
+                                                @elseif (!$canUpgrade)
+                                                    <button class="upgrade-btn" disabled style="background: #888; cursor: not-allowed;" 
+                                                            title="Requires: VIP 6 + 3 Gen1 VIP6 + 100 Gen2/3 VIP6">
+                                                        Team Requirements Not Met
+                                                    </button>
+                                            
+                                                @else
+                                                    <button class="upgrade-btn" disabled style="background: #888; cursor: not-allowed;" 
+                                                            title="You need ${{ number_format($amountToPay, 2) }} to upgrade">
+                                                        Insufficient Balance
+                                                    </button>
+                                                @endif
+                                            </div>
+
+                                        </div>
+                                        <div data-v-5959a183="" data-v-decd48ac="" class="list">
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
+                                                        data-v-5959a183="" data-v-decd48ac="" alt=""
+                                                        src="{{ asset('') }}static/img/d32a35a2d9ac4acc4fca025fce1ad2c1.png"
+                                                        lazy="loading"></div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                        VIP 8
+                                                        Upgrade Candition</div>
+                                                </div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="s"><img
+                                                        data-v-5959a183="" data-v-decd48ac=""
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAYCAYAAADOMhxqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEcSURBVHgBlVO7EcIwDLXNBGwAHWXoKKHKpYMJgA2SCQgTJJmAEQhdUgEdHYzACNkgPN05d0J2+OjOSSS9J+sptlKwLMvmWEv1g2kAN1rrg/WfbdtOkyRp+ggG4DXzR4zsJ6DiVcSWRVHseglYOdaDB1Ek7dOk6YEktXKmlliusXqeDsGS5pbEzRmC6T4QvCCZCIIzhAF36rq+hWE4BGjGwpMoilRVVde3HZilyjMETG79poHbpyF4CZYUgHQXO52M+tP+bsm7gwdM7WzpJzqEPM8zD3gPcOm0RIeORihqlHEcrzrHsL4DD5iOxpYHjAWTyKMAk8iFvEzmm0hRRJlvIh0CkmMRKwFOVY9RSxfmOyKldTcuwCuw1ZtPhBd5gJ02bhlOjAAAAABJRU5ErkJggg=="
+                                                        alt=""></div>
+                                            </div>
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="sn flex">
+                                                <ul data-v-5959a183="" data-v-decd48ac="" class="flex li flex1">
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Contract number</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            YHRO974892109</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Contract days</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            365
+                                                            days</div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Daily rate of return</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            480 USDT
+                                                        </div>
+                                                    </li>
+                                                    <li data-v-5959a183="" data-v-decd48ac="">
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                            Unlock
+                                                            Balance</div>
+                                                        <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                            15000 USDT</div>
+                                                    </li>
+                                                </ul>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="str"><img
+                                                        data-v-5959a183="" data-v-decd48ac=""
+                                                        src="{{ asset('static/img/' . ($myRank >= 7 ? 'jh_on0.9a3e055f.png' : 'jh_off.f212c34c.png')) }}"
+                                                        alt=""></div>
+                                            </div>
+                                            <div data-v-5959a183="" data-v-decd48ac="" class="jd">
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="flex">
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="n">
+                                                        Running Days </div>
+                                                    <div data-v-5959a183="" data-v-decd48ac="" class="s">
+                                                        <span data-v-5959a183="" data-v-decd48ac=""
+                                                            class="themeColor0">0</span>/365
+                                                    </div>
+                                                </div>
+                                                <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
+                                                        data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
+                                                        style="width: 71%;"><i data-v-5959a183=""
+                                                            data-v-decd48ac="" class="themeLineBg0"></i></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="upgrade-btn-wrapper" style="margin-top: 15px; text-align: center;">
+                                                <div class="upgrade-btn-wrapper" style="margin-top: 15px; text-align: center;">
+                                                    @php
+                                                        $vipLevel = 8;
+                                                        $requiredAmount = 15000;
+                                                        $requiredRank = 7;
+                                                        $amountToPay = max(0, $requiredAmount - ($user->package ?? 0));
+                                                        $canUpgrade = $myRank == $requiredRank && $gen_team1_VIP7 >= 3 && ($gen_team2_VIP7 + $gen_team3_VIP7) >= 250;
+                                                    @endphp
+                                                
+                                                    @if ($myRank >= $vipLevel)
+                                                       
+                                                    @elseif ($myRank < $requiredRank)
+                                                        <button class="upgrade-btn" disabled style="background: #888; cursor: not-allowed;"
+                                                                title="Requires VIP {{ $requiredRank }}">
+                                                            Locked
+                                                        </button>
+                                                
+                                                    @elseif ($balance >= $amountToPay && $canUpgrade)
+                                                        <form method="POST" action="{{ route('user.fundActivation') }}">
+                                                            @csrf
+                                                            <input type="hidden" name="rank" value="{{ $vipLevel }}">
+                                                            <input type="hidden" name="amount" value="{{ $amountToPay }}">
+                                                            <button type="submit" class="upgrade-btn">
+                                                                Upgrade VIP {{ $vipLevel }} (${{ number_format($amountToPay, 2) }})
+                                                            </button>
+                                                        </form>
+                                                
+                                                    @elseif (!$canUpgrade)
+                                                        <button class="upgrade-btn" disabled style="background: #888; cursor: not-allowed;"
+                                                                title="Requires: VIP 7 + 3 Gen1 VIP7 + 250 Gen2/3 VIP7">
+                                                            Team Requirements Not Met
+                                                        </button>
+                                                
+                                                    @else
+                                                        <button class="upgrade-btn" disabled style="background: #888; cursor: not-allowed;"
+                                                                title="You need ${{ number_format($amountToPay, 2) }} to upgrade">
+                                                            Insufficient Balance
+                                                        </button>
+                                                    @endif
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -723,14 +1461,108 @@
         </div><!---->
     </div>
     <!-- Vue and Vant JS -->
-
-
     <script src="{{ asset('') }}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
     <script src="{{ asset('') }}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
     <script src="{{ asset('') }}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
     <script src="{{ asset('') }}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script>
-   
+
     {{-- <script src="{{asset('')}}js1744307594169/app.46ba12d9.1744307594169.js"></script> --}}
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const track1 = document.querySelector(".van-swipe__track");
+            const track2 = document.querySelector(".list-box");
+
+            if (!track1 || !track2) return;
+
+            const items1 = track1.querySelectorAll(".van-swipe-item");
+            const items2 = track2.querySelectorAll(".list");
+
+            let itemWidth = items1[0]?.offsetWidth || 0;
+            const maxIndex = items1.length - 1;
+
+            let isDragging = false;
+            let startX = 0;
+            let currentX = 0;
+            let dragDistance = 0;
+
+            const updateSecondSection = (index) => {
+                items2.forEach((item, i) => {
+                    item.style.display = i === index ? "block" : "none";
+                });
+            };
+
+            const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+
+            // Initialize
+            updateSecondSection(0);
+
+            const startDrag = (x) => {
+                isDragging = true;
+                startX = x - currentX;
+                dragDistance = 0;
+                track1.style.transition = "none";
+            };
+
+            const onDrag = (x) => {
+                if (!isDragging) return;
+                dragDistance = Math.abs(x - (startX + currentX));
+                currentX = x - startX;
+                track1.style.transform = `translateX(${currentX}px)`;
+            };
+
+            const endDrag = () => {
+                if (!isDragging) return;
+                isDragging = false;
+
+                let snappedIndex = clamp(Math.round(Math.abs(currentX) / itemWidth), 0, maxIndex);
+                currentX = -itemWidth * snappedIndex;
+
+                track1.style.transition = "transform 0.3s ease";
+                track1.style.transform = `translateX(${currentX}px)`;
+                updateSecondSection(snappedIndex);
+            };
+
+            // Mouse events
+            track1.addEventListener("mousedown", (e) => {
+                track1.style.cursor = "grabbing";
+                startDrag(e.pageX);
+            });
+
+            document.addEventListener("mousemove", (e) => onDrag(e.pageX));
+            document.addEventListener("mouseup", () => {
+                track1.style.cursor = "grab";
+                endDrag();
+            });
+
+            // Touch events
+            track1.addEventListener("touchstart", (e) => startDrag(e.touches[0].clientX));
+            document.addEventListener("touchmove", (e) => onDrag(e.touches[0].clientX));
+            document.addEventListener("touchend", endDrag);
+
+            // Click (only when not dragged)
+            items1.forEach((item, index) => {
+                item.addEventListener("click", () => {
+                    if (dragDistance > 5) return; // avoid accidental drag/click conflict
+
+                    currentX = -itemWidth * index;
+                    track1.style.transition = "transform 0.3s ease";
+                    track1.style.transform = `translateX(${currentX}px)`;
+                    updateSecondSection(index);
+                });
+            });
+
+            // Fallback: recalculate itemWidth after DOM is ready
+            setTimeout(() => {
+                if (!itemWidth && items1[0]) {
+                    itemWidth = items1[0].offsetWidth;
+                }
+            }, 100);
+        });
+    </script>
+
+
+
+
 </body>
 
 </html>

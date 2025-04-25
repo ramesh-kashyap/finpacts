@@ -74,7 +74,7 @@
 }
 .list li[data-v-5803b0fe] {
   padding:.28rem;
-  background:#fff;
+  background: linear-gradient(72deg, #042d50, #070808);
   border:.02rem solid #ebebeb;
   border-radius:.2rem;
   margin-bottom:.24rem;
@@ -82,7 +82,7 @@
   position:relative
 }
 .list li .stu[data-v-5803b0fe] {
-  background:#f9f9f9;
+  background: none;
   border-radius:0 0 .2rem .2rem;
   padding:.28rem;
   margin:-.28rem;
@@ -158,7 +158,7 @@
   padding:.06rem 0
 }
 .list li .it>div .n[data-v-5803b0fe] {
-  color:#929292;
+  color: #f8eeee;
   margin-top:.05rem;
   font-weight:400;
   font-size:.24rem;
@@ -168,14 +168,14 @@
 .list li .it>div .s[data-v-5803b0fe] {
   font-weight:600;
   line-height:.39rem;
-  color:#000
+  color: #ffffff;
 }
 .bgs[data-v-5803b0fe] {
-  background:#f2f3f5;
+  background: transparent;
   padding-top:.26rem
 }
 .main[data-v-5803b0fe] {
   border-radius:.24rem .24rem 0 0;
-  background:#fff;
+  background: transparent;
   padding:.26rem 0
 }

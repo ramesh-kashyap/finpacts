@@ -76,197 +76,13 @@ class Dashboard extends Controller
         {
         $percentage=0;    
         }
-      
 
-
-
-
-
-
-        
-   
-
-
-
-
-      $ids=$this->my_level_team($user->id);
-      $my_level_team=$this->my_level_team_count($user->id);
-      $gen_team1 =  (array_key_exists(1,$my_level_team) ? $my_level_team[1]:array());
-      $gen_team2 =  (array_key_exists(2,$my_level_team) ? $my_level_team[2]:array());
-      $gen_team3 =  (array_key_exists(3,$my_level_team) ? $my_level_team[3]:array());
-
-      $notes = User::where(function($query) use($ids)
-              {
-                if(!empty($ids)){
-                  foreach ($ids as $key => $value) {
-                  //   $f = explode(",", $value);
-                  //   print_r($f)."<br>";
-                    $query->orWhere('id', $value);
-                  }
-                }else{$query->where('id',null);}
-              })->orderBy('id', 'DESC')->get();
-
-
-
-              $teamwithdraw = Withdraw::where(function($query) use($ids)
-              {
-                if(!empty($ids)){
-                  foreach ($ids as $key => $value) {
-                  //   $f = explode(",", $value);
-                  //   print_r($f)."<br>";
-                    $query->orWhere('user_id', $value);
-                  }
-                }else{$query->where('user_id',null);}
-              })->where('status','Approved')->orderBy('id', 'DESC')->get();
-
-        
-      $gen_team1 = User::where(function($query) use($gen_team1)
-              {
-                if(!empty($gen_team1)){
-                  foreach ($gen_team1 as $key => $value) {
-                  //   $f = explode(",", $value);
-                  //   print_r($f)."<br>";
-                    $query->orWhere('id', $value);
-                  }
-                }else{$query->where('id',null);}
-              })->orderBy('id', 'DESC')->get();
-              
-        $gen_team2 = User::where(function($query) use($gen_team2)
-              {
-                if(!empty($gen_team2)){
-                  foreach ($gen_team2 as $key => $value) {
-                  //   $f = explode(",", $value);
-                  //   print_r($f)."<br>";
-                    $query->orWhere('id', $value);
-                  }
-                }else{$query->where('id',null);}
-              })->orderBy('id', 'DESC')->get();
-         $gen_team3 = User::where(function($query) use($gen_team3)
-              {
-                if(!empty($gen_team3)){
-                  foreach ($gen_team3 as $key => $value) {
-                  //   $f = explode(",", $value);
-                  //   print_r($f)."<br>";
-                    $query->orWhere('id', $value);
-                  }
-                }else{$query->where('id',null);}
-              })->orderBy('id', 'DESC')->get();
-
-
-        $gen_team1UserName =$gen_team1->pluck('username');
-        $gen_team2UserName =$gen_team2->pluck('username');
-        $gen_team3UserName =$gen_team3->pluck('username');
-
- 
-   $totalrecharge=Investment::whereIn('user_id',(!empty($ids)?$ids:array()))->where('status','Active')->sum("amount");
-   
-   
-     if($gen_team1->isNotEmpty())
-     {
-         $gen_teamIncome = Income::where(function($query) use($gen_team1UserName)
-        {
-          if(!empty($gen_team1UserName)){
-            foreach ($gen_team1UserName as $key => $value) {
-            //   $f = explode(",", $value);
-            //   print_r($f)."<br>";
-              $query->orWhere('rname', $value);
-            }
-          }else{$query->where('rname',null);}
-        })->where('user_id',$user->id)->orderBy('id', 'DESC')->sum('comm'); 
-     }
-     else
-     {
-       $gen_teamIncome =0;  
-     }
-       
-  if($gen_team2->isNotEmpty())
-     {
-        $gen_team2Income = Income::where(function($query) use($gen_team2UserName)
-        {
-            // dd($gen_team2UserName);
-          if($gen_team2UserName){
-            foreach ($gen_team2UserName as $key => $value) {
-            //   $f = explode(",", $value);
-            //   print_r($f)."<br>";
-              $query->orWhere('rname', $value);
-            }
-          }else{$query->where('rname',null);}
-        })->where('user_id',$user->id)->orderBy('id', 'DESC')->sum('comm');
-  
-     }
-      else
-     {
-       $gen_team2Income =0;  
-     }
-     
-      if($gen_team3->isNotEmpty())
-     {
-         
-      $gen_team3Income = Income::where(function($query) use($gen_team3UserName)
-        {
-          if(!empty($gen_team3UserName)){
-            foreach ($gen_team3UserName as $key => $value) {
-            //   $f = explode(",", $value);
-            //   print_r($f)."<br>";
-              $query->orWhere('rname', $value);
-            }
-          }else{$query->where('rname',null);}
-        })->where('user_id',$user->id)->orderBy('id', 'DESC')->sum('comm');
-        
-     }
-      else
-     {
-       $gen_team3Income =0;  
-     }
-  
-      $teamUserName =$gen_team1->pluck('username');
-        $todaysIncome =  \DB::table('incomes')->where('user_id',$user->id)->where('ttime',date('Y-m-d'))->where('remarks','Quantify Level Income')->sum('comm');
-    
-
-
-  
-        $response = Http::get('https://api.coingecko.com/api/v3/coins/markets', [
-          'vs_currency' => 'usd',
-          'order' => 'market_cap_desc',
-          'per_page' => 10,
-          'page' => 1,
-          'sparkline' => false
-      ]);
-  
-
-      $coins = $response->json();
-
-
-      
-
-
-      $this->data['coins'] =$coins ;
      $this->data['willgetProfit'] =$personal_deposit*200/100;
      $this->data['remaining_amount'] =($personal_deposit*2)-$totalIncome;
      $this->data['totalIncome'] =$percentage;
 
-     $this->data['todaysIncome'] =$todaysIncome;
-     $this->data['gen_team3Income'] =$gen_team3Income;
-     $this->data['gen_team2Income'] =$gen_team2Income;
-     $this->data['gen_teamIncome'] =$gen_teamIncome;
 
-
-     $this->data['gen_team1total'] =$gen_team1->count();
-     $this->data['active_gen_team1total'] =$gen_team1->where('active_status','Active')->count();
-     $this->data['gen_team2total'] =$gen_team2->count();
-     $this->data['active_gen_team2total'] =$gen_team2->where('active_status','Active')->count();
-
-     $this->data['gen_team3total'] =$gen_team3->count();
-     $this->data['active_gen_team3total'] =$gen_team3->where('active_status','Active')->count();
-
-
-     $this->data['gen_team1Income'] =$gen_team1->count();
      $this->data['notificationCount'] =$notificationCount;
-     $this->data['totalwithdrawal'] =$teamwithdraw->sum('amount');
-     $this->data['todaysuser'] =$notes->where('jdate',date('Y-m-d'))->count();
-     $this->data['totalrecharge'] =$totalrecharge;
-     $this->data['totalTeam'] =$notes->count();
-     $this->data['teamEarning'] =$gen_teamIncome+$gen_team2Income+$gen_team3Income;
       $this->data['page'] = 'user.dashboard';
       return $this->dashboard_layout();
 
@@ -316,13 +132,10 @@ class Dashboard extends Controller
       
       }
 
-
       public function tradeOn()
       {
           $user = Auth::user();
           date_default_timezone_set("Asia/Kolkata");
-      
-          $quantifiable_count = 6;
       
           $roiMap = [
               60     => ['weekday' => 2,   'weekend' => 1],
@@ -347,45 +160,20 @@ class Dashboard extends Controller
               ], 400);
           }
       
-          $todaysRoi = \DB::table('orders')
+          $existingTrade = \DB::table('orders')
               ->where('user_id', $user->id)
               ->where('ttime', $today)
-              ->count();
+              ->first();
       
-          if ($todaysRoi >= $quantifiable_count) {
+          if ($existingTrade) {
               return response()->json([
                   'status' => false,
-                  'message' => 'You have reached today’s trade limit.'
+                  'message' => 'You have already completed today’s trade.'
               ], 200);
           }
       
-          $roiSoFar = \DB::table('orders')
-              ->where('user_id', $user->id)
-              ->where('ttime', $today)
-              ->sum('roi');
+          $roiAmount = $isWeekend ? $roiMap[$package]['weekend'] : $roiMap[$package]['weekday'];
       
-          $totalRoiAmount = $isWeekend ? $roiMap[$package]['weekend'] : $roiMap[$package]['weekday'];
-          $remainingTrades = $quantifiable_count - $todaysRoi;
-          $remainingRoi = $totalRoiAmount - $roiSoFar;
-      
-          // Ensure at least 0.01 for each trade left
-          if ($remainingTrades === 1) {
-              $roiAmount = number_format($remainingRoi, 2, '.', '');
-          } else {
-              $maxPerTrade = $remainingRoi - ($remainingTrades - 1) * 0.01;
-              $roiAmount = number_format(mt_rand(1, (int)($maxPerTrade * 100)) / 100, 2, '.', '');
-          }
-      
-          // Update tradeAmt
-          $todaysRoiSum = $roiSoFar;
-          $balance2 = $package - $todaysRoiSum;
-          $forthhalf = $balance2 / $quantifiable_count;
-          $minQuan = $quantifiable_count - ($todaysRoi + 1);
-          $updateBalance = $forthhalf * $minQuan;
-      
-          \DB::table('users')->where('id', $user->id)->update(['tradeAmt' => $updateBalance]);
-      
-          // Pick unused company for today
           $usedCompanies = \DB::table('orders')
               ->where('user_id', $user->id)
               ->where('ttime', $today)
@@ -403,6 +191,7 @@ class Dashboard extends Controller
       
           $orderNo = 'ORD' . strtoupper(uniqid());
       
+          // Create order
           Order::create([
               'user_id' => $user->id,
               'company_name' => $company->company_name,
@@ -412,34 +201,35 @@ class Dashboard extends Controller
               'ttime' => $today
           ]);
       
-          // Add income on final trade
-          if (($todaysRoi + 1) === $quantifiable_count) {
-              \DB::table('incomes')->insert([
-                  'user_id' => $user->id,
-                  'user_id_fk' => $user->username,
-                  'amt' => $totalRoiAmount,
-                  'comm' => $totalRoiAmount,
-                  'ttime' => $today,
-                  'level' => 1,
-                  'remarks' => 'Daily Reward',
-                  'created_at' => now(),
-                  'updated_at' => now(),
-              ]);
-
-              \DB::table('users')->where('id',$user->id)->update(['last_trade' => date("Y-m-d H:i:s")]);  
-          }
+          // Add income immediately
+          \DB::table('incomes')->insert([
+              'user_id' => $user->id,
+              'user_id_fk' => $user->username,
+              'amt' => $roiAmount,
+              'comm' => $roiAmount,
+              'ttime' => $today,
+              'level' => 1,
+              'remarks' => 'Contract Income',
+              'created_at' => now(),
+              'updated_at' => now(),
+          ]);
+      
+          // Optional: update last trade time
+          \DB::table('users')->where('id', $user->id)->update([
+              'last_trade' => date("Y-m-d H:i:s"),
+              'tradeAmt' => 0 // No need to reserve remaining amount
+          ]);
       
           return response()->json([
               'status' => true,
-              'message' => 'Order created successfully.',
+              'message' => 'Trade completed successfully.',
               'data' => [
-                  'totalTask' => $todaysRoi + 1,
+                  'totalTask' => 1,
                   'walletBalance' => round($user->available_balance(), 2),
-                  'todaysEarning' => $roiSoFar + $roiAmount,
+                  'todaysEarning' => $roiAmount,
                   'company' => $company->company_name,
                   'logo' => $company->company_logo,
                   'roi_amount' => $roiAmount,
-                  'tradeAmt' => $updateBalance,
                   'orderNo' => $orderNo,
                   'dateTime' => date("Y-m-d H:i:s")
               ]

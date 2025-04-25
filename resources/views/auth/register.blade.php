@@ -159,8 +159,8 @@
                 <div class="van-pull-refresh__track" style="transition-duration: 0ms;">
                     <div class="van-pull-refresh__head" style="height: 60px;"></div>
                     <div data-v-decd48ac="" data-v-189e3d4a="" class="page">
-                        <div data-v-189e3d4a="" data-v-decd48ac="" class="bg"><img data-v-189e3d4a="" data-v-decd48ac=""
-                                src="{{ asset('') }}static/img/bg_logo.2c5a4b9e.png" alt=""></div>
+                        <div data-v-189e3d4a="" data-v-decd48ac="" class="bg"><img data-v-67a36a02="" data-v-decd48ac=""
+                            src="{{ asset('') }}static/img/cb5c4e881c97bb8f1f3b14f53be186de.jpg" alt=""></div>
                         <div data-v-decd48ac="" class="headers on">
                             <div data-v-189e3d4a="" data-v-decd48ac="" class="heads">
                                 <div data-v-189e3d4a="" data-v-decd48ac="" class="container"><span data-v-189e3d4a=""
@@ -187,7 +187,7 @@
                                                     data-v-decd48ac="">Welcome to register</span></div>
                                         </div>
                                         <div data-v-189e3d4a="" data-v-decd48ac="" class="flex1">
-                                            <p data-v-189e3d4a="" data-v-decd48ac="">Welcome to register FINPACT</p>
+                                            <p data-v-189e3d4a="" data-v-decd48ac="">Welcome to register TTMD</p>
                                         </div>
                                     </div>
                                 </div>
@@ -276,7 +276,7 @@
                                         </ul><button data-v-189e3d4a="" data-v-decd48ac=""
                                             class="btn on">Register</button>
                                         <div data-v-189e3d4a="" data-v-decd48ac="" class="p"> Already have an
-                                            account?<span data-v-189e3d4a="" data-v-decd48ac="">Log in now</span></div>
+                                            account? <a href="{{route('login')}}"> <span data-v-189e3d4a="" data-v-decd48ac="">  Log in now</span></a></div>
                                     </div>
                                 </div>
                                 <!---->

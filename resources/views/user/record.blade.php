@@ -201,13 +201,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <ul data-v-5803b0fe="" data-v-decd48ac="" class="tab">
-                                            <li data-v-5803b0fe="" data-v-decd48ac="" class="on"> All </li>
-                                            <li data-v-5803b0fe="" data-v-decd48ac="" class=""> Under contract
-                                            </li>
-                                            <li data-v-5803b0fe="" data-v-decd48ac="" class=""> Expired </li>
-                                            <li data-v-5803b0fe="" data-v-decd48ac="" class=""> Cleared </li>
-                                        </ul>
+                                       
                                     </div>
                                     <div data-v-5803b0fe="" data-v-decd48ac="" class="main">
                                         <div data-v-5803b0fe="" data-v-decd48ac="" class="empty db"

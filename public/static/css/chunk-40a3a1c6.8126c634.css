@@ -9,7 +9,7 @@
   align-items:center
 }
 .today_earnings .name .sift span[data-v-6e348d44] {
-  color:#131315;
+  color: #ffffff;
   font-family:PingFang SC;
   font-size:.26rem
 }
@@ -30,16 +30,17 @@
   z-index:1
 }
 .logo img[data-v-6e348d44] {
-  height:.48rem
+  height: 0.8rem;
+  margin-top: 6px;
 }
 .tab[data-v-6e348d44] {
   border-radius:0 0 .24rem .24rem;
-  background:#fff;
+  background: linear-gradient(72deg, #042d50, #070808);
   margin-bottom:.24rem;
   padding:.12rem .24rem
 }
 .tab li[data-v-6e348d44] {
-  background:#fff;
+  background: none;
   align-items:center;
   padding:.12rem 0
 }
@@ -62,7 +63,7 @@
   font-weight:600;
   font-size:.3rem;
   line-height:.42rem;
-  color:#000;
+  color: #ffffff;
   position:relative
 }
 .main .name .set[data-v-6e348d44] {
@@ -115,7 +116,7 @@
   margin-top:.32rem;
   padding-top:.32rem;
   padding-bottom:.32rem;
-  background:#fff
+  background: transparent;
 }
 .main .list-box .name[data-v-6e348d44] {
   border-bottom:.02rem solid #ebebeb;
@@ -126,17 +127,20 @@
 .main .list-box ul li[data-v-6e348d44] {
   display:flex;
   align-items:center;
-  padding:.2rem 0
+  padding: 10px;
+  background: linear-gradient(72deg, #042d50, #070808);
+  margin-top: 10px;
+  border-radius: .16rem;
 }
 .main .list-box ul li .flex1 .n[data-v-6e348d44] {
   margin-bottom:.12rem
 }
 .main .list-box ul li .flex1 .time[data-v-6e348d44] {
-  color:#929292;
+  color: #d2c6c6;
   font-size:.24rem
 }
 .card[data-v-6e348d44] {
-  background-color:#fff;
+  background: linear-gradient(72deg, #042d50, #070808);
   border-radius:.24rem
 }
 .total-income[data-v-6e348d44] {
@@ -173,7 +177,7 @@
   box-shadow:none!important
 }
 [data-v-6e348d44] .head.head0 {
-  background:linear-gradient(265deg,#7ac4ff 3.65%,#3094e4 94.5%)!important
+  background: transparent;
 }
 [data-v-6e348d44] .head.head1 {
   background:linear-gradient(265deg,#b4ccf8 3.65%,#6583b4 94.5%)!important
@@ -194,7 +198,7 @@
   background:linear-gradient(265deg,#faaf9b 3.65%,#e98484 94.5%)!important
 }
 [data-v-6e348d44] .headers {
-  background:transparent!important;
+  background: red;
   box-shadow:none;
   color:#fff
 }
@@ -202,7 +206,7 @@
   background:transparent;
   height:100%;
   width:100%;
-  background:#f2f3f5
+  background: linear-gradient(81deg, #03031d, #03031f, #09096e);
 }
 .bg[data-v-6e348d44]:before {
   position:absolute;
@@ -212,7 +216,7 @@
   left:0;
   width:100%;
   height:3.2rem;
-  background:linear-gradient(265deg,#7ac4ff 3.65%,#3094e4 94.5%);
+  /* background:linear-gradient(265deg,#7ac4ff 3.65%,#3094e4 94.5%); */
   background-size:100% 100%;
   border-radius:0 0 .48rem .48rem
 }
@@ -289,9 +293,9 @@
 }
 .earnings_box .earnings_list .earnings[data-v-6e348d44] {
   flex:1;
-  background-color:#fff;
+  background: linear-gradient(72deg, #042d50, #070808);
   border-radius:.24rem;
-  padding:.32rem .24rem
+  padding:.32rem .24rem;
 }
 .earnings_box .earnings_list .earnings[data-v-6e348d44]:first-of-type {
   margin-right:.22rem
@@ -306,12 +310,12 @@
   margin-right:.16rem
 }
 .earnings_box .earnings_list .earnings .info_box .info .title[data-v-6e348d44] {
-  color:#909090;
+  color: #dcdcdc;
   font-size:.24rem
 }
 .earnings_box .earnings_list .earnings .info_box .info .value[data-v-6e348d44] {
   margin-top:.08rem;
-  color:#000;
+  color: #ffffff;
   font-size:.28rem
 }
 .earnings_box .earnings_list .earnings .info_box .icon_right[data-v-6e348d44] {
@@ -327,7 +331,7 @@
   width:fit-content;
   padding:.2rem .4rem;
   border-radius:.9rem;
-  color:#a7a7a7;
+  color: #0d0c0c;
   font-size:.26rem
 }
 .earnings_box .earnings_list .earnings .receive_btn .btn_e.btn_e_bg[data-v-6e348d44] {
@@ -370,4 +374,9 @@
   margin-top:.64rem;
   height:.88rem;
   line-height:.88rem
+}
+
+.s {
+  color: #a2ffbc;
+  font-weight: 500;
 }

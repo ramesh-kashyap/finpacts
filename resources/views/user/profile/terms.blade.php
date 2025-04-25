@@ -175,16 +175,16 @@
                             <div data-v-decd48ac="" id="content" class="content-scroll">
                                 <div data-v-59b15e09="" data-v-decd48ac="" class="container">
                                     <div data-v-59b15e09="" data-v-decd48ac="" class="item">
-                                        <h2 data-v-59b15e09="" data-v-decd48ac="">FINPACT LIMITED User Rules </h2>
+                                        <h2 data-v-59b15e09="" data-v-decd48ac="">TTMD LIMITED User Rules </h2>
                                         <div data-v-59b15e09="" data-v-decd48ac="" class="p">
-                                            <p>When you join FINPACT LIMITED and start earning income, you need to
-                                                strictly abide by the FINPACT LIMITED rules and usage regulations. Only
+                                            <p>When you join TTMD LIMITED and start earning income, you need to
+                                                strictly abide by the TTMD LIMITED rules and usage regulations. Only
                                                 by following these rules and regulations can you ensure that you are
-                                                eligible to participate in FINPACT LIMITED and receive a stable daily
+                                                eligible to participate in TTMD LIMITED and receive a stable daily
                                                 income</p>
 
                                             <p>At the same time, you also need to understand that the purpose of opting
-                                                into FINPACT LIMITED is to make money and start a business. Therefore,
+                                                into TTMD LIMITED is to make money and start a business. Therefore,
                                                 we require you to engage in money-making tasks and
                                                 entrepreneurship-related work every day. Please allocate your time
                                                 reasonably to avoid wasting time on meaningless things. </p>
@@ -192,44 +192,44 @@
                                             <p>In order to strictly protect the security of your funds and keep your
                                                 information confidential, please do not easily send private messages and
                                                 illegal false messages to avoid causing harm and undermining your stable
-                                                income in FINPACT LIMITED. </p>
+                                                income in TTMD LIMITED. </p>
 
-                                            <p>We solemnly declare that FINPACT LIMITED is a legally registered company
+                                            <p>We solemnly declare that TTMD LIMITED is a legally registered company
                                                 in the British Virgin Islands holding a valid business license and
-                                                certificate. FINPACT LIMITED reserves the right to retain all important
+                                                certificate. TTMD LIMITED reserves the right to retain all important
                                                 trade secrets. Information on business matters is also provided to
                                                 facilitate communication with users. </p>
 
-                                            <p>All members must understand that FINPACT LIMITED is an innovative AI
-                                                financial product that provides financial services and advice. FINPACT
+                                            <p>All members must understand that TTMD LIMITED is an innovative AI
+                                                financial product that provides financial services and advice. TTMD
                                                 LIMITED can help more people realize their dreams. Even if you are a
                                                 newbie in the financial industry and have no financial management
-                                                experience, with the smart system of FINPACT LIMITED, you can easily
+                                                experience, with the smart system of TTMD LIMITED, you can easily
                                                 realize your dream of stable daily income. <br>
                                                 Users only need to study hard every day and maintain a positive work
                                                 attitude to earn the expected daily income. Those who cannot understand
-                                                the great value of FINPACT LIMITED will waste their precious time on
+                                                the great value of TTMD LIMITED will waste their precious time on
                                                 meaningless things, eventually deviate from the development philosophy
-                                                of FINPACT LIMITED, and are eventually surpassed and forgotten by
+                                                of TTMD LIMITED, and are eventually surpassed and forgotten by
                                                 countless new members. </p>
 
-                                            <p>The whole time. FINPACT LIMITED has strong financial resources and
+                                            <p>The whole time. TTMD LIMITED has strong financial resources and
                                                 reasonable operational plans and plans. It also proves to you or your
-                                                referees and countless people the absolute strength of FINPACT LIMITED.
+                                                referees and countless people the absolute strength of TTMD LIMITED.
                                                 Everything is so real and so rational. Whether you want to be the next
                                                 rich person depends only on your choice and efforts! </p>
 
-                                            <p>For everyone, FINPACT LIMITED is not perfect, but FINPACT LIMITED is
+                                            <p>For everyone, TTMD LIMITED is not perfect, but TTMD LIMITED is
                                                 legal, safe and stable. If you like this job, stay, otherwise feel free
                                                 to leave! </p>
 
-                                            <p>This is FINPACT LIMITED. It never deliberately pleases anyone. Always
+                                            <p>This is TTMD LIMITED. It never deliberately pleases anyone. Always
                                                 adhere to the company's core development policies and plans and strive
-                                                to be the best. In the future, FINPACT LIMITED will firmly be at the
+                                                to be the best. In the future, TTMD LIMITED will firmly be at the
                                                 forefront of the crypto industry! </p>
 
                                             <p>If you want to realize your dreams and create more wealth, you don’t need
-                                                to think, just follow the direction of FINPACT LIMITED and you will
+                                                to think, just follow the direction of TTMD LIMITED and you will
                                                 benefit from your wealth! </p>
                                         </div>
                                     </div>

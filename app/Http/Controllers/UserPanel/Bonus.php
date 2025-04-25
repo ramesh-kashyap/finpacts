@@ -337,42 +337,11 @@ class Bonus extends Controller
   public function roi_income(Request $request)
   {
       $user = Auth::user();
-  
-      $limit = $request->limit ?? paginationLimit();
-      $status = $request->status ?? null;
-      $search = $request->search ?? null;
-      $start_date = $request->start_date;
-      $end_date = $request->end_date;
-  
-      $notes = Income::where('user_id', $user->id)->orderBy('created_at', 'DESC');
-  
-      // ✅ Add date filter here
-      if ($start_date && $end_date) {
-          $notes = $notes->whereBetween('created_at', [
-              $start_date . " 00:00:00",
-              $end_date . " 23:59:59"
-          ]);
-      }
-  
-      // 🔍 Search filter
-      if ($search && $request->reset != "Reset") {
-          $notes = $notes->where(function ($q) use ($search) {
-              $q->Where('ttime', 'LIKE', '%' . $search . '%')
-                  ->orWhere('amt', 'LIKE', '%' . $search . '%')
-                  ->orWhere('rname', 'LIKE', '%' . $search . '%')
-                  ->orWhere('comm', 'LIKE', '%' . $search . '%');
-          });
-      }
-  
-      $notes = $notes->paginate($limit)->appends([
-          'limit' => $limit,
-          'start_date' => $start_date,
-          'end_date' => $end_date,
-          'search' => $search,
-      ]);
-  
-      $this->data['level_income'] = $notes;
-      $this->data['search'] = $search;
+
+      $todaysRoi = \DB::table('orders')->where('user_id',$user->id)->where('ttime',date('Y-m-d'))->get();
+      $totalRecords = Order::where('user_id',$user->id)->orderBy('id','DESC')->get();
+      $this->data['level_income'] = $totalRecords;
+      $this->data['todaysRoi'] = $todaysRoi->count();
       $this->data['page'] = 'user.bonus.roi-bonus';
   
       return $this->dashboard_layout();

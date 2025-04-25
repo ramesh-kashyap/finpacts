@@ -179,10 +179,10 @@
                                         <div data-v-13db724a="" data-v-decd48ac="" class="cname">Current level</div>
                                         <div data-v-13db724a="" data-v-decd48ac="" class="photo"><img
                                                 data-v-13db724a="" data-v-decd48ac=""
-                                                src="{{asset('')}}static/img/0feefd89860da746f3a51ec0d8063854.png"
+                                                src="{{asset('')}}static/img/logo-2.png"
                                                 alt=""></div>
                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex1">
-                                            <div data-v-13db724a="" data-v-decd48ac="" class="n">Finpact-694194
+                                            <div data-v-13db724a="" data-v-decd48ac="" class="n">TTMD-694194
                                             </div>
                                             <div data-v-13db724a="" data-v-decd48ac="" class="s"><span
                                                     data-v-13db724a="" data-v-decd48ac="">Junior Ally</span></div>

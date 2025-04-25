@@ -18,7 +18,7 @@
   margin-top:.2069rem;
   margin-bottom:.17241rem;
   border-radius:.13793rem;
-  background:#ececec;
+  background: #3b3b3b;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -41,10 +41,10 @@
   font-size:.2rem
 }
 .tab-nav li.active[data-v-5b33f38b] {
-  background-color:#fff
+  background: linear-gradient(72deg, #042d50, #070808);
 }
 .tab-nav li.active div[data-v-5b33f38b] {
-  color:#131315
+  color: #ffffff;
 }
 .list[data-v-5b33f38b] {
   padding:.2069rem .10345rem

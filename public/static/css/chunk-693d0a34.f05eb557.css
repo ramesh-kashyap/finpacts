@@ -28,12 +28,12 @@
     border-radius: 50%;
     padding: .14rem;
     position: relative;
-    /* background:#fff; */
+    background: linear-gradient(145deg, #0e1636, #101c3d);
 }
 
 .footers .item:nth-child(3) img[data-v-46204c6a] {
-    width: .96rem;
-    height: .96rem
+    width: 1.2rem;
+    height: .96rem;
 }
 
 .footers .item div img[data-v-46204c6a] {

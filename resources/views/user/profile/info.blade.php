@@ -184,7 +184,7 @@
                                             <div data-v-20c16f3c="" data-v-decd48ac="" class="str">
                                                 <div data-v-20c16f3c="" data-v-decd48ac="" class="pic rel"><img
                                                         data-v-20c16f3c="" data-v-decd48ac=""
-                                                        src="{{asset('')}}static/img/0feefd89860da746f3a51ec0d8063854.png"
+                                                        src="{{asset('')}}static/img/logo-2.png"
                                                         alt="">
                                                     <div data-v-20c16f3c="" data-v-decd48ac="" class="file"
                                                         style="opacity: 0;">
@@ -212,7 +212,7 @@
                                         </li>
                                         <li data-v-20c16f3c="" data-v-decd48ac="" class="it flex">
                                             <div data-v-20c16f3c="" data-v-decd48ac="" class="flex1">nickname</div>
-                                            <div data-v-20c16f3c="" data-v-decd48ac="" class="str">Finpact-694194
+                                            <div data-v-20c16f3c="" data-v-decd48ac="" class="str">TTMD-694194
                                             </div><img data-v-20c16f3c="" data-v-decd48ac=""
                                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
                                                 alt="">

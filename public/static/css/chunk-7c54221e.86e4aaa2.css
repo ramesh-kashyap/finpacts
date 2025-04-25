@@ -1,6 +1,7 @@
 .bann[data-v-5959a183] {
   padding:.26rem 0;
-  background:#f2f2f2
+  background: transparent;
+  height: 160px;
 }
 .bann .swiper[data-v-5959a183] {
   margin-right:.16rem;
@@ -95,14 +96,15 @@
   display:block;
   padding:0 .24rem;
   height:.4rem;
-  color:#fff;
+  color: #000000;
   font-family:PingFang SC;
   font-size:.24rem;
   font-style:normal;
   font-weight:400;
   line-height:.4rem;
   position:relative;
-  z-index:1
+  z-index:1;
+  font-weight: 500;
 }
 .bann .swiper .dj .dj-bg[data-v-5959a183] {
   opacity:.3;
@@ -128,18 +130,35 @@
   width:100%
 }
 .box[data-v-5959a183] {
-  background:#fff;
+  background: #00000000;
   border-radius:.32rem .32rem 0 0;
   padding:.32rem .28rem
 }
 .box .list[data-v-5959a183] {
-  background:#fff;
+  background: linear-gradient(72deg, #042d50, #070808);
   border:.02rem solid #ebebeb;
   border-radius:.2rem;
   padding:.26rem;
   padding-bottom:.02rem;
   margin-bottom:.2rem;
-  overflow:hidden
+  overflow:hidden;
+  width: 100%;
+  margin-right:10px;
+  height: fit-content;
+}
+.list-box{
+  position: relative;
+    overflow: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    cursor: grab;
+    -webkit-user-select: none;
+    user-select: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex
+;
+    height: 100%;
 }
 .box .list .he[data-v-5959a183] {
   align-items:center;
@@ -163,7 +182,7 @@
   font-weight:600;
   font-size:.28rem;
   line-height:.39rem;
-  color:#000
+  color: #ffffff;
 }
 .box .list .he .s img[data-v-5959a183] {
   height:.2rem;
@@ -201,12 +220,12 @@
   margin:.16rem 0
 }
 .box .list .li li .n[data-v-5959a183] {
-  color:#929292;
+  color: #fdfdfd;
   font-size:.24rem;
   margin-bottom:.16rem
 }
 .box .list .li li .s[data-v-5959a183] {
-  color:#000;
+  color: #ffffff;
   font-size:.28rem;
   font-weight:600
 }
