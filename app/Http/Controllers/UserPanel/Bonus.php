@@ -151,14 +151,14 @@ class Bonus extends Controller
 
 
 
-    public function dailyIncentive(Request $request)
+    public function income_roports(Request $request)
     {
        $user=Auth::user();
 
           $limit = $request->limit ? $request->limit : paginationLimit();
             $status = $request->status ? $request->status : null;
             $search = $request->search ? $request->search : null;
-            $notes = Income::where('user_id',$user->id)->where('remarks','Leadership Bonus')->orderBy('id', 'DESC');
+            $notes = Income::where('user_id',$user->id)->orderBy('id', 'DESC');
            if($search <> null && $request->reset!="Reset"){
             $notes = $notes->where(function($q) use($search){
               $q->Where('rname', 'LIKE', '%' . $search . '%')
@@ -175,7 +175,7 @@ class Bonus extends Controller
                 ]);
         $this->data['level_income'] =$notes;
         $this->data['search'] =$search;
-        $this->data['page'] = 'user.bonus.daily-incentive';
+        $this->data['page'] = 'user.bonus.income-roports';
         return $this->dashboard_layout();
 
 

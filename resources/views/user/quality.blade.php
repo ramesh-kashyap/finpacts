@@ -8,7 +8,7 @@
     <meta http-equiv="expires" content="0">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
-    <link rel="icon" href="/logo.png">
+    <link rel="icon" href="{{asset('')}}logo.png">
     <meta name="google" content="notranslate">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="full-screen" content="true">
@@ -224,7 +224,7 @@
                                 <div data-v-29c52665="" class="container flex"><!---->
                                     <div data-v-29c52665="" class="myName">
                                         <div data-v-29c52665=""><img data-v-29c52665=""
-                                                src="{{ asset('') }}static/img/logo-2.png"
+                                                src="{{ asset('') }}static/img/logo.png"
                                                 alt=""></div>
                                     </div>
                                     <div data-v-29c52665="" class="name tac">Contract</div>
@@ -544,7 +544,7 @@
                                                     </div>
                                                 </div>
                                                 <div data-v-5959a183="" class="van-swipe-item" style="width: 320px;">
-                                                    <div data-v-5959a183="" class="swiper flex v6"
+                                                    <div data-v-5959a183="" class="swiper flex v8"
                                                         style="pointer-events: none;">
                                                         <div data-v-5959a183="" class="flex1">
                                                             <div data-v-5959a183="">
@@ -561,12 +561,12 @@
                                                                         @endif
                                                                     </span>
                                                                 </div>
-                                                                <div data-v-5959a183="" class="name themeColor6">
+                                                                <div data-v-5959a183="" class="name themeColor8">
                                                                     <div data-v-5959a183="" class="icon"></div>
                                                                     VIP 8
                                                                 </div>
                                                             </div>
-                                                            <div data-v-5959a183="" class="str themeColor6"><span
+                                                            <div data-v-5959a183="" class="str themeColor8"><span
                                                                     data-v-5959a183="">
                                                                     @if ($myRank >= 8)
                                                                         It has
@@ -579,7 +579,7 @@
                                                         </div>
                                                         <div data-v-5959a183="" class="ico"><img
                                                                 data-v-5959a183=""
-                                                                src="{{ asset('') }}static/img/d32a35a2d9ac4acc4fca025fce1ad2c1.png"
+                                                                src="{{ asset('') }}static/img/vip8.png"
                                                                 alt="" style="pointer-events: none;"></div>
                                                     </div>
                                                 </div>
@@ -1331,7 +1331,7 @@
                                             <div data-v-5959a183="" data-v-decd48ac="" class="he flex themeBg0">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="ico"><img
                                                         data-v-5959a183="" data-v-decd48ac="" alt=""
-                                                        src="{{ asset('') }}static/img/d32a35a2d9ac4acc4fca025fce1ad2c1.png"
+                                                        src="{{ asset('') }}static/img/vip8.png"
                                                         lazy="loading"></div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex1">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">

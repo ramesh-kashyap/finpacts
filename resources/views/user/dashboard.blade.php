@@ -8,7 +8,7 @@
     <meta http-equiv="expires" content="0">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
-    <link rel="icon" href="/logo.png">
+    <link rel="icon" href="{{asset('')}}logo.png">
     <meta name="google" content="notranslate">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="full-screen" content="true">
@@ -385,7 +385,7 @@
                                 <div data-v-29c52665="" class="container flex"><!---->
                                     <div data-v-29c52665="" class="myName">
                                         <div data-v-29c52665=""><img data-v-29c52665=""
-                                                src="{{ asset('static/img/logo-2.png') }}" alt=""></div>
+                                                src="{{ asset('static/img/logo.png') }}" alt=""></div>
                                     </div>
                                     <div data-v-29c52665="" class="name tac"></div>
                                     <div data-v-29c52665="" class="flex1"></div>
@@ -400,9 +400,7 @@
                                             alt=""></div><!----><!----><!----><!----><!---->
                                 </div>
                             </div>
-                            <div data-v-2a245038="" data-v-decd48ac="" class="logo"><img data-v-2a245038=""
-                                    data-v-decd48ac="" src="{{ asset('') }}static/img/logo.png" alt="">
-                            </div>
+                            
                         </div>
                         <div data-v-decd48ac="" id="scroll" class="content-container"
                             style="padding-top: 44px; padding-bottom: 60px;">
@@ -432,7 +430,7 @@
                                                 <p class="subtitle">Let’s manage your budget</p>
                                             </div>
                                             <div class="avatar-section">
-                                                <button class="new-card-button">+ Upgrade</button>
+                                                <button class="new-card-button"><a href="{{route('user.vip')}}" style="color:#000000">+ Upgrade</a> </button>
                                             </div>
                                         </div>
 

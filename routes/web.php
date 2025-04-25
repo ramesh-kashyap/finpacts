@@ -197,7 +197,7 @@ Route::get('/level-income', [App\Http\Controllers\UserPanel\Bonus::class, 'index
 Route::get('/matching-bonus', [App\Http\Controllers\UserPanel\Bonus::class, 'cashback_income'])->name('user.matching-bonus');
 Route::get('/reward-bonus', [App\Http\Controllers\UserPanel\Bonus::class, 'reward_income'])->name('user.reward-bonus');
 Route::get('/income', [App\Http\Controllers\UserPanel\Bonus::class, 'roi_income'])->name('user.income');
-Route::get('/dailyIncentive', [App\Http\Controllers\UserPanel\Bonus::class, 'dailyIncentive'])->name('user.dailyIncentive');
+Route::get('/income-roports', [App\Http\Controllers\UserPanel\Bonus::class, 'income_roports'])->name('user.income-roports');
 Route::get('/activitiesBonus', [App\Http\Controllers\UserPanel\Bonus::class, 'activitiesBonus'])->name('user.activitiesBonus');
 
 Route::get('/gap-margin-bonus', [App\Http\Controllers\UserPanel\Bonus::class, 'gap_margin_bonus'])->name('user.gap-margin-bonus');

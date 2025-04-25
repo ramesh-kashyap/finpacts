@@ -8,7 +8,7 @@
     <meta http-equiv="expires" content="0">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
-    <link rel="icon" href="/logo.png">
+    <link rel="icon" href="{{asset('')}}logo.png">
     <meta name="google" content="notranslate">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="full-screen" content="true">
@@ -720,13 +720,16 @@
         background-size: 100% 100%;
         border-radius: 0 0 .48rem .48rem;
     }
-    .page .headers.on[data-v-decd48ac] {
-    background: linear-gradient(72deg, #042d50, #070808) !important;
-}.page .headers[data-v-decd48ac] {
 
-    height: 1rem;
- 
-}
+    .page .headers.on[data-v-decd48ac] {
+        background: linear-gradient(72deg, #042d50, #070808) !important;
+    }
+
+    .page .headers[data-v-decd48ac] {
+
+        height: 1rem;
+
+    }
 </style>
 
 <body class="mein_cn">
@@ -776,15 +779,18 @@
                                         <div data-v-6e348d44="" data-v-decd48ac="" class="income income0">
                                             <div data-v-6e348d44="" data-v-decd48ac="" class="name">Cumulative
                                                 total income</div>
-                                            <div data-v-6e348d44="" data-v-decd48ac="" class="am"> {{number_format(Auth::user()->users_incomes(),2)}} USDT </div>
+                                            <div data-v-6e348d44="" data-v-decd48ac="" class="am">
+                                                {{ number_format(Auth::user()->users_incomes(), 2) }} USDT </div>
                                         </div>
                                         <ul data-v-6e348d44="" data-v-decd48ac="" class="tab">
                                             <li data-v-6e348d44="" data-v-decd48ac="">
                                                 <div data-v-6e348d44="" data-v-decd48ac="" class="flex">
                                                     <div data-v-6e348d44="" data-v-decd48ac="" class="n flex1">
                                                         Personal income</div>
-                                                    <div data-v-6e348d44="" data-v-decd48ac="" class="s">{{number_format(Auth::user()->roi_bonus->sum('comm'),2)}} <span
-                                                            data-v-6e348d44="" data-v-decd48ac="">USDT</span></div>
+                                                    <div data-v-6e348d44="" data-v-decd48ac="" class="s">
+                                                        {{ number_format(Auth::user()->roi_bonus->sum('comm'), 2) }}
+                                                        <span data-v-6e348d44="" data-v-decd48ac="">USDT</span>
+                                                    </div>
                                                     <img data-v-6e348d44="" data-v-decd48ac=""
                                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
                                                         alt="">
@@ -794,8 +800,10 @@
                                                 <div data-v-6e348d44="" data-v-decd48ac="" class="flex">
                                                     <div data-v-6e348d44="" data-v-decd48ac="" class="n flex1">Todays
                                                         Benefits</div>
-                                                    <div data-v-6e348d44="" data-v-decd48ac="" class="s">{{number_format(Auth::user()->todays_bonus->sum('comm'),2)}} <span
-                                                            data-v-6e348d44="" data-v-decd48ac="">USDT</span></div>
+                                                    <div data-v-6e348d44="" data-v-decd48ac="" class="s">
+                                                        {{ number_format(Auth::user()->todays_bonus->sum('comm'), 2) }}
+                                                        <span data-v-6e348d44="" data-v-decd48ac="">USDT</span>
+                                                    </div>
                                                     <img data-v-6e348d44="" data-v-decd48ac=""
                                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
                                                         alt="">
@@ -813,7 +821,9 @@
                                                     <div data-v-6e348d44="" data-v-decd48ac="" class="info">
                                                         <div data-v-6e348d44="" data-v-decd48ac="" class="title">
                                                             Contract income</div>
-                                                        <div data-v-6e348d44="" data-v-decd48ac="" class="value">$ {{number_format(Auth::user()->roi_bonus->sum('comm'),2)}} </div>
+                                                        <div data-v-6e348d44="" data-v-decd48ac="" class="value">$
+                                                            {{ number_format(Auth::user()->roi_bonus->sum('comm'), 2) }}
+                                                        </div>
                                                     </div><i data-v-6e348d44="" data-v-decd48ac=""
                                                         class="icon_right van-icon van-icon-arrow">
                                                         <!---->
@@ -829,7 +839,9 @@
                                                     <div data-v-6e348d44="" data-v-decd48ac="" class="info">
                                                         <div data-v-6e348d44="" data-v-decd48ac="" class="title">
                                                             Team Benefits</div>
-                                                        <div data-v-6e348d44="" data-v-decd48ac="" class="value"> $ {{number_format(Auth::user()->level_bonus->sum('comm'),2)}}  </div>
+                                                        <div data-v-6e348d44="" data-v-decd48ac="" class="value"> $
+                                                            {{ number_format(Auth::user()->level_bonus->sum('comm'), 2) }}
+                                                        </div>
                                                     </div><i data-v-6e348d44="" data-v-decd48ac=""
                                                         class="icon_right van-icon van-icon-arrow">
                                                         <!---->
@@ -996,8 +1008,9 @@
                                             <div data-v-6e348d44="" data-v-decd48ac="" class="sift"><span
                                                     data-v-6e348d44="" data-v-decd48ac="">view all</span></div>
                                         </div>
+                                        @if ($level_income->isEmpty())
                                         <div data-v-6e348d44="" data-v-decd48ac="" class="empty db"
-                                            style="display: none;">
+                                            style="display: block;">
                                             <div data-v-6e348d44="" data-v-decd48ac="" class="flexs">
                                                 <div data-v-5f0c154b="" data-v-6e348d44=""
                                                     class="empty db custom-image" data-v-decd48ac="">
@@ -1011,7 +1024,7 @@
                                                 </div>
                                             </div>
                                         </div>
-
+                                        @endif
 
                                         <style>
                                             .list .list-item[data-v-68c18260] {
@@ -1155,10 +1168,46 @@
                                                 margin: 0;
                                                 padding: 0;
                                             }
+
+                                            .van-empty {
+                                                display: -webkit-box;
+                                                display: -webkit-flex;
+                                                display: flex;
+                                                -webkit-box-orient:
+                                                    vertical;
+                                                -webkit-box-direction:
+                                                    normal;
+                                                -webkit-flex-direction:
+                                                    column;
+                                                flex-direction: column;
+                                                -webkit-box-align:
+                                                    center;
+                                                -webkit-align-items:
+                                                    center;
+                                                align-items: center;
+                                                -webkit-box-pack:
+                                                    center;
+                                                -webkit-justify-content:
+                                                    center;
+                                                justify-content: center;
+                                                box-sizing: border-box;
+                                                padding:
+                                                    .55172rem 0;
+                                            }
+
+                                            .van-empty__image,
+                                            .van-empty__image img {
+                                                width: auto !important;
+                                            }
+
+                                            .van-empty__image {
+                                                height: 2.4rem !important;
+                                            }
                                         </style>
 
 
-                                        @if (is_array($level_income) || $level_income)
+                                        @if(!empty($level_income) && (is_array($level_income) || is_object($level_income)))
+
                                             @foreach ($level_income as $value)
                                                 <div data-v-6e348d44="" class="van-pull-refresh" data-v-decd48ac="">
                                                     <div class="van-pull-refresh__track"
@@ -1211,6 +1260,7 @@
                                                     </div>
                                             @endforeach
                                         @else
+                                           
                                         @endif
 
 

@@ -8,7 +8,7 @@
     <meta http-equiv="expires" content="0">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
-    <link rel="icon" href="/logo.png">
+    <link rel="icon" href="{{asset('')}}logo.png">
     <meta name="google" content="notranslate">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="full-screen" content="true">
@@ -143,7 +143,11 @@
     <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-4f89519c.2a0f3cea.css">
     <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-4f89519c.5238fa59.1744307594169.chunk.js"></script>
 </head>
-
+<style>
+    .page .headers.on[data-v-decd48ac] {
+    background: linear-gradient(81deg, #03031d, #03031f, #09096e);
+}
+</style>
 <body class="mein_cn">
     <div class="page-loading-con" id="loaderInit" style="display: none;">
         <div class="page-loading">
@@ -168,31 +172,31 @@
                                         </a>
                                     <div data-v-29c52665="" class="name tac">Credit Center</div>
                                     <div data-v-29c52665="" class="flex1"></div><!----><!----><!----><!----><!---->
-                                    <div data-v-29c52665="" class="str"> Credit Rules </div><!----><!----><!---->
+                                    {{-- <div data-v-29c52665="" class="str"> Credit Rules </div><!----><!----><!----> --}}
                                 </div>
                             </div>
                         </div>
+                        @php
+                            $vipRules = [
+                                1 => ['amount' => 60,   'requires' => 0],
+                                2 => ['amount' => 120,  'requires' => 1],
+                                3 => ['amount' => 360,  'requires' => 2],
+                                4 => ['amount' => 840,  'requires' => 3],
+                                5 => ['amount' => 1680, 'requires' => 4],
+                                6 => ['amount' => 3600, 'requires' => 5],
+                                7 => ['amount' => 7560, 'requires' => 6],
+                                8 => ['amount' => 15000,'requires' => 7],
+                                9 => ['amount' => 30000,'requires' => 8],
+                            ];
+                            @endphp
+
+                                <?php
+                                $balance = round(Auth::user()->available_balance(), 2);
+                                
+                                ?>
                         <div data-v-decd48ac="" id="scroll" class="content-container" style="padding-top: 44px;">
                             <div data-v-decd48ac="" id="content" class="content-scroll">
-                                <div data-v-13db724a="" data-v-decd48ac="" class="container">
-                                    <div data-v-13db724a="" data-v-decd48ac="" class="infos flex v0">
-                                        <div data-v-13db724a="" data-v-decd48ac="" class="cname">Current level</div>
-                                        <div data-v-13db724a="" data-v-decd48ac="" class="photo"><img
-                                                data-v-13db724a="" data-v-decd48ac=""
-                                                src="{{asset('')}}static/img/logo-2.png"
-                                                alt=""></div>
-                                        <div data-v-13db724a="" data-v-decd48ac="" class="flex1">
-                                            <div data-v-13db724a="" data-v-decd48ac="" class="n">TTMD-694194
-                                            </div>
-                                            <div data-v-13db724a="" data-v-decd48ac="" class="s"><span
-                                                    data-v-13db724a="" data-v-decd48ac="">Junior Ally</span></div>
-                                        </div>
-                                        <div data-v-13db724a="" data-v-decd48ac="" class="ico"><img
-                                                data-v-13db724a="" data-v-decd48ac="" alt=""
-                                                src="{{asset('')}}static/img/bc3cf11087b69389ded07723adf92b4a.png">
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <div data-v-13db724a="" data-v-decd48ac="" class="main">
                                     <div data-v-13db724a="" data-v-decd48ac="" class="container">
                                         <ul data-v-13db724a="" data-v-decd48ac="" class="line2">
@@ -201,29 +205,46 @@
                                                     <div data-v-13db724a="" data-v-decd48ac="" class="n flex1"><img
                                                             data-v-13db724a="" data-v-decd48ac=""
                                                             src="{{asset('')}}static/img/bc3cf11087b69389ded07723adf92b4a.png"
-                                                            alt="">Junior Ally</div>
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="s"><span
+                                                            alt="">VIP 1</div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                    @php
+                                                                $vipLevel = 1; // ← Change this dynamically in each card (e.g. 1 for VIP1, 2 for VIP2...)
+                                                                $rule = $vipRules[$vipLevel];
+                                                                $requiredAmount = $rule['amount'];
+                                                                $currentPackage = $user->package ?? 0;
+                                                                $amountToPay = max(0, $requiredAmount - $currentPackage);
+                                                            @endphp
+
+
+                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel)
+                                                        <span
                                                             data-v-13db724a="" data-v-decd48ac=""
-                                                            class="on on0">Achieve</span></div>
+                                                            class="on on0">Achieve
+                                                        </span>
+                                                        @else
+                                                        <span
+                                                            data-v-13db724a="" data-v-decd48ac="" class="off">Not
+                                                            achieved</span>
+                                                            @endif
+                                                        </div>
                                                 </div>
                                                 <div data-v-13db724a="" data-v-decd48ac="" class="box">
                                                     <div data-v-13db724a="" data-v-decd48ac="">
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            0.5%-5%</div>
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">2 USDT</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            yield</div>
+                                                            Daily Profit</div>
                                                     </div>
                                                     <div data-v-13db724a="" data-v-decd48ac="">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            USDT</div>
+                                                        60.00 USDT</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            Coin types available</div>
+                                                        Unlock Balance</div>
                                                     </div>
                                                     <div data-v-13db724a="" data-v-decd48ac="">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            6-300</div>
+                                                            365</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            Fund Scope</div>
+                                                            Contract Days</div>
                                                     </div>
                                                 </div>
                                                 <div data-v-13db724a="" data-v-decd48ac="" class="tj">
@@ -234,160 +255,150 @@
                                                     <div data-v-13db724a="" data-v-decd48ac="" class="n flex1"><img
                                                             data-v-13db724a="" data-v-decd48ac=""
                                                             src="{{asset('')}}static/img/3ef4d33c9bfec649c5a233f9bf6c8a07.png"
-                                                            alt="">Level 1 Ally</div>
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="s"><span
+                                                            alt="">VIP 2</div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                    @php
+                                                                $vipLevel = 2; // ← Change this dynamically in each card (e.g. 1 for VIP1, 2 for VIP2...)
+                                                                $rule = $vipRules[$vipLevel];
+                                                                $requiredAmount = $rule['amount'];
+                                                                $currentPackage = $user->package ?? 0;
+                                                                $amountToPay = max(0, $requiredAmount - $currentPackage);
+                                                            @endphp
+
+
+                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel)
+                                                        <span
+                                                            data-v-13db724a="" data-v-decd48ac=""
+                                                            class="on on0">Achieve
+                                                        </span>
+                                                        @else
+                                                        <span
                                                             data-v-13db724a="" data-v-decd48ac="" class="off">Not
-                                                            achieved</span></div>
+                                                            achieved</span>
+                                                            @endif
+                                                        </div>
                                                 </div>
                                                 <div data-v-13db724a="" data-v-decd48ac="" class="box">
                                                     <div data-v-13db724a="" data-v-decd48ac="">
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            0.5%-15%</div>
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">4 USDT</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            yield</div>
+                                                            Daily Profit</div>
                                                     </div>
                                                     <div data-v-13db724a="" data-v-decd48ac="">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            USDT</div>
+                                                        
+                                                                    120.00</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            Coin types available</div>
+                                                        Unlock Balance</div>
                                                     </div>
                                                     <div data-v-13db724a="" data-v-decd48ac="">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            50-800</div>
+                                                            365</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            Fund Scope</div>
+                                                            Contract Days</div>
                                                     </div>
                                                 </div>
                                                 <div data-v-13db724a="" data-v-decd48ac="" class="tj">
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="cname">
-                                                        Conditions for credit rating upgrade</div>
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="ul1">
-                                                            <ul data-v-13db724a="" data-v-decd48ac="">
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="flex">
-                                                            <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="left"><span data-v-13db724a=""
-                                                                    data-v-decd48ac="">Direct referrer</span></div>
-                                                            <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="right"> 0/<span data-v-13db724a=""
-                                                                    data-v-decd48ac="">5</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="for">
-                                                            <span data-v-13db724a="" data-v-decd48ac=""
-                                                                style="width: 4.51%;"></span></div>
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="flex">
-                                                            <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="left"> Asset status </div>
-                                                            <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="right"> 13.53/<span data-v-13db724a=""
-                                                                    data-v-decd48ac="">300</span></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                    <!----><!----><!----></div>
                                             </li>
                                             <li data-v-13db724a="" data-v-decd48ac="" class="v3">
                                                 <div data-v-13db724a="" data-v-decd48ac="" class="tit flex">
                                                     <div data-v-13db724a="" data-v-decd48ac="" class="n flex1"><img
                                                             data-v-13db724a="" data-v-decd48ac=""
                                                             src="{{asset('')}}static/img/e84156ccdb1b6d531814aec74fc68f87.png"
-                                                            alt="">Level 2 Ally</div>
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="s"><span
+                                                            alt="">VIP 3</div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                    @php
+                                                                $vipLevel = 3; // ← Change this dynamically in each card (e.g. 1 for VIP1, 2 for VIP2...)
+                                                                $rule = $vipRules[$vipLevel];
+                                                                $requiredAmount = $rule['amount'];
+                                                                $currentPackage = $user->package ?? 0;
+                                                                $amountToPay = max(0, $requiredAmount - $currentPackage);
+                                                            @endphp
+
+
+                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel)
+                                                        <span
+                                                            data-v-13db724a="" data-v-decd48ac=""
+                                                            class="on on0">Achieve
+                                                        </span>
+                                                        @else
+                                                        <span
                                                             data-v-13db724a="" data-v-decd48ac="" class="off">Not
-                                                            achieved</span></div>
+                                                            achieved</span>
+                                                            @endif
+                                                        </div>
                                                 </div>
                                                 <div data-v-13db724a="" data-v-decd48ac="" class="box">
                                                     <div data-v-13db724a="" data-v-decd48ac="">
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            0.5%-15%</div>
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">12 USDT</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            yield</div>
+                                                            Daily Profit</div>
                                                     </div>
                                                     <div data-v-13db724a="" data-v-decd48ac="">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            USDT</div>
+                                                        
+                                                        360.00</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            Coin types available</div>
+                                                        Unlock Balance</div>
                                                     </div>
                                                     <div data-v-13db724a="" data-v-decd48ac="">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            50-1600</div>
+                                                            365</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            Fund Scope</div>
+                                                            Contract Days</div>
                                                     </div>
                                                 </div>
                                                 <div data-v-13db724a="" data-v-decd48ac="" class="tj">
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="cname">
-                                                        Conditions for credit rating upgrade</div>
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="ul1">
-                                                            <ul data-v-13db724a="" data-v-decd48ac="">
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="flex">
-                                                            <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="left"><span data-v-13db724a=""
-                                                                    data-v-decd48ac="">Level 1 Ally</span></div>
-                                                            <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="right"> 0/<span data-v-13db724a=""
-                                                                    data-v-decd48ac="">4</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="for">
-                                                            <span data-v-13db724a="" data-v-decd48ac=""
-                                                                style="width: 1.23%;"></span></div>
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="flex">
-                                                            <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="left"> Asset status </div>
-                                                            <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="right"> 13.53/<span data-v-13db724a=""
-                                                                    data-v-decd48ac="">1100</span></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                    <!----><!----><!----></div>
                                             </li>
                                             <li data-v-13db724a="" data-v-decd48ac="" class="v4">
                                                 <div data-v-13db724a="" data-v-decd48ac="" class="tit flex">
                                                     <div data-v-13db724a="" data-v-decd48ac="" class="n flex1"><img
                                                             data-v-13db724a="" data-v-decd48ac=""
                                                             src="{{asset('')}}static/img/5a927157d4c65dd50b6e79204b700238.png"
-                                                            alt="">Level 3 Ally</div>
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="s"><span
+                                                            alt="">VIP 4</div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                    @php
+                                                                $vipLevel = 4; // ← Change this dynamically in each card (e.g. 1 for VIP1, 2 for VIP2...)
+                                                                $rule = $vipRules[$vipLevel];
+                                                                $requiredAmount = $rule['amount'];
+                                                                $currentPackage = $user->package ?? 0;
+                                                                $amountToPay = max(0, $requiredAmount - $currentPackage);
+                                                                $teamvip1 = $gen_team1_VIP3 + $gen_team2_VIP3 + $gen_team3_VIP3;
+                                                            @endphp
+
+
+                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel && $teamvip1 >= 12)
+                                                        <span
+                                                            data-v-13db724a="" data-v-decd48ac=""
+                                                            class="on on0">Achieve{{ $teamvip1 }}{{ $directc }}
+                                                        </span>
+                                                        @else
+                                                        <span
                                                             data-v-13db724a="" data-v-decd48ac="" class="off">Not
-                                                            achieved</span></div>
+                                                            achieved</span>
+                                                            @endif
+                                                        </div>
                                                 </div>
                                                 <div data-v-13db724a="" data-v-decd48ac="" class="box">
                                                     <div data-v-13db724a="" data-v-decd48ac="">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            0.5%-15%</div>
+                                                            28 USDT</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            yield</div>
+                                                           Daily Profit</div>
                                                     </div>
                                                     <div data-v-13db724a="" data-v-decd48ac="">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            USDT</div>
+                                                        840.00</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            Coin types available</div>
+                                                        Unlock Balance</div>
                                                     </div>
                                                     <div data-v-13db724a="" data-v-decd48ac="">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            50-3400</div>
+                                                        365</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            Fund Scope</div>
+                                                            Contract Days</div>
                                                     </div>
                                                 </div>
                                                 <div data-v-13db724a="" data-v-decd48ac="" class="tj">
@@ -395,31 +406,53 @@
                                                         Conditions for credit rating upgrade</div>
                                                     <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="ul1">
-                                                            <ul data-v-13db724a="" data-v-decd48ac="">
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                            </ul>
+                                                        <ul data-v-13db724a="" data-v-decd48ac="">
+    @php
+        $vipLevel = 4;
+        $rule = $vipRules[$vipLevel];
+        $amountToPay = max(0, $rule['amount'] - $currentPackage);
+
+        $gen_team1_VIP3 = $gen_team1_VIP3 ?? 0;
+    @endphp
+
+    @for ($i = 0; $i < 3; $i++)
+        <li 
+            data-v-13db724a="" 
+            data-v-decd48ac="" 
+            style="{{ $i < $gen_team1_VIP3 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block;">
+        </li>
+    @endfor
+</ul>
+
+
                                                         </div>
+                                                        @php
+    $gen_team1_VIP3 = $gen_team1_VIP3 ?? 0;
+    $gen_team2_VIP3 = $gen_team2_VIP3 ?? 0;
+    $gen_team3_VIP3 = $gen_team3_VIP3 ?? 0;
+    $completedtask = $gen_team1_VIP3 + $gen_team2_VIP3 + $gen_team3_VIP3;
+    $quantifiableCount = 12;
+    $process = ($completedtask / $quantifiableCount) * 100;
+@endphp
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="left"><span data-v-13db724a=""
-                                                                    data-v-decd48ac="">Level 2 Ally</span></div>
+                                                                    data-v-decd48ac="">Direct referrer</span></div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="right"> 0/<span data-v-13db724a=""
+                                                                class="right"> {{$gen_team1_VIP3}}/<span data-v-13db724a=""
                                                                     data-v-decd48ac="">3</span></div>
                                                         </div>
-                                                    </div>
+                                                    </div>                                                    
                                                     <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="for">
                                                             <span data-v-13db724a="" data-v-decd48ac=""
-                                                                style="width: 0.6765%;"></span></div>
+                                                            style="width: {{$process}}%;"></span></div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="left"> Asset status </div>
+                                                                class="left"> L2 + L3 Team </div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="right"> 13.53/<span data-v-13db724a=""
-                                                                    data-v-decd48ac="">2000</span></div>
+                                                                class="right"> {{ $completedtask }}/<span data-v-13db724a=""
+                                                                    data-v-decd48ac="">{{ $quantifiableCount }}</span></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -429,29 +462,48 @@
                                                     <div data-v-13db724a="" data-v-decd48ac="" class="n flex1"><img
                                                             data-v-13db724a="" data-v-decd48ac=""
                                                             src="{{asset('')}}static/img/801aeb5622b9a5316256390053248c92.png"
-                                                            alt="">Level 4 Ally</div>
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="s"><span
+                                                            alt="">VIP 5</div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                    @php
+                                                                $vipLevel = 5; // ← Change this dynamically in each card (e.g. 1 for VIP1, 2 for VIP2...)
+                                                                $rule = $vipRules[$vipLevel];
+                                                                $requiredAmount = $rule['amount'];
+                                                                $currentPackage = $user->package ?? 0;
+                                                                $amountToPay = max(0, $requiredAmount - $currentPackage);
+                                                                $teamvip2 = $gen_team1_VIP4 + $gen_team2_VIP4 + $gen_team3_VIP4;
+                                                            @endphp
+
+
+                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel && $teamvip2 >=25)
+                                                        <span
+                                                            data-v-13db724a="" data-v-decd48ac=""
+                                                            class="on on0">Achieve
+                                                        </span>
+                                                        @else
+                                                        <span
                                                             data-v-13db724a="" data-v-decd48ac="" class="off">Not
-                                                            achieved</span></div>
+                                                            achieved</span>
+                                                            @endif
+                                                        </div>
                                                 </div>
                                                 <div data-v-13db724a="" data-v-decd48ac="" class="box">
                                                     <div data-v-13db724a="" data-v-decd48ac="">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            0.5%-15%</div>
+                                                            60 USDT</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            yield</div>
+                                                           Daily Profit</div>
                                                     </div>
                                                     <div data-v-13db724a="" data-v-decd48ac="">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            USDT</div>
+                                                         1680 USDT</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            Coin types available</div>
+                                                            Unlock Balance</div>
                                                     </div>
                                                     <div data-v-13db724a="" data-v-decd48ac="">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            50-7500</div>
+                                                        365</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            Fund Scope</div>
+                                                            Contract Days</div>
                                                     </div>
                                                 </div>
                                                 <div data-v-13db724a="" data-v-decd48ac="" class="tj">
@@ -460,30 +512,251 @@
                                                     <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="ul1">
                                                             <ul data-v-13db724a="" data-v-decd48ac="">
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
+                                                            @php
+        $vipLevel = 5;
+        $rule = $vipRules[$vipLevel];
+        $amountToPay = max(0, $rule['amount'] - $currentPackage);
+
+        $gen_team1_VIP3 = $gen_team2_VIP3 ?? 0;
+    @endphp
+
+    @for ($i = 0; $i < 3; $i++)
+        <li 
+            data-v-13db724a="" 
+            data-v-decd48ac="" 
+            style="{{ $i < $gen_team1_VIP3 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block;">
+        </li>
+    @endfor
                                                             </ul>
                                                         </div>
+                                                        @php
+    $completedtask4 = ($gen_team1_VIP4 ?? 0) + ($gen_team2_VIP4 ?? 0) + ($gen_team3_VIP4 ?? 0);
+    $quantifiableCount4 = 25;
+    $process4 = min(100, ($completedtask4 / $quantifiableCount4) * 100);
+@endphp
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="left"><span data-v-13db724a=""
-                                                                    data-v-decd48ac="">Level 3 Ally</span></div>
+                                                                    data-v-decd48ac="">L1 Team</span></div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="right"> 0/<span data-v-13db724a=""
+                                                                class="right"> {{$gen_team1_VIP4}}/<span data-v-13db724a=""
                                                                     data-v-decd48ac="">3</span></div>
                                                         </div>
                                                     </div>
                                                     <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="for">
                                                             <span data-v-13db724a="" data-v-decd48ac=""
-                                                                style="width: 0.33825%;"></span></div>
+                                                                style="width:{{$process4}}"></span></div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="left"> Asset status </div>
+                                                                class="left"> L2 + L3 Team </div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="right"> 13.53/<span data-v-13db724a=""
-                                                                    data-v-decd48ac="">4000</span></div>
+                                                                class="right"> {{$completedtask4}}/<span data-v-13db724a=""
+                                                                    data-v-decd48ac="">{{ $quantifiableCount4 }}</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li data-v-13db724a="" data-v-decd48ac="" class="v4">
+                                                <div data-v-13db724a="" data-v-decd48ac="" class="tit flex">
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="n flex1"><img
+                                                            data-v-13db724a="" data-v-decd48ac=""
+                                                            src="{{asset('')}}static/img/d8d58144ff82da22c5a4675d125dd9fd.png"
+                                                            alt="">VIP 6</div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                    @php
+                                                                $vipLevel = 6; // ← Change this dynamically in each card (e.g. 1 for VIP1, 2 for VIP2...)
+                                                                $rule = $vipRules[$vipLevel];
+                                                                $requiredAmount = $rule['amount'];
+                                                                $currentPackage = $user->package ?? 0;
+                                                                $amountToPay = max(0, $requiredAmount - $currentPackage);
+                                                                $teamvip3 = $gen_team1_VIP5 + $gen_team2_VIP5 + $gen_team3_VIP5;
+                                                            @endphp
+
+
+                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel && $teamvip3 >= 50)
+                                                        <span
+                                                            data-v-13db724a="" data-v-decd48ac=""
+                                                            class="on on0">Achieve
+                                                        </span>
+                                                        @else
+                                                        <span
+                                                            data-v-13db724a="" data-v-decd48ac="" class="off">Not
+                                                            achieved</span>
+                                                            @endif
+                                                        </div>
+                                                </div>
+                                                <div data-v-13db724a="" data-v-decd48ac="" class="box">
+                                                    <div data-v-13db724a="" data-v-decd48ac="">
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                            120 USDT</div>
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="n">
+                                                           Daily Profit</div>
+                                                    </div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="">
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                        3600 USDT</div>
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="n">
+                                                            Unlock Balance</div>
+                                                    </div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="">
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                        365</div>
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="n">
+                                                            Contract Days</div>
+                                                    </div>
+                                                </div>
+                                                <div data-v-13db724a="" data-v-decd48ac="" class="tj">
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="cname">
+                                                        Conditions for credit rating upgrade</div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="ul1">
+                                                        <ul data-v-13db724a="" data-v-decd48ac="">
+    @php
+        $vipLevel = 6;
+        $rule = $vipRules[$vipLevel];
+        $amountToPay = max(0, $rule['amount'] - $currentPackage);
+
+        $gen_team3_VIP3 = $gen_team3_VIP3 ?? 0;
+    @endphp
+
+    <li data-v-13db724a="" data-v-decd48ac=""
+        style="{{ 0 < $gen_team3_VIP3 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 4px;">
+    </li>
+    
+    <li data-v-13db724a="" data-v-decd48ac=""
+        style="{{ 1 < $gen_team3_VIP3 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 4px;">
+    </li>
+    
+    <li data-v-13db724a="" data-v-decd48ac=""
+        style="{{ 2 < $gen_team3_VIP3 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 4px;">
+    </li>
+</ul>
+
+                                                        </div>
+                                                        @php
+    $completedtask5 = ($gen_team1_VIP5 ?? 0) + ($gen_team2_VIP5 ?? 0) + ($gen_team3_VIP5 ?? 0);
+    $quantifiableCount5 = 50;
+    $process5 = min(100, ($completedtask5 / $quantifiableCount5) * 100);
+@endphp
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="flex">
+                                                            <div data-v-13db724a="" data-v-decd48ac=""
+                                                                class="left"><span data-v-13db724a=""
+                                                                    data-v-decd48ac="">L1 Team</span></div>
+                                                            <div data-v-13db724a="" data-v-decd48ac=""
+                                                                class="right">{{$gen_team1_VIP5}}/<span data-v-13db724a=""
+                                                                    data-v-decd48ac="">3</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="for">
+                                                            <span data-v-13db724a="" data-v-decd48ac=""
+                                                                style="width: {{ $process5 }}%"></span></div>
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="flex">
+                                                            <div data-v-13db724a="" data-v-decd48ac=""
+                                                                class="left"> L2 + L3 Team </div>
+                                                            <div data-v-13db724a="" data-v-decd48ac=""
+                                                                class="right"> {{ $completedtask5 }}/<span data-v-13db724a=""
+                                                                    data-v-decd48ac="">{{ $quantifiableCount5 }}</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li data-v-13db724a="" data-v-decd48ac="" class="v5">
+                                                <div data-v-13db724a="" data-v-decd48ac="" class="tit flex">
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="n flex1"><img
+                                                            data-v-13db724a="" data-v-decd48ac=""
+                                                            src="{{asset('')}}static/img/d32a35a2d9ac4acc4fca025fce1ad2c1.png"
+                                                            alt="">VIP 7</div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                    @php
+                                                                $vipLevel = 7; // ← Change this dynamically in each card (e.g. 1 for VIP1, 2 for VIP2...)
+                                                                $rule = $vipRules[$vipLevel];
+                                                                $requiredAmount = $rule['amount'];
+                                                                $currentPackage = $user->package ?? 0;
+                                                                $amountToPay = max(0, $requiredAmount - $currentPackage);
+                                                                $teamvip4 = $gen_team1_VIP6 + $gen_team2_VIP6 + $gen_team3_VIP6;
+                                                            @endphp
+
+
+                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel && $teamvip4 >=100)
+                                                        <span
+                                                            data-v-13db724a="" data-v-decd48ac=""
+                                                            class="on on0">Achieve
+                                                        </span>
+                                                        @else
+                                                        <span
+                                                            data-v-13db724a="" data-v-decd48ac="" class="off">Not
+                                                            achieved</span>
+                                                            @endif
+                                                        </div>
+                                                </div>
+                                                <div data-v-13db724a="" data-v-decd48ac="" class="box">
+                                                    <div data-v-13db724a="" data-v-decd48ac="">
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                            240 USDT</div>
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="n">
+                                                           Daily Profit</div>
+                                                    </div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="">
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                        7560 USDT</div>
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="n">
+                                                            Unlock Balance</div>
+                                                    </div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="">
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                        365</div>
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="n">
+                                                            Contract Days</div>
+                                                    </div>
+                                                </div>
+                                                <div data-v-13db724a="" data-v-decd48ac="" class="tj">
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="cname">
+                                                        Conditions for credit rating upgrade</div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="ul1">
+                                                        <ul data-v-13db724a="" data-v-decd48ac="">
+    @php
+        $vipLevel = 7;
+        $rule = $vipRules[$vipLevel];
+        $amountToPay = max(0, $rule['amount'] - $currentPackage);
+
+        $gen_team3_VIP7 = $gen_team3_VIP7 ?? 0;
+    @endphp
+
+    @for ($i = 0; $i < 3; $i++) <!-- Adjust 5 as necessary -->
+        <li data-v-13db724a="" data-v-decd48ac=""
+            style="{{ $i < $gen_team3_VIP7 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 4px;">
+        </li>
+    @endfor
+</ul>
+
+                                                        </div>
+                                                        @php
+    $completedtask6 = ($gen_team1_VIP6 ?? 0) + ($gen_team2_VIP6 ?? 0) + ($gen_team3_VIP6 ?? 0);
+    $quantifiableCount6 = 100;
+    $process6 = min(100, ($completedtask6 / $quantifiableCount6) * 100);
+@endphp
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="flex">
+                                                            <div data-v-13db724a="" data-v-decd48ac=""
+                                                                class="left"><span data-v-13db724a=""
+                                                                    data-v-decd48ac="">L1 Team</span></div>
+                                                            <div data-v-13db724a="" data-v-decd48ac=""
+                                                                class="right">{{$gen_team1_VIP6}}/<span data-v-13db724a=""
+                                                                    data-v-decd48ac="">3</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="for">
+                                                            <span data-v-13db724a="" data-v-decd48ac=""
+                                                                style="width: {{ $process6 }}"></span></div>
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="flex">
+                                                            <div data-v-13db724a="" data-v-decd48ac=""
+                                                                class="left"> L2 + L3 Team </div>
+                                                            <div data-v-13db724a="" data-v-decd48ac=""
+                                                                class="right">{{$completedtask6}}/<span data-v-13db724a=""
+                                                                    data-v-decd48ac="">{{$quantifiableCount6}}</span></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -492,30 +765,149 @@
                                                 <div data-v-13db724a="" data-v-decd48ac="" class="tit flex">
                                                     <div data-v-13db724a="" data-v-decd48ac="" class="n flex1"><img
                                                             data-v-13db724a="" data-v-decd48ac=""
-                                                            src="{{asset('')}}static/img/d8d58144ff82da22c5a4675d125dd9fd.png"
-                                                            alt="">Level 5 Ally</div>
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="s"><span
+                                                            src="{{asset('')}}static/img/vip8.png"
+                                                            alt="">VIP 8</div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                    @php
+                                                                $vipLevel = 8; // ← Change this dynamically in each card (e.g. 1 for VIP1, 2 for VIP2...)
+                                                                $rule = $vipRules[$vipLevel];
+                                                                $requiredAmount = $rule['amount'];
+                                                                $currentPackage = $user->package ?? 0;
+                                                                $amountToPay = max(0, $requiredAmount - $currentPackage);
+                                                                $teamvip5 = $gen_team1_VIP7 + $gen_team2_VIP7 + $gen_team3_VIP7;
+                                                            @endphp
+
+
+                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel && $teamvip5 >=250)
+                                                        <span
+                                                            data-v-13db724a="" data-v-decd48ac=""
+                                                            class="on on0">Achieve
+                                                        </span>
+                                                        @else
+                                                        <span
                                                             data-v-13db724a="" data-v-decd48ac="" class="off">Not
-                                                            achieved</span></div>
+                                                            achieved</span>
+                                                            @endif
+                                                    </div>
                                                 </div>
                                                 <div data-v-13db724a="" data-v-decd48ac="" class="box">
                                                     <div data-v-13db724a="" data-v-decd48ac="">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            0.5%-15%</div>
+                                                            480 USDT</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            yield</div>
+                                                           Daily Profit</div>
                                                     </div>
                                                     <div data-v-13db724a="" data-v-decd48ac="">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            USDT</div>
+                                                        15000 USDT</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            Coin types available</div>
+                                                            Unlock Balance</div>
+                                                    </div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="">
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                        365</div>
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="n">
+                                                            Contract Days</div>
+                                                    </div>
+                                                </div>
+                                                <div data-v-13db724a="" data-v-decd48ac="" class="tj">
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="cname">
+                                                        Conditions for credit rating upgrade</div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="ul1">
+                                                        <ul data-v-13db724a="" data-v-decd48ac="">
+    @php
+        $vipLevel = 8;
+        $rule = $vipRules[$vipLevel];
+        $amountToPay = max(0, $rule['amount'] - $currentPackage);
+
+        $gen_team3_VIP8 = $gen_team3_VIP8 ?? 0;
+    @endphp
+
+    @for ($i = 0; $i < 3; $i++) <!-- Adjust 5 as necessary -->
+        <li data-v-13db724a="" data-v-decd48ac=""
+            style="{{ $i < $gen_team3_VIP8 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 4px;">
+        </li>
+    @endfor
+</ul>
+
+                                                        </div>
+                                                        @php
+    $completedtask7 = ($gen_team1_VIP7 ?? 0) + ($gen_team2_VIP7 ?? 0) + ($gen_team3_VIP7 ?? 0);
+    $quantifiableCount7 = 250;
+    $process7 = min(100, ($completedtask7 / $quantifiableCount7) * 100);
+@endphp
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="flex">
+                                                            <div data-v-13db724a="" data-v-decd48ac=""
+                                                                class="left"><span data-v-13db724a=""
+                                                                    data-v-decd48ac="">L1 Team</span></div>
+                                                            <div data-v-13db724a="" data-v-decd48ac=""
+                                                                class="right">{{$gen_team1_VIP7}}/
+                                                                <span data-v-13db724a=""
+                                                                    data-v-decd48ac="">3</span>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="for">
+                                                            <span data-v-13db724a="" data-v-decd48ac=""
+                                                                style="width: {{ $process7 }}"></span></div>
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="flex">
+                                                            <div data-v-13db724a="" data-v-decd48ac=""
+                                                                class="left"> L2 + L3 Team </div>
+                                                            <div data-v-13db724a="" data-v-decd48ac=""
+                                                                class="right">{{ $completedtask7 }}/<span data-v-13db724a=""
+                                                                    data-v-decd48ac="">{{ $quantifiableCount7 }}</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <!-- <li data-v-13db724a="" data-v-decd48ac="" class="v7">
+                                                <div data-v-13db724a="" data-v-decd48ac="" class="tit flex">
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="n flex1"><img
+                                                            data-v-13db724a="" data-v-decd48ac=""
+                                                            src="{{asset('')}}static/img/d32a35a2d9ac4acc4fca025fce1ad2c1.png"
+                                                            alt="">Level 9 Ally</div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                    @php
+                                                                $vipLevel = 8;
+                                                                $rule = $vipRules[$vipLevel];
+                                                                $requiredAmount = $rule['amount'];
+                                                                $currentPackage = $user->package ?? 0;
+                                                                $amountToPay = max(0, $requiredAmount - $currentPackage);
+                                                            @endphp
+
+
+                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel)
+                                                        <span
+                                                            data-v-13db724a="" data-v-decd48ac=""
+                                                            class="on on0">Achieve
+                                                        </span>
+                                                        @else
+                                                        <span
+                                                            data-v-13db724a="" data-v-decd48ac="" class="off">Not
+                                                            achieved</span>
+                                                            @endif
+                                                    </div>
+                                                </div>
+                                                <div data-v-13db724a="" data-v-decd48ac="" class="box">
+                                                    <div data-v-13db724a="" data-v-decd48ac="">
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                            2 USDT</div>
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="n">
+                                                           Daily Profit</div>
+                                                    </div>
+                                                    <div data-v-13db724a="" data-v-decd48ac="">
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">
+                                                        1800 USDT</div>
+                                                        <div data-v-13db724a="" data-v-decd48ac="" class="n">
+                                                            Unlock Balance</div>
                                                     </div>
                                                     <div data-v-13db724a="" data-v-decd48ac="">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="s">
                                                             50-22000</div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            Fund Scope</div>
+                                                            Contract Days</div>
                                                     </div>
                                                 </div>
                                                 <div data-v-13db724a="" data-v-decd48ac="" class="tj">
@@ -524,102 +916,57 @@
                                                     <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="ul1">
                                                             <ul data-v-13db724a="" data-v-decd48ac="">
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                            </ul>
+    @php
+        $vipLevel = 9;
+        $rule = $vipRules[$vipLevel];
+        $amountToPay = max(0, $rule['amount'] - $currentPackage);
+
+        $gen_team3_VIP9 = $gen_team3_VIP9 ?? 0;
+    @endphp
+
+    @for ($i = 0; $i < 5; $i++)
+        <li data-v-13db724a="" data-v-decd48ac=""
+            style="{{ $i < $gen_team3_VIP9 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 4px;">
+        </li>
+    @endfor
+</ul>
+
                                                         </div>
+                                                        @php
+    $completedtask8 = ($gen_team1_VIP8 ?? 0) + ($gen_team2_VIP8 ?? 0) + ($gen_team3_VIP8 ?? 0);
+    $quantifiableCount8 = 5;
+    $process8 = min(100, ($completedtask8 / $quantifiableCount8) * 100);
+@endphp
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="left"><span data-v-13db724a=""
-                                                                    data-v-decd48ac="">Level 4 Ally</span></div>
+                                                                    data-v-decd48ac="">L1 Team</span></div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="right"> 0/<span data-v-13db724a=""
-                                                                    data-v-decd48ac="">3</span></div>
+                                                                class="right"> {{ $completedtask8 }}/
+                                                                <span data-v-13db724a=""
+                                                                    data-v-decd48ac="">{{ $quantifiableCount8 }}</span>
+                                                                </div>
                                                         </div>
                                                     </div>
                                                     <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="for">
                                                             <span data-v-13db724a="" data-v-decd48ac=""
-                                                                style="width: 0.1353%;"></span></div>
+                                                                style="width: {{ $process8 }}"></span></div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="left"> Asset status </div>
+                                                                class="left"> L2 + L3 Team </div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="right"> 13.53/<span data-v-13db724a=""
                                                                     data-v-decd48ac="">10000</span></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li data-v-13db724a="" data-v-decd48ac="" class="v7">
-                                                <div data-v-13db724a="" data-v-decd48ac="" class="tit flex">
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="n flex1"><img
-                                                            data-v-13db724a="" data-v-decd48ac=""
-                                                            src="{{asset('')}}static/img/d32a35a2d9ac4acc4fca025fce1ad2c1.png"
-                                                            alt="">Level 6 Ally</div>
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="s"><span
-                                                            data-v-13db724a="" data-v-decd48ac="" class="off">Not
-                                                            achieved</span></div>
-                                                </div>
-                                                <div data-v-13db724a="" data-v-decd48ac="" class="box">
-                                                    <div data-v-13db724a="" data-v-decd48ac="">
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            0.5%-15%</div>
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            yield</div>
-                                                    </div>
-                                                    <div data-v-13db724a="" data-v-decd48ac="">
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            USDT</div>
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            Coin types available</div>
-                                                    </div>
-                                                    <div data-v-13db724a="" data-v-decd48ac="">
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="s">
-                                                            50-80000</div>
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="n">
-                                                            Fund Scope</div>
-                                                    </div>
-                                                </div>
-                                                <div data-v-13db724a="" data-v-decd48ac="" class="tj">
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="cname">
-                                                        Conditions for credit rating upgrade</div>
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="ul1">
-                                                            <ul data-v-13db724a="" data-v-decd48ac="">
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                                <li data-v-13db724a="" data-v-decd48ac=""></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="flex">
-                                                            <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="left"><span data-v-13db724a=""
-                                                                    data-v-decd48ac="">Level 5 Ally</span></div>
-                                                            <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="right"> 0/<span data-v-13db724a=""
-                                                                    data-v-decd48ac="">2</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <div data-v-13db724a="" data-v-decd48ac="" class="ser1">
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="for">
-                                                            <span data-v-13db724a="" data-v-decd48ac=""
-                                                                style="width: 0.0451%;"></span></div>
-                                                        <div data-v-13db724a="" data-v-decd48ac="" class="flex">
-                                                            <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="left"> Asset status </div>
-                                                            <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="right"> 13.53/<span data-v-13db724a=""
-                                                                    data-v-decd48ac="">30000</span></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                            </li> -->
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div><!---->
+                        </div>
                     </div>
                 </div>
             </div>

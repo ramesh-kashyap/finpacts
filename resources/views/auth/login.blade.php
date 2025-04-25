@@ -8,7 +8,7 @@
     <meta http-equiv="expires" content="0">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
-    <link rel="icon" href="/logo.png">
+    <link rel="icon" href="{{asset('')}}logo.png">
     <meta name="google" content="notranslate">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="full-screen" content="true">
@@ -362,13 +362,7 @@
                                         <!---->
                             </div>
                         </div>
-                        <div data-v-decd48ac="" class="footer">
-                            <div data-v-67a36a02="" data-v-decd48ac="" class="bottom">
-                                <div data-v-67a36a02="" data-v-decd48ac="" class="container"> Click "Login" to
-                                    agree<span data-v-67a36a02="" data-v-decd48ac="">"User Agreement" and "Privacy
-                                        Policy"</span></div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

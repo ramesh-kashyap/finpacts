@@ -46,6 +46,9 @@
 .bann .swiper.v5[data-v-5959a183] {
   background-image:url(../../static/img/bg_vip5.2eafc4d1.png)
 }
+.swiper.flex.v8 {
+  background-image: url(../../static/img/bg_vip8.a1c623d5.png);
+}
 .bann .swiper.v5 .icon[data-v-5959a183] {
   background-size:100% 100%;
   background-image:url(../../static/img/icon_vip5.2ea34a0f.png)
@@ -56,6 +59,12 @@
 .bann .swiper.v6 .icon[data-v-5959a183] {
   background-size:100% 100%;
   background-image:url(../../static/img/icon_vip6.bfbc2a9f.png)
+}
+.bann .swiper .name.themeColor8[data-v-5959a183] {
+  color: #398200;
+}
+.str.themeColor8 {
+  color: #3a8200;
 }
 .bann .swiper .ico img[data-v-5959a183] {
   width:1.78rem;

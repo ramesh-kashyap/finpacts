@@ -47,6 +47,8 @@ class WithdrawRequest extends Controller
     }
 
 
+  
+
     public function WithdrawRequest(Request $request)
     {
 
@@ -166,7 +168,7 @@ class WithdrawRequest extends Controller
                         'payable_amt' => $request->amount-$request->amount*$chargeAmt/100,
                         'charge' => $request->amount*$chargeAmt/100,
                         'account' => $account,
-                        'payment_mode' =>"USDT.BEP20",
+                        'payment_mode' =>"USDT",
                         'status' => 'Pending',
                         'walletType' => 1,
                         'wdate' => Date("Y-m-d"),
@@ -216,7 +218,6 @@ class WithdrawRequest extends Controller
 
 
     }
-
 
 
     public function WithdrawRequestPrinciple(Request $request)
