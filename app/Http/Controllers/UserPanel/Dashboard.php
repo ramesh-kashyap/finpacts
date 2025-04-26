@@ -897,7 +897,7 @@ public function notice()
   ->where('read_status', 0)
   ->update(['read_status' => 1]);
   
-  $notifications = Notification::orderBy('id', 'desc')->get();
+  $notifications = Notification::where('user_id', auth()->id())->orderBy('id', 'desc')->get();
   return view('user.notice', compact('notifications'));
 }
 

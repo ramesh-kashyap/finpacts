@@ -49,7 +49,7 @@ class Sendmail extends Mailable
 
     public function build()
     {
-           return $this->from('info@qstaig.com', siteName())->subject($this->data['subject'])->view('mail.'.$this->data['MailDetail']['viewpage'])->with('view_message',$this->data['MailDetail']);
+           return $this->from('info@ttmdltd.com', siteName())->subject($this->data['subject'])->view('mail.'.$this->data['MailDetail']['viewpage'])->with('view_message',$this->data['MailDetail']);
         
     }
 
