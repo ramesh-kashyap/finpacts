@@ -473,6 +473,7 @@
                                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
                                                         alt="" class="view">
                                                 </li>
+                                                <a href="{{ url('/clear') }}">
                                                 <li data-v-3eefa016="" data-v-decd48ac="" class="db">
                                                     <div data-v-3eefa016="" data-v-decd48ac="" class="ico"><img
                                                             data-v-3eefa016="" data-v-decd48ac=""
@@ -490,6 +491,7 @@
                                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
                                                         alt="" class="view">
                                                 </li>
+                                                </a>
 
                                                 <li data-v-3eefa016="" data-v-decd48ac="" class="db">
                                                  

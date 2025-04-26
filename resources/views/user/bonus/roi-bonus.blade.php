@@ -930,8 +930,9 @@
                                                 (strtotime(date('Y-m-d H:i:s')) - strtotime(Auth::user()->last_trade)) /
                                                     3600,
                                             );
+                                            // dd($hourdiff);
                                         @endphp
-
+                                    
                                         @if ($hourdiff >= 24 && Auth::user()->active_status=="Active")
                                             <button class="button" id="submitOrderBtn" onclick="submitOrder()">
                                                 <div class="dots_border"></div>

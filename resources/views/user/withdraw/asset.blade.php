@@ -430,6 +430,7 @@
                                                         </ul>
                                                     </div>
                                                 </div>
+                                                </div>
                                         @endforeach
 
                                         <?php }?>

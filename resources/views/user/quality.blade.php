@@ -655,17 +655,31 @@
                                                         alt="">
                                                 </div>
                                             </div>
+                                            @php
+                                                $investment = \App\Models\Investment::where('amount', 60)
+                                                    ->where('user_id', Auth::id())
+                                                    ->first();
+
+                                                $runningDays = 0;
+                                                $progress = 0;
+
+                                                if ($investment && Auth::user()->package=="60") {
+                                                    $runningDays = \Carbon\Carbon::parse($investment->sdate)->diffInDays(now());
+                                                    $runningDays = $runningDays > 365 ? 365 : $runningDays;
+                                                    $progress = ($runningDays / 365) * 100;
+                                                }
+                                            @endphp
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                         Running Days </div>
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
                                                             data-v-5959a183="" data-v-decd48ac=""
-                                                            class="themeColor0">0</span>/365 </div>
+                                                            class="themeColor0">{{$runningDays}}</span>/365 </div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
                                                         data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
-                                                        style="width: 39%;"><i data-v-5959a183="" data-v-decd48ac=""
+                                                        style="width: {{$progress?$progress:5}}%;"><i data-v-5959a183="" data-v-decd48ac=""
                                                             class="themeLineBg0"></i></span></div>
                                             </div>
                                             <div class="upgrade-btn-wrapper"
@@ -753,17 +767,33 @@
                                                         src="{{ asset('static/img/' . ($myRank >= 2 ? 'jh_on0.9a3e055f.png' : 'jh_off.f212c34c.png')) }}"
                                                         alt=""></div>
                                             </div>
+
+                                            @php
+                                            $investment = \App\Models\Investment::where('amount', 120)
+                                                ->where('user_id', Auth::id())
+                                                ->first();
+
+                                            $runningDays = 0;
+                                            $progress = 0;
+
+                                            if ($investment && Auth::user()->package=="120") {
+                                                $runningDays = \Carbon\Carbon::parse($investment->sdate)->diffInDays(now());
+                                                $runningDays = $runningDays > 365 ? 365 : $runningDays;
+                                                $progress = ($runningDays / 365) * 100;
+                                            }
+                                        @endphp
+
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                         Running Days </div>
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
                                                             data-v-5959a183="" data-v-decd48ac=""
-                                                            class="themeColor0">0</span>/365 </div>
+                                                            class="themeColor0">{{$runningDays}}</span>/365 </div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
                                                         data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
-                                                        style="width: 73%;"><i data-v-5959a183="" data-v-decd48ac=""
+                                                        style="width: {{$progress?$progress:5}}%;"><i data-v-5959a183="" data-v-decd48ac=""
                                                             class="themeLineBg0"></i></span></div>
                                             </div>
 
@@ -855,17 +885,32 @@
                                                         src="{{ asset('static/img/' . ($myRank >= 3 ? 'jh_on0.9a3e055f.png' : 'jh_off.f212c34c.png')) }}"
                                                         alt=""></div>
                                             </div>
+
+                                            @php
+                                            $investment = \App\Models\Investment::where('amount', 360)
+                                                ->where('user_id', Auth::id())
+                                                ->first();
+
+                                            $runningDays = 0;
+                                            $progress = 0;
+
+                                            if ($investment && Auth::user()->package=="360") {
+                                                $runningDays = \Carbon\Carbon::parse($investment->sdate)->diffInDays(now());
+                                                $runningDays = $runningDays > 365 ? 365 : $runningDays;
+                                                $progress = ($runningDays / 365) * 100;
+                                            }
+                                        @endphp
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                         Running Days </div>
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
                                                             data-v-5959a183="" data-v-decd48ac=""
-                                                            class="themeColor0">0</span>/365 </div>
+                                                            class="themeColor0">{{$runningDays}}</span>/365 </div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
                                                         data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
-                                                        style="width: 35%;"><i data-v-5959a183="" data-v-decd48ac=""
+                                                        style="width: {{$progress?$progress:5}}%;"><i data-v-5959a183="" data-v-decd48ac=""
                                                             class="themeLineBg0"></i></span></div>
                                             </div>
 
@@ -955,17 +1000,32 @@
                                                         src="{{ asset('static/img/' . ($myRank >= 4 ? 'jh_on0.9a3e055f.png' : 'jh_off.f212c34c.png')) }}"
                                                         alt=""></div>
                                             </div>
+
+                                            @php
+                                            $investment = \App\Models\Investment::where('amount', 840)
+                                                ->where('user_id', Auth::id())
+                                                ->first();
+
+                                            $runningDays = 0;
+                                            $progress = 0;
+
+                                            if ($investment && Auth::user()->package=="840") {
+                                                $runningDays = \Carbon\Carbon::parse($investment->sdate)->diffInDays(now());
+                                                $runningDays = $runningDays > 365 ? 365 : $runningDays;
+                                                $progress = ($runningDays / 365) * 100;
+                                            }
+                                        @endphp
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                         Running Days </div>
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
                                                             data-v-5959a183="" data-v-decd48ac=""
-                                                            class="themeColor0">0</span>/365 </div>
+                                                            class="themeColor0">{{$runningDays}}</span>/365 </div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
                                                         data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
-                                                        style="width: 60%;"><i data-v-5959a183="" data-v-decd48ac=""
+                                                        style="width: {{$progress?$progress:5}}%;"><i data-v-5959a183="" data-v-decd48ac=""
                                                             class="themeLineBg0"></i></span></div>
                                             </div>
                                             <div class="upgrade-btn-wrapper" style="margin-top: 15px; text-align: center;">
@@ -1056,17 +1116,31 @@
                                                         src="{{ asset('static/img/' . ($myRank >= 5 ? 'jh_on0.9a3e055f.png' : 'jh_off.f212c34c.png')) }}"
                                                         alt=""></div>
                                             </div>
+                                            @php
+                                            $investment = \App\Models\Investment::where('amount', 1680)
+                                                ->where('user_id', Auth::id())
+                                                ->first();
+
+                                            $runningDays = 0;
+                                            $progress = 0;
+
+                                            if ($investment && Auth::user()->package=="1680") {
+                                                $runningDays = \Carbon\Carbon::parse($investment->sdate)->diffInDays(now());
+                                                $runningDays = $runningDays > 365 ? 365 : $runningDays;
+                                                $progress = ($runningDays / 365) * 100;
+                                            }
+                                        @endphp
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                         Running Days </div>
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
                                                             data-v-5959a183="" data-v-decd48ac=""
-                                                            class="themeColor0">0</span>/365 </div>
+                                                            class="themeColor0">{{$runningDays}}</span>/365 </div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
                                                         data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
-                                                        style="width: 71%;"><i data-v-5959a183="" data-v-decd48ac=""
+                                                        style="width: {{$progress?$progress:5}}%;"><i data-v-5959a183="" data-v-decd48ac=""
                                                             class="themeLineBg0"></i></span></div>
                                             </div>
 
@@ -1161,17 +1235,31 @@
                                                         src="{{ asset('static/img/' . ($myRank >= 6 ? 'jh_on0.9a3e055f.png' : 'jh_off.f212c34c.png')) }}"
                                                         alt=""></div>
                                             </div>
+                                            @php
+                                            $investment = \App\Models\Investment::where('amount', 3600)
+                                                ->where('user_id', Auth::id())
+                                                ->first();
+
+                                            $runningDays = 0;
+                                            $progress = 0;
+
+                                            if ($investment && Auth::user()->package=="3600") {
+                                                $runningDays = \Carbon\Carbon::parse($investment->sdate)->diffInDays(now());
+                                                $runningDays = $runningDays > 365 ? 365 : $runningDays;
+                                                $progress = ($runningDays / 365) * 100;
+                                            }
+                                        @endphp
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                         Running Days </div>
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="s"><span
                                                             data-v-5959a183="" data-v-decd48ac=""
-                                                            class="themeColor0">0</span>/365 </div>
+                                                            class="themeColor0">{{$runningDays}}</span>/365 </div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
                                                         data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
-                                                        style="width: 71%;"><i data-v-5959a183="" data-v-decd48ac=""
+                                                        style="width: {{$progress?$progress:5}}%;"><i data-v-5959a183="" data-v-decd48ac=""
                                                             class="themeLineBg0"></i></span></div>
                                             </div>
 
@@ -1268,18 +1356,32 @@
                                                         src="{{ asset('static/img/' . ($myRank >= 7 ? 'jh_on0.9a3e055f.png' : 'jh_off.f212c34c.png')) }}"
                                                         alt=""></div>
                                             </div>
+                                            @php
+                                            $investment = \App\Models\Investment::where('amount', 7560)
+                                                ->where('user_id', Auth::id())
+                                                ->first();
+
+                                            $runningDays = 0;
+                                            $progress = 0;
+
+                                            if ($investment && Auth::user()->package=="7560") {
+                                                $runningDays = \Carbon\Carbon::parse($investment->sdate)->diffInDays(now());
+                                                $runningDays = $runningDays > 365 ? 365 : $runningDays;
+                                                $progress = ($runningDays / 365) * 100;
+                                            }
+                                        @endphp
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                         Running Days </div>
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="s">
                                                         <span data-v-5959a183="" data-v-decd48ac=""
-                                                            class="themeColor0">0</span>/365
+                                                            class="themeColor0">{{$runningDays}}</span>/365
                                                     </div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
                                                         data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
-                                                        style="width: 71%;"><i data-v-5959a183=""
+                                                        style="width: {{$progress?$progress:5}}%;"><i data-v-5959a183=""
                                                             data-v-decd48ac="" class="themeLineBg0"></i></span>
                                                 </div>
                                             </div>
@@ -1378,18 +1480,32 @@
                                                         src="{{ asset('static/img/' . ($myRank >= 7 ? 'jh_on0.9a3e055f.png' : 'jh_off.f212c34c.png')) }}"
                                                         alt=""></div>
                                             </div>
+                                            @php
+                                            $investment = \App\Models\Investment::where('amount', 15000)
+                                                ->where('user_id', Auth::id())
+                                                ->first();
+
+                                            $runningDays = 0;
+                                            $progress = 0;
+
+                                            if ($investment && Auth::user()->package=="15000") {
+                                                $runningDays = \Carbon\Carbon::parse($investment->sdate)->diffInDays(now());
+                                                $runningDays = $runningDays > 365 ? 365 : $runningDays;
+                                                $progress = ($runningDays / 365) * 100;
+                                            }
+                                        @endphp
                                             <div data-v-5959a183="" data-v-decd48ac="" class="jd">
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="flex">
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="n">
                                                         Running Days </div>
                                                     <div data-v-5959a183="" data-v-decd48ac="" class="s">
                                                         <span data-v-5959a183="" data-v-decd48ac=""
-                                                            class="themeColor0">0</span>/365
+                                                            class="themeColor0">{{$runningDays}}</span>/365
                                                     </div>
                                                 </div>
                                                 <div data-v-5959a183="" data-v-decd48ac="" class="src"><span
                                                         data-v-5959a183="" data-v-decd48ac="" class="themeLineBg0"
-                                                        style="width: 71%;"><i data-v-5959a183=""
+                                                        style="width: {{$progress?$progress:5}}%;"><i data-v-5959a183=""
                                                             data-v-decd48ac="" class="themeLineBg0"></i></span>
                                                 </div>
                                             </div>
