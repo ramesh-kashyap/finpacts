@@ -8,7 +8,7 @@
     <meta http-equiv="expires" content="0">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
-    <link rel="icon" href="{{asset('')}}logo.png">
+    <link rel="icon" href="/logo.png">
     <meta name="google" content="notranslate">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="full-screen" content="true">
@@ -152,6 +152,16 @@
             <div class="loader-inner"></div>
         </div>
     </div>
+
+    <style>.page .headers.on[data-v-decd48ac] {
+        background: linear-gradient(81deg, #03031d, #03031f, #09096e);
+    }
+    
+    .page .headers[data-v-decd48ac] {
+
+        height: 0.8rem;
+    
+    }</style>
     <div id="app" class="applang">
         <div data-v-6302a7bf="">
             <div data-v-6302a7bf="" class="van-pull-refresh">
@@ -179,29 +189,41 @@
                                         <div data-v-5803b0fe="" data-v-decd48ac="" class="income themeBtBg0">
                                             <div data-v-5803b0fe="" data-v-decd48ac="" class="name">Total contract
                                                 amount</div>
-                                            <div data-v-5803b0fe="" data-v-decd48ac="" class="am">12 USDT</div>
+                                                @php
+                                                    $latestInvestment = $investments->first();
+                                                    $totalIncome = $income->sum('comm');
+                                                @endphp
+                                                <div data-v-5803b0fe="" data-v-decd48ac="" class="am">
+                                                    {{ number_format(Auth::user()->package,2) ?? '0' }}
+                                                    USDT</div>
                                             <ul data-v-5803b0fe="" data-v-decd48ac="" class="flex">
                                                 <li data-v-5803b0fe="" data-v-decd48ac="">
-                                                    <div data-v-5803b0fe="" data-v-decd48ac="" class="s"> 2
+                                                    <div data-v-5803b0fe="" data-v-decd48ac="" class="s"> {{ $investments->count() }}
                                                         times </div>
                                                     <div data-v-5803b0fe="" data-v-decd48ac="" class="n">Number
                                                         of contracts</div>
                                                 </li>
                                                 <li data-v-5803b0fe="" data-v-decd48ac="">
-                                                    <div data-v-5803b0fe="" data-v-decd48ac="" class="s">12 USDT
+                                                    <div data-v-5803b0fe="" data-v-decd48ac="" class="s">{{ number_format(Auth::user()->package,2) ?? '0' }} USDT
                                                     </div>
                                                     <div data-v-5803b0fe="" data-v-decd48ac="" class="n">Locked
                                                         amount</div>
                                                 </li>
                                                 <li data-v-5803b0fe="" data-v-decd48ac="">
-                                                    <div data-v-5803b0fe="" data-v-decd48ac="" class="s">0.03
+                                                    <div data-v-5803b0fe="" data-v-decd48ac="" class="s">{{ $totalIncome ?? '0' }}
                                                         USDT</div>
                                                     <div data-v-5803b0fe="" data-v-decd48ac="" class="n">
                                                         Cumulative contract income</div>
                                                 </li>
                                             </ul>
                                         </div>
-                                       
+                                        <!-- <ul data-v-5803b0fe="" data-v-decd48ac="" class="tab">
+                                            <li data-v-5803b0fe="" data-v-decd48ac="" class="on"> All </li>
+                                            <li data-v-5803b0fe="" data-v-decd48ac="" class=""> Under contract
+                                            </li>
+                                            <li data-v-5803b0fe="" data-v-decd48ac="" class=""> Expired </li>
+                                            <li data-v-5803b0fe="" data-v-decd48ac="" class=""> Cleared </li>
+                                        </ul> -->
                                     </div>
                                     <div data-v-5803b0fe="" data-v-decd48ac="" class="main">
                                         <div data-v-5803b0fe="" data-v-decd48ac="" class="empty db"
@@ -219,29 +241,43 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        @php
+                          $roiMap = [
+                                60     => ['weekday' => 2,  'VIP' => 1,  'weekend' => 1,'image' => asset('static/img/bc3cf11087b69389ded07723adf92b4a.png')],
+                                120    => ['weekday' => 4,  'VIP' => 2, 'weekend' => 2, 'image' => asset('static/img/3ef4d33c9bfec649c5a233f9bf6c8a07.png')],
+                                360    => ['weekday' => 12, 'VIP' => 3, 'weekend' => 6, 'image' => asset('static/img/e84156ccdb1b6d531814aec74fc68f87.png')],
+                                840    => ['weekday' => 28, 'VIP' => 4, 'weekend' => 14, 'image' => asset('static/img/5a927157d4c65dd50b6e79204b700238.png')],
+                                1680   => ['weekday' => 60, 'VIP' => 5, 'weekend' => 30, 'image' => asset('static/img/801aeb5622b9a5316256390053248c92.png')],
+                                3600   => ['weekday' => 120, 'VIP' => 6, 'weekend' => 60, 'image' => asset('static/img/5a927157d4c65dd50b6e79204b700238.png')],
+                                7560   => ['weekday' => 240, 'VIP' => 7, 'weekend' => 120, 'image' => asset('static/img/801aeb5622b9a5316256390053248c92.png')],
+                                15000  => ['weekday' => 480, 'VIP' => 8, 'weekend' => 240, 'image' => asset('static/img/d8d58144ff82da22c5a4675d125dd9fd.png')],
+                            ];
+                            @endphp
+
                                         <div data-v-5803b0fe="" class="van-pull-refresh" data-v-decd48ac="">
                                             <div class="van-pull-refresh__track" style="transition-duration: 0ms;">
                                                 <div class="van-pull-refresh__head" style="height: 50px;"></div>
                                                 <div data-v-5803b0fe="" role="feed" class="van-list">
                                                     <div data-v-5803b0fe="" class="container">
                                                         <ul data-v-5803b0fe="" class="list">
+                                                        @foreach($investments as $investment)
                                                             <li data-v-5803b0fe="">
                                                                 <div data-v-5803b0fe="" class="he flex">
                                                                     <div data-v-5803b0fe="" class="ico"><img
-                                                                            data-v-5803b0fe="" alt=""
-                                                                            data-src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
-                                                                            src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
+                                                                            data-v-5803b0fe="" alt=""                                                                            
+                                                                            src="{{ $roiMap[$investment->amount]['image'] ?? asset('static/img/bc3cf11087b69389ded07723adf92b4a.png') }}"
                                                                             lazy="loaded"></div>
                                                                     <div data-v-5803b0fe="" class="flex1">
-                                                                        <div data-v-5803b0fe="" class="n">3-day
-                                                                            Experience-based Contract</div><span
-                                                                            data-v-5803b0fe="">USDT</span>
+                                                                        <div data-v-5803b0fe="" class="n">
+                                                                        Contract VIP{{  $roiMap[$investment->amount]['VIP'] ?? '0' }}
+                                                                        </div><span
+                                                                            data-v-5803b0fe=""></span>
                                                                     </div>
                                                                     <div data-v-5803b0fe="" class="str">
                                                                         <div data-v-5803b0fe="" class="n"><var
                                                                                 data-v-5803b0fe=""
-                                                                                class="s1">Under
-                                                                                contract</var><!----><!----></div><span
+                                                                                class="s1">{{$investment->remaining_days ? 'Runing Contract': 'Closed Contract' }}
+                                                                                </var><!----><!----></div><span
                                                                             data-v-5803b0fe=""></span>
                                                                     </div>
                                                                 </div>
@@ -249,74 +285,38 @@
                                                                     <div data-v-5803b0fe="">
                                                                         <div data-v-5803b0fe="" class="n">
                                                                             Contract amount</div>
-                                                                        <div data-v-5803b0fe="" class="s">6 USDT
+                                                                        <div data-v-5803b0fe="" class="s">
+                                                                        {{ $investment->amount ?? 0 }} USDT
                                                                         </div>
                                                                     </div>
                                                                     <div data-v-5803b0fe="">
                                                                         <div data-v-5803b0fe="" class="n">Daily
                                                                             interest</div>
-                                                                        <div data-v-5803b0fe="" class="s">0.5%
+                                                                        <div data-v-5803b0fe="" class="s">
+                                                                        {{  $roiMap[$investment->amount]['weekday'] ?? '0' }} USDT
+                                                                        </div>
+                                                                    </div>
+                                                                    <div data-v-5803b0fe="">
+                                                                        <div data-v-5803b0fe="" class="n">Weekend</div>
+                                                                        <div data-v-5803b0fe="" class="s">
+                                                                        {{  $roiMap[$investment->amount]['weekend'] ?? '0' }} USDT
                                                                         </div>
                                                                     </div>
                                                                     <div data-v-5803b0fe="">
                                                                         <div data-v-5803b0fe="" class="n">Lending
                                                                             period</div>
                                                                         <div data-v-5803b0fe="" class="s">
-                                                                            Contract 3 days </div>
+                                                                        365 Days </div>
                                                                     </div>
                                                                 </div>
                                                                 <div data-v-5803b0fe="" class="stu flex">
                                                                     <div data-v-5803b0fe="" class="flex1"><span
-                                                                            data-v-5803b0fe="">Remaining lock-up time：
-                                                                            4 days</span></div><!---->
+                                                                            data-v-5803b0fe="">
+                                                                            Remaing Days：{{ $investment->remaining_days ?? '0' }}
+                                                                        </span></div><!---->
                                                                 </div>
                                                             </li>
-                                                            <li data-v-5803b0fe="">
-                                                                <div data-v-5803b0fe="" class="he flex">
-                                                                    <div data-v-5803b0fe="" class="ico"><img
-                                                                            data-v-5803b0fe="" alt=""
-                                                                            data-src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
-                                                                            src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20230918/e6ab0d3d4109e0a08784508341f5d1fc.png"
-                                                                            lazy="loaded"></div>
-                                                                    <div data-v-5803b0fe="" class="flex1">
-                                                                        <div data-v-5803b0fe="" class="n">3-day
-                                                                            Experience-based Contract</div><span
-                                                                            data-v-5803b0fe="">USDT</span>
-                                                                    </div>
-                                                                    <div data-v-5803b0fe="" class="str">
-                                                                        <div data-v-5803b0fe="" class="n"><var
-                                                                                data-v-5803b0fe=""
-                                                                                class="s1">Under
-                                                                                contract</var><!----><!----></div><span
-                                                                            data-v-5803b0fe=""></span>
-                                                                    </div>
-                                                                </div>
-                                                                <div data-v-5803b0fe="" class="it">
-                                                                    <div data-v-5803b0fe="">
-                                                                        <div data-v-5803b0fe="" class="n">
-                                                                            Contract amount</div>
-                                                                        <div data-v-5803b0fe="" class="s">6 USDT
-                                                                        </div>
-                                                                    </div>
-                                                                    <div data-v-5803b0fe="">
-                                                                        <div data-v-5803b0fe="" class="n">Daily
-                                                                            interest</div>
-                                                                        <div data-v-5803b0fe="" class="s">0.5%
-                                                                        </div>
-                                                                    </div>
-                                                                    <div data-v-5803b0fe="">
-                                                                        <div data-v-5803b0fe="" class="n">Lending
-                                                                            period</div>
-                                                                        <div data-v-5803b0fe="" class="s">
-                                                                            Contract 3 days </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div data-v-5803b0fe="" class="stu flex">
-                                                                    <div data-v-5803b0fe="" class="flex1"><span
-                                                                            data-v-5803b0fe="">Remaining lock-up time：
-                                                                            3 days</span></div><!---->
-                                                                </div>
-                                                            </li>
+                                                            @endforeach
                                                         </ul>
                                                     </div>
                                                     <div class="van-list__finished-text">No more</div>

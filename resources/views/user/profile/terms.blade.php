@@ -143,7 +143,16 @@
     <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-4f89519c.2a0f3cea.css">
     <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-4f89519c.5238fa59.1744307594169.chunk.js"></script>
 </head>
-
+<style>
+    h2[data-v-59b15e09] {
+    font-size: .3rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    line-height: .42rem;
+    margin: .34rem 0 .24rem 0;
+}
+</style>
 <body class="main_en">
     <div class="page-loading-con" id="loaderInit" style="display: none;">
         <div class="page-loading">

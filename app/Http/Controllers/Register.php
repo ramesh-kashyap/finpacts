@@ -10,6 +10,7 @@ use Redirect;
 use Carbon\Carbon;
 use Log;
 use Hash;
+use DB;
 class Register extends Controller
 {
 
@@ -53,30 +54,35 @@ class Register extends Controller
 
     public function register(Request $request)
     {
+        //  dd($request->all());
         try{
             $validation =  Validator::make($request->all(), [
-                'phone' => 'required|unique:users,phone',
-                'password' => 'required|confirmed|min:5',
-                'sponsor' => 'required|exists:users,username',           
-                'name' => 'required',
-   
+                'phone' => 'required|numeric|digits_between:7,15',
+                'email' => 'required|email|unique:users,email',
+                'password' => 'required|same:cpassword',
+                'sponsor' => 'required',
+                'vcode' => 'required',
             ]);
             if($validation->fails()) {
-
-                Log::info($validation->getMessageBag()->first());
-     
+                Log::info($validation->getMessageBag()->first());              
                 return Redirect::back()->withErrors($validation->getMessageBag()->first())->withInput();
             }
             //check if email exist
           
           
-            if (isset($request->captcha)) {
-                if (!captchaVerify($request->captcha, $request->captcha_secret)) {
-                    $notify[] = ['error', "Invalid Captcha"];
-                    return back()->withNotify($notify)->withInput();
-                }
+            // if (isset($request->captcha)) {
+            //     if (!captchaVerify($request->captcha, $request->captcha_secret)) {
+            //         $notify[] = ['error', "Invalid Captcha"];
+            //         return back()->withNotify($notify)->withInput();
+            //     }
+            // }
+            
+            $otpRecord = DB::table('password_resets')
+            ->where('email', $request->email)
+            ->first();             
+            if (!$otpRecord || $otpRecord->token != $request->vcode) {
+                return Redirect::back()->withErrors(['Invalid or expired OTP'])->withInput();
             }
-
             
             $user = User::where('username',$request->sponsor)->first();
             if(!$user)
@@ -93,8 +99,8 @@ class Register extends Controller
                 //  
           
             $data['phone'] = $post_array['phone'];
-            $data['name'] = $post_array['name'];
-
+            $data['name'] = "TTMD-".$username;
+            $data['email'] = $post_array['email'];
             $data['username'] = $username;
             $data['password'] =   Hash::make($post_array['password']);
             $data['tpassword'] =   Hash::make($tpassword);
@@ -142,7 +148,6 @@ class Register extends Controller
 
           
     } 
-
     
 
 

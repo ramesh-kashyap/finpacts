@@ -8,7 +8,7 @@
     <meta http-equiv="expires" content="0">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
-    <link rel="icon" href="{{asset('')}}logo.png">
+    <link rel="icon" href="/logo.png">
     <meta name="google" content="notranslate">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="full-screen" content="true">
@@ -123,34 +123,27 @@
         }
 
     </style>
-    <link href="/js1744307594169/app.46ba12d9.1744307594169.js" rel="preload" as="script">
-    <link href="/js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js" rel="preload" as="script">
-    <link href="/js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js" rel="preload" as="script">
-    <link href="/js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js" rel="preload" as="script">
-    <link href="/js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js" rel="preload" as="script">
+
     <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="preload" as="style">
     <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="preload" as="style">
     <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="preload" as="style">
     <link href="{{ asset('') }}static/css/chunk-vant.d14f5539.css" rel="stylesheet">
     <link href="{{ asset('') }}static/css/chunk-vendors.794edbf9.css" rel="stylesheet">
     <link href="{{ asset('') }}static/css/app.c3049ff2.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-60f64a44.d2532916.css">
-    <script charset="utf-8" src="/js1744307594169/chunk-60f64a44.cffad1f6.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-e73e2a42.32e65bef.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-e73e2a42.4bd31143.1744307594169.chunk.js"></script>
     <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-5576a184.9f52f39a.css">
     <script charset="utf-8" src="/js1744307594169/chunk-5576a184.c49d8c14.1744307594169.chunk.js"></script>
     <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-7cbde8e8.788c4ae8.css">
     <script charset="utf-8" src="/js1744307594169/chunk-7cbde8e8.43936207.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-3525d94c.2ba0cbc0.css">
-    <script charset="utf-8" src="/js1744307594169/chunk-3525d94c.e40fcb0e.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-0c334b0a.bd99dde0.css">
-    <script charset="utf-8" src="/js1744307594169/chunk-0c334b0a.d7611963.1744307594169.chunk.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-e73e2a42.32e65bef.css">
-    <script charset="utf-8" src="/js1744307594169/chunk-e73e2a42.4bd31143.1744307594169.chunk.js"></script>
     <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-4f89519c.2a0f3cea.css">
     <script charset="utf-8" src="/js1744307594169/chunk-4f89519c.5238fa59.1744307594169.chunk.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}static/css/chunk-3525d94c.2ba0cbc0.css">
+    <script charset="utf-8" src="/js1744307594169/chunk-3525d94c.e40fcb0e.1744307594169.chunk.js"></script>
 </head>
 
 <body class="mein_cn">
+@include('partials.notify')
     <div class="page-loading-con" id="loaderInit" style="display: none;">
         <div class="page-loading">
             <div class="loader-outter"></div>
@@ -169,36 +162,28 @@
                                     <div data-v-29c52665="" class="back"><img data-v-29c52665=""
                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE+SURBVHgB3diLDYIwEAbgwy7gCLoBbOIGtiM4gbqBE0DdSCcQJ5AN8GrAIPIobXNH+JOG0jbhCyVpC8DSIqVcmwKBsgKPKKX2URQ9sLwQdYQAicAxBoMX3Wwry3Krtc7BI05vqAtTpQDPTAb1YXDaFL4db9CkKRvCpGmqIUCsQRQYaxAVxgpEiRkFUWMGQRyYXhAXphPEifkDcWN+QHPAfEEDaxNVciynLMuu9Vp2At5ssFxMpQYF22B55LMwf0C4jzkAbwr8Vs+m8v2occcnsTHrGCzN3AJRRF25YeI4fiJq1xqzS5Ikx+47EEQ0b+aAEu0GbpToauREib4OLpQY6uRAibEB1KhREDXKCkSJsgZRoZzO9j3LTFGd7b1Or05ne3yoxoerVnOQHYPz75g2yqzWIc723ql+WG1gqXkDGBPa7OTyg7AAAAAASUVORK5CYII="
                                             alt=""></div>
-                                    <!---->
                                     <div data-v-29c52665="" class="name tac">Forgot password</div>
-                                    <div data-v-29c52665="" class="flex1"></div>
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
+                                    <div data-v-29c52665="" class="flex1"></div>                                    
                                 </div>
                             </div>
                         </div>
+                        <form action="{{ route('forgot_submit') }}" method="POST">
+                        @csrf
                         <div data-v-decd48ac="" id="scroll" class="content-container"
                             style="padding-top: 44px; padding-bottom: 76px;">
                             <div data-v-decd48ac="" id="content" class="content-scroll">
                                 <div data-v-e2d76358="" data-v-decd48ac="" class="container">
                                     <ul data-v-e2d76358="" data-v-decd48ac="" class="tab"></ul>
-                                    <ul data-v-e2d76358="" data-v-decd48ac="" class="line">
+                                    <ul data-v-e2d76358="" data-v-decd48ac="" class="line">                                        
                                         <li data-v-e2d76358="" data-v-decd48ac="" class="">
                                             <div data-v-e2d76358="" data-v-decd48ac="" class="name">email</div>
                                             <div data-v-e2d76358="" data-v-decd48ac="" class="flex">
                                                 <!---->
                                                 <div data-v-e2d76358="" data-v-decd48ac="" class="flex1">
                                                     <!---->
-                                                    <div data-v-e2d76358="" data-v-decd48ac=""><input data-v-e2d76358=""
-                                                            data-v-decd48ac="" type="text"
-                                                            placeholder="Please enter your email address"></div>
+                                                    <div data-v-e2d76358="" data-v-decd48ac="">
+                                                        <input data-v-e2d76358="" data-v-decd48ac="" type="text" id="emailId" name="email" placeholder="Please enter your email address">
+                                                    </div>
                                                 </div>
                                                 <div data-v-e2d76358="" data-v-decd48ac="" class="arr"><img
                                                         data-v-e2d76358="" data-v-decd48ac=""
@@ -206,18 +191,18 @@
                                                         alt=""></div>
                                             </div>
                                         </li>
-                                        <li data-v-e2d76358="" data-v-decd48ac="" class="active">
+                                        <li data-v-e2d76358="" data-v-decd48ac="" class="">
                                             <div data-v-e2d76358="" data-v-decd48ac="" class="name"><span
                                                     data-v-e2d76358="" data-v-decd48ac="">Verification code</span></div>
                                             <div data-v-e2d76358="" data-v-decd48ac="" class="flex">
                                                 <div data-v-e2d76358="" data-v-decd48ac="" class="flex1"><input
-                                                        data-v-e2d76358="" data-v-decd48ac="" type="text"
+                                                        data-v-e2d76358="" data-v-decd48ac="" type="text" name="code"
                                                         placeholder="Please enter the verification code"></div>
-                                                <div data-v-e2d76358="" data-v-decd48ac="" class="code"> Send </div>
-                                                <div data-v-e2d76358="" data-v-decd48ac="" class="code"
+                                                <div data-v-e2d76358="" data-v-decd48ac="" class="code code-btn" > Send </div>
+                                                <div data-v-e2d76358="" data-v-decd48ac="" class="code resend-btn"
                                                     style="display: none;">
                                                     <div data-v-e2d76358="" class="van-count-down" data-v-decd48ac="">
-                                                        <span data-v-e2d76358="">42 <var
+                                                        <span data-v-e2d76358="">53 <var
                                                                 data-v-e2d76358="">s</var></span></div>
                                                 </div>
                                             </div>
@@ -226,11 +211,11 @@
                                             <div data-v-e2d76358="" data-v-decd48ac="" class="name">New password</div>
                                             <div data-v-e2d76358="" data-v-decd48ac="" class="flex">
                                                 <div data-v-e2d76358="" data-v-decd48ac="" class="flex1"><input
+                                                        data-v-e2d76358="" data-v-decd48ac=""  id="passwordInput"
+                                                        placeholder="Please enter a new password" name="password" type="password"></div>
+                                                <div data-v-e2d76358="" data-v-decd48ac="" class="arr" onclick="togglePassword()"><img  id="eyeIcon" 
                                                         data-v-e2d76358="" data-v-decd48ac=""
-                                                        placeholder="Please enter a new password" type="password"></div>
-                                                <div data-v-e2d76358="" data-v-decd48ac="" class="arr"><img
-                                                        data-v-e2d76358="" data-v-decd48ac=""
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJdSURBVHgB7ZfdUeswEIXXGd5vSjAd+HYAFVw6uFABpgJMBbErIFRAOsBUQDrAdOAOwp7xhhFC1q5CQnjwmdEotqXdTz+7UogmTTquMjqiFotFnmXZ7WazuWH1oTZHAxS4J/6Zc1kz5HkIckZHkAcHFVK+6IS+5whGz+CIHf5xHPY8I29cd1zWPDNtBI647ZXbxlXyEsMBVyU7+c/13Nit49IyyAP3uw/ALcc6mgEZDDC1gO1FGhxkAmS4Cxm5dcZUWeAgNUiaprlluEc6AJysSlQzDY6NVbRHOXAIlhf4iLUfXWI2gEBYkC5EbMN1S0MwYFZy2asXEbiPSJZEXZMVUAy8kiJEJVeln2AjqWQZ+iaDRKJe+z6CeVAMaHANGyz99zvAQXMJwr++vS97UPZETnF1XCraD9xWBbepKAYII2ywJEXc5i5lWeWxJmXg3P/aj2x/BiuypZN1IhzUki74LkcB2ck/MsjdzEY4qCODMIs0BpiqBDiopx30KYoRmbhAap3kwkAJcFBBNq3cB38GsZHVkWIQiXDW7YN8eEdjgIhMORU0XabA4bJBw70xKsmtnfsueJLUdf1CxiUxwGn5b6uuLMtT/+VszCkZltoAd2aEg63z0PudLwvuCUFD7sLm7uRzEbosRGylXRYcyCoU1QnHlwUOp1I19l3Lg0vylvon4aDRf3UOwPwAcL3YWmkNZwpcfgC4Jds6tcBBJylwzvMztyGyQ/Zyua39PKcpCwCu3KwfSyVIIzTky1zKdjt0NOxd1G3opvwdwLnMYGH9a/jjAqTMzqRJk3673gEm67MuunyD5QAAAABJRU5ErkJggg==">
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ/SURBVHgB7VfBdZtAEB0luUcl4A5IBcEnPZ2iVJC4gqAKjCsQVBC5Ais36WRSQdxBNh2oA+V/M9gIA7NI4sZ/b71+Yvn7d3bm7yIyYsSIEYNiImdgtVqF6CK0YDKZfGSvj/aHw+Efeof2tFwuczkRvQVCVIAuhqBv6Keerzm0HKLvINZJD3gLhDCKSVXYOVj3EeolEOIWEPZT/CNmwUEkNC431sB31oAsy24h7kEuJ45gzj6Q2xr4vushCbDSRIZDNJ/PZbvd/m4b0LrF2FYWwkpssGIz9LkUxcBIB2gL33zV7U7FVyArFeR/xSa+RxeDfN/B8yiv9tMGLvIaPE/1Bx+aRiupJS4DYVwVI4UnUiy9z7Hh92sPkVMtwk/1B2+KRBM3kG44tESFTdM0fWTEOQmTn/+XBUCRWMyN2AjBlXQKZBRAFhtEoj72vK1a4VHDmIR5rCJzKXK0E+D6oX7bLFCKqPjYyXOugCxqEleZ8LYi+JfY4Nxxq0AQfhEPVJI5MoZO9bwmnHiAUZQ2gQNjLyfgSKD6mQmtWCI3hrpKtEPxw9HxV48gzdJnpd/5x0r+6oI904d+eCdtAlmZPlHkCVFWG8Z/VcOuT/RyOljFVEK91R3N1TQQvvZH7C1Zx3H84m+67XyHwjelDfU4TRz4ruo/th11oZJalrPRSLkWnkhPiMDgYfSumngucVlwUtyW7+XVSkK9KCw83u9/WaiITKpmOwT0VErannfeB3e7XT6bzaBxEskAsMQRfa783O5ALgNW+c1FrvwEiXhfa7CTU7DWgjDFEad+djI3P4t/RPe6uHSwz84mqAHT+wJtpS05KU4k9md9uI8YMWLEwPgPjJRCnnYugEEAAAAASUVORK5CYII=">
                                                 </div>
                                             </div>
                                         </li>
@@ -239,16 +224,16 @@
                                                 confirmation</div>
                                             <div data-v-e2d76358="" data-v-decd48ac="" class="flex">
                                                 <div data-v-e2d76358="" data-v-decd48ac="" class="flex1"><input
-                                                        data-v-e2d76358="" data-v-decd48ac=""
-                                                        placeholder="Please enter the new password again"
+                                                        data-v-e2d76358="" data-v-decd48ac="" name="password_confirmation"
+                                                        placeholder="Please enter the new password again" id="passwordInput2"
                                                         type="password"></div>
-                                                <div data-v-e2d76358="" data-v-decd48ac="" class="arr"><img
-                                                        data-v-e2d76358="" data-v-decd48ac=""
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJdSURBVHgB7ZfdUeswEIXXGd5vSjAd+HYAFVw6uFABpgJMBbErIFRAOsBUQDrAdOAOwp7xhhFC1q5CQnjwmdEotqXdTz+7UogmTTquMjqiFotFnmXZ7WazuWH1oTZHAxS4J/6Zc1kz5HkIckZHkAcHFVK+6IS+5whGz+CIHf5xHPY8I29cd1zWPDNtBI647ZXbxlXyEsMBVyU7+c/13Nit49IyyAP3uw/ALcc6mgEZDDC1gO1FGhxkAmS4Cxm5dcZUWeAgNUiaprlluEc6AJysSlQzDY6NVbRHOXAIlhf4iLUfXWI2gEBYkC5EbMN1S0MwYFZy2asXEbiPSJZEXZMVUAy8kiJEJVeln2AjqWQZ+iaDRKJe+z6CeVAMaHANGyz99zvAQXMJwr++vS97UPZETnF1XCraD9xWBbepKAYII2ywJEXc5i5lWeWxJmXg3P/aj2x/BiuypZN1IhzUki74LkcB2ck/MsjdzEY4qCODMIs0BpiqBDiopx30KYoRmbhAap3kwkAJcFBBNq3cB38GsZHVkWIQiXDW7YN8eEdjgIhMORU0XabA4bJBw70xKsmtnfsueJLUdf1CxiUxwGn5b6uuLMtT/+VszCkZltoAd2aEg63z0PudLwvuCUFD7sLm7uRzEbosRGylXRYcyCoU1QnHlwUOp1I19l3Lg0vylvon4aDRf3UOwPwAcL3YWmkNZwpcfgC4Jds6tcBBJylwzvMztyGyQ/Zyua39PKcpCwCu3KwfSyVIIzTky1zKdjt0NOxd1G3opvwdwLnMYGH9a/jjAqTMzqRJk3673gEm67MuunyD5QAAAABJRU5ErkJggg==">
+                                                <div data-v-e2d76358="" data-v-decd48ac="" class="arr"  onclick="togglePassword2()"><img
+                                                        data-v-e2d76358="" data-v-decd48ac="" id="eyeIcon2" 
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ/SURBVHgB7VfBdZtAEB0luUcl4A5IBcEnPZ2iVJC4gqAKjCsQVBC5Ais36WRSQdxBNh2oA+V/M9gIA7NI4sZ/b71+Yvn7d3bm7yIyYsSIEYNiImdgtVqF6CK0YDKZfGSvj/aHw+Efeof2tFwuczkRvQVCVIAuhqBv6Keerzm0HKLvINZJD3gLhDCKSVXYOVj3EeolEOIWEPZT/CNmwUEkNC431sB31oAsy24h7kEuJ45gzj6Q2xr4vushCbDSRIZDNJ/PZbvd/m4b0LrF2FYWwkpssGIz9LkUxcBIB2gL33zV7U7FVyArFeR/xSa+RxeDfN/B8yiv9tMGLvIaPE/1Bx+aRiupJS4DYVwVI4UnUiy9z7Hh92sPkVMtwk/1B2+KRBM3kG44tESFTdM0fWTEOQmTn/+XBUCRWMyN2AjBlXQKZBRAFhtEoj72vK1a4VHDmIR5rCJzKXK0E+D6oX7bLFCKqPjYyXOugCxqEleZ8LYi+JfY4Nxxq0AQfhEPVJI5MoZO9bwmnHiAUZQ2gQNjLyfgSKD6mQmtWCI3hrpKtEPxw9HxV48gzdJnpd/5x0r+6oI904d+eCdtAlmZPlHkCVFWG8Z/VcOuT/RyOljFVEK91R3N1TQQvvZH7C1Zx3H84m+67XyHwjelDfU4TRz4ruo/th11oZJalrPRSLkWnkhPiMDgYfSumngucVlwUtyW7+XVSkK9KCw83u9/WaiITKpmOwT0VErannfeB3e7XT6bzaBxEskAsMQRfa783O5ALgNW+c1FrvwEiXhfa7CTU7DWgjDFEad+djI3P4t/RPe6uHSwz84mqAHT+wJtpS05KU4k9md9uI8YMWLEwPgPjJRCnnYugEEAAAAASUVORK5CYII=">
                                                 </div>
                                             </div>
                                         </li>
-                                        <li data-v-e2d76358="" data-v-decd48ac="" class="err"></li>
+                                        <li data-v-e2d76358="" data-v-decd48ac="" class="err"></li>                                        
                                     </ul>
                                 </div>
                                 <!---->
@@ -256,8 +241,9 @@
                         </div>
                         <div data-v-decd48ac="" class="footer">
                             <div data-v-e2d76358="" data-v-decd48ac="" class="go"><button data-v-e2d76358=""
-                                    data-v-decd48ac="" class="btn on">OK</button></div>
+                                    data-v-decd48ac="" class="btn on" type="submit">OK</button></div>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -276,11 +262,107 @@
         </div>
         <!---->
     </div>
-    <script src="/js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
-    <script src="/js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
-    <script src="/js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
-    <script src="/js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script>
-    <script src="/js1744307594169/app.46ba12d9.1744307594169.js"></script>
+
+    <script>
+        function togglePassword() {
+          const input = document.getElementById("passwordInput");
+          const icon = document.getElementById("eyeIcon");
+      
+          if (input.type === "password") {
+            input.type = "text";
+            icon.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJdSURBVHgB7ZfdUeswEIXXGd5vSjAd+HYAFVw6uFABpgJMBbErIFRAOsBUQDrAdOAOwp7xhhFC1q5CQnjwmdEotqXdTz+7UogmTTquMjqiFotFnmXZ7WazuWH1oTZHAxS4J/6Zc1kz5HkIckZHkAcHFVK+6IS+5whGz+CIHf5xHPY8I29cd1zWPDNtBI647ZXbxlXyEsMBVyU7+c/13Nit49IyyAP3uw/ALcc6mgEZDDC1gO1FGhxkAmS4Cxm5dcZUWeAgNUiaprlluEc6AJysSlQzDY6NVbRHOXAIlhf4iLUfXWI2gEBYkC5EbMN1S0MwYFZy2asXEbiPSJZEXZMVUAy8kiJEJVeln2AjqWQZ+iaDRKJe+z6CeVAMaHANGyz99zvAQXMJwr++vS97UPZETnF1XCraD9xWBbepKAYII2ywJEXc5i5lWeWxJmXg3P/aj2x/BiuypZN1IhzUki74LkcB2ck/MsjdzEY4qCODMIs0BpiqBDiopx30KYoRmbhAap3kwkAJcFBBNq3cB38GsZHVkWIQiXDW7YN8eEdjgIhMORU0XabA4bJBw70xKsmtnfsueJLUdf1CxiUxwGn5b6uuLMtT/+VszCkZltoAd2aEg63z0PudLwvuCUFD7sLm7uRzEbosRGylXRYcyCoU1QnHlwUOp1I19l3Lg0vylvon4aDRf3UOwPwAcL3YWmkNZwpcfgC4Jds6tcBBJylwzvMztyGyQ/Zyua39PKcpCwCu3KwfSyVIIzTky1zKdjt0NOxd1G3opvwdwLnMYGH9a/jjAqTMzqRJk3673gEm67MuunyD5QAAAABJRU5ErkJggg=="; // eye closed
+          } else {
+            input.type = "password";
+            icon.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ/SURBVHgB7VfBdZtAEB0luUcl4A5IBcEnPZ2iVJC4gqAKjCsQVBC5Ais36WRSQdxBNh2oA+V/M9gIA7NI4sZ/b71+Yvn7d3bm7yIyYsSIEYNiImdgtVqF6CK0YDKZfGSvj/aHw+Efeof2tFwuczkRvQVCVIAuhqBv6Keerzm0HKLvINZJD3gLhDCKSVXYOVj3EeolEOIWEPZT/CNmwUEkNC431sB31oAsy24h7kEuJ45gzj6Q2xr4vushCbDSRIZDNJ/PZbvd/m4b0LrF2FYWwkpssGIz9LkUxcBIB2gL33zV7U7FVyArFeR/xSa+RxeDfN/B8yiv9tMGLvIaPE/1Bx+aRiupJS4DYVwVI4UnUiy9z7Hh92sPkVMtwk/1B2+KRBM3kG44tESFTdM0fWTEOQmTn/+XBUCRWMyN2AjBlXQKZBRAFhtEoj72vK1a4VHDmIR5rCJzKXK0E+D6oX7bLFCKqPjYyXOugCxqEleZ8LYi+JfY4Nxxq0AQfhEPVJI5MoZO9bwmnHiAUZQ2gQNjLyfgSKD6mQmtWCI3hrpKtEPxw9HxV48gzdJnpd/5x0r+6oI904d+eCdtAlmZPlHkCVFWG8Z/VcOuT/RyOljFVEK91R3N1TQQvvZH7C1Zx3H84m+67XyHwjelDfU4TRz4ruo/th11oZJalrPRSLkWnkhPiMDgYfSumngucVlwUtyW7+XVSkK9KCw83u9/WaiITKpmOwT0VErannfeB3e7XT6bzaBxEskAsMQRfa783O5ALgNW+c1FrvwEiXhfa7CTU7DWgjDFEad+djI3P4t/RPe6uHSwz84mqAHT+wJtpS05KU4k9md9uI8YMWLEwPgPjJRCnnYugEEAAAAASUVORK5CYII="; // eye open
+          }
+        }
+          function togglePassword2() {
+          const input = document.getElementById("passwordInput2");
+          const icon = document.getElementById("eyeIcon2");
+      
+          if (input.type === "password") {
+            input.type = "text";
+            icon.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJdSURBVHgB7ZfdUeswEIXXGd5vSjAd+HYAFVw6uFABpgJMBbErIFRAOsBUQDrAdOAOwp7xhhFC1q5CQnjwmdEotqXdTz+7UogmTTquMjqiFotFnmXZ7WazuWH1oTZHAxS4J/6Zc1kz5HkIckZHkAcHFVK+6IS+5whGz+CIHf5xHPY8I29cd1zWPDNtBI647ZXbxlXyEsMBVyU7+c/13Nit49IyyAP3uw/ALcc6mgEZDDC1gO1FGhxkAmS4Cxm5dcZUWeAgNUiaprlluEc6AJysSlQzDY6NVbRHOXAIlhf4iLUfXWI2gEBYkC5EbMN1S0MwYFZy2asXEbiPSJZEXZMVUAy8kiJEJVeln2AjqWQZ+iaDRKJe+z6CeVAMaHANGyz99zvAQXMJwr++vS97UPZETnF1XCraD9xWBbepKAYII2ywJEXc5i5lWeWxJmXg3P/aj2x/BiuypZN1IhzUki74LkcB2ck/MsjdzEY4qCODMIs0BpiqBDiopx30KYoRmbhAap3kwkAJcFBBNq3cB38GsZHVkWIQiXDW7YN8eEdjgIhMORU0XabA4bJBw70xKsmtnfsueJLUdf1CxiUxwGn5b6uuLMtT/+VszCkZltoAd2aEg63z0PudLwvuCUFD7sLm7uRzEbosRGylXRYcyCoU1QnHlwUOp1I19l3Lg0vylvon4aDRf3UOwPwAcL3YWmkNZwpcfgC4Jds6tcBBJylwzvMztyGyQ/Zyua39PKcpCwCu3KwfSyVIIzTky1zKdjt0NOxd1G3opvwdwLnMYGH9a/jjAqTMzqRJk3673gEm67MuunyD5QAAAABJRU5ErkJggg=="; // eye closed
+          } else {
+            input.type = "password";
+            icon.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ/SURBVHgB7VfBdZtAEB0luUcl4A5IBcEnPZ2iVJC4gqAKjCsQVBC5Ais36WRSQdxBNh2oA+V/M9gIA7NI4sZ/b71+Yvn7d3bm7yIyYsSIEYNiImdgtVqF6CK0YDKZfGSvj/aHw+Efeof2tFwuczkRvQVCVIAuhqBv6Keerzm0HKLvINZJD3gLhDCKSVXYOVj3EeolEOIWEPZT/CNmwUEkNC431sB31oAsy24h7kEuJ45gzj6Q2xr4vushCbDSRIZDNJ/PZbvd/m4b0LrF2FYWwkpssGIz9LkUxcBIB2gL33zV7U7FVyArFeR/xSa+RxeDfN/B8yiv9tMGLvIaPE/1Bx+aRiupJS4DYVwVI4UnUiy9z7Hh92sPkVMtwk/1B2+KRBM3kG44tESFTdM0fWTEOQmTn/+XBUCRWMyN2AjBlXQKZBRAFhtEoj72vK1a4VHDmIR5rCJzKXK0E+D6oX7bLFCKqPjYyXOugCxqEleZ8LYi+JfY4Nxxq0AQfhEPVJI5MoZO9bwmnHiAUZQ2gQNjLyfgSKD6mQmtWCI3hrpKtEPxw9HxV48gzdJnpd/5x0r+6oI904d+eCdtAlmZPlHkCVFWG8Z/VcOuT/RyOljFVEK91R3N1TQQvvZH7C1Zx3H84m+67XyHwjelDfU4TRz4ruo/th11oZJalrPRSLkWnkhPiMDgYfSumngucVlwUtyW7+XVSkK9KCw83u9/WaiITKpmOwT0VErannfeB3e7XT6bzaBxEskAsMQRfa783O5ALgNW+c1FrvwEiXhfa7CTU7DWgjDFEad+djI3P4t/RPe6uHSwz84mqAHT+wJtpS05KU4k9md9uI8YMWLEwPgPjJRCnnYugEEAAAAASUVORK5CYII="; // eye open
+          }
+        }
+      </script>
+      <script src="https://code.jquery.com//jquery-3.3.1.min.js"></script>
+
+   <script>
+    $(document).ready(function () {
+        var countdown;
+        var timer;
+
+        $('.code-btn').click(function (e) {
+            var emailId = $('#emailId').val();
+
+            if (!emailId) {
+                iziToast.error({
+                    message: 'Invalid Email!',
+                    position: "topRight"
+                });
+                return false;
+            }
+
+            startTimer(); // Start the timer after sending the code
+            $('.code-btn').hide();
+            $('.resend-btn').show();
+            $.ajax({
+                type: "POST",
+                url: "{{ route('send_forgot') }}",
+                data: {
+                    "emailId": emailId,
+                    "_token": "{{ csrf_token() }}"
+                },
+                success: function (response) {
+                    if (response) {
+                        iziToast.success({
+                            message: 'Email sent Successfully',
+                            position: "topRight"
+                        });
+
+
+
+                    } else {
+                        iziToast.error({
+                            message: 'Error!',
+                            position: "topRight"
+                        });
+                    }
+                }
+            });
+        });
+
+        function startTimer() {
+            var resendButton = $('.resend-btn');
+            countdown = 60; // 60 seconds
+            resendButton.prop('disabled', true); // Disable the resend button
+            resendButton.text('Wait ' + countdown + 's');
+
+            timer = setInterval(function () {
+                countdown--;
+                resendButton.text('Wait ' + countdown + 's');
+
+                if (countdown <= 0) {
+                    clearInterval(timer);
+                    resendButton.prop('disabled',
+                    false); // Enable the resend button after the timer ends
+                    resendButton.text('Resend'); // Reset button text
+                }
+            }, 1000);
+        }
+
+        // Optional: Handle Resend Button Click
+        $('.resend-btn').click(function (e) {
+            $('.code-btn').trigger('click'); // Simulate a click on the original send button
+        });
+    });
+
+</script>
+
 </body>
 
 </html>

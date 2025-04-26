@@ -412,8 +412,8 @@ class WithdrawRequest extends Controller
         $this->data['userDirect'] = $userDirect;
         $this->data['todaysRoi'] = $todaysRoi->count();
         $this->data['todaysRoiSum'] = \DB::table('contract')->where('user_id',$user->id)->where('ttime',date('Y-m-d'))->where('c_status','-1')->sum('profit');
-        $this->data['todaysLevelIncome'] = \DB::table('incomes')->where('user_id',$user->id)->where('ttime',date('Y-m-d'))->where('remarks','Quantify Level Income')->sum('comm');
-        $this->data['totalLevelIncome'] = \DB::table('incomes')->where('user_id',$user->id)->where('remarks','Quantify Level Income')->sum('comm');
+        $this->data['taskIncome'] = \DB::table('incomes')->where('user_id',$user->id)->where('remarks','Task Income')->sum('comm');
+        $this->data['totalLevelIncome'] = \DB::table('incomes')->where('user_id',$user->id)->where('remarks','Team Income')->sum('comm');
         $this->data['level_income'] = \DB::table('incomes')->where('user_id',$user->id)->limit(10)->get();
         $this->data['balance'] =round($user->available_balance(),2);
         $this->data['page'] = 'user.withdraw.asset';

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
 use App\Models\User;
+use App\Models\Language;
 use App\Models\Investment;
 use App\Models\Income;
 use App\Models\User_trade;
@@ -58,7 +59,7 @@ class Dashboard extends Controller
       $totalIncome = Income::where('user_id',$user->id)->sum('comm');
 
         $transaction_data = Income::where('user_id',$user->id)->orderBy('id', 'desc')->take(10)->get();
-          $this->data['todaysRoiSum'] = \DB::table('contract')->where('user_id',$user->id)->where('ttime',date('Y-m-d'))->where('c_status','-1')->sum('profit');
+          $this->data['todaysRoiSum'] = \DB::table('incomes')->where('user_id',$user->id)->where('ttime',date('Y-m-d'))->sum('comm');
 
          $total_team=User::whereIn('id',(!empty($tolteam)?$tolteam:array()))->where('active_status','Active')->count();
         $this->data['weekly_profit'] =$weekly_profit;
@@ -758,10 +759,14 @@ public function tradeOnBack()
         return $this->dashboard_layout();
     
     }
-  public function lang()
+    public function lang()
     {
         $user=Auth::user();
   
+        $languages = Language::all();
+
+        $this->data['languages'] = $languages;
+
         $this->data['page'] = 'user.lang';
         return $this->dashboard_layout();
     

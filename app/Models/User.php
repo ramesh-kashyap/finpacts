@@ -83,9 +83,9 @@ class User extends Authenticatable
 
 
     
-    public function leadership_bonus()
+    public function task_bonus()
     {
-        return $this->hasMany('App\Models\Income','user_id','id')->where('remarks','Leadership Income');
+        return $this->hasMany('App\Models\Income','user_id','id')->where('remarks','Task Income');
     } 
         
     public function level_bonus()

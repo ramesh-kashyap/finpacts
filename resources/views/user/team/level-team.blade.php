@@ -8,7 +8,7 @@
     <meta http-equiv="expires" content="0">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
-    <link rel="icon" href="{{asset('')}}logo.png">
+    <link rel="icon" href="{{ asset('') }}logo.png">
     <meta name="google" content="notranslate">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="full-screen" content="true">
@@ -150,6 +150,179 @@
     </script>
 </head>
 
+<style>
+    .tab a {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .van-pull-refresh {
+        overflow: scroll;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .van-pull-refresh__track {
+        position: relative;
+        height: 100%;
+        -webkit-transition-property: -webkit-transform;
+        transition-property: -webkit-transform;
+        transition-property: transform;
+        transition-property: transform, -webkit-transform;
+    }
+
+    .van-pull-refresh__head {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: .86207rem;
+        overflow: hidden;
+        color: #969799;
+        font-size: .24138rem;
+        line-height: .86207rem;
+        text-align: center;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    blockquote,
+    body,
+    dd,
+    del,
+    div,
+    dl,
+    dt,
+    fieldset,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    input,
+    li,
+    menu,
+    ol,
+    p,
+    pre,
+    td,
+    textarea,
+    th,
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li,
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    ul li[data-v-6e348d44] {
+        display: flex;
+        align-items: center;
+        padding: .2rem 0;
+        background: linear-gradient(72deg, #042d50, #070808);
+        padding: 10px;
+        margin-top: 11px;
+        border-radius: 7px;
+    }
+
+    ul li .flex1 .n[data-v-6e348d44] {
+        margin-bottom: .12rem;
+    }
+
+    .flex1 {
+        flex: 1;
+    }
+
+    ul li .flex1 .time[data-v-6e348d44] {
+        color: #929292;
+        font-size: .24rem;
+    }
+
+    ul li .flex1 .n[data-v-6e348d44] {
+        margin-bottom: .12rem;
+    }
+
+    .bg[data-v-c31487f4]::before {
+        position: absolute;
+        display: block;
+        content: "";
+        top: -.9rem;
+        left: 0;
+        width: 100%;
+        height: 4.4rem;
+        background: linear-gradient(72deg, #042d50, #070808);
+        background-size: auto;
+        background-size: 100% 100%;
+        border-radius:
+            0 0 .48rem .48rem;
+    }
+
+    [data-v-c31487f4] .headers {
+        background: linear-gradient(72deg, #042d50, #070808) !important;
+        box-shadow: none;
+        color: #fff;
+    }
+
+    .page .headers[data-v-decd48ac] {
+        height: 0.8rem;
+    }
+</style>
+<style>
+    /* Pagination container */
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        list-style: none;
+        padding: 0;
+    }
+
+    /* Each page item */
+    .page-item {
+        margin: 0 5px;
+    }
+
+    /* Page link style */
+    .page-link {
+        display: block;
+        padding: 0px 15px;
+        background: #042d50;
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: 0.3s ease;
+    }
+
+    /* Hover effect */
+    .page-link:hover {
+        background: #0371d8;
+        color: #fff;
+        border-color: #0371d8;
+    }
+
+    /* Active page */
+    .page-item.active .page-link {
+        background: #ebebeb;
+        /* Light green */
+        color: #000;
+        font-weight: bold;
+        border-color: #ebebeb;
+    }
+
+    /* Disabled page (e.g., Prev when on first page) */
+    .page-item.disabled .page-link {
+        background: #ccc;
+        color: #666;
+        cursor: not-allowed;
+    }
+</style>
+
 <body class="mein_cn">
     <div class="page-loading-con" id="loaderInit" style="display: none;">
         <div class="page-loading">
@@ -184,7 +357,8 @@
                                     <div data-v-7e039ef0="" data-v-decd48ac="" class="income themeBtBg0">
                                         <div data-v-7e039ef0="" data-v-decd48ac="" class="name">Cumulative total
                                             income</div>
-                                        <div data-v-7e039ef0="" data-v-decd48ac="" class="am"> 0 USDT </div>
+                                        <div data-v-7e039ef0="" data-v-decd48ac="" class="am">
+                                            {{ number_format($teamEarning, 2) }} USDT </div>
                                     </div>
                                     <ul data-v-7e039ef0="" data-v-decd48ac="" class="line1">
                                         <li data-v-7e039ef0="" data-v-decd48ac="">
@@ -192,18 +366,19 @@
                                                     data-v-7e039ef0="" data-v-decd48ac=""
                                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIVSURBVHgB7Za/SxxBFMe/bzVFIMK1Wl1lq3ClG5IiCQRyouUhIUWI0UpD/oAzfYp00QuBhBBPKwttBPEEtTyx1Uars1UOf+HuPb+zrnKee7vn7dmoXxhmGN7M572Z3fcGeNR9l6BJ2TPaze4rWzcUHdypxL4oDnKr72Uvar2FJqWH2COoi8Mi2zzHBpbWJ5jynQpV4xGPFxI4dj/A0qS/dBM/X/2tNrH/awpt+M5hmY4NrX+Ucjzwp0Iv2tw5xpmsWb4LtzKIX282r8EtTHGYW8tIrt6W0Uc9UkgGQ404Z0nBOw1fa0NSZDjm2F+GbdvAHbvZYKgvQQInzljNbInzzxALLNobaaM6gFsqGqySiLQxUbccfEe6P2B7WtNMJimTxRALLLofaaPwbPry2sX7Hjbp06ROxAIrvkTaiDt44SMy7Dr99Il44MnXK4zgR4jFBCbf7no+CvLsFthS2o55O6/Z5/+0szmwyUqKg/oGlau0u56REtPkhAL9vgPpeg5IKPDEGWcYYzzDiP+UOVsYeU3RMHdOwDCH72AKxxH6LwuHxAM25oA9yy+9gizbZy+Xo/aoRxcHWPp2OMreHmrEnK76ByNLO9WFI0jt19dZPc0BAxw4Pevp+60b0sEXisMmYeAWy4O6rM0GKihLhVUrEKyyb37GVknL2Jan+HbhBbaq32I3P67R5ReIK8c5qH6VPOph6hx2l8O/acwJ/AAAAABJRU5ErkJggg=="
                                                     alt=""></div>
-                                       
-                                                <div data-v-7e039ef0="" data-v-decd48ac="" class="flex1">
-                                                    <a href="{{ route('user.referral-team') }}">
+
+                                            <div data-v-7e039ef0="" data-v-decd48ac="" class="flex1">
+                                                <a href="{{ route('user.referral-team') }}">
                                                     <div data-v-7e039ef0="" data-v-decd48ac="" class="n">Team
                                                         size
                                                     </div>
-                                                    <div data-v-7e039ef0="" data-v-decd48ac="" class="s">0</div>
+                                                    <div data-v-7e039ef0="" data-v-decd48ac="" class="s">
+                                                        {{ number_format($totalTeam, 2) }}</div>
                                                 </a>
-                                                </div>
-                                                <i data-v-7e039ef0="" data-v-decd48ac=""
-                                                    class="van-icon van-icon-arrow"><!----></i>
-                                          
+                                            </div>
+                                            <i data-v-7e039ef0="" data-v-decd48ac=""
+                                                class="van-icon van-icon-arrow"><!----></i>
+
                                         </li>
                                         <li data-v-7e039ef0="" data-v-decd48ac="">
                                             <div data-v-7e039ef0="" data-v-decd48ac="" class="ico"><img
@@ -213,7 +388,8 @@
                                             <div data-v-7e039ef0="" data-v-decd48ac="" class="flex1">
                                                 <div data-v-7e039ef0="" data-v-decd48ac="" class="n">First-level
                                                     team income</div>
-                                                <div data-v-7e039ef0="" data-v-decd48ac="" class="s"> 0 USDT
+                                                <div data-v-7e039ef0="" data-v-decd48ac="" class="s">
+                                                    {{ number_format($team1Income, 2) }} USDT
                                                 </div>
                                             </div>
                                         </li>
@@ -226,7 +402,8 @@
                                             <div data-v-7e039ef0="" data-v-decd48ac="" class="flex1">
                                                 <div data-v-7e039ef0="" data-v-decd48ac="" class="n">
                                                     Second-level team income</div>
-                                                <div data-v-7e039ef0="" data-v-decd48ac="" class="s"> 0 USDT
+                                                <div data-v-7e039ef0="" data-v-decd48ac="" class="s">
+                                                    {{ number_format($team2Income, 2) }} USDT
                                                 </div>
                                             </div>
                                         </li>
@@ -238,7 +415,8 @@
                                             <div data-v-7e039ef0="" data-v-decd48ac="" class="flex1">
                                                 <div data-v-7e039ef0="" data-v-decd48ac="" class="n">Three-tier
                                                     team benefits</div>
-                                                <div data-v-7e039ef0="" data-v-decd48ac="" class="s"> 0 USDT
+                                                <div data-v-7e039ef0="" data-v-decd48ac="" class="s">
+                                                    {{ number_format($team3Income, 2) }} USDT
                                                 </div>
                                             </div>
                                         </li>
@@ -248,7 +426,7 @@
                                     <div data-v-7e039ef0="" data-v-decd48ac="" class="container">
                                         <div data-v-7e039ef0="" data-v-decd48ac="" class="cname">Income details
                                         </div>
-                                        <div data-v-7e039ef0="" data-v-decd48ac="" class="tab">
+                                        {{-- <div data-v-7e039ef0="" data-v-decd48ac="" class="tab">
                                             <div data-v-7e039ef0="" data-v-decd48ac="" class="it flex">
                                                 <div data-v-7e039ef0="" data-v-decd48ac="" class="flex1"> All levels
                                                 </div><img data-v-7e039ef0="" data-v-decd48ac=""
@@ -262,22 +440,72 @@
                                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAMCAYAAABvEu28AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADESURBVHgBpVLBEcIgEDySBmIHlgA/n/rzawfQiXZgBUAnjj9/0oGUECvAOwecyIRoyM4wHHfLznIHgwgppWGMSahACOHMosgaRR6wAE3ce1we6uFZiqKrO4YdzIPHp+2SI7DWUuIAM4F3FN1th0nnnOecP9HZ/h8R5J2MMZbiNi+i2E0IscJw80tEa338nEtEpdQFt22hfEUnX7WmQITYLz9Sol7KPFl0RBiZ5HtC1Nyc20wJDSZJ/6xPE4JaoLOO1hTnBcrLUucL1LSvAAAAAElFTkSuQmCC"
                                                     alt="">
                                             </div>
-                                        </div>
-                                        <div data-v-7e039ef0="" data-v-decd48ac="" class="empty db" style="">
-                                            <div data-v-7e039ef0="" data-v-decd48ac="" class="flexs">
-                                                <div data-v-5f0c154b="" data-v-7e039ef0=""
-                                                    class="empty db custom-image" data-v-decd48ac="">
-                                                    <div data-v-5f0c154b="" class="flexs">
-                                                        <div data-v-5f0c154b="" class="custom-image van-empty">
-                                                            <div class="van-empty__image"><img
-                                                                    src="{{ asset('') }}static/img/none0.f307acfc.png">
+                                        </div> --}}
+                                        @if ($level_income->isEmpty())
+                                            <div data-v-4c275272="" data-v-decd48ac="" class="empty db"
+                                                style="display: block;">
+                                                <div data-v-4c275272="" data-v-decd48ac="" class="flexs">
+                                                    <div data-v-5f0c154b="" data-v-4c275272=""
+                                                        class="empty db custom-image" data-v-decd48ac="">
+                                                        <div data-v-5f0c154b="" class="flexs">
+                                                            <div data-v-5f0c154b="" class="custom-image van-empty">
+                                                                <div class="van-empty__image"><img
+                                                                        src="/static/img/none0.f307acfc.png"></div>
+                                                                <p class="van-empty__description">No data yet</p>
                                                             </div>
-                                                            <p class="van-empty__description">No data yet</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div><!---->
+                                        @endif
+
+                                        <?php if(is_array($level_income) || is_object($level_income)){ ?>
+
+                                        <?php
+                                        date_default_timezone_set('UTC');
+                                        $cnt = 0; ?>
+                                        @foreach ($level_income as $value)
+                                            <div data-v-6e348d44="" class="van-pull-refresh" data-v-decd48ac="">
+                                                <div class="van-pull-refresh__track"
+                                                    style="transition-duration: 0ms;">
+
+
+
+                                                    <div class="van-pull-refresh__head" style="height: 50px;"></div>
+
+
+
+                                                    <div data-v-6e348d44="" role="feed" class="van-list">
+                                                        <ul data-v-6e348d44="">
+                                                            <li data-v-6e348d44="">
+                                                                <div data-v-6e348d44="" class="flex1">
+                                                                    <div data-v-6e348d44="" class="n">
+                                                                        {{ $value->remarks }} Lvl-{{ $value->level }}
+                                                                    </div>
+                                                                    <div data-v-6e348d44="" class="time">
+                                                                        {{ date('D, d M Y H:i:s', strtotime($value->created_at)) }}
+                                                                    </div>
+                                                                </div>
+                                                                <div data-v-6e348d44="" class="s"
+                                                                    style="color: #82ff82;">
+                                                                    +{{ $value->comm }} USDT
+
+                                                                </div>
+
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                        @endforeach
+
+                                        <?php }?>
+
+                                        <div class="van-list__finished-text" style="margin-bottom: 30em;">
+                                            {{ $level_income->withQueryString()->links() }}
+
+                                        </div>
+
+
                                     </div>
                                 </div><!----><!---->
                             </div>

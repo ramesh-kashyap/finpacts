@@ -8,7 +8,7 @@
     <meta http-equiv="expires" content="0">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
-    <link rel="icon" href="{{asset('')}}logo.png">
+    <link rel="icon" href="{{ asset('') }}logo.png">
     <meta name="google" content="notranslate">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="full-screen" content="true">
@@ -251,20 +251,31 @@
     ul li .flex1 .n[data-v-6e348d44] {
         margin-bottom: .12rem;
     }
+
     .bg[data-v-c31487f4]::before {
-  position: absolute;
-  display: block;
-  content: "";
-  top: -.9rem;
-  left: 0;
-  width: 100%;
-  height: 4.4rem;
-  background:linear-gradient(72deg, #042d50, #070808);
-    background-size: auto;
-  background-size: 100% 100%;
-  border-radius:
-0 0 .48rem .48rem;
-}
+        position: absolute;
+        display: block;
+        content: "";
+        top: -.9rem;
+        left: 0;
+        width: 100%;
+        height: 4.4rem;
+        background: linear-gradient(72deg, #042d50, #070808);
+        background-size: auto;
+        background-size: 100% 100%;
+        border-radius:
+            0 0 .48rem .48rem;
+    }
+
+    [data-v-c31487f4] .headers {
+        background: linear-gradient(72deg, #042d50, #070808) !important;
+        box-shadow: none;
+        color: #fff;
+    }
+
+    .page .headers[data-v-decd48ac] {
+        height: 0.8rem;
+    }
 </style>
 
 <body class="mein_cn">
@@ -305,34 +316,35 @@
                             <div data-v-decd48ac="" id="content" class="content-scroll">
                                 <div data-v-c31487f4="" data-v-decd48ac="" class="container">
                                     <div data-v-c31487f4="" data-v-decd48ac="" class="income income0">
-                                        <div data-v-c31487f4="" data-v-decd48ac="" class="name">Total assets
-                                            (converted)</div>
-                                        <div data-v-c31487f4="" data-v-decd48ac="" class="am">13.5 USDT</div>
+                                        <div data-v-c31487f4="" data-v-decd48ac="" class="name">Total assets</div>
+                                        <div data-v-c31487f4="" data-v-decd48ac="" class="am">
+                                            {{ number_format(Auth::user()->available_balance(), 2) }} USDT</div>
                                         <ul data-v-c31487f4="" data-v-decd48ac="" class="flex">
                                             <li data-v-c31487f4="" data-v-decd48ac="">
-                                                <div data-v-c31487f4="" data-v-decd48ac="" class="s"> 7.5 USDT
-                                                </div>
-                                                <div data-v-c31487f4="" data-v-decd48ac="" class="n">Available
-                                                    assets</div>
-                                            </li>
-                                            <li data-v-c31487f4="" data-v-decd48ac="">
-                                                <div data-v-c31487f4="" data-v-decd48ac="" class="s"> 6 USDT
+                                                <div data-v-c31487f4="" data-v-decd48ac="" class="s">
+                                                    {{ number_format(Auth::user()->package, 2) }} USDT
                                                 </div>
                                                 <div data-v-c31487f4="" data-v-decd48ac="" class="n">Contract
+                                                    Package</div>
+                                            </li>
+                                            <li data-v-c31487f4="" data-v-decd48ac="">
+                                                <div data-v-c31487f4="" data-v-decd48ac="" class="s">
+                                                    {{ number_format(Auth::user()->roi_bonus->sum('comm'), 2) }} USDT
+                                                </div>
+                                                <div data-v-c31487f4="" data-v-decd48ac="" class="n">Contract
+                                                    Income
                                                 </div>
                                             </li>
                                             <li data-v-c31487f4="" data-v-decd48ac="">
-                                                <div data-v-c31487f4="" data-v-decd48ac="" class="s"> 0 USDT
+                                                <div data-v-c31487f4="" data-v-decd48ac="" class="s"> {{number_format($totalLevelIncome,2)}} USDT
                                                 </div>
-                                                <div data-v-c31487f4="" data-v-decd48ac="" class="n">Funds to be
-                                                    released <i data-v-c31487f4="" data-v-decd48ac=""
-                                                        class="van-icon van-icon-arrow"><!----></i></div>
+                                                <div data-v-c31487f4="" data-v-decd48ac="" class="n">Team Income </div>
                                             </li>
                                             <li data-v-c31487f4="" data-v-decd48ac="">
-                                                <div data-v-c31487f4="" data-v-decd48ac="" class="s"> 0 USDT
+                                                <div data-v-c31487f4="" data-v-decd48ac="" class="s"> {{number_format($taskIncome,2)}} USDT
                                                 </div>
-                                                <div data-v-c31487f4="" data-v-decd48ac="" class="n">Total
-                                                    contract income</div>
+                                                <div data-v-c31487f4="" data-v-decd48ac="" class="n">Task
+                                                     income</div>
                                             </li>
                                         </ul>
                                     </div>
@@ -351,37 +363,37 @@
 
                                         <li data-v-c31487f4="" data-v-decd48ac="">
                                             <a href="{{ route('user.Withdraw') }}">
-                                            <img data-v-c31487f4=""
-                                                data-v-decd48ac=""
-                                                src="data:image/png;base64,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"
-                                                alt=""> Withdrawal </a> </li>
+                                                <img data-v-c31487f4="" data-v-decd48ac=""
+                                                    src="data:image/png;base64,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"
+                                                    alt=""> Withdrawal </a>
+                                        </li>
                                     </ul>
                                     {{-- <div data-v-c31487f4="" data-v-decd48ac="" class="btn task_btn themeBtBg0"> <a
                                             href="{{ route('user.activities') }}" rel="noopener noreferrer">Task
                                             Center </a></div> --}}
                                 </div>
 
-                                
+
                                 <div data-v-c31487f4="" data-v-decd48ac="" class="list">
                                     <div data-v-c31487f4="" data-v-decd48ac="" class="it">
                                         <div data-v-c31487f4="" data-v-decd48ac="" class="name">My Assets </div>
 
                                         @if ($level_income->isEmpty())
-                                        <div data-v-4c275272="" data-v-decd48ac="" class="empty db"
-                                            style="display: block;">
-                                            <div data-v-4c275272="" data-v-decd48ac="" class="flexs">
-                                                <div data-v-5f0c154b="" data-v-4c275272="" class="empty db custom-image"
-                                                    data-v-decd48ac="">
-                                                    <div data-v-5f0c154b="" class="flexs">
-                                                        <div data-v-5f0c154b="" class="custom-image van-empty">
-                                                            <div class="van-empty__image"><img
-                                                                    src="/static/img/none0.f307acfc.png"></div>
-                                                            <p class="van-empty__description">No data yet</p>
+                                            <div data-v-4c275272="" data-v-decd48ac="" class="empty db"
+                                                style="display: block;">
+                                                <div data-v-4c275272="" data-v-decd48ac="" class="flexs">
+                                                    <div data-v-5f0c154b="" data-v-4c275272=""
+                                                        class="empty db custom-image" data-v-decd48ac="">
+                                                        <div data-v-5f0c154b="" class="flexs">
+                                                            <div data-v-5f0c154b="" class="custom-image van-empty">
+                                                                <div class="van-empty__image"><img
+                                                                        src="/static/img/none0.f307acfc.png"></div>
+                                                                <p class="van-empty__description">No data yet</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
                                         @endif
 
 
@@ -416,6 +428,8 @@
                                                                     +{{ $value->comm }} USDT</div>
                                                             </li>
                                                         </ul>
+                                                    </div>
+                                                </div>
                                         @endforeach
 
                                         <?php }?>

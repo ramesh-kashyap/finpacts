@@ -9,7 +9,6 @@ use Redirect;
 use App\Models\PasswordReset;
 use App\Models\User;
 use App\Models\UserLogin;
-
 use DB;
 class Login extends Controller
 {
@@ -114,43 +113,44 @@ class Login extends Controller
 
     public function forgot_password_submit(Request $request)
     {
-         $validation =  Validator::make($request->all(), [
-                'phone' => 'required|unique:users',
-                'email' => 'required',
-                'code' => 'required',
-                'password' => 'required|confirmed',
-
-            ]);
-            
-        $credentials = User::where('phone',$request->phone)->where('email',$request->email)->first();
-
-        if ($credentials)
-        {
-
-          
-           $code = $request->code;
-
-          
-            if (PasswordReset::where('token', $code)->where('email', $request->email)->count() != 1) {
-                $notify[] = ['error', 'Invalid token'];
-                return redirect()->route('forgot-password')->withNotify($notify);
-            }
-
-            $password = password_hash($request->password, PASSWORD_DEFAULT);
-
-            $credentials->password=$password;
-            $credentials->PSR=$request->password;
-            $credentials->save();
-            $notify[] = ['success', 'Your Password change Successfully.'];
-            return redirect()->route('login')->withNotify($notify);
+        $validation = Validator::make($request->all(), [
+            'email' => 'required|email',
+            'code' => 'required',
+            'password' => 'required|confirmed',
+        ]);     
+        if ($validation->fails()) {
+            return redirect()->route('forgot-password')->withErrors($validation)->withInput();
         }
-        else{
-            $notify[] = ['error', 'Invalid Username '];
+    
+        $user = User::where('email', $request->email)->first();
+        if (!$user) {
+            $notify[] = ['error', 'Invalid Username'];
             return redirect()->route('forgot-password')->withNotify($notify);
         }
-
-
-
+    
+        $otpRecord = PasswordReset::where('email', $request->email)
+            ->where('token', $request->code)
+            ->orderByDesc('created_at')
+            ->first();
+    
+        if (!$otpRecord) {
+            $notify[] = ['error', 'Invalid token'];
+            return redirect()->route('forgot-password')->withNotify($notify);
+        }
+    
+        $otpExpiryTime = \Carbon\Carbon::parse($otpRecord->created_at)->addMinutes(10);
+    
+        if (\Carbon\Carbon::now()->gt($otpExpiryTime)) {
+            $notify[] = ['error', 'OTP expired. Please request a new one.'];
+            return redirect()->route('forgot-password')->withNotify($notify);
+        }
+        $user->password = bcrypt($request->password); // preferred over password_hash
+        $user->PSR = $request->password;
+        $user->save();
+        // $otpRecord->delete();
+    
+        $notify[] = ['success', 'Your password has been changed successfully.'];
+        return redirect()->route('login')->withNotify($notify);
     }
 
     public function codeVerify(){

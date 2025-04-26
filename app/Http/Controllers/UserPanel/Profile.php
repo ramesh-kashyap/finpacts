@@ -387,39 +387,49 @@ class Profile extends Controller
     }
 
 
+    public function updateName(Request $request)
+{
+    $request->validate([
+        'name' => 'required|string|max:255'
+    ]);
+
+    $user = auth()->user();
+    $user->name = $request->name;
+    $user->save();
+
+    return response()->json(['success' => true]);
+}
+
     public function wallet_change(Request $request)
     {
-        try {
+        $request->validate([
+            'walletAddress'     => 'required|string|max:255',
+            'selected_mainnet'  => 'required|in:TRX,BSC',
+            // 'code' => 'required'
+        ]);
+    
+        $user = Auth::user();
+    // dd($request->all());
 
-            $user = Auth::user();
-            $id = Auth::user()->id;
-
-
-            $request->validate(['code' => 'required']);
-            $code = $request->code;
-
-            if (PasswordReset::where('token', $code)->where('email', $user->email)->count() != 1) {
-                $notify[] = ['error', 'Invalid token'];
-                return redirect()->route('user.codeVerify')->withNotify($notify);
-            }
-
-
-            $usdtTrc20 = session()->get('usdtTrc20');
-            $usdtBep20 = session()->get('usdtBep20');
-
-            $user->usdtTrc20 = $usdtTrc20;
-            $user->usdtBep20 = $usdtBep20;
-            $user->save();
-            $notify[] = ['success', 'Your Wallet change Successfully.'];
-
+        $code = $request->code;
+        if (PasswordReset::where('token', $code)->where('email', $user->email)->count() != 1) {
+            $notify[] = ['error', 'Invalid token'];
             return redirect()->route('user.wallets')->withNotify($notify);
-        } catch (\Exception $e) {
-            Log::info('error here');
-            Log::info($e->getMessage());
-            print_r($e->getMessage());
-
-            return back()->withErrors('error', $e->getMessage())->withInput();
         }
+
+
+
+        if ($request->selected_mainnet === 'TRX') {
+            $user->usdtTrc20 = $request->walletAddress;
+        } else {
+            $user->usdtBep20 = $request->walletAddress;
+        }
+    
+        $user->save();
+    
+        $notify[] = ['success', 'Your Change wallets Address Successfully.'];
+
+        return redirect()->route('user.wallets')->withNotify($notify);
     }
 
     public function old_password()

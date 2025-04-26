@@ -13,14 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/clear', function() {
-
-   Artisan::call('cache:clear');
-   Artisan::call('config:clear');
-   Artisan::call('config:cache');
-   Artisan::call('view:clear');
-
-   return "Cleared!";
-
+  Artisan::call('cache:clear');
+  Artisan::call('config:clear');
+  Artisan::call('config:cache');
+  Artisan::call('view:clear');
+  Artisan::call('optimize:clear');
+  if (url()->previous()) {
+      $notify[] = ['success', '✅ Cache Cleared Successfully!'];
+      return redirect()->back()->withNotify($notify);
+  } else {
+      return "✅ Cache Cleared Successfully!";
+  }
 });
 
 Route::get('/', function () {
@@ -132,6 +135,7 @@ Route::post('/update-password', [App\Http\Controllers\UserPanel\Profile::class, 
 Route::get('/BankDetail', [App\Http\Controllers\UserPanel\Profile::class, 'BankDetail'])->name('user.BankDetail');
 Route::post('/bank-update', [App\Http\Controllers\UserPanel\Profile::class, 'bank_profile_update'])->name('user.bank-update');
 Route::post('/change-trxpasswword', [App\Http\Controllers\UserPanel\Profile::class, 'change_trxpassword_post'])->name('user.change-trxpasswword');
+Route::post('/user/update-name', [App\Http\Controllers\UserPanel\Profile::class, 'updateName'])->name('user.update.name');
 // end profile
 
 

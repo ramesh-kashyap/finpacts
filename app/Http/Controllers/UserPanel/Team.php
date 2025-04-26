@@ -27,54 +27,70 @@ class Team extends Controller
     public function index(Request $request)
     {
       $user=Auth::user();
-      // print_r($user->username);die();
-        $my_level_team=$this->my_level_team_count($user->id);
+      $my_level_team = $this->my_level_team_count($user->id);
 
-
-      // print_r($ids);die;
-        $limit = $request->limit ? $request->limit : paginationLimit();
-        $selected_level = $request->selected_level ? $request->selected_level :1;
-            
-        $search = $request->search ? $request->search : null;
-        // $notes = User::where('sponsor',$user->username);
-    $gen_team =  (array_key_exists($selected_level,$my_level_team) ? $my_level_team[$selected_level]:array());
-       end($my_level_team);        
-          $key = key($my_level_team);
-          $max_lenght=$key;
-          
-    ($selected_level)?Session::put('selected_level',$selected_level):"";
-
-            // $notes = User::where('sponsor',$user->username);
-          $notes = User::where(function($query) use($gen_team)
-              {
-                if(!empty($gen_team)){
-                  foreach ($gen_team as $key => $value) {
-                  //   $f = explode(",", $value);
-                  //   print_r($f)."<br>";
-                    $query->orWhere('id', $value);
-                  }
-                }else{$query->where('id',null);}
-              })->orderBy('id', 'DESC');
-      
-       if($search <> null && $request->reset!="Reset"){
-        $notes = $notes->where(function($q) use($search){
-          $q->orWhere('name', 'LIKE', '%' . $search . '%')
-          ->orWhere('username', 'LIKE', '%' . $search . '%')
-          ->orWhere('email', 'LIKE', '%' . $search . '%')
-          ->orWhere('phone', 'LIKE', '%' . $search . '%')
-          ->orWhere('jdate', 'LIKE', '%' . $search . '%')
-          ->orWhere('active_status', 'LIKE', '%' . $search . '%');
-        });
-
+      $limit = $request->limit ?? 7;
+      $selected_level = $request->selected_level ?? 1;
+      $search = $request->search ?? null;
+  
+      $gen_team = $my_level_team[$selected_level] ?? [];
+  
+      end($my_level_team);
+      $max_length = key($my_level_team);
+  
+      if ($selected_level) {
+          Session::put('selected_level', $selected_level);
       }
-            $notes = $notes->paginate($limit)
-                ->appends([
-                    'limit' => $limit
-                ]);
+  
+      $notesQuery = User::where(function ($query) use ($gen_team) {
+          if (!empty($gen_team)) {
+              $query->whereIn('id', $gen_team);
+          } else {
+              $query->whereNull('id');
+          }
+      })->orderByDesc('id');
+  
+      if (!empty($search) && $request->reset != "Reset") {
+          $notesQuery->where(function ($q) use ($search) {
+              $q->where('name', 'LIKE', "%{$search}%")
+                ->orWhere('username', 'LIKE', "%{$search}%")
+                ->orWhere('email', 'LIKE', "%{$search}%")
+                ->orWhere('phone', 'LIKE', "%{$search}%")
+                ->orWhere('jdate', 'LIKE', "%{$search}%")
+                ->orWhere('active_status', 'LIKE', "%{$search}%");
+          });
+      }
+  
+      $notes = $notesQuery->paginate($limit)->appends([
+          'limit' => $limit
+      ]);
+  
+      // Active and Inactive Users Count per Level (1,2,3)
+      $activeInactiveStats = [];
+  
+      foreach ([1, 2, 3] as $level) {
+          $teamIds = $my_level_team[$level] ?? [];
+  
+          $activeCount = User::whereIn('id', $teamIds)
+                          ->where('active_status', 'Active')
+                          ->count();
+  
+          $inactiveCount = User::whereIn('id', $teamIds)
+                          ->where('active_status', 'Pending')
+                          ->count();
+  
+          $activeInactiveStats[$level] = [
+              'active' => $activeCount,
+              'inactive' => $inactiveCount,
+          ];
+      }
+  
+      $this->data['direct_team'] = $notes;
+      $this->data['search'] = $search;
+      $this->data['max_length'] = $max_length;
+      $this->data['activeInactiveStats'] = $activeInactiveStats; // ✅
 
-        $this->data['direct_team'] =$notes;
-        $this->data['search'] =$search;
-       $this->data['max_lenght'] =$max_lenght;
+      // dd($this->data);
 
     $this->data['page'] = 'user.team.direct-team';
     return $this->dashboard_layout();
@@ -83,166 +99,45 @@ class Team extends Controller
 
     public function LevelTeam(Request $request)
     {
-      $user=Auth::user();
-      // print_r($user->username);die();
-      $ids=$this->my_level_team($user->id);
-      $my_level_team=$this->my_level_team_count($user->id);
-      $gen_team1 =  (array_key_exists(1,$my_level_team) ? $my_level_team[1]:array());
-      $gen_team2 =  (array_key_exists(2,$my_level_team) ? $my_level_team[2]:array());
-      $gen_team3 =  (array_key_exists(3,$my_level_team) ? $my_level_team[3]:array());
-
-      $notes = User::where(function($query) use($ids)
-              {
-                if(!empty($ids)){
-                  foreach ($ids as $key => $value) {
-                  //   $f = explode(",", $value);
-                  //   print_r($f)."<br>";
-                    $query->orWhere('id', $value);
-                  }
-                }else{$query->where('id',null);}
-              })->orderBy('id', 'DESC')->get();
-
-
-
-              $teamwithdraw = Withdraw::where(function($query) use($ids)
-              {
-                if(!empty($ids)){
-                  foreach ($ids as $key => $value) {
-                  //   $f = explode(",", $value);
-                  //   print_r($f)."<br>";
-                    $query->orWhere('user_id', $value);
-                  }
-                }else{$query->where('user_id',null);}
-              })->where('status','Approved')->orderBy('id', 'DESC')->get();
-
-        
-      $gen_team1 = User::where(function($query) use($gen_team1)
-              {
-                if(!empty($gen_team1)){
-                  foreach ($gen_team1 as $key => $value) {
-                  //   $f = explode(",", $value);
-                  //   print_r($f)."<br>";
-                    $query->orWhere('id', $value);
-                  }
-                }else{$query->where('id',null);}
-              })->orderBy('id', 'DESC')->get();
-              
-        $gen_team2 = User::where(function($query) use($gen_team2)
-              {
-                if(!empty($gen_team2)){
-                  foreach ($gen_team2 as $key => $value) {
-                  //   $f = explode(",", $value);
-                  //   print_r($f)."<br>";
-                    $query->orWhere('id', $value);
-                  }
-                }else{$query->where('id',null);}
-              })->orderBy('id', 'DESC')->get();
-         $gen_team3 = User::where(function($query) use($gen_team3)
-              {
-                if(!empty($gen_team3)){
-                  foreach ($gen_team3 as $key => $value) {
-                  //   $f = explode(",", $value);
-                  //   print_r($f)."<br>";
-                    $query->orWhere('id', $value);
-                  }
-                }else{$query->where('id',null);}
-              })->orderBy('id', 'DESC')->get();
-
-
-        $gen_team1UserName =$gen_team1->pluck('username');
-        $gen_team2UserName =$gen_team2->pluck('username');
-        $gen_team3UserName =$gen_team3->pluck('username');
-
- 
-   $totalrecharge=Investment::whereIn('user_id',(!empty($ids)?$ids:array()))->where('status','Active')->sum("amount");
-   
-   
-     if($gen_team1->isNotEmpty())
-     {
-         $gen_teamIncome = Income::where(function($query) use($gen_team1UserName)
-        {
-          if(!empty($gen_team1UserName)){
-            foreach ($gen_team1UserName as $key => $value) {
-            //   $f = explode(",", $value);
-            //   print_r($f)."<br>";
-              $query->orWhere('rname', $value);
-            }
-          }else{$query->where('rname',null);}
-        })->where('user_id',$user->id)->orderBy('id', 'DESC')->sum('comm'); 
-     }
-     else
-     {
-       $gen_teamIncome =0;  
-     }
-       
-  if($gen_team2->isNotEmpty())
-     {
-        $gen_team2Income = Income::where(function($query) use($gen_team2UserName)
-        {
-            // dd($gen_team2UserName);
-          if($gen_team2UserName){
-            foreach ($gen_team2UserName as $key => $value) {
-            //   $f = explode(",", $value);
-            //   print_r($f)."<br>";
-              $query->orWhere('rname', $value);
-            }
-          }else{$query->where('rname',null);}
-        })->where('user_id',$user->id)->orderBy('id', 'DESC')->sum('comm');
-  
-     }
-      else
-     {
-       $gen_team2Income =0;  
-     }
-     
-      if($gen_team3->isNotEmpty())
-     {
-         
-      $gen_team3Income = Income::where(function($query) use($gen_team3UserName)
-        {
-          if(!empty($gen_team3UserName)){
-            foreach ($gen_team3UserName as $key => $value) {
-            //   $f = explode(",", $value);
-            //   print_r($f)."<br>";
-              $query->orWhere('rname', $value);
-            }
-          }else{$query->where('rname',null);}
-        })->where('user_id',$user->id)->orderBy('id', 'DESC')->sum('comm');
-        
-     }
-      else
-     {
-       $gen_team3Income =0;  
-     }
-  
-      $teamUserName =$gen_team1->pluck('username');
-        $todaysIncome =  \DB::table('incomes')->where('user_id',$user->id)->where('ttime',date('Y-m-d'))->where('remarks','Quantify Level Income')->sum('comm');
+        $user = Auth::user();
+        $ids = $this->my_level_team($user->id);
     
-        $this->data['todaysIncome'] =$todaysIncome;
-        $this->data['gen_team3Income'] =$gen_team3Income;
-        $this->data['gen_team2Income'] =$gen_team2Income;
-        $this->data['gen_teamIncome'] =$gen_teamIncome;
-
-
-        $this->data['gen_team1total'] =$gen_team1->count();
-        $this->data['active_gen_team1total'] =$gen_team1->where('active_status','Active')->count();
-        $this->data['gen_team2total'] =$gen_team2->count();
-        $this->data['active_gen_team2total'] =$gen_team2->where('active_status','Active')->count();
-
-        $this->data['gen_team3total'] =$gen_team3->count();
-        $this->data['active_gen_team3total'] =$gen_team3->where('active_status','Active')->count();
-
-
-        $this->data['gen_team1Income'] =$gen_team1->count();
-
-        $this->data['totalwithdrawal'] =$teamwithdraw->sum('amount');
-        $this->data['todaysuser'] =$notes->where('jdate',date('Y-m-d'))->count();
-        $this->data['totalrecharge'] =$totalrecharge;
-        $this->data['totalTeam'] =$notes->count();
-        $this->data['teamEarning'] =$gen_teamIncome+$gen_team2Income+$gen_team3Income;
+        $notes = User::when(!empty($ids), function ($query) use ($ids) {
+                $query->whereIn('id', $ids);
+            }, function ($query) {
+                $query->whereNull('id'); // ensure no records if $ids is empty
+            })
+            ->orderByDesc('id')
+            ->get();
+    
+        $this->data['totalTeam'] = $notes->count();
+        $this->data['teamEarning'] = Income::where('user_id', $user->id)
+                                    ->where('remarks', 'Level Income')
+                                    ->sum('comm');
+    
+        $this->data['team1Income'] = Income::where('user_id', $user->id)
+                                    ->where('level', 1)
+                                    ->where('remarks', 'Team Income')
+                                    ->sum('comm');
+    
+        $this->data['team2Income'] = Income::where('user_id', $user->id)
+                                    ->where('level', 2)
+                                    ->where('remarks', 'Team Income')
+                                    ->sum('comm');
+    
+        $this->data['team3Income'] = Income::where('user_id', $user->id)
+                                    ->where('level', 3)
+                                    ->where('remarks', 'Team Income')
+                                    ->sum('comm');
+    
+        $this->data['level_income'] = Income::where('user_id', $user->id)
+                                    ->where('remarks', 'Team Income')
+                                    ->orderByDesc('id')
+                                    ->paginate(10);
+    
         $this->data['page'] = 'user.team.level-team';
+    
         return $this->dashboard_layout();
-
     }
     
     

@@ -109,7 +109,7 @@
             }
         }
     </style>
-  
+
     <style>
         * {
             margin: 0;
@@ -152,6 +152,15 @@
     <link rel="stylesheet" type="text/css" href="{{asset('')}}static/css/chunk-6d426460.4038aca3.css">
     <script charset="utf-8" src="{{asset('')}}js1744307594169/chunk-6d426460.94243b8a.1744307594169.chunk.js"></script>
 </head>
+<style>
+    .card_list .card[data-v-ae1b0c26] {
+        margin-top: .24rem;
+        padding: .32rem .28rem;
+        border-radius: .2rem;
+        box-shadow: 0 0 .16rem .05rem rgba(0, 0, 0, .1);
+        background: linear-gradient(72deg, #042d50, #070808);
+    }
+</style>
 
 <body class="mein_cn">
     <div class="page-loading-con" id="loaderInit" style="display: none;">
@@ -171,14 +180,23 @@
                             <div data-v-29c52665="" data-v-06646a51="" class="head head0" data-v-decd48ac="">
                                 <div data-v-29c52665="" class="container flex">
                                     <a href="{{ route('user.dashboard') }}">
-                                    <div data-v-29c52665="" class="back"><img data-v-29c52665=""
-                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE+SURBVHgB3diLDYIwEAbgwy7gCLoBbOIGtiM4gbqBE0DdSCcQJ5AN8GrAIPIobXNH+JOG0jbhCyVpC8DSIqVcmwKBsgKPKKX2URQ9sLwQdYQAicAxBoMX3Wwry3Krtc7BI05vqAtTpQDPTAb1YXDaFL4db9CkKRvCpGmqIUCsQRQYaxAVxgpEiRkFUWMGQRyYXhAXphPEifkDcWN+QHPAfEEDaxNVciynLMuu9Vp2At5ssFxMpQYF22B55LMwf0C4jzkAbwr8Vs+m8v2occcnsTHrGCzN3AJRRF25YeI4fiJq1xqzS5Ikx+47EEQ0b+aAEu0GbpToauREib4OLpQY6uRAibEB1KhREDXKCkSJsgZRoZzO9j3LTFGd7b1Or05ne3yoxoerVnOQHYPz75g2yqzWIc723ql+WG1gqXkDGBPa7OTyg7AAAAAASUVORK5CYII="
-                                            alt=""></div><!---->
+                                        <div data-v-29c52665="" class="back"><img data-v-29c52665=""
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE+SURBVHgB3diLDYIwEAbgwy7gCLoBbOIGtiM4gbqBE0DdSCcQJ5AN8GrAIPIobXNH+JOG0jbhCyVpC8DSIqVcmwKBsgKPKKX2URQ9sLwQdYQAicAxBoMX3Wwry3Krtc7BI05vqAtTpQDPTAb1YXDaFL4db9CkKRvCpGmqIUCsQRQYaxAVxgpEiRkFUWMGQRyYXhAXphPEifkDcWN+QHPAfEEDaxNVciynLMuu9Vp2At5ssFxMpQYF22B55LMwf0C4jzkAbwr8Vs+m8v2occcnsTHrGCzN3AJRRF25YeI4fiJq1xqzS5Ikx+47EEQ0b+aAEu0GbpToauREib4OLpQY6uRAibEB1KhREDXKCkSJsgZRoZzO9j3LTFGd7b1Or05ne3yoxoerVnOQHYPz75g2yqzWIc723ql+WG1gqXkDGBPa7OTyg7AAAAAASUVORK5CYII="
+                                                alt=""></div>
+                                        <!---->
                                     </a>
                                     <div data-v-29c52665="" class="name tac">Task Center</div>
-                                    <div data-v-29c52665="" class="flex1"></div><!----><!----><!---->
-                                    <div data-v-06646a51="" data-v-29c52665="" class="rules"> Rules </div>
-                                    <!----><!----><!----><!----><!----><!---->
+                                    <div data-v-29c52665="" class="flex1"></div>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    {{-- <div data-v-06646a51="" data-v-29c52665="" class="rules"> Rules </div> --}}
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
                                 </div>
                             </div>
                         </div>
@@ -196,242 +214,238 @@
                                                         receive benefits</div>
                                                 </div>
                                             </div>
+                                            <a href="{{route('user.income-roports')}}">
                                             <div data-v-a8d9cade="" class="total_rewards">
+                                           
                                                 <div data-v-a8d9cade="" class="rewards_box">
                                                     <div data-v-a8d9cade="">Collect the total rewards so far</div>
-                                                    <div data-v-a8d9cade="" class="themeColor0">0 USDT</div>
-                                                </div><i data-v-a8d9cade=""
-                                                    class="van-icon van-icon-arrow"><!----></i>
+                                                    <div data-v-a8d9cade="" class="themeColor0">{{number_format(Auth::user()->task_bonus->sum('comm'),2)}} USDT</div>
+                                                </div> <i data-v-a8d9cade="" class="van-icon van-icon-arrow">
+                                                    <!---->
+                                                </i>
+                                          
                                             </div>
+                                        </a> 
                                         </div>
                                     </div>
                                 </div>
                                 <div data-v-ef18793c="" data-v-06646a51="" class="tab_box" data-v-decd48ac="">
                                     <ul data-v-ef18793c="" class="ul0 ul">
-                                        <li data-v-ef18793c="" class="themeColor0 active"> Long-term tasks </li>
-                                        <li data-v-ef18793c="" class="noactive"> Daily tasks </li>
+                                        {{-- <li data-v-ef18793c="" class="tab-btn themeColor0 active" data-target="long-tasks"> Long-term tasks </li> --}}
+                                        {{-- <li data-v-ef18793c="" class="tab-btn noactive" data-target="daily-tasks"> Comp tasks </li> --}}
                                     </ul>
                                 </div>
                                 <div data-v-06646a51="" data-v-decd48ac="" class="container lower_section">
-                                    <div data-v-ae1b0c26="" data-v-06646a51="" class="long_tasks"
-                                        data-v-decd48ac="">
+                                    <div data-v-ae1b0c26="" data-v-06646a51="" class="tasks-section long_tasks long-tasks" data-v-decd48ac="">
                                         <div data-v-ae1b0c26="" class="card_list">
                                             <div data-v-ae1b0c26="" class="card">
                                                 <div data-v-ae1b0c26="" class="title_box">
                                                     <div data-v-ae1b0c26="" class="title_top">
-                                                        <div data-v-ae1b0c26="" class="title">Upgrade to Level 1 Ally
+                                                        <div data-v-ae1b0c26="" class="title">Upgrade to VIP 2
                                                         </div>
                                                     </div>
                                                     <div data-v-ae1b0c26="" class="title_bot">
                                                         <div data-v-ae1b0c26="" class="text">
                                                             <div data-v-ae1b0c26="" class="illustrate">Upgrade to
-                                                                Level 1 Ally and you will get 30USDT</div>
+                                                                VIP 2 and you will get 5 USDT</div>
                                                             <div data-v-ae1b0c26="" class="rewards"> Task reward：
-                                                                <span data-v-ae1b0c26="">30 USDT</span></div>
+                                                                <span data-v-ae1b0c26="">5 USDT</span>
+                                                            </div>
                                                         </div>
                                                         <div data-v-ae1b0c26="" class="btn_box">
                                                             <div data-v-ae1b0c26="" class="btn_t1">
                                                                 <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
-                                                                <span data-v-ae1b0c26="" class="themeColor0">In
-                                                                    progress</span>
+                                                                <span data-v-ae1b0c26="" class="themeColor0"> {{(Auth::user()->package>=120)?"Completed":"In Progress"}}</span>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div><!---->
+                                                </div>
+                                                <!---->
                                             </div>
                                             <div data-v-ae1b0c26="" class="card">
                                                 <div data-v-ae1b0c26="" class="title_box">
                                                     <div data-v-ae1b0c26="" class="title_top">
-                                                        <div data-v-ae1b0c26="" class="title">Upgrade to Level 2 Ally
+                                                        <div data-v-ae1b0c26="" class="title">Upgrade to VIP 3 
                                                         </div>
                                                     </div>
                                                     <div data-v-ae1b0c26="" class="title_bot">
                                                         <div data-v-ae1b0c26="" class="text">
                                                             <div data-v-ae1b0c26="" class="illustrate">Upgrade to
-                                                                Level 2 Ally Reward 100USDT</div>
+                                                                VIP 3  Reward 15 USDT</div>
                                                             <div data-v-ae1b0c26="" class="rewards"> Task reward：
-                                                                <span data-v-ae1b0c26="">100 USDT</span></div>
+                                                                <span data-v-ae1b0c26="">15 USDT</span>
+                                                            </div>
                                                         </div>
                                                         <div data-v-ae1b0c26="" class="btn_box">
                                                             <div data-v-ae1b0c26="" class="btn_t1">
                                                                 <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
-                                                                <span data-v-ae1b0c26="" class="themeColor0">In
-                                                                    progress</span>
+                                                                <span data-v-ae1b0c26="" class="themeColor0">{{(Auth::user()->package>=360)?"Completed":"In Progress"}}</span>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div><!---->
+                                                </div>
+                                                <!---->
                                             </div>
+                                          
                                             <div data-v-ae1b0c26="" class="card">
                                                 <div data-v-ae1b0c26="" class="title_box">
                                                     <div data-v-ae1b0c26="" class="title_top">
-                                                        <div data-v-ae1b0c26="" class="title">Upgrade to Level 3 Ally
+                                                        <div data-v-ae1b0c26="" class="title">Upgrade to VIP 4
                                                         </div>
                                                     </div>
                                                     <div data-v-ae1b0c26="" class="title_bot">
                                                         <div data-v-ae1b0c26="" class="text">
                                                             <div data-v-ae1b0c26="" class="illustrate">Upgrade to
-                                                                Level 3 Ally and you will get 500USDT</div>
+                                                                VIP 4 and you will get 20 USDT</div>
                                                             <div data-v-ae1b0c26="" class="rewards"> Task reward：
-                                                                <span data-v-ae1b0c26="">500 USDT</span></div>
+                                                                <span data-v-ae1b0c26="">20 USDT</span>
+                                                            </div>
                                                         </div>
                                                         <div data-v-ae1b0c26="" class="btn_box">
                                                             <div data-v-ae1b0c26="" class="btn_t1">
                                                                 <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
-                                                                <span data-v-ae1b0c26="" class="themeColor0">In
-                                                                    progress</span>
+                                                                <span data-v-ae1b0c26="" class="themeColor0">{{(Auth::user()->package>=840)?"Completed":"In Progress"}}</span>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div><!---->
+                                                </div>
+                                                <!---->
                                             </div>
                                             <div data-v-ae1b0c26="" class="card">
                                                 <div data-v-ae1b0c26="" class="title_box">
                                                     <div data-v-ae1b0c26="" class="title_top">
-                                                        <div data-v-ae1b0c26="" class="title">Upgrade to Level 4 Ally
+                                                        <div data-v-ae1b0c26="" class="title">Upgrade to VIP 5 
                                                         </div>
                                                     </div>
                                                     <div data-v-ae1b0c26="" class="title_bot">
                                                         <div data-v-ae1b0c26="" class="text">
                                                             <div data-v-ae1b0c26="" class="illustrate">Upgrade to
-                                                                Level 4 Ally and you will get 2000USDT</div>
+                                                                VIP 5  and you will get 30 USDT</div>
                                                             <div data-v-ae1b0c26="" class="rewards"> Task reward：
-                                                                <span data-v-ae1b0c26="">2000 USDT</span></div>
+                                                                <span data-v-ae1b0c26="">30 USDT</span>
+                                                            </div>
                                                         </div>
                                                         <div data-v-ae1b0c26="" class="btn_box">
                                                             <div data-v-ae1b0c26="" class="btn_t1">
                                                                 <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
-                                                                <span data-v-ae1b0c26="" class="themeColor0">In
-                                                                    progress</span>
+                                                                <span data-v-ae1b0c26="" class="themeColor0">{{(Auth::user()->package>=1680)?"Completed":"In Progress"}}</span>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div><!---->
+                                                </div>
+                                                <!---->
                                             </div>
                                             <div data-v-ae1b0c26="" class="card">
                                                 <div data-v-ae1b0c26="" class="title_box">
                                                     <div data-v-ae1b0c26="" class="title_top">
-                                                        <div data-v-ae1b0c26="" class="title">Upgrade to Level 5 Ally
+                                                        <div data-v-ae1b0c26="" class="title">Upgrade to VIP 6 
                                                         </div>
                                                     </div>
                                                     <div data-v-ae1b0c26="" class="title_bot">
                                                         <div data-v-ae1b0c26="" class="text">
                                                             <div data-v-ae1b0c26="" class="illustrate">Upgrade to
-                                                                Level 5 Ally and you will get 5000USDT</div>
+                                                                VIP 6  and you will get 50 USDT</div>
                                                             <div data-v-ae1b0c26="" class="rewards"> Task reward：
-                                                                <span data-v-ae1b0c26="">5000 USDT</span></div>
+                                                                <span data-v-ae1b0c26="">50 USDT</span>
+                                                            </div>
                                                         </div>
                                                         <div data-v-ae1b0c26="" class="btn_box">
                                                             <div data-v-ae1b0c26="" class="btn_t1">
                                                                 <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
-                                                                <span data-v-ae1b0c26="" class="themeColor0">In
-                                                                    progress</span>
+                                                                <span data-v-ae1b0c26="" class="themeColor0">{{(Auth::user()->package>=3600)?"Completed":"In Progress"}}</span>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div><!---->
+                                                </div>
+                                                <!---->
                                             </div>
                                             <div data-v-ae1b0c26="" class="card">
                                                 <div data-v-ae1b0c26="" class="title_box">
                                                     <div data-v-ae1b0c26="" class="title_top">
-                                                        <div data-v-ae1b0c26="" class="title">Upgrade to Level 6 Ally
-                                                        </div>
+                                                        <div data-v-ae1b0c26="" class="title">Upgrade to VIP 7 </div>
                                                     </div>
                                                     <div data-v-ae1b0c26="" class="title_bot">
                                                         <div data-v-ae1b0c26="" class="text">
                                                             <div data-v-ae1b0c26="" class="illustrate">Upgrade to
-                                                                Level 6 Ally and you will get 10000USDT</div>
+                                                                VIP 7  and you will get 120 USDT
+                                                            </div>
                                                             <div data-v-ae1b0c26="" class="rewards"> Task reward：
-                                                                <span data-v-ae1b0c26="">10000 USDT</span></div>
+                                                                <span data-v-ae1b0c26=""> 120 USDT</span>
+                                                            </div>
                                                         </div>
                                                         <div data-v-ae1b0c26="" class="btn_box">
                                                             <div data-v-ae1b0c26="" class="btn_t1">
                                                                 <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
-                                                                <span data-v-ae1b0c26="" class="themeColor0">In
-                                                                    progress</span>
+                                                                <span data-v-ae1b0c26="" class="themeColor0">{{(Auth::user()->package>=7560)?"Completed":"In Progress"}}</span>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div><!---->
+                                                </div>
+                                                <!---->
                                             </div>
                                             <div data-v-ae1b0c26="" class="card">
                                                 <div data-v-ae1b0c26="" class="title_box">
                                                     <div data-v-ae1b0c26="" class="title_top">
-                                                        <div data-v-ae1b0c26="" class="title">Get F-coins through the
-                                                            team</div>
+                                                        <div data-v-ae1b0c26="" class="title">Upgrade to VIP 8</div>
                                                     </div>
                                                     <div data-v-ae1b0c26="" class="title_bot">
                                                         <div data-v-ae1b0c26="" class="text">
-                                                            <div data-v-ae1b0c26="" class="illustrate">When your L1
-                                                                member activates the account, you can get 5F coin reward
+                                                            <div data-v-ae1b0c26="" class="illustrate">Upgrade to
+                                                                VIP 8  and you will get 380 USDT
                                                             </div>
                                                             <div data-v-ae1b0c26="" class="rewards"> Task reward：
-                                                                <span data-v-ae1b0c26=""> 5 F Coin</span></div>
+                                                                <span data-v-ae1b0c26=""> 380 USDT</span>
+                                                            </div>
                                                         </div>
                                                         <div data-v-ae1b0c26="" class="btn_box">
                                                             <div data-v-ae1b0c26="" class="btn_t1">
                                                                 <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
-                                                                <span data-v-ae1b0c26="" class="themeColor0">In
-                                                                    progress</span>
+                                                                <span data-v-ae1b0c26="" class="themeColor0">{{(Auth::user()->package>=15000)?"Completed":"In Progress"}}</span>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div><!---->
+                                                </div>
+                                                <!---->
                                             </div>
-                                            <div data-v-ae1b0c26="" class="card">
-                                                <div data-v-ae1b0c26="" class="title_box">
-                                                    <div data-v-ae1b0c26="" class="title_top">
-                                                        <div data-v-ae1b0c26="" class="title">Get F-coins through the
-                                                            team</div>
-                                                    </div>
-                                                    <div data-v-ae1b0c26="" class="title_bot">
-                                                        <div data-v-ae1b0c26="" class="text">
-                                                            <div data-v-ae1b0c26="" class="illustrate">When your L2
-                                                                member activates the account, you can get 2F coin reward
-                                                            </div>
-                                                            <div data-v-ae1b0c26="" class="rewards"> Task reward：
-                                                                <span data-v-ae1b0c26=""> 2 F Coin</span></div>
-                                                        </div>
-                                                        <div data-v-ae1b0c26="" class="btn_box">
-                                                            <div data-v-ae1b0c26="" class="btn_t1">
-                                                                <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
-                                                                <span data-v-ae1b0c26="" class="themeColor0">In
-                                                                    progress</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div><!---->
-                                            </div>
-                                            <div data-v-ae1b0c26="" class="card">
-                                                <div data-v-ae1b0c26="" class="title_box">
-                                                    <div data-v-ae1b0c26="" class="title_top">
-                                                        <div data-v-ae1b0c26="" class="title">Get F-coins through the
-                                                            team</div>
-                                                    </div>
-                                                    <div data-v-ae1b0c26="" class="title_bot">
-                                                        <div data-v-ae1b0c26="" class="text">
-                                                            <div data-v-ae1b0c26="" class="illustrate">When your L3
-                                                                member activates the account, you can get 1F coin reward
-                                                            </div>
-                                                            <div data-v-ae1b0c26="" class="rewards"> Task reward：
-                                                                <span data-v-ae1b0c26=""> 1 F Coin</span></div>
-                                                        </div>
-                                                        <div data-v-ae1b0c26="" class="btn_box">
-                                                            <div data-v-ae1b0c26="" class="btn_t1">
-                                                                <div data-v-ae1b0c26="" class="themeTaskBtBg0"></div>
-                                                                <span data-v-ae1b0c26="" class="themeColor0">In
-                                                                    progress</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div><!---->
-                                            </div><!---->
+                                           
+                                            <!---->
                                         </div>
-                                        <div data-v-a1bf5ce4="" data-v-ae1b0c26=""><!----></div>
+                                        <div data-v-a1bf5ce4="" data-v-ae1b0c26="">
+                                            <!---->
+                                        </div>
                                     </div>
+                                    <!-- Daily tasks -->
+                                    <div class="tasks-section daily-tasks" style="display: none;">
+                                        <div class="card_list">
+                                            <!-- Your daily tasks content here -->
+                                            <div class="card">
+                                                <div class="title_box">
+                                                    <div class="title_top">
+                                                        <div class="title">Complete 3 Trades Today</div>
+                                                    </div>
+                                                    <div class="title_bot">
+                                                        <div class="text">
+                                                            <div class="illustrate">Complete 3 successful trades to earn
+                                                                5 USDT</div>
+                                                            <div class="rewards">Task reward: <span>5 USDT</span></div>
+                                                        </div>
+                                                        <div class="btn_box">
+                                                            <div class="btn_t1">
+                                                                <div class="themeTaskBtBg0"></div>
+                                                                <span class="themeColor0">In progress</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- More daily cards... -->
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
-                        </div><!---->
+                        </div>
+                        <!---->
                     </div>
                 </div>
             </div>
@@ -447,18 +461,40 @@
                 <div data-v-b68a32e2="" class="loader-inner"></div>
             </div>
             <p data-v-b68a32e2="">Loading...</p>
-        </div><!---->
+        </div>
+        <!---->
     </div>
+
+
+    <!-- JS to switch tabs -->
+    <script>
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            let target = this.getAttribute('data-target');
+
+            document.querySelectorAll('.tasks-section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            document.querySelector(`.${target}`).style.display = 'block';
+        });
+    });
+    </script>
+
     <script src="{{asset('')}}js1744307594169/chunk-vue.a3b4853b.1744307594169.chunk.js"></script>
     <script src="{{asset('')}}js1744307594169/chunk-echarts.cc04be28.1744307594169.chunk.js"></script>
     <script src="{{asset('')}}js1744307594169/chunk-vant.81420f35.1744307594169.chunk.js"></script>
     <script src="{{asset('')}}js1744307594169/chunk-vendors.374f8b51.1744307594169.chunk.js"></script>
     <div class="van-overlay" style="z-index: 2001; display: none;"></div>
-    <div data-v-7e78ca37="" class="van-popup van-popup--center"
-        style="background: none; z-index: 2002; display: none;">
+    <div data-v-7e78ca37="" class="van-popup van-popup--center" style="background: none; z-index: 2002; display: none;">
         <div data-v-7e78ca37="" class="popup-box"><img data-v-7e78ca37=""
                 src="{{asset('')}}static/img/home-checkIn-icon.3b9c0bc0.png" alt="" class="icon-logo"><i
-                data-v-7e78ca37="" class="cross van-icon van-icon-cross"><!----></i>
+                data-v-7e78ca37="" class="cross van-icon van-icon-cross">
+                <!---->
+            </i>
             <div data-v-7e78ca37="" class="content">
                 <div data-v-7e78ca37="" class="text">You haven't Check-in today yet, Check-in and get a gift!</div>
                 <div data-v-36e29cae="" data-v-7e78ca37="" class="btn_box big">

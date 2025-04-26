@@ -1,0 +1,118 @@
+.qrcode,.qrcode /deep/ img,.qrcode img {
+    width: 3.44rem;
+    height: 3.44rem
+}
+
+.box[data-v-5e8a43b1] {
+    text-align: center;
+    background: url(data:image/png;base64,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) no-repeat 50%;
+    background-size: auto 100%;
+    margin: .4rem 0
+}
+
+.box .txt[data-v-5e8a43b1] {
+    font-weight: 600;
+    font-size: .32rem;
+    line-height: .45rem;
+    color: #ffffff;
+}
+
+.box .m[data-v-5e8a43b1] {
+    width: 3.6rem;
+    height: 3.6rem;
+    background: #fff;
+    border-radius: .16rem;
+    box-shadow: 0 .2rem .3rem 0 rgba(0,0,0,.2);
+    padding: .08rem;
+    margin: .24rem auto
+}
+
+.box .m[data-v-5e8a43b1] canvas,.box .m[data-v-5e8a43b1] img {
+    width: 3.44rem;
+    height: 3.44rem
+}
+
+.link-box .name[data-v-5e8a43b1] {
+    font-weight: 600;
+    font-size: .28rem;
+    line-height: .39rem;
+    color: #ffffff;
+    margin-bottom: .17rem
+}
+
+.link-box ul[data-v-5e8a43b1] {
+    background: linear-gradient(72deg, #042d50, #070808);
+    border: .02rem solid #dbdbdb;
+    border-radius: .16rem;
+    padding: 0 .28rem
+}
+
+.link-box ul li[data-v-5e8a43b1] {
+    border-bottom: .02rem solid #ebebeb;
+    align-items: center;
+    padding: .2rem 0
+}
+
+.link-box ul li img[data-v-5e8a43b1] {
+    height: .24rem
+}
+
+.link-box ul li .flex1[data-v-5e8a43b1] {
+    text-align: right;
+    padding: 0 .2rem;
+    text-transform: none
+}
+
+.link-box ul li[data-v-5e8a43b1]:last-child {
+    border: 0
+}
+
+.shaer-box[data-v-5e8a43b1] {
+    margin-top: .28rem;
+    padding-bottom: .28rem
+}
+
+.shaer-box .name[data-v-5e8a43b1] {
+    font-weight: 600;
+    margin-bottom: .17rem
+}
+
+.shaer-box ul li[data-v-5e8a43b1] {
+    margin-right: .48rem
+}
+
+.shaer-box ul li img[data-v-5e8a43b1] {
+    height: .88rem
+}
+
+.shaer-box ul li .n[data-v-5e8a43b1] {
+    display: none
+}
+
+.url[data-v-5e8a43b1] {
+    word-break: break-word
+}
+
+.doc-box[data-v-5e8a43b1] {
+    margin: .28rem 0;
+    padding: .26rem;
+    background: #f8f8f8;
+    border-radius: .2rem
+}
+
+.doc-box .name[data-v-5e8a43b1] {
+    font-size: .3rem;
+    line-height: .42rem;
+    margin-bottom: .16rem
+}
+
+.doc-box .n[data-v-5e8a43b1] {
+    font-size: .26rem;
+    margin: .16rem 0
+}
+
+.doc-box p[data-v-5e8a43b1] {
+    padding-left: .2rem;
+    color: #929292;
+    margin-bottom: .1rem
+}

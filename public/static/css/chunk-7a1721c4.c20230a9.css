@@ -792,7 +792,7 @@
 .AboutLIst li img[data-v-2a245038] {
     width: .48rem;
     height: .48rem;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(245deg) brightness(104%) contrast(104%);
+    /* filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(245deg) brightness(104%) contrast(104%); */
 }
 
 .AboutLIst li .flex1[data-v-2a245038] {

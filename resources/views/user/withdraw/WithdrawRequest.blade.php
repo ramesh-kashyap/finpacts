@@ -155,13 +155,15 @@
         line-height: .41379rem;
         background-color: #fff;
     }
+
     .img[data-v-a11fc2d2] {
-    height: .48rem;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(245deg) brightness(104%) contrast(104%);
-}
-.page .headers.on[data-v-decd48ac] {
-    background: linear-gradient(81deg, #03031d, #03031f, #09096e);
-}
+        height: .48rem;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(245deg) brightness(104%) contrast(104%);
+    }
+
+    .page .headers.on[data-v-decd48ac] {
+        background: linear-gradient(81deg, #03031d, #03031f, #09096e);
+    }
 </style>
 
 <body class="mein_cn">
@@ -258,7 +260,7 @@
                                                         z-index: 1000;
                                                         padding: 10px;
                                                         border-radius: 10px;
-                                                        margin: 10px;
+                                                        margin: 0px auto;
                                                     }
 
                                                     .van-popover__content.active {
@@ -316,9 +318,10 @@
                                                                     <label for="usdtBep20" value="bep20">BNB SMART
                                                                         CHAIN (BEP20)</label>
 
-                                                                    <input type="text"  id="usdtBep20" 
+                                                                    <input type="text" id="usdtBep20"
                                                                         name="PSys"
-                                                                        placeholder="Enter your BNB (BEP20) address" style="visibility: collapse;">
+                                                                        placeholder="Enter your BNB (BEP20) address"
+                                                                        style="visibility: collapse;">
 
 
                                                                     <dd class="text-12px text-gray">Estimated arrival
@@ -348,7 +351,7 @@
 
 
 
-                                                <input data-v-a11fc2d2="" data-v-40b7e5e7="" type="text"
+                                                <input data-v-a11fc2d2="" data-v-40b7e5e7="" type="text" id="amountRequest"
                                                     placeholder="Enter amount" min="20" name="amount">
 
 
@@ -357,17 +360,15 @@
                                             <div data-v-a11fc2d2="" data-v-40b7e5e7="" class="tip1">
                                                 <p data-v-a11fc2d2="" data-v-40b7e5e7=""><span data-v-a11fc2d2=""
                                                         data-v-40b7e5e7="">Make amount</span><span data-v-a11fc2d2=""
-                                                        data-v-40b7e5e7="">20 USDT</span></p>
+                                                        data-v-40b7e5e7="" id="withdrawamt">0 USDT</span></p>
                                                 <p data-v-a11fc2d2="" data-v-40b7e5e7="">
 
 
 
 
                                                     <span data-v-a11fc2d2="" data-v-40b7e5e7="">
-                                                        Temporary quota <a data-v-a11fc2d2="" href="/wallet/temporary"
-                                                            class="" data-v-40b7e5e7=""
-                                                            style="color: rgb(160, 210, 17);"> Check
-                                                        </a></span><span data-v-a11fc2d2="" data-v-40b7e5e7=""> 0 USDT
+                                                        Actual Amount Received</span><span data-v-a11fc2d2=""
+                                                        data-v-40b7e5e7="" id="ActualAmount"> 0 USDT
                                                     </span>
                                                 </p>
                                             </div>
@@ -464,9 +465,9 @@
                                                 <p data-v-a11fc2d2="" data-v-40b7e5e7=""><span data-v-a11fc2d2=""
                                                         data-v-40b7e5e7="">Min Withdraw</span><span data-v-a11fc2d2=""
                                                         data-v-40b7e5e7="">20 USDT</span></p>
-                                                <p data-v-a11fc2d2="" data-v-40b7e5e7=""><span data-v-a11fc2d2=""
+                                                {{-- <p data-v-a11fc2d2="" data-v-40b7e5e7=""><span data-v-a11fc2d2=""
                                                         data-v-40b7e5e7="">Fixed gas fee</span><span
-                                                        data-v-a11fc2d2="" data-v-40b7e5e7="">0 USDT</span></p>
+                                                        data-v-a11fc2d2="" data-v-40b7e5e7="">0 USDT</span></p> --}}
                                             </div>
                                         </div>
 
@@ -480,7 +481,7 @@
                                     <div data-v-a11fc2d2="" data-v-40b7e5e7="" class="go">
 
                                         <button data-v-a11fc2d2="" type="submit" data-v-40b7e5e7=""
-                                            class="on btn">Withdraw</button>
+                                            class="on btn submit-btn">Withdraw</button>
                                     </div>
                                 </div>
                             </div>
@@ -526,6 +527,7 @@
                         $(document).ready(function() {
                             var countdown;
                             var timer;
+
 
                             $('.code-btn').click(function(e) {
                                 var emailId = $('#emailId').val();
@@ -589,6 +591,35 @@
                             // Optional: Handle Resend Button Click
                             $('.resend-btn').click(function(e) {
                                 $('.code-btn').trigger('click'); // Simulate a click on the original send button
+                            });
+
+                            $('#amountRequest').on('change keyup', function() {
+
+                                let str = $(this).val();
+                                str = str.replace(',', '.');
+                                $(this).val(str);
+
+                                let min = 20;
+                                let max = 500000;
+                                let charge = 15; // in percent
+
+                                let amount = parseFloat(str);
+
+                                if (amount >= min && amount <= max) {
+                                    $(".submit-btn").prop("disabled", false);
+                                } else {
+                                    $(".submit-btn").prop("disabled", true);
+                                }
+
+                                if (!isNaN(amount)) {
+                                    $('#withdrawamt').html(amount + " USDT");
+                                    $('#ActualAmount').html((amount - (amount * charge / 100)).toFixed(2) + " USDT");
+                                    $('#chargefee').html(charge + " %");
+                                } else {
+                                    $('#withdrawamt').html("0 USDT");
+                                    $('#ActualAmount').html("0 USDT");
+                                    $('#chargefee').html(charge + " %");
+                                }
                             });
                         });
                     </script>

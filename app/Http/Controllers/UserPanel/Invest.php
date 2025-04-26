@@ -835,33 +835,37 @@ public function viewdetail($txnId)
 
         
 
-        public function records(Request $request)
-        {
+    public function records(Request $request)
+    {
+    $user = Auth::user();
+    $investments = Investment::where('user_id_fk', $user->username)
+    ->orderBy('created_at', 'asc') 
+    ->get();
+    
 
-          $user=Auth::user();
-        $limit = $request->limit ? $request->limit : paginationLimit();
-          $status = $request->status ? $request->status : null;
-          $search = $request->search ? $request->search : null;
-          $notes = Contract::where('user_id',$user->id)->orderBy('id','DESC');
-        if($search <> null && $request->reset!="Reset"){
-          $notes = $notes->where(function($q) use($search){
-            $q->Where('c_bot', 'LIKE', '%' . $search . '%')
-            ->orWhere('c_buy', 'LIKE', '%' . $search . '%')
-            ->orWhere('qty', 'LIKE', '%' . $search . '%')
-            ->orWhere('profit', 'LIKE', '%' . $search . '%')
-            ->orWhere('c_ref', 'LIKE', '%' . $search . '%');
-          });
+     // Calculate remaining days for the latest investment only
+foreach ($investments as $key => $investment) {
+  if ($key === array_key_last($investments->toArray())) {
+      $daysPassed = now()->diffInDays($investment->created_at);
+      $investment->remaining_days = max(365 - $daysPassed, 0);
+  } else {
+      $investment->remaining_days = 0;
+  }
+}
 
-        }
+$incomes = Income::where('user_id_fk', $user->username)
+->where('remarks', 'Contract Income')
+->orderBy('created_at', 'desc')
+->get(); // ← This returns a COLLECTION
 
-        $notes = $notes->paginate($limit)->appends(['limit' => $limit ]);
+    $this->data['user'] = $user;
+    $this->data['myRank'] = $user->rank;
+    $this->data['income'] = $incomes;
+    $this->data['investments'] = $investments;
+    $this->data['page'] = 'user.record';
 
-        $this->data['search'] =$search;
-        $this->data['level_income'] =$notes;
-          $this->data['page'] = 'user.record';
-          return $this->dashboard_layout();
-          
-        }
+    return $this->dashboard_layout();
+    }
 
 
 

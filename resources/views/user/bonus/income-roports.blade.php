@@ -193,6 +193,57 @@
                                         }
                                     </style>
 
+<style>
+    /* Pagination container */
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        list-style: none;
+        padding: 0;
+    }
+
+    /* Each page item */
+    .page-item {
+        margin: 0 5px;
+    }
+
+    /* Page link style */
+    .page-link {
+        display: block;
+        padding: 0px 15px;
+        background: #042d50;
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: 0.3s ease;
+    }
+
+    /* Hover effect */
+    .page-link:hover {
+        background: #0371d8;
+        color: #fff;
+        border-color: #0371d8;
+    }
+
+    /* Active page */
+    .page-item.active .page-link {
+        background: #ebebeb;
+        /* Light green */
+        color: #000;
+        font-weight: bold;
+        border-color: #ebebeb;
+    }
+
+    /* Disabled page (e.g., Prev when on first page) */
+    .page-item.disabled .page-link {
+        background: #ccc;
+        color: #666;
+        cursor: not-allowed;
+    }
+</style>
+
 
 
 
@@ -254,6 +305,12 @@
                                             @endforeach
 
                                             <?php }?>
+
+
+                                            <div class="van-list__finished-text" style="margin-bottom: 30em;">
+                                                {{ $level_income->withQueryString()->links() }}
+    
+                                            </div>
 
 
 
