@@ -351,8 +351,9 @@
 
 
 
-                                                <input data-v-a11fc2d2="" data-v-40b7e5e7="" type="text" id="amountRequest"
-                                                    placeholder="Enter amount" min="20" name="amount">
+                                                <input data-v-a11fc2d2="" data-v-40b7e5e7="" type="text"
+                                                    id="amountRequest" placeholder="Enter amount" min="20"
+                                                    name="amount">
 
 
 
@@ -391,9 +392,9 @@
 
 
 
-                                                <img data-v-a11fc2d2="" data-v-40b7e5e7=""
+                                                <a href="{{route('user.wallets')}}"><img data-v-a11fc2d2="" data-v-40b7e5e7=""
                                                     src="{{ asset('') }}static/img/men.png" alt=""
-                                                    class="img">
+                                                    class="img"></a> 
 
 
                                             </div>
@@ -465,9 +466,18 @@
                                                 <p data-v-a11fc2d2="" data-v-40b7e5e7=""><span data-v-a11fc2d2=""
                                                         data-v-40b7e5e7="">Min Withdraw</span><span data-v-a11fc2d2=""
                                                         data-v-40b7e5e7="">20 USDT</span></p>
+                                                <p data-v-a11fc2d2="" data-v-40b7e5e7=""><span data-v-a11fc2d2=""
+                                                        data-v-40b7e5e7="">Processing Time</span><span
+                                                        data-v-a11fc2d2="" data-v-40b7e5e7="">0–48 hours</span></p>
+                                                {{-- <br> --}}
                                                 {{-- <p data-v-a11fc2d2="" data-v-40b7e5e7=""><span data-v-a11fc2d2=""
-                                                        data-v-40b7e5e7="">Fixed gas fee</span><span
-                                                        data-v-a11fc2d2="" data-v-40b7e5e7="">0 USDT</span></p> --}}
+                                                        style="line-height: initial;" data-v-40b7e5e7="">Withdrawals
+                                                        requested on Thursday will be processed and credited by
+                                                        Monday</span></p>
+                                                <p data-v-a11fc2d2="" data-v-40b7e5e7=""><span data-v-a11fc2d2=""
+                                                        style="line-height: initial;" data-v-40b7e5e7="">Withdrawals
+                                                        requested on Friday will be processed and credited by
+                                                        Tuesday.</span></p> --}}
                                             </div>
                                         </div>
 

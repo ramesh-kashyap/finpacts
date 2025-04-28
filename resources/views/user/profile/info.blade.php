@@ -201,8 +201,8 @@
                                         </li>
                                         <li data-v-20c16f3c="" data-v-decd48ac="" class="it flex">
                                             <div data-v-20c16f3c="" data-v-decd48ac="" class="flex1">UID</div>
-                                            <div data-v-20c16f3c="" data-v-decd48ac="" class="str"> {{Auth::user()->username}} </div>
-                                            <img data-v-20c16f3c="" data-v-decd48ac=""
+                                            <div data-v-20c16f3c="" data-v-decd48ac="" class="str"> <span id="userId"> {{Auth::user()->username}}</span> </div>
+                                            <img data-v-20c16f3c="" data-v-decd48ac="" class="copy-btn"
                                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAcCAYAAAB75n/uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFVSURBVHgB7VZLTsMwEJ3JByGxCSfAN6C5QVgiIZGKDVtuADfhBt2yQQ0SEkvECQInINwgGyQUyzEzCWmjCreOFFdd9G3Glifz7PGbcRDWILp+EVKqGQ0nPAVLaMCsVtXdTzYtcEPwfEjgFZRKyTgwrVZS3eMyeAlaf4AN0DuhMwjemO+HMyMBBb9kqzUUB7WMy2xaggWidB5JP/yEdnMTBAc4unp+JZPw2APHaFI0hlpMPl5PLQkMVAyCTuki88N0Lkw+wVhqIXv2L8FYajH5LS6ZjvtlG5zx5/ve8W0kcIU9wZ5gBwm4AKmqRDcPYGS01a2bwtMATy5StOhrtZK3Lgi4Yb7xe8xtfPQUfT9eHPfnW1FR20ERT1sF2GFVLSZwirjlJvxN5YU5PdgFWEA2b8BSLUaCMPRvuh8sRBBkBQxDoxbTolc+nBdEEq/bhSlwXy0mp1+DNZn1gotjbAAAAABJRU5ErkJggg=="
                                                 alt="">
                                         </li>
@@ -220,6 +220,51 @@
                 </div>
             </div>
         </div>
+
+        <style>
+            .van-toast {
+         
+         
+            width: 2.51724rem;
+            max-width: 70%;
+            min-height: 1.51724rem;
+            padding: .27586rem;
+            color: #fff;
+            font-size: .24138rem;
+            line-height: 0px;
+            white-space: pre;
+           
+            padding: 7px;
+        }
+        .van-icon, .van-icon:before {
+display: contents;
+}
+        </style>
+                <!---->
+                <!---->
+                <div class="van-toast van-toast--middle van-toast--success" style="z-index: 2015; display: none;"><i
+                        class="van-icon van-icon-success van-toast__icon">
+                        <!----></i>
+                    <div class="van-toast__text">Copied successful</div>
+                </div>
+                <!---->
+                <script>
+                    document.querySelector('.copy-btn').addEventListener('click', function() {
+                        let copyText = document.getElementById('userId').innerText.trim();
+                    
+                        navigator.clipboard.writeText(copyText).then(function() {
+                            let toast = document.querySelector('.van-toast');
+                                toast.style.display = 'block'; // Show the toast
+        
+                                // Hide after 3 seconds
+                                setTimeout(() => {
+                                    toast.style.display = 'none';
+                                }, 3000);
+                        }, function(err) {
+                            console.error('Could not copy text: ', err);
+                        });
+                    });
+                    </script>
         <script src="https://code.jquery.com//jquery-3.3.1.min.js"></script>
 @include('partials.notify')
         <script>

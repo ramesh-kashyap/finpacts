@@ -750,10 +750,10 @@
                             <div data-v-29c52665="" data-v-6e348d44="" class="head head0" data-v-decd48ac="">
                                 <div data-v-29c52665="" class="container flex">
                                     <!---->
-                                    <div data-v-29c52665="" class="myName">
+                                    {{-- <div data-v-29c52665="" class="myName">
                                         <div data-v-29c52665=""><img data-v-29c52665=""
                                                 src="{{ asset('') }}static/img/logo-2.png" alt=""></div>
-                                    </div>
+                                    </div> --}}
                                     <div data-v-29c52665="" class="name tac"></div>
                                     <div data-v-29c52665="" class="flex1"></div>
                                     <!---->
@@ -996,8 +996,8 @@
                                         <div data-v-6e348d44="" data-v-decd48ac="" class="name">
                                             <div data-v-6e348d44="" data-v-decd48ac="" class="flex1 ti-be ti0"><span
                                                     data-v-6e348d44="" data-v-decd48ac="">Contract Record</span></div>
-                                            <div data-v-6e348d44="" data-v-decd48ac="" class="sift"><span
-                                                    data-v-6e348d44="" data-v-decd48ac="">view all</span></div>
+                                            <div data-v-6e348d44="" data-v-decd48ac="" class="sift"><a href="{{route('user.order-roports')}}"> <span
+                                                    data-v-6e348d44="" data-v-decd48ac="">view all</span></a></div>
                                         </div>
                                         @if ($level_income->isEmpty())
                                         <div data-v-6e348d44="" data-v-decd48ac="" class="empty db"
@@ -1249,14 +1249,11 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                </div>
                                             @endforeach
-                                        @else
-                                           
                                         @endif
 
 
-                                    </div>
-                                </div>
                             </div>
 
                         </div>

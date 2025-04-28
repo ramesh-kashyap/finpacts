@@ -160,6 +160,15 @@
         box-shadow: 0 0 .16rem .05rem rgba(0, 0, 0, .1);
         background: linear-gradient(72deg, #042d50, #070808);
     }
+    .card_list .card .title_box .btn_box .btn_t1 div[data-v-ae1b0c26] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    border-radius: .12rem;
+}
 </style>
 
 <body class="mein_cn">

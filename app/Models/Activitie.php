@@ -9,7 +9,7 @@ class Activitie extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'user_id','status','url','ttime'
+        'data','created_at'
     ];
 
 

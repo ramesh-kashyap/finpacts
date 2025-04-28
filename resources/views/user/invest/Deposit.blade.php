@@ -163,6 +163,27 @@
     font-weight: 600;
     color: #b2c8e6;
 }
+.page .headers.on[data-v-decd48ac] {
+    background: linear-gradient(81deg, #03031d, #03031f, #09096e);
+}
+
+.page .headers[data-v-decd48ac] {
+    height: 0.8rem;
+}
+.modal-con .modal-title[data-v-2848a4de] {
+    margin-bottom: .4rem;
+    position: relative;
+    text-align: center;
+    font-size: .32rem;
+    color: #ffffff;
+    line-height: .32rem;
+}
+.modal-con .modal-list .list-info .info div[data-v-2848a4de] {
+    margin-bottom: .24rem;
+    font-size: .28rem;
+    color: #ffffff;
+    line-height: .28rem;
+}
 </style>
 <body class="mein_cn">
     <div class="page-loading-con" id="loaderInit" style="display: none;">
@@ -191,9 +212,9 @@
                                     <div data-v-29c52665="" class="name tac">Recharge</div>
                                     <div data-v-29c52665="" class="flex1"></div>
 
-                                    <div data-v-29c52665="" class="Set"><img data-v-29c52665=""
+                                    <div data-v-29c52665="" class="Set"><a href="{{route('user.DepositHistory')}}"><img data-v-29c52665=""
                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAR3SURBVHgB7ZyJcdswEEV/MilAqSDbQVSC0oE6MEtwB0QHdiqg0oFTAdWBnQrIVCClAoUYUgkta3EueMh8MzuyIHIBfJwEYAILCwsLCz6sGssbKxurGjvNxA5dmu8bI4wAdQmYg1guVmBAIXWpHQCcbswOXd6SkgM43bjlSMQ9gNM7MfGaSLjNZsvZAcJ94s4SmWpsg/mwhjlP2koIQYZIKow0DRCCYJ5+rSCAqe8jzB8C3z0pCFAyzgvcDgoJmzFXOmvcDhvwXZQzH5jwk+f1cyU6nx8hR45xpz067gdMBC6RHA8YT7iYQcA3n2+QasK69EWGfwGOjX12vNY3n2+QbMLvEikBv2M6/PC49ugY5k1I3/CI8QcRBT/UFT+PECC6c50R54IPKYB3Pw+MZhlEIlkEjGQRMJJFwEg+Yb7oJ58t2hWiL93nCq+fiOrOfjX20ti++56cqU5j+pv6ofPF58YyJF4YnpqAZ+GkJ+oFEgk5JQFTCHdpOYQJEdCWUd/1OkLb3E4DWQXB2ugroM96oIKdO4zzXK3j3EIAXwF9MnuAmdzDV432WTZDW3v6I7D+W4/M2+6aysNvjkjGEtBVvAJhm/oum+siIvoKqOCWKG3cctHW4d49ZPopgpuQdwjEV0CNbT3QtFxEDvemOIZmO7YXfF4mRMAYKkOc+reU+9Fkif8ZAQwpYA6zeIT0EMwiKngylIAEueaT4//Kcsj+8Bp8c/bedRxKwJ0hLp8+79o8VMEf06EqBQ+GEJAM8RTw41rNsc03OUoI1MIhBMwM8RD8kEwvQaAWDiEg95xbwB/p9O4Yf6Wrg9QCkiGOkCmLdHo3Bp9OzTi1gBnjv0IYKdJbMz6z/kVj7YlwtewnpsMTE/4q7WMJ+JUJ32M6vDDhBAdSN+Eacv0fkCa9hIhuJrWAUR20h78C4awYn07zy7EEDMW0ohIjYnA65yagMviMEXGyAnI1JrQJ6/tsG1C+Iq4wYQFrxj8hHGkR13AYRMaaxnBThA3COTb2zeBbk8FdRGLCf/e/jCVgzYTHrjy7iuiyXrhhwk2+/5G6CWdwaB4RuDRnW39bMfdlcCC1gKYOegMZbCKaBFwb7iM4kFpATQmZ0dIEJ+KT5b4drqfNeYNpCAEVIkvZES3irud7b/FPhnRlcKRG2ual0Rnj5oMl5Lk8fMmxg0DBcs1LQRYFPrEpNtJtmDaVCg8/bMak32xhqoU6POWG+iUE8zM1efgyjpIVZEVUA8bFQRDeWNeUBofnKi1VQ0zTjdQirmE/WhIEId0hx8vTA7a4Zne4qB/BKaH1Rcwcri8gUxsJbif9txBAwU2M0JoYEpcWMqT72MD9gKWCIKlef3dteVx53F+hPZd4/oebyyO+hLZm+x7xVUgAwb30XM10WnWsQ+YZEkNoa+Qe4ZnU92nxVpZ4KoSL4WvPuI3XWr1BIX2tU7hxCPLdx1m40H2YWUJo+yi9Khwq3B6Cws35HQiEdlqy7kx//9L7/djYH7Ri193nE4Rea7KwsLCwAPwF9Df9T4Rlt1UAAAAASUVORK5CYII="
-                                            alt=""></div>
+                                            alt=""></a> </div>
                                 </div>
                             </div>
                         </div>
@@ -256,7 +277,7 @@
                                                         id="depositAddressDiv">
                                                         {{ $address_in }}
                                                     </div>
-                                                    <div data-v-2848a4de="" data-v-decd48ac="" class="ico"><img
+                                                    <div data-v-2848a4de="" data-v-decd48ac="" class="ico copy-btn"><img
                                                             data-v-2848a4de="" data-v-decd48ac=""
                                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAcCAYAAAB75n/uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFVSURBVHgB7VZLTsMwEJ3JByGxCSfAN6C5QVgiIZGKDVtuADfhBt2yQQ0SEkvECQInINwgGyQUyzEzCWmjCreOFFdd9G3Glifz7PGbcRDWILp+EVKqGQ0nPAVLaMCsVtXdTzYtcEPwfEjgFZRKyTgwrVZS3eMyeAlaf4AN0DuhMwjemO+HMyMBBb9kqzUUB7WMy2xaggWidB5JP/yEdnMTBAc4unp+JZPw2APHaFI0hlpMPl5PLQkMVAyCTuki88N0Lkw+wVhqIXv2L8FYajH5LS6ZjvtlG5zx5/ve8W0kcIU9wZ5gBwm4AKmqRDcPYGS01a2bwtMATy5StOhrtZK3Lgi4Yb7xe8xtfPQUfT9eHPfnW1FR20ERT1sF2GFVLSZwirjlJvxN5YU5PdgFWEA2b8BSLUaCMPRvuh8sRBBkBQxDoxbTolc+nBdEEq/bhSlwXy0mp1+DNZn1gotjbAAAAABJRU5ErkJggg=="
                                                             alt=""></div>
@@ -289,7 +310,7 @@
 
                                 <div data-v-2848a4de="" class="van-popup van-popup--round van-popup--center"
                                     id="networkPopup" style="display: none; z-index: 2025;">
-                                    <div data-v-2848a4de="" class="modal-con" style="background: #f2f3f5;">
+                                    <div data-v-2848a4de="" class="modal-con" style="background: #030323;">
                                         <div data-v-2848a4de="" class="modal-title"> Select network <img
                                                 data-v-2848a4de="" id="closePopup"
                                                 onclick="document.getElementById('networkPopup').style.display='none';"
@@ -301,7 +322,7 @@
                                                 <div data-v-2848a4de="" class="img">
 
                                                     <img data-v-2848a4de=""
-                                                        src="https://fastcoin.s3.ap-southeast-1.amazonaws.com/upload/20241228/e5315cc0ed9748bd789c0e5af1579f6f.png"
+                                                        src="{{asset('')}}static/img/tron.png"
                                                         alt="">
                                                 </div>
                                                 <div data-v-2848a4de="" class="info"
@@ -374,16 +395,47 @@
             </div>
             <!---->
         </div>
-
+<style>
+    .van-toast {
+ 
+ 
+    width: 2.51724rem;
+    max-width: 70%;
+    min-height: 1.51724rem;
+    padding: .27586rem;
+    color: #fff;
+    font-size: .24138rem;
+    line-height: 0px;
+    white-space: pre;
+   
+    padding: 7px;
+}
+</style>
         <!---->
         <!---->
         <div class="van-toast van-toast--middle van-toast--success" style="z-index: 2015; display: none;"><i
                 class="van-icon van-icon-success van-toast__icon">
                 <!----></i>
-            <div class="van-toast__text">Registration successful</div>
+            <div class="van-toast__text">Copied successful</div>
         </div>
         <!---->
+        <script>
+            document.querySelector('.copy-btn').addEventListener('click', function() {
+                let copyText = document.getElementById('depositAddressDiv').innerText.trim();
+            
+                navigator.clipboard.writeText(copyText).then(function() {
+                    let toast = document.querySelector('.van-toast');
+                        toast.style.display = 'block'; // Show the toast
 
+                        // Hide after 3 seconds
+                        setTimeout(() => {
+                            toast.style.display = 'none';
+                        }, 3000);
+                }, function(err) {
+                    console.error('Could not copy text: ', err);
+                });
+            });
+            </script>
 
         <script>
             document.getElementById("closePopup").addEventListener("click", function() {

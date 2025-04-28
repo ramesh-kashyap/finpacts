@@ -39,7 +39,7 @@ Route::get('/reward_bonus', [App\Http\Controllers\Cron::class, 'reward_bonus'])-
 Route::get('/royalty_bonus', [App\Http\Controllers\Cron::class, 'dailyIncentive'])->name('royalty_bonus');
 Route::get('/leadership_rank', [App\Http\Controllers\Cron::class, 'leadership_rank'])->name('leadership_rank');
 Route::get('/releasefund', [App\Http\Controllers\Cron::class, 'releasefund'])->name('releasefund');
-Route::any('/dynamicupicallback', [App\Http\Controllers\Cron::class, 'dynamicupicallback'])->name('dynamicupicallback');
+Route::any('/dynamicUpiCallback', [App\Http\Controllers\Cron::class, 'dynamicUpiCallback'])->name('dynamicUpiCallback');
 Route::get('/manage-trade', [App\Http\Controllers\Cron::class, 'manage_trade'])->name('manage-trade');
 
 Route::post('/sendforgot', [App\Http\Controllers\Login::class, 'sendforgot'])->name('send_forgot');
@@ -202,6 +202,7 @@ Route::get('/matching-bonus', [App\Http\Controllers\UserPanel\Bonus::class, 'cas
 Route::get('/reward-bonus', [App\Http\Controllers\UserPanel\Bonus::class, 'reward_income'])->name('user.reward-bonus');
 Route::get('/income', [App\Http\Controllers\UserPanel\Bonus::class, 'roi_income'])->name('user.income');
 Route::get('/income-roports', [App\Http\Controllers\UserPanel\Bonus::class, 'income_roports'])->name('user.income-roports');
+Route::get('/order-roports', [App\Http\Controllers\UserPanel\Bonus::class, 'order_roports'])->name('user.order-roports');
 Route::get('/activitiesBonus', [App\Http\Controllers\UserPanel\Bonus::class, 'activitiesBonus'])->name('user.activitiesBonus');
 
 Route::get('/gap-margin-bonus', [App\Http\Controllers\UserPanel\Bonus::class, 'gap_margin_bonus'])->name('user.gap-margin-bonus');

@@ -8,7 +8,7 @@
     <meta http-equiv="expires" content="0">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
-    <link rel="icon" href="{{asset('')}}logo.png">
+    <link rel="icon" href="{{ asset('') }}logo.png">
     <meta name="google" content="notranslate">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="full-screen" content="true">
@@ -198,9 +198,10 @@
                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAApCAYAAABHomvIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJiSURBVHgB7ZjBbdswFIYfpSAoYgQhEjrQkSOkG6gbNMfenAnSTOD22Ft77M2ZwOkEViZIugF7Myo5IBC0KRBL7CNqK5TR2KSp2kKhD7BIPpPgL1J8fCSBv8BYFCtVnGP2BGpFCaVIsrsbXI7HY2HTgpgFzjm9v/8xxGwM/xaBXV9MJt+vVlWsCGSse6NU3aO2pHOiXmVZliyrszPPHB11e4viCIFbTCTUBE4vxyc3yn1MkmVtyhHE0RuhwLj8w+LtXKE04kGQD/HFT2z7CeYZUxw2+1K3OI2UYxEE6sK0EUL4sjblCOIUK8MuZr/awdGj1U9JJWgVaJdo/7q/37kSQshVArcJjjKcpmmqv/+nKW4QvChgFEUR14UmCtTQx8dcr/AnN7PAYDJJz2CD6BUehsXIcEOxfjRmBPUKx+TaMHH9aOoUl7QCfdlxqayjHSl/UVgDSl9I0wHbYi2QseM+hmLvwhDWAtviZnB8ahNimVhPsVLqLfjTA0esBc5CL0+UAEesp3g6Dc/CMI9XRR/PURSFvLvLPoIj1gJnjnQAG+b/cTM6uphO83OM2WzdzDXu5wPwxOEbzIeOB6oeY0z4RuYObubP5u2CUsFaTt3ExQ++B4cTHrqlJM/3EvDEeopnLsLRTaTgSxvN+NIK9KUV6Esr0JeGCSwOFi3GTkKEcarv4WWSvhr7BhtDHeB+/7pUQ8htRSDunZdYoW+0wBvX7V14Yd+fdFq5oz487N6Yt5/bQp9/six9qfOVQ+TDw8/Pnc4eig44Fr1DpTWQeCX8AWPIN3MDea4mpZTDhpFSikXbb3+w4GJWc6aDAAAAAElFTkSuQmCC"
                                             alt="" class="headRight">
                                     </a>
-                                    <div data-v-29c52665="" class="lang">  <a href="{{ route('user.lang') }}"> <img data-v-29c52665=""
-                                            src="data:image/png;base64,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"
-                                            alt=""></a> </div>
+                                    <div data-v-29c52665="" class="lang"> <a href="{{ route('user.lang') }}"> <img
+                                                data-v-29c52665=""
+                                                src="data:image/png;base64,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"
+                                                alt=""></a> </div>
 
                                     <div data-v-29c52665="" class="Set">
                                         <a href="{{ route('user.showinfo') }}">
@@ -228,19 +229,21 @@
                                             </div>
                                             <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">
                                                 <div data-v-3eefa016="" data-v-decd48ac="" class="n"><span
-                                                        data-v-3eefa016="" data-v-decd48ac="">{{Auth::user()->name}}</span>
+                                                        data-v-3eefa016=""
+                                                        data-v-decd48ac="">{{ Auth::user()->name }}</span>
                                                 </div>
                                                 <div data-v-3eefa016="" data-v-decd48ac="" class="copy"> UID:
-                                                    {{Auth::user()->username}}
-                                                    <img data-v-3eefa016="" data-v-decd48ac=""
+                                                     <span id="userId">{{ Auth::user()->username }}</span>
+                                                    <img data-v-3eefa016="" class="copy-btn" data-v-decd48ac=""
                                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAcCAYAAAB75n/uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFVSURBVHgB7VZLTsMwEJ3JByGxCSfAN6C5QVgiIZGKDVtuADfhBt2yQQ0SEkvECQInINwgGyQUyzEzCWmjCreOFFdd9G3Glifz7PGbcRDWILp+EVKqGQ0nPAVLaMCsVtXdTzYtcEPwfEjgFZRKyTgwrVZS3eMyeAlaf4AN0DuhMwjemO+HMyMBBb9kqzUUB7WMy2xaggWidB5JP/yEdnMTBAc4unp+JZPw2APHaFI0hlpMPl5PLQkMVAyCTuki88N0Lkw+wVhqIXv2L8FYajH5LS6ZjvtlG5zx5/ve8W0kcIU9wZ5gBwm4AKmqRDcPYGS01a2bwtMATy5StOhrtZK3Lgi4Yb7xe8xtfPQUfT9eHPfnW1FR20ERT1sF2GFVLSZwirjlJvxN5YU5PdgFWEA2b8BSLUaCMPRvuh8sRBBkBQxDoxbTolc+nBdEEq/bhSlwXy0mp1+DNZn1gotjbAAAAABJRU5ErkJggg=="
                                                         alt="">
                                                 </div>
                                             </div>
-                                            <div data-v-3eefa016="" data-v-decd48ac="" class="arr" >  <a href="{{route('user.showinfo')}}"> <i data-v-3eefa016=""
-                                                    data-v-decd48ac="" class="van-icon van-icon-arrow">
-                                                    <!---->
-                                                </i></a></div>
+                                            <div data-v-3eefa016="" data-v-decd48ac="" class="arr"> <a
+                                                    href="{{ route('user.showinfo') }}"> <i data-v-3eefa016=""
+                                                        data-v-decd48ac="" class="van-icon van-icon-arrow">
+                                                        <!---->
+                                                    </i></a></div>
                                         </div>
                                     </div>
                                     {{-- <div data-v-3eefa016="" data-v-decd48ac="" class="invateBox flex vip0"><img
@@ -258,17 +261,19 @@
                                         <div data-v-3eefa016="" data-v-decd48ac="">
                                             <div data-v-3eefa016="" data-v-decd48ac="" class="ico"><img
                                                     data-v-3eefa016="" data-v-decd48ac=""
-                                                    src="{{asset('')}}static/img/bc3cf11087b69389ded07723adf92b4a.png"
+                                                    src="{{ asset('') }}static/img/bc3cf11087b69389ded07723adf92b4a.png"
                                                     alt=""></div>
                                         </div>
-                                        <p data-v-3eefa016="" data-v-decd48ac="" class="flex1"> VIP {{Auth::user()->rank}} </p>
-                                        <div data-v-3eefa016="" data-v-decd48ac="" class="str upgrade themeColor0"> <a style="color: #000" href="{{route('user.vip')}}">
-                                            Improve credit  </a> </div>
+                                        <p data-v-3eefa016="" data-v-decd48ac="" class="flex1"> VIP
+                                            {{ Auth::user()->rank }} </p>
+                                        <div data-v-3eefa016="" data-v-decd48ac="" class="str upgrade themeColor0">
+                                            <a style="color: #000" href="{{ route('user.vip') }}">
+                                                Improve credit </a> </div>
                                     </div>
                                 </div>
                                 <div data-v-3eefa016="" data-v-decd48ac="" class="box box0">
-                                    <div data-v-3eefa016="" data-v-decd48ac="" class="js"><img data-v-3eefa016=""
-                                            data-v-decd48ac=""
+                                    <div data-v-3eefa016="" data-v-decd48ac="" class="js"><img
+                                            data-v-3eefa016="" data-v-decd48ac=""
                                             src="data:image/png;base64,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"
                                             alt=""></div>
                                     <div data-v-3eefa016="" data-v-decd48ac="" class="container">
@@ -278,7 +283,8 @@
                                             <li data-v-3eefa016="" data-v-decd48ac="">
                                                 <div data-v-3eefa016="" data-v-decd48ac="" class="ico"><img
                                                         data-v-3eefa016="" data-v-decd48ac=""
-                                                        src="{{ asset('') }}static/img/ct-0.2f282e7c.png" alt=""></div>
+                                                        src="{{ asset('') }}static/img/ct-0.2f282e7c.png"
+                                                        alt=""></div>
                                                 <p data-v-3eefa016="" data-v-decd48ac=""><a
                                                         href="{{ route('user.Withdraw-History') }}">Deposit and
                                                         Withdrawal Records </a>
@@ -292,7 +298,8 @@
                                                 <div data-v-3eefa016="" data-v-decd48ac="" class="ico">
 
                                                     <img data-v-3eefa016="" data-v-decd48ac=""
-                                                        src="{{ asset('') }}static/img/jc-0.7c91f686.png" alt="">
+                                                        src="{{ asset('') }}static/img/jc-0.7c91f686.png"
+                                                        alt="">
                                                 </div>
                                                 <a href="{{ route('user.record') }}">
                                                     <p data-v-3eefa016="" data-v-decd48ac="">Order Record
@@ -334,23 +341,24 @@
                                                         alt="" class="view">
                                                 </li> -->
                                                 <a href="{{ route('user.activities') }}">
-                                                <li data-v-3eefa016="" data-v-decd48ac="" class="db">
-                                                    <div data-v-3eefa016="" data-v-decd48ac="" class="ico"><img
-                                                            data-v-3eefa016="" data-v-decd48ac=""
-                                                            src="{{ asset('') }}static/img/icon/task.png" alt=""
-                                                            class=""></div>
-                                                    <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">Task
-                                                        Center
-                                                    </div>
-                                                    <div data-v-3eefa016="" data-v-decd48ac="" class="status">
-                                                        <!---->
-                                                        <!---->
-                                                        <!---->
-                                                        <!---->
-                                                    </div><img data-v-3eefa016="" data-v-decd48ac=""
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
-                                                        alt="" class="view">
-                                                </li>
+                                                    <li data-v-3eefa016="" data-v-decd48ac="" class="db">
+                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="ico">
+                                                            <img data-v-3eefa016="" data-v-decd48ac=""
+                                                                src="{{ asset('') }}static/img/icon/task.png"
+                                                                alt="" class=""></div>
+                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">
+                                                            Task
+                                                            Center
+                                                        </div>
+                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="status">
+                                                            <!---->
+                                                            <!---->
+                                                            <!---->
+                                                            <!---->
+                                                        </div><img data-v-3eefa016="" data-v-decd48ac=""
+                                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
+                                                            alt="" class="view">
+                                                    </li>
                                                 </a>
 
                                                 <a href="{{ route('user.ChangePass') }}">
@@ -394,48 +402,54 @@
 
 
                                                 @if (empty(Auth::user()->email))
-                                                <a href="{{ route('user.bindMail') }}">
-                                                    <li data-v-3eefa016="" data-v-decd48ac="" class="db">
-                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="ico">
-                                                            <img data-v-3eefa016="" data-v-decd48ac=""
-                                                                src="{{ asset('') }}static/img/icon/bind.png" alt=""
-                                                                class="">
-                                                        </div>
-                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">
-                                                            Bind email
-                                                        </div>
-                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="status">
-                                                            <!---->
-                                                            <!---->
-                                                            <!---->
-                                                            <!---->
-                                                        </div><img data-v-3eefa016="" data-v-decd48ac=""
-                                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
-                                                            alt="" class="view">
-                                                    </li>
-                                                </a>
+                                                    <a href="{{ route('user.bindMail') }}">
+                                                        <li data-v-3eefa016="" data-v-decd48ac="" class="db">
+                                                            <div data-v-3eefa016="" data-v-decd48ac=""
+                                                                class="ico">
+                                                                <img data-v-3eefa016="" data-v-decd48ac=""
+                                                                    src="{{ asset('') }}static/img/icon/bind.png"
+                                                                    alt="" class="">
+                                                            </div>
+                                                            <div data-v-3eefa016="" data-v-decd48ac=""
+                                                                class="flexs">
+                                                                Bind email
+                                                            </div>
+                                                            <div data-v-3eefa016="" data-v-decd48ac=""
+                                                                class="status">
+                                                                <!---->
+                                                                <!---->
+                                                                <!---->
+                                                                <!---->
+                                                            </div><img data-v-3eefa016="" data-v-decd48ac=""
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
+                                                                alt="" class="view">
+                                                        </li>
+                                                    </a>
                                                 @else
-                                                <a href="{{ route('user.ChangeMail') }}">
-                                                    <li data-v-3eefa016="" data-v-decd48ac="" class="db">
-                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="ico">
-                                                            <img data-v-3eefa016="" data-v-decd48ac=""
-                                                                src="{{ asset('') }}static/img/icon/bind.png" alt=""
-                                                                class="">
-                                                        </div>
-                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">
-                                                            Bind email
-                                                        </div>
-                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="status">
-                                                            <!---->
-                                                            <!---->
-                                                            <!---->
-                                                            <!---->
-                                                        </div><img data-v-3eefa016="" data-v-decd48ac=""
-                                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
-                                                            alt="" class="view">
-                                                    </li>
+                                                    <a href="{{ route('user.ChangeMail') }}">
+                                                        <li data-v-3eefa016="" data-v-decd48ac="" class="db">
+                                                            <div data-v-3eefa016="" data-v-decd48ac=""
+                                                                class="ico">
+                                                                <img data-v-3eefa016="" data-v-decd48ac=""
+                                                                    src="{{ asset('') }}static/img/icon/bind.png"
+                                                                    alt="" class="">
+                                                            </div>
+                                                            <div data-v-3eefa016="" data-v-decd48ac=""
+                                                                class="flexs">
+                                                                Bind email
+                                                            </div>
+                                                            <div data-v-3eefa016="" data-v-decd48ac=""
+                                                                class="status">
+                                                                <!---->
+                                                                <!---->
+                                                                <!---->
+                                                                <!---->
+                                                            </div><img data-v-3eefa016="" data-v-decd48ac=""
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
+                                                                alt="" class="view">
+                                                        </li>
 
-                                                </a>
+                                                    </a>
                                                 @endif
 
 
@@ -443,8 +457,8 @@
                                                 <li data-v-3eefa016="" data-v-decd48ac="" class="db">
                                                     <div data-v-3eefa016="" data-v-decd48ac="" class="ico"><img
                                                             data-v-3eefa016="" data-v-decd48ac=""
-                                                            src="{{ asset('') }}static/img/icon/help.png" alt=""
-                                                            class=""></div>
+                                                            src="{{ asset('') }}static/img/icon/help.png"
+                                                            alt="" class=""></div>
                                                     <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">Help
                                                         Center
                                                     </div>
@@ -457,56 +471,15 @@
                                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
                                                         alt="" class="view">
                                                 </li>
-                                                <li data-v-3eefa016="" data-v-decd48ac="" class="db">
-                                                    <div data-v-3eefa016="" data-v-decd48ac="" class="ico"><img
-                                                            data-v-3eefa016="" data-v-decd48ac=""
-                                                            src="{{ asset('') }}static/img/icon/sound.png" alt=""
-                                                            class=""></div>
-                                                    <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">Contact
-                                                        customer service</div>
-                                                    <div data-v-3eefa016="" data-v-decd48ac="" class="status">
-                                                        <!---->
-                                                        <!---->
-                                                        <!---->
-                                                        <!---->
-                                                    </div><img data-v-3eefa016="" data-v-decd48ac=""
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
-                                                        alt="" class="view">
-                                                </li>
-                                                <a href="{{ url('/clear') }}">
-                                                <li data-v-3eefa016="" data-v-decd48ac="" class="db">
-                                                    <div data-v-3eefa016="" data-v-decd48ac="" class="ico"><img
-                                                            data-v-3eefa016="" data-v-decd48ac=""
-                                                            src="{{ asset('') }}static/img/icon/cach.png" alt=""
-                                                            class="smallimg"></div>
-                                                    <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">Clear
-                                                        cache
-                                                    </div>
-                                                    <div data-v-3eefa016="" data-v-decd48ac="" class="status">
-                                                        <!---->
-                                                        <!---->
-                                                        <!---->
-                                                        <!---->
-                                                    </div><img data-v-3eefa016="" data-v-decd48ac=""
-                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
-                                                        alt="" class="view">
-                                                </li>
-                                                </a>
-
-                                                <li data-v-3eefa016="" data-v-decd48ac="" class="db">
-                                                 
-                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="ico"><img
-                                                                data-v-3eefa016="" data-v-decd48ac=""
-                                                                src="{{ asset('') }}static/img/icon/right.png" alt=""
-                                                                class="smallimg"></div>
-
+                                                <a href="https://t.me/Liamscollins" target="_blank">
+                                                    <li data-v-3eefa016="" data-v-decd48ac="" class="db">
+                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="ico">
+                                                            <img data-v-3eefa016="" data-v-decd48ac=""
+                                                                src="{{ asset('') }}static/img/icon/sound.png"
+                                                                alt="" class=""></div>
                                                         <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">
-                                                            <a href="{{ route('logout') }}" style="color: #fff">
-                                                            Log
-                                                            out
-                                                        </a>
-                                                        </div>
-
+                                                            Contact
+                                                            customer service</div>
                                                         <div data-v-3eefa016="" data-v-decd48ac="" class="status">
                                                             <!---->
                                                             <!---->
@@ -515,7 +488,52 @@
                                                         </div><img data-v-3eefa016="" data-v-decd48ac=""
                                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
                                                             alt="" class="view">
-                                                   
+                                                    </li>
+                                                </a>
+                                                <a href="{{ url('/clear') }}">
+                                                    <li data-v-3eefa016="" data-v-decd48ac="" class="db">
+                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="ico">
+                                                            <img data-v-3eefa016="" data-v-decd48ac=""
+                                                                src="{{ asset('') }}static/img/icon/cach.png"
+                                                                alt="" class="smallimg"></div>
+                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">
+                                                            Clear
+                                                            cache
+                                                        </div>
+                                                        <div data-v-3eefa016="" data-v-decd48ac="" class="status">
+                                                            <!---->
+                                                            <!---->
+                                                            <!---->
+                                                            <!---->
+                                                        </div><img data-v-3eefa016="" data-v-decd48ac=""
+                                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
+                                                            alt="" class="view">
+                                                    </li>
+                                                </a>
+
+                                                <li data-v-3eefa016="" data-v-decd48ac="" class="db">
+
+                                                    <div data-v-3eefa016="" data-v-decd48ac="" class="ico"><img
+                                                            data-v-3eefa016="" data-v-decd48ac=""
+                                                            src="{{ asset('') }}static/img/icon/right.png"
+                                                            alt="" class="smallimg"></div>
+
+                                                    <div data-v-3eefa016="" data-v-decd48ac="" class="flexs">
+                                                        <a href="{{ route('logout') }}" style="color: #fff">
+                                                            Log
+                                                            out
+                                                        </a>
+                                                    </div>
+
+                                                    <div data-v-3eefa016="" data-v-decd48ac="" class="status">
+                                                        <!---->
+                                                        <!---->
+                                                        <!---->
+                                                        <!---->
+                                                    </div><img data-v-3eefa016="" data-v-decd48ac=""
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIxSURBVHgB7ZnNccIwEIWXnwJSAiVACekgqQA4cgBCBSEVYB84QyqADkgHoYO4hOTOT94m9kwmIyvMSrs6hG/G47Glg55290mWia6kpUEBLBaLLm4dXPvZbFZQApokJMuyVavVesW1wfWW5/kjJUAkADM/aDabg5/vGo3GPIUIkQDMeN/1vhTRJ0NEAs7n80ddG0RkZW2YIBJwOp0yT/MN0msDER0yQCQAjvOCKDzVtSMKnVLEDSkjdqHpdDrHbVvXDhFd1MqClBELYI7H4xC3wtNloO1MQQsZw7mOmd7R94LmBOk2QMSeSYFgAQy7Di9qni7viNYtamdPkQlKoYpyYDNPFzVniiKAmUwmWQpniiaASeFMUQUw1s4UpYh/Y+lMKgIYK2eKnkIVVs6kJoCxcCZVAYy2M6kLYC5xJv7KIwEmAlAPXwVLHhFIpTsSYCKgAvVQ24ZUEtWBiQAuUszwjovW021NAkwEoEhXvsEjMjkca00C1BayCt428GlFXTva9uPxuEdCVCOA1HnwDR4Uh8PhngJIvZXohR5JqkSAtwe8wvr6IDLDGOep0QVc4ji8vUDebykCbYoMOw75t9F5ub2IQtQa0HYcF9FSyMJxXFgeq/Q0foIER8DScVwECbB2HBdBLmTtOC7ENZDCcVyI/5GlcBwXIgF/fD1VxyUFGRB9K6HpOC6kApyHUdqO4yKkiDPM9rR65sFrO46LoJV4uVx28cey026396PRqKAr/5BP0/ESFvr/rm0AAAAASUVORK5CYII="
+                                                        alt="" class="view">
+
                                                 </li>
 
                                             </ul>
@@ -525,6 +543,50 @@
                                 </div>
                             </div>
                         </div>
+                        <style>
+                            .van-toast {
+                         
+                         
+                            width: 2.51724rem;
+                            max-width: 70%;
+                            min-height: 1.51724rem;
+                            padding: .27586rem;
+                            color: #fff;
+                            font-size: .24138rem;
+                            line-height: 0px;
+                            white-space: pre;
+                           
+                            padding: 7px;
+                        }
+                        .van-icon, .van-icon:before {
+    display: contents;
+}
+                        </style>
+                                <!---->
+                                <!---->
+                                <div class="van-toast van-toast--middle van-toast--success" style="z-index: 2015; display: none;"><i
+                                        class="van-icon van-icon-success van-toast__icon">
+                                        <!----></i>
+                                    <div class="van-toast__text">Copied successful</div>
+                                </div>
+                                <!---->
+                                <script>
+                                    document.querySelector('.copy-btn').addEventListener('click', function() {
+                                        let copyText = document.getElementById('userId').innerText.trim();
+                                    
+                                        navigator.clipboard.writeText(copyText).then(function() {
+                                            let toast = document.querySelector('.van-toast');
+                                                toast.style.display = 'block'; // Show the toast
+                        
+                                                // Hide after 3 seconds
+                                                setTimeout(() => {
+                                                    toast.style.display = 'none';
+                                                }, 3000);
+                                        }, function(err) {
+                                            console.error('Could not copy text: ', err);
+                                        });
+                                    });
+                                    </script>
 
                         @include('layouts.upnl.footer')
 

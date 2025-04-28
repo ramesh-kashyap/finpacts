@@ -182,6 +182,40 @@ class Bonus extends Controller
     }
 
 
+    public function order_roports(Request $request)
+    {
+       $user=Auth::user();
+
+          $limit = $request->limit ? $request->limit : paginationLimit();
+            $status = $request->status ? $request->status : null;
+            $search = $request->search ? $request->search : null;
+            $notes = Order::where('user_id',$user->id)->orderBy('id', 'DESC');
+           if($search <> null && $request->reset!="Reset"){
+            $notes = $notes->where(function($q) use($search){
+              $q->Where('rname', 'LIKE', '%' . $search . '%')
+              ->orWhere('ttime', 'LIKE', '%' . $search . '%')
+              ->orWhere('level', 'LIKE', '%' . $search . '%')
+              ->orWhere('amt', 'LIKE', '%' . $search . '%')
+              ->orWhere('comm', 'LIKE', '%' . $search . '%');
+            });
+
+      }
+            $notes = $notes->paginate($limit)
+                ->appends([
+                    'limit' => $limit
+                ]);
+        $this->data['level_income'] =$notes;
+        $this->data['search'] =$search;
+        $this->data['page'] = 'user.bonus.order-roports';
+        return $this->dashboard_layout();
+
+
+    }
+
+
+    
+
+
 
     public function my_level_team_count($userid,$level=3){
         $arrin=array($userid);

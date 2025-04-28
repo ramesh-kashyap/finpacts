@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Income History</title>
+    <title>Order History</title>
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="expires" content="0">
@@ -158,13 +158,13 @@
                             <div data-v-29c52665="" data-v-4c275272="" class="head head0" data-v-decd48ac="">
                                 <div data-v-29c52665="" class="container flex">
 
-                                    <a href="{{ route('user.asset') }}">
+                                    <a href="{{ route('user.income') }}">
                                         <div data-v-29c52665="" class="back"><img data-v-29c52665=""
                                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE+SURBVHgB3diLDYIwEAbgwy7gCLoBbOIGtiM4gbqBE0DdSCcQJ5AN8GrAIPIobXNH+JOG0jbhCyVpC8DSIqVcmwKBsgKPKKX2URQ9sLwQdYQAicAxBoMX3Wwry3Krtc7BI05vqAtTpQDPTAb1YXDaFL4db9CkKRvCpGmqIUCsQRQYaxAVxgpEiRkFUWMGQRyYXhAXphPEifkDcWN+QHPAfEEDaxNVciynLMuu9Vp2At5ssFxMpQYF22B55LMwf0C4jzkAbwr8Vs+m8v2occcnsTHrGCzN3AJRRF25YeI4fiJq1xqzS5Ikx+47EEQ0b+aAEu0GbpToauREib4OLpQY6uRAibEB1KhREDXKCkSJsgZRoZzO9j3LTFGd7b1Or05ne3yoxoerVnOQHYPz75g2yqzWIc723ql+WG1gqXkDGBPa7OTyg7AAAAAASUVORK5CYII="
                                                 alt=""></div>
 
                                     </a>
-                                    <div data-v-29c52665="" class="name tac">Income History</div>
+                                    <div data-v-29c52665="" class="name tac">Order History</div>
                                     <div data-v-29c52665="" class="flex1"></div>
 
                                 </div>
@@ -244,6 +244,184 @@
     }
 </style>
 
+<style>
+    .list .list-item[data-v-68c18260] {
+        border-radius: .24rem;
+        border: .02rem solid hsla(0, 0%, 100%, .1);
+        background: linear-gradient(72deg, #042d50, #070808);
+        margin-bottom: .24rem;
+        padding: .332rem .28rem;
+        line-height: 100%;
+        margin-top: 15px;
+    }
+
+    .list .list-item .com1[data-v-68c18260] {
+        display: flex;
+        border-bottom: .02rem solid hsla(0, 0%, 100%, .1);
+        padding-bottom: .32rem;
+        margin-bottom: .32rem;
+    }
+
+    .list .list-item .com1 .left[data-v-68c18260] {
+        flex: 1;
+        margin-right: .24rem;
+    }
+
+    .list .list-item .com1 .left .title[data-v-68c18260] {
+        font-weight: 500;
+        margin-bottom: .16rem;
+    }
+
+    .list .list-item .com1 .left .time[data-v-68c18260] {
+        color: #7d7d88;
+        font-size: .24rem;
+    }
+
+    .list .list-item .com1 .right[data-v-68c18260] {
+        display: flex;
+        align-items: center;
+    }
+
+    .list .list-item .com1 .right div[data-v-68c18260] {
+        width: .12rem;
+        height: .12rem;
+        border-radius: 50%;
+        background: #00fc83;
+        filter: drop-shadow(0 0 .06897rem rgba(0, 252, 131, .6));
+    }
+
+    .list .list-item .com1 .right span[data-v-68c18260] {
+        opacity: .6;
+        font-size: .24rem;
+        margin: 0 .1rem;
+    }
+
+    .list .list-item .com1 .right i[data-v-68c18260] {
+        opacity: .6;
+        font-size: .24rem;
+    }
+
+    .van-icon,
+    .van-icon:before {
+        display: inline-block;
+    }
+
+    .van-icon {
+        position: relative;
+        font: normal normal normal .24138rem / 1 vant-icon;
+        font: normal normal normal .24138rem / 1 var(--van-icon-font-family, "vant-icon");
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    li,
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    .list .list-item ul li[data-v-68c18260] {
+        flex: 1;
+    }
+
+    li,
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    .list .list-item ul li[data-v-68c18260]:nth-child(2) {
+        text-align: center;
+    }
+
+    .list .list-item ul li[data-v-68c18260]:last-child {
+        text-align: right;
+    }
+
+    .list .list-item ul li[data-v-68c18260] {
+        flex: 1;
+    }
+
+    .list .list-item ul li .title[data-v-68c18260] {
+        font-size: .24rem;
+        color: #7d7d88;
+        margin-bottom: .16rem;
+    }
+
+    .list .list-item ul li:last-child .val[data-v-68c18260] {
+        color: #96c906;
+    }
+
+    blockquote,
+    body,
+    dd,
+    del,
+    div,
+    dl,
+    dt,
+    fieldset,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    input,
+    li,
+    menu,
+    ol,
+    p,
+    pre,
+    td,
+    textarea,
+    th,
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .van-empty {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient:
+            vertical;
+        -webkit-box-direction:
+            normal;
+        -webkit-flex-direction:
+            column;
+        flex-direction: column;
+        -webkit-box-align:
+            center;
+        -webkit-align-items:
+            center;
+        align-items: center;
+        -webkit-box-pack:
+            center;
+        -webkit-justify-content:
+            center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding:
+            .55172rem 0;
+    }
+
+    .van-empty__image,
+    .van-empty__image img {
+        width: auto !important;
+    }
+
+    .van-empty__image {
+        height: 2.4rem !important;
+    }
+</style>
 
 
 
@@ -274,38 +452,61 @@
 
 
 
-                                            <?php if(is_array($level_income) || is_object($level_income)){ ?>
+                                            @if(!empty($level_income) && (is_array($level_income) || is_object($level_income)))
 
-                                            <?php
-                                            date_default_timezone_set('UTC');
-                                            $cnt = 0; ?>
                                             @foreach ($level_income as $value)
-                                                <div data-v-4c275272="" role="feed" class="van-list">
-                                                    <ul data-v-4c275272="" class="list">
-                                                        <li data-v-4c275272="" class="flex">
-                                                            <div data-v-4c275272="" class="flex1">
-                                                                <div data-v-4c275272="" class="n">{{$value->remarks}}
+                                                <div data-v-6e348d44="" class="van-pull-refresh" data-v-decd48ac="">
+                                                    <div class="van-pull-refresh__track"
+                                                        style="transition-duration: 0ms;">
+
+
+
+                                                        <div class="van-pull-refresh__head" style="height: 50px;">
+                                                        </div>
+
+
+
+                                                        <div data-v-6e348d44="" role="feed" class="van-list list">
+                                                            <div data-v-68c18260="" class="list-item">
+                                                                <div data-v-68c18260="" class="com1">
+                                                                    <div data-v-68c18260="" class="left">
+                                                                        <div data-v-68c18260="" class="title"></div>
+                                                                        <div data-v-68c18260="" class="time">
+                                                                            {{ date('D, d M Y H:i:s', strtotime($value->created_at)) }}
+                                                                        </div>
+                                                                    </div>
+                                                                    <div data-v-68c18260="" class="right">
+                                                                        <div data-v-68c18260=""></div>
+                                                                        <span data-v-68c18260="">Completed</span>
+                                                                        <i data-v-68c18260=""
+                                                                            class="van-icon van-icon-arrow"></i>
+                                                                    </div>
                                                                 </div>
-                                                                <!---->
-                                                                <div data-v-4c275272="" class="time">
-                                                                    {{ date('D, d M Y H:i:s', strtotime($value->created_at)) }}
-                                                                </div>
+                                                                <ul data-v-68c18260="" class="flex">
+                                                                    <li data-v-68c18260="">
+                                                                        <img style="    width: 40px;height: 40px;    margin-left: 41px;"
+                                                                            src="{{ $value->company_logo }}"
+                                                                            alt="Company Logo"
+                                                                            class="w-12 h-12 rounded-xl object-cover">
+                                                                        <div class="font-semibold"
+                                                                            style="margin:10px">
+                                                                            {{ $value->company_name }}
+                                                                        </div>
+                                                                    </li>
+
+                                                                    <li data-v-68c18260="">
+                                                                        <div data-v-68c18260="" class="title">
+                                                                            Commission</div>
+                                                                        <div data-v-68c18260="" class="val">
+                                                                            {{ $value->roi ?? '0' }} USDT</div>
+                                                                    </li>
+                                                                </ul>
                                                             </div>
-                                                            <div data-v-4c275272="" class="str">
-                                                                <div data-v-4c275272="" class="price">
-                                                                    {{ $value->comm }} USDT</div>
-                                                                <!---->
-                                                                <div data-v-4c275272="" class="s"><span
-                                                                        data-v-4c275272=""
-                                                                        class="s1">completed
-                                                                    </span></div>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             @endforeach
-
-                                            <?php }?>
-
+                                        @endif
 
                                             <div class="van-list__finished-text" style="margin-bottom: 30em;">
                                                 {{ $level_income->withQueryString()->links() }}

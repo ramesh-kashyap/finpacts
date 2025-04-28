@@ -367,11 +367,12 @@
                                                                 $requiredAmount = $rule['amount'];
                                                                 $currentPackage = $user->package ?? 0;
                                                                 $amountToPay = max(0, $requiredAmount - $currentPackage);
-                                                                $teamvip1 = $gen_team1_VIP3 + $gen_team2_VIP3 + $gen_team3_VIP3;
+                                                                $totalTeam23 = $gen2_rank1_count + $gen2_rank1_count;
+                                                                $canUpgrade =$gen_team1_VIP3 >= 3 && $totalTeam23 >= 12;
                                                             @endphp
 
 
-                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel && $teamvip1 >= 12)
+                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel && $canUpgrade)
                                                         <span
                                                             data-v-13db724a="" data-v-decd48ac=""
                                                             class="on on0">Achieve{{ $teamvip1 }}{{ $directc }}
@@ -429,17 +430,14 @@
 
                                                         </div>
                                                         @php
-    $gen_team1_VIP3 = $gen_team1_VIP3 ?? 0;
-    $gen_team2_VIP3 = $gen_team2_VIP3 ?? 0;
-    $gen_team3_VIP3 = $gen_team3_VIP3 ?? 0;
-    $completedtask = $gen_team1_VIP3 + $gen_team2_VIP3 + $gen_team3_VIP3;
+    $completedtask =  $gen2_rank1_count + $gen3_rank1_count;
     $quantifiableCount = 12;
     $process = ($completedtask / $quantifiableCount) * 100;
 @endphp
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="left"><span data-v-13db724a=""
-                                                                    data-v-decd48ac="">Direct referrer</span></div>
+                                                                    data-v-decd48ac="">Direct referrer VIP3</span></div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="right"> {{$gen_team1_VIP3}}/<span data-v-13db724a=""
                                                                     data-v-decd48ac="">3</span></div>
@@ -451,7 +449,7 @@
                                                             style="width: {{$process}}%;"></span></div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="left"> L2 + L3 Team </div>
+                                                                class="left"> B + C Team </div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="right"> {{ $completedtask }}/<span data-v-13db724a=""
                                                                     data-v-decd48ac="">{{ $quantifiableCount }}</span></div>
@@ -472,11 +470,12 @@
                                                                 $requiredAmount = $rule['amount'];
                                                                 $currentPackage = $user->package ?? 0;
                                                                 $amountToPay = max(0, $requiredAmount - $currentPackage);
-                                                                $teamvip2 = $gen_team1_VIP4 + $gen_team2_VIP4 + $gen_team3_VIP4;
+                                                                $totalTeam23 = $gen2_rank1_count + $gen2_rank1_count;
+                                                                $canUpgrade = $gen_team1_VIP4 >= 3 && $totalTeam23 >= 12;
                                                             @endphp
 
 
-                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel && $teamvip2 >=25)
+                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel && $canUpgrade)
                                                         <span
                                                             data-v-13db724a="" data-v-decd48ac=""
                                                             class="on on0">Achieve
@@ -519,27 +518,28 @@
         $rule = $vipRules[$vipLevel];
         $amountToPay = max(0, $rule['amount'] - $currentPackage);
 
-        $gen_team1_VIP3 = $gen_team2_VIP3 ?? 0;
+        $gen_team1_VIP4 = $gen_team1_VIP4 ?? 0;
     @endphp
 
     @for ($i = 0; $i < 3; $i++)
         <li 
             data-v-13db724a="" 
             data-v-decd48ac="" 
-            style="{{ $i < $gen_team1_VIP3 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block;">
+            style="{{ $i < $gen_team1_VIP4 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block;">
         </li>
     @endfor
                                                             </ul>
                                                         </div>
                                                         @php
-    $completedtask4 = ($gen_team1_VIP4 ?? 0) + ($gen_team2_VIP4 ?? 0) + ($gen_team3_VIP4 ?? 0);
+    $completedtask4 = $gen2_rank1_count + $gen3_rank1_count;
+    
     $quantifiableCount4 = 25;
     $process4 = min(100, ($completedtask4 / $quantifiableCount4) * 100);
 @endphp
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="left"><span data-v-13db724a=""
-                                                                    data-v-decd48ac="">L1 Team</span></div>
+                                                                    data-v-decd48ac="">Direct referrer VIP4</span></div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="right"> {{$gen_team1_VIP4}}/<span data-v-13db724a=""
                                                                     data-v-decd48ac="">3</span></div>
@@ -551,7 +551,7 @@
                                                                 style="width:{{$process4}}"></span></div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="left"> L2 + L3 Team </div>
+                                                                class="left"> B + C Team </div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="right"> {{$completedtask4}}/<span data-v-13db724a=""
                                                                     data-v-decd48ac="">{{ $quantifiableCount4 }}</span></div>
@@ -572,11 +572,12 @@
                                                                 $requiredAmount = $rule['amount'];
                                                                 $currentPackage = $user->package ?? 0;
                                                                 $amountToPay = max(0, $requiredAmount - $currentPackage);
-                                                                $teamvip3 = $gen_team1_VIP5 + $gen_team2_VIP5 + $gen_team3_VIP5;
+                                                                $totalTeam23 = $gen2_rank1_count + $gen2_rank1_count;
+                                                                $canUpgrade = $gen_team1_VIP5 >= 3 && $totalTeam23 >= 12;
                                                             @endphp
 
 
-                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel && $teamvip3 >= 50)
+                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel && $$canUpgrade)
                                                         <span
                                                             data-v-13db724a="" data-v-decd48ac=""
                                                             class="on on0">Achieve
@@ -619,32 +620,32 @@
         $rule = $vipRules[$vipLevel];
         $amountToPay = max(0, $rule['amount'] - $currentPackage);
 
-        $gen_team3_VIP3 = $gen_team3_VIP3 ?? 0;
+        $gen_team1_VIP5 = $gen_team1_VIP5 ?? 0;
     @endphp
 
     <li data-v-13db724a="" data-v-decd48ac=""
-        style="{{ 0 < $gen_team3_VIP3 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 4px;">
+        style="{{ 0 < $gen_team1_VIP5 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 4px;">
     </li>
     
     <li data-v-13db724a="" data-v-decd48ac=""
-        style="{{ 1 < $gen_team3_VIP3 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 4px;">
+        style="{{ 1 < $gen_team1_VIP5 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 4px;">
     </li>
     
     <li data-v-13db724a="" data-v-decd48ac=""
-        style="{{ 2 < $gen_team3_VIP3 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 4px;">
+        style="{{ 2 < $gen_team1_VIP5 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 4px;">
     </li>
 </ul>
 
                                                         </div>
                                                         @php
-    $completedtask5 = ($gen_team1_VIP5 ?? 0) + ($gen_team2_VIP5 ?? 0) + ($gen_team3_VIP5 ?? 0);
+    $completedtask5 = $gen2_rank1_count + $gen3_rank1_count;
     $quantifiableCount5 = 50;
     $process5 = min(100, ($completedtask5 / $quantifiableCount5) * 100);
 @endphp
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="left"><span data-v-13db724a=""
-                                                                    data-v-decd48ac="">L1 Team</span></div>
+                                                                    data-v-decd48ac="">Direct referrer VIP5</span></div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="right">{{$gen_team1_VIP5}}/<span data-v-13db724a=""
                                                                     data-v-decd48ac="">3</span></div>
@@ -656,7 +657,7 @@
                                                                 style="width: {{ $process5 }}%"></span></div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="left"> L2 + L3 Team </div>
+                                                                class="left"> B + C Team </div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="right"> {{ $completedtask5 }}/<span data-v-13db724a=""
                                                                     data-v-decd48ac="">{{ $quantifiableCount5 }}</span></div>
@@ -677,11 +678,13 @@
                                                                 $requiredAmount = $rule['amount'];
                                                                 $currentPackage = $user->package ?? 0;
                                                                 $amountToPay = max(0, $requiredAmount - $currentPackage);
-                                                                $teamvip4 = $gen_team1_VIP6 + $gen_team2_VIP6 + $gen_team3_VIP6;
+                                                              
+                                                                $totalTeam23 = $gen2_rank1_count + $gen2_rank1_count;
+                                                                $canUpgrade = $gen_team1_VIP6 >= 3 && $totalTeam23 >= 12;
                                                             @endphp
 
 
-                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel && $teamvip4 >=100)
+                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel && $$canUpgrade)
                                                         <span
                                                             data-v-13db724a="" data-v-decd48ac=""
                                                             class="on on0">Achieve
@@ -724,26 +727,26 @@
         $rule = $vipRules[$vipLevel];
         $amountToPay = max(0, $rule['amount'] - $currentPackage);
 
-        $gen_team3_VIP7 = $gen_team3_VIP7 ?? 0;
+        $gen_team1_VIP6 = $gen_team1_VIP6 ?? 0;
     @endphp
 
     @for ($i = 0; $i < 3; $i++) <!-- Adjust 5 as necessary -->
         <li data-v-13db724a="" data-v-decd48ac=""
-            style="{{ $i < $gen_team3_VIP7 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 4px;">
+            style="{{ $i < $gen_team1_VIP6 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 4px;">
         </li>
     @endfor
 </ul>
 
                                                         </div>
                                                         @php
-    $completedtask6 = ($gen_team1_VIP6 ?? 0) + ($gen_team2_VIP6 ?? 0) + ($gen_team3_VIP6 ?? 0);
+    $completedtask6 = $gen2_rank1_count + $gen3_rank1_count;
     $quantifiableCount6 = 100;
     $process6 = min(100, ($completedtask6 / $quantifiableCount6) * 100);
 @endphp
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="left"><span data-v-13db724a=""
-                                                                    data-v-decd48ac="">L1 Team</span></div>
+                                                                    data-v-decd48ac="">Direct referrer VIP6</span></div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="right">{{$gen_team1_VIP6}}/<span data-v-13db724a=""
                                                                     data-v-decd48ac="">3</span></div>
@@ -755,7 +758,7 @@
                                                                 style="width: {{ $process6 }}"></span></div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="left"> L2 + L3 Team </div>
+                                                                class="left"> B + C Team </div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="right">{{$completedtask6}}/<span data-v-13db724a=""
                                                                     data-v-decd48ac="">{{$quantifiableCount6}}</span></div>
@@ -776,11 +779,12 @@
                                                                 $requiredAmount = $rule['amount'];
                                                                 $currentPackage = $user->package ?? 0;
                                                                 $amountToPay = max(0, $requiredAmount - $currentPackage);
-                                                                $teamvip5 = $gen_team1_VIP7 + $gen_team2_VIP7 + $gen_team3_VIP7;
+                                                                $totalTeam23 = $gen2_rank1_count + $gen2_rank1_count;
+                                                                $canUpgrade = $gen_team1_VIP7 >= 3 && $totalTeam23 >= 12;
                                                             @endphp
 
 
-                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel && $teamvip5 >=250)
+                                                    @if($balance >= $amountToPay && $amountToPay > 0 || $myRank >=$vipLevel && $canUpgrade)
                                                         <span
                                                             data-v-13db724a="" data-v-decd48ac=""
                                                             class="on on0">Achieve
@@ -823,26 +827,26 @@
         $rule = $vipRules[$vipLevel];
         $amountToPay = max(0, $rule['amount'] - $currentPackage);
 
-        $gen_team3_VIP8 = $gen_team3_VIP8 ?? 0;
+        $gen_team1_VIP7 = $gen_team1_VIP7 ?? 0;
     @endphp
 
     @for ($i = 0; $i < 3; $i++) <!-- Adjust 5 as necessary -->
         <li data-v-13db724a="" data-v-decd48ac=""
-            style="{{ $i < $gen_team3_VIP8 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 4px;">
+            style="{{ $i < $gen_team1_VIP7 ? 'background-color: #c042c6;' : 'background-color: #e0e0e0;' }}; width: 20px; height: 20px; border-radius: 50%; display: inline-block; margin-right: 4px;">
         </li>
     @endfor
 </ul>
 
                                                         </div>
                                                         @php
-    $completedtask7 = ($gen_team1_VIP7 ?? 0) + ($gen_team2_VIP7 ?? 0) + ($gen_team3_VIP7 ?? 0);
+    $completedtask7 = $gen2_rank1_count + $gen3_rank1_count;
     $quantifiableCount7 = 250;
     $process7 = min(100, ($completedtask7 / $quantifiableCount7) * 100);
 @endphp
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="left"><span data-v-13db724a=""
-                                                                    data-v-decd48ac="">L1 Team</span></div>
+                                                                    data-v-decd48ac="">Direct referrer VIP7</span></div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="right">{{$gen_team1_VIP7}}/
                                                                 <span data-v-13db724a=""
@@ -856,7 +860,7 @@
                                                                 style="width: {{ $process7 }}"></span></div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="left"> L2 + L3 Team </div>
+                                                                class="left"> B + C Team </div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="right">{{ $completedtask7 }}/<span data-v-13db724a=""
                                                                     data-v-decd48ac="">{{ $quantifiableCount7 }}</span></div>
@@ -935,14 +939,14 @@
 
                                                         </div>
                                                         @php
-    $completedtask8 = ($gen_team1_VIP8 ?? 0) + ($gen_team2_VIP8 ?? 0) + ($gen_team3_VIP8 ?? 0);
+    $completedtask8 = $gen2_rank1_count + $gen3_rank1_count;
     $quantifiableCount8 = 5;
     $process8 = min(100, ($completedtask8 / $quantifiableCount8) * 100);
 @endphp
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="left"><span data-v-13db724a=""
-                                                                    data-v-decd48ac="">L1 Team</span></div>
+                                                                    data-v-decd48ac="">Direct referrer</span></div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="right"> {{ $completedtask8 }}/
                                                                 <span data-v-13db724a=""
@@ -956,7 +960,7 @@
                                                                 style="width: {{ $process8 }}"></span></div>
                                                         <div data-v-13db724a="" data-v-decd48ac="" class="flex">
                                                             <div data-v-13db724a="" data-v-decd48ac=""
-                                                                class="left"> L2 + L3 Team </div>
+                                                                class="left"> B + C Team </div>
                                                             <div data-v-13db724a="" data-v-decd48ac=""
                                                                 class="right"> 13.53/<span data-v-13db724a=""
                                                                     data-v-decd48ac="">10000</span></div>

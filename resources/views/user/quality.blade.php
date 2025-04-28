@@ -1033,7 +1033,7 @@
                                                     $vipLevel = 4;
                                                     $rule = $vipRules[$vipLevel];
                                                     $amountToPay = max(0, $rule['amount'] - $currentPackage);
-                                                    $totalTeam23 = $gen_team2_VIP3 + $gen_team3_VIP3;
+                                                    $totalTeam23 = $gen2_rank1_count + $gen2_rank1_count;
                                                     $canUpgrade = $myRank == 3 && $gen_team1_VIP3 >= 3 && $totalTeam23 >= 12;
                                                 @endphp
                                             
@@ -1150,7 +1150,7 @@
                                                     $requiredAmount = 1680;
                                                     $requiredRank = 4;
                                                     $amountToPay = max(0, $requiredAmount - ($user->package ?? 0));
-                                                    $canUpgrade = $myRank == $requiredRank && $gen_team1_VIP4 >= 3 && ($gen_team2_VIP4 + $gen_team3_VIP4) >= 25;
+                                                    $canUpgrade = $myRank == $requiredRank && $gen_team1_VIP4 >= 3 && ($gen2_rank1_count + $gen2_rank1_count) >= 25;
                                                 @endphp
                                             
                                                 @if ($myRank >= $vipLevel)
@@ -1269,7 +1269,7 @@
                                                     $requiredAmount = 3600;
                                                     $requiredRank = 5;
                                                     $amountToPay = max(0, $requiredAmount - ($user->package ?? 0));
-                                                    $canUpgrade = $myRank == $requiredRank && $gen_team1_VIP5 >= 3 && ($gen_team2_VIP5 + $gen_team3_VIP5) >= 50;
+                                                    $canUpgrade = $myRank == $requiredRank && $gen_team1_VIP5 >= 3 && ($gen2_rank1_count + $gen2_rank1_count) >= 50;
                                                 @endphp
                                             
                                                 @if ($myRank >= $vipLevel)
@@ -1392,7 +1392,7 @@
                                                     $requiredAmount = 7560;
                                                     $requiredRank = 6;
                                                     $amountToPay = max(0, $requiredAmount - ($user->package ?? 0));
-                                                    $canUpgrade = $myRank == $requiredRank && $gen_team1_VIP6 >= 3 && ($gen_team2_VIP6 + $gen_team3_VIP6) >= 100;
+                                                    $canUpgrade = $myRank == $requiredRank && $gen_team1_VIP6 >= 3 && ($gen2_rank1_count + $gen2_rank1_count) >= 100;
                                                 @endphp
                                             
                                                 @if ($myRank >= $vipLevel)
@@ -1517,7 +1517,7 @@
                                                         $requiredAmount = 15000;
                                                         $requiredRank = 7;
                                                         $amountToPay = max(0, $requiredAmount - ($user->package ?? 0));
-                                                        $canUpgrade = $myRank == $requiredRank && $gen_team1_VIP7 >= 3 && ($gen_team2_VIP7 + $gen_team3_VIP7) >= 250;
+                                                        $canUpgrade = $myRank == $requiredRank && $gen_team1_VIP7 >= 3 && ($gen2_rank1_count + $gen2_rank1_count) >= 250;
                                                     @endphp
                                                 
                                                     @if ($myRank >= $vipLevel)

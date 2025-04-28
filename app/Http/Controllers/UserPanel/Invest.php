@@ -9,6 +9,7 @@ use App\Models\Investment;
 use App\Models\Income;
 use App\Models\Contract;
 use App\Models\Task;
+use App\Models\BuyFund;
 use App\Models\Order
 ;
 
@@ -31,14 +32,14 @@ class Invest extends Controller
         $user=Auth::user();
         $invest_check=Investment::where('user_id',$user->id)->where('status','!=','Decline')->orderBy('id','desc')->limit(1)->first();
         $userInfo = Auth::user();
-        $refId = $userInfo->phone;
+        $refId = $userInfo->username;
     
     
         $url = 'https://api.cryptapi.io/bep20/usdt/create/';
     
         $queryParams = [
-            'callback'      => "https://dcxpro.world/cryptapicallback?refid={$refId}",
-            'address'       => '0x29EFD41e774E88E3374Eb741572e14076816F413',
+            'callback'      => "https://ttmdltd.com/dynamicUpiCallback?refid={$refId}",
+            'address'       => '0xcd0678db5f49df6a0454f009e258953f4fe4f561',
             'pending'       => 0,
             'confirmations' => 1,
             'email'         => $userInfo->email ?? 'default@example.com',
@@ -87,21 +88,21 @@ class Invest extends Controller
 public function getAddressDetails($currency)
 {
     $user = Auth::user();
-    $refId = $user->phone;
+    $refId = $user->username;
 
     // Currency-based API URL
     if ($currency === 'bep20') {
         $url = 'https://api.cryptapi.io/bep20/usdt/create/';
-        $address= "0x29EFD41e774E88E3374Eb741572e14076816F413";
+        $address= "0xcd0678db5f49df6a0454f009e258953f4fe4f561";
     } elseif ($currency === 'trc20') {
         $url = 'https://api.cryptapi.io/trc20/usdt/create/';
-        $address= "TD4KhBToV1nKRumY4L7jJzR4cWLK9xzmyb";
+        $address= "TM1VAYkAxggG2jhbQ3BXWnYtAWUjjZ6CxP";
     } else {
         return response()->json(['success' => false, 'message' => 'Invalid currency']);
     }
 
     $queryParams = [
-        'callback' => "https://dcxpro.world/cryptapicallback?refid={$refId}",
+        'callback'      => "https://ttmdltd.com/dynamicUpiCallback?refid={$refId}",
         'address' =>  $address,
         'pending' => 0,
         'confirmations' => 1,
@@ -742,7 +743,7 @@ public function viewdetail($txnId)
       $limit = $request->limit ? $request->limit : paginationLimit();
         $status = $request->status ? $request->status : null;
         $search = $request->search ? $request->search : null;
-        $notes = Investment::where('user_id',$user->id);
+        $notes = BuyFund::where('user_id',$user->id);
       if($search <> null && $request->reset!="Reset"){
         $notes = $notes->where(function($q) use($search){
           $q->Where('user_id_fk', 'LIKE', '%' . $search . '%')
@@ -825,6 +826,10 @@ public function viewdetail($txnId)
           }
       }
 
+      $this->data['gen2_rank1_count'] = $gen_teams[2]->where('rank', 1)->count();
+      $this->data['gen3_rank1_count'] = $gen_teams[3]->where('rank', 1)->count();
+
+
     // dd($this->data);
         $this->data['user'] = $user;
         $this->data['myRank'] = $user->rank;
@@ -892,6 +897,9 @@ $incomes = Income::where('user_id_fk', $user->username)
                   $this->data["gen_team{$level}_VIP{$vipLevel}"] = $users->where('rank', '>=', $vipLevel)->count();
               }
           }
+
+          $this->data['gen2_rank1_count'] = $gen_teams[2]->where('rank', 1)->count();
+           $this->data['gen3_rank1_count'] = $gen_teams[3]->where('rank', 1)->count();
 
         // dd($this->data);
         

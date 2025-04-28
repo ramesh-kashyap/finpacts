@@ -440,7 +440,7 @@
                                             <p class="small-label">Total balance</p>
                                             <h2 class="balance">
                                                 ${{ number_format(Auth::user()->available_balance(), 2) }}</h2>
-                                            <p class="balance-change">↑ $ {{number_format($todaysRoiSum,2)}} <span class="dim"> Todays</span></p>
+                                            <p class="balance-change">↑ $ {{number_format($todaysRoiSum,2)}} <span class="dim"> Today</span></p>
                                         </div>
 
 
